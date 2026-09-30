@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://exam-photo-resizer.vercel.app/sitemap.xml
+Sitemap: https://toolsbharat.vercel.app/sitemap.xml
