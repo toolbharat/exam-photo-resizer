@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA to Percentage Calculator — Free Online Tool | PixSathi</title>
+    <meta name="description" content="Free CGPA to Percentage calculator for engineering, medical, and all Indian universities. Convert CGPA to percentage instantly. — PixSathi">
+    <link rel="canonical" href="https://pixsathi.in/cgpa-calculator">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tool-container { max-width: 700px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: #2d3748; font-weight: 600; font-size: 14px; }
+        .form-group input, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 16px; font-family: inherit; outline: none; }
+        .form-group input:focus, .form-group select:focus { border-color: #667eea; }
+        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 8px; }
+        .btn:hover { background: #5a67d8; }
+        .result-box { display: none; margin-top: 24px; padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: #ffffff; text-align: center; }
+        .result-box .label { font-size: 14px; opacity: 0.9; margin-bottom: 8px; }
+        .result-box .value { font-size: 48px; font-weight: 700; line-height: 1; margin-bottom: 8px; }
+        .result-box .grade { font-size: 16px; opacity: 0.9; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.3); }
+        .formula-info { margin-top: 20px; padding: 16px; background: #f7fafc; border-radius: 8px; font-size: 13px; color: #4a5568; }
+        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/about">ℹ️ About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>🧮 CGPA to Percentage Calculator</h1>
+            <p>Apna CGPA daalo aur exact percentage paao.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="form-group">
+                <label for="university">University / Board</label>
+                <select id="university">
+                    <option value="9.5">CBSE / General (CGPA × 9.5)</option>
+                    <option value="10-7.5">Engineering (CGPA × 10 - 7.5)</option>
+                    <option value="9">Medical (CGPA × 9)</option>
+                    <option value="custom">Custom Formula</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cgpa">CGPA (out of 10)</label>
+                <input type="number" id="cgpa" placeholder="jaise: 8.5" min="0" max="10" step="0.01">
+            </div>
+
+            <div class="form-group" id="customGroup" style="display: none;">
+                <label for="customMultiplier">Multiplier</label>
+                <input type="number" id="customMultiplier" placeholder="jaise: 9.5" min="0" max="10" step="0.01" value="9.5">
+            </div>
+
+            <button class="btn" id="calculateBtn">Percentage Nikalo</button>
+
+            <div class="result-box" id="resultBox">
+                <div class="label">Aapka Percentage</div>
+                <div class="value" id="percentageValue">0%</div>
+                <div class="grade" id="gradeText">Grade: -</div>
+            </div>
+
+            <div class="formula-info">
+                <strong>Formula:</strong> <span id="formulaText">Percentage = CGPA × 9.5</span>
+            </div>
+
+            <div class="info-box">
+                <strong>ℹ️ Note:</strong> Har university ka formula alag hota hai. Sahi formula apni university ki official website se check karo.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Free CGPA to Percentage Calculator</h2>
+            <p>PixSathi ka CGPA to Percentage Calculator ek free online tool hai jo aapke CGPA ko exact percentage mein convert kar deta hai.</p>
+
+            <h2>Common Formulas</h2>
+            <ul>
+                <li><strong>CBSE:</strong> Percentage = CGPA × 9.5</li>
+                <li><strong>Engineering:</strong> Percentage = (CGPA × 10) - 7.5</li>
+                <li><strong>Medical:</strong> Percentage = CGPA × 9</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const university = document.getElementById('university');
+        const cgpa = document.getElementById('cgpa');
+        const customGroup = document.getElementById('customGroup');
+        const customMultiplier = document.getElementById('customMultiplier');
+        const calculateBtn = document.getElementById('calculateBtn');
+        const resultBox = document.getElementById('resultBox');
+        const percentageValue = document.getElementById('percentageValue');
+        const gradeText = document.getElementById('gradeText');
+        const formulaText = document.getElementById('formulaText');
+
+        university.addEventListener('change', () => {
+            if (university.value === 'custom') {
+                customGroup.style.display = 'block';
+                formulaText.textContent = 'Percentage = CGPA × ' + customMultiplier.value;
+            } else {
+                customGroup.style.display = 'none';
+                updateFormulaText();
+            }
+        });
+
+        customMultiplier.addEventListener('input', () => {
+            formulaText.textContent = 'Percentage = CGPA × ' + customMultiplier.value;
+        });
+
+        function updateFormulaText() {
+            const v = university.value;
+            if (v === '9.5') formulaText.textContent = 'Percentage = CGPA × 9.5 (CBSE)';
+            else if (v === '10-7.5') formulaText.textContent = 'Percentage = (CGPA × 10) - 7.5 (Engineering)';
+            else if (v === '9') formulaText.textContent = 'Percentage = CGPA × 9 (Medical)';
+        }
+
+        function getGrade(p) {
+            if (p >= 90) return 'O (Outstanding)';
+            if (p >= 80) return 'A+ (Excellent)';
+            if (p >= 70) return 'A (Very Good)';
+            if (p >= 60) return 'B+ (Good)';
+            if (p >= 50) return 'B (Average)';
+            if (p >= 40) return 'C (Pass)';
+            return 'F (Fail)';
+        }
+
+        calculateBtn.addEventListener('click', () => {
+            const cgpaVal = parseFloat(cgpa.value);
+            if (isNaN(cgpaVal) || cgpaVal < 0 || cgpaVal > 10) {
+                alert('Sahi CGPA daalo (0 se 10 ke beech)');
+                return;
+            }
+
+            let pct = 0;
+            const type = university.value;
+            if (type === '9.5') pct = cgpaVal * 9.5;
+            else if (type === '10-7.5') pct = (cgpaVal * 10) - 7.5;
+            else if (type === '9') pct = cgpaVal * 9;
+            else if (type === 'custom') {
+                const m = parseFloat(customMultiplier.value);
+                if (isNaN(m) || m <= 0) { alert('Sahi multiplier daalo'); return; }
+                pct = cgpaVal * m;
+            }
+
+            if (pct > 100) pct = 100;
+
+            percentageValue.textContent = pct.toFixed(2) + '%';
+            gradeText.textContent = 'Grade: ' + getGrade(pct);
+            resultBox.style.display = 'block';
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        updateFormulaText();
+    </script>
+</body>
+</html>
