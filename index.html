@@ -21,19 +21,56 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /* Compact Header */
+        .header {
+            padding: 8px 20px !important;
+        }
+        .header .container {
+            gap: 10px !important;
+        }
+        .logo {
+            font-size: 16px !important;
+        }
+        .tagline {
+            font-size: 10px !important;
+            margin: 0 !important;
+        }
+        .nav a {
+            padding: 4px 10px !important;
+            font-size: 12px !important;
+        }
+
+        /* Compact Intro */
+        .intro-section {
+            padding: 14px 16px !important;
+            margin-bottom: 14px !important;
+        }
+        .intro-section h1 {
+            font-size: 20px !important;
+            margin-bottom: 4px !important;
+        }
+        .intro-section p {
+            font-size: 12px !important;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 15px !important;
+            margin: 16px 0 10px !important;
+        }
+
         /* Dashboard Cards */
         .dash-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 14px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
         }
 
         .dash-card {
             background: #ffffff;
             border: 1px solid #e5e5ea;
-            border-radius: 12px;
-            padding: 16px;
+            border-radius: 10px;
+            padding: 14px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
             transition: all 0.2s;
             display: flex;
@@ -47,7 +84,7 @@
         }
 
         .dash-card-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             color: #1d1d1f;
             margin-bottom: 10px;
@@ -57,15 +94,13 @@
         }
 
         .dash-card-title span.icon {
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        /* Exam badges */
         .exam-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
-            margin-bottom: 8px;
         }
 
         .exam-badge {
@@ -87,26 +122,25 @@
             border-color: #4f46e5;
         }
 
-        /* Tool cards */
         .tool-card {
             text-decoration: none;
             color: inherit;
             display: flex;
             align-items: center;
             gap: 12px;
-            min-height: 90px;
+            min-height: 80px;
         }
 
         .tool-icon {
-            font-size: 28px;
+            font-size: 26px;
             flex-shrink: 0;
         }
 
         .tool-info h3 {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             color: #1d1d1f;
-            margin: 0 0 3px 0;
+            margin: 0 0 2px 0;
         }
 
         .tool-info p {
@@ -120,7 +154,7 @@
             font-size: 11px;
             color: #4f46e5;
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .exam-card-wrapper {
@@ -129,8 +163,28 @@
 
         @media (min-width: 768px) {
             .exam-card-wrapper {
-                grid-column: span 2;
+                grid-column: span 3;
             }
+        }
+
+        /* Content Section Compact */
+        .content-section h2 {
+            font-size: 16px !important;
+            margin: 14px 0 8px !important;
+        }
+        .content-section h3 {
+            font-size: 14px !important;
+        }
+        .content-section p,
+        .content-section li {
+            font-size: 13px !important;
+        }
+
+        /* Footer Compact */
+        .footer {
+            padding: 14px !important;
+            margin-top: 20px !important;
+            font-size: 11px !important;
         }
     </style>
 </head>
@@ -141,10 +195,10 @@
             <div class="logo">📸 PixSathi</div>
             <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
             <nav class="nav" aria-label="Main navigation">
-    <a href="/">🏠 Home</a>
-    <a href="/india">🇮🇳 India</a>
-    <a href="/contact">📬 Contact</a>
-</nav>
+                <a href="/">🏠 Home</a>
+                <a href="/india">🇮🇳 India</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
         </div>
     </header>
 
@@ -155,7 +209,7 @@
             <p>Choose a tool below. All tools are 100% free and work in your browser.</p>
         </section>
 
-                <!-- ============ EXAM PHOTO RESIZER ============ -->
+        <!-- ============ EXAM PHOTO RESIZER ============ -->
         <section class="country-section">
             <h2 class="section-title">📸 Exam Photo Resizer</h2>
             <div class="dash-grid">
@@ -296,36 +350,6 @@
                 </a>
 
             </div>
-        </section>        </a>
-
-                <a href="/cgpa-calculator" class="dash-card tool-card">
-                    <div class="tool-icon">🧮</div>
-                    <div class="tool-info">
-                        <h3>CGPA Calculator</h3>
-                        <p>CGPA → Percentage instantly</p>
-                        <div class="tool-cta">Open Tool →</div>
-                    </div>
-                </a>
-
-                <a href="/qr-code-generator" class="dash-card tool-card">
-                    <div class="tool-icon">🎯</div>
-                    <div class="tool-info">
-                        <h3>QR Code Generator</h3>
-                        <p>Text / URL → QR code</p>
-                        <div class="tool-cta">Open Tool →</div>
-                    </div>
-                </a>
-
-                <a href="/excel-merger" class="dash-card tool-card">
-                    <div class="tool-icon">📊</div>
-                    <div class="tool-info">
-                        <h3>Excel Merger</h3>
-                        <p>Merge multiple Excel files</p>
-                        <div class="tool-cta">Open Tool →</div>
-                    </div>
-                </a>
-
-            </div>
         </section>
 
         <!-- SEO Content -->
@@ -336,7 +360,6 @@
             <h2>Popular Tools</h2>
             <ul>
                 <li><strong>Exam Photo Resizer:</strong> SSC, IBPS, GATE, NEET, UPSC ke liye exact photo size</li>
-                <li><strong>Signature Resizer:</strong> Exam form ke liye signature size</li>
                 <li><strong>CGPA Calculator:</strong> CGPA ko percentage mein convert karo</li>
                 <li><strong>Image Compressor:</strong> JPG/PNG file size kam karo</li>
                 <li><strong>JPG to PDF:</strong> Images ko PDF mein convert karo</li>
@@ -345,6 +368,7 @@
                 <li><strong>PDF Merger:</strong> Multiple PDFs ko jodo</li>
                 <li><strong>Word to PDF:</strong> Word document ko PDF mein convert karo</li>
                 <li><strong>QR Code Generator:</strong> Text/URL ka QR code banao</li>
+                <li><strong>Excel Merger:</strong> Multiple Excel files merge karo</li>
             </ul>
 
             <h2>Why Choose PixSathi?</h2>
@@ -357,7 +381,6 @@
             </ul>
 
             <h2>Frequently Asked Questions</h2>
-
             <h3>Are these tools really free?</h3>
             <p>Yes, 100% free. No signup, no login, no hidden fees.</p>
 
@@ -369,7 +392,6 @@
 
             <h3>Which exams are supported?</h3>
             <p>SSC CGL, SSC CHSL, SSC MTS, IBPS PO, IBPS Clerk, IBPS SO, IBPS RRB, GATE, NEET, JEE Main, UPSC, RRB NTPC, RRB Group D, CTET, UGC NET, CLAT, AILET, CUET, DUET, and 45+ more Indian government exams.</p>
-
         </section>
 
     </main>
@@ -377,13 +399,13 @@
     <footer class="footer">
         <div class="container">
             <p>© 2026 PixSathi | Made for India 🇮🇳</p>
-            <p style="margin-top: 8px; font-size: 13px;">
-    <a href="/">Home</a> · 
-    <a href="/about">About</a> · 
-    <a href="/privacy-policy">Privacy</a> · 
-    <a href="/disclaimer">Disclaimer</a> · 
-    <a href="/contact">Contact</a>
-</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
+            </p>
         </div>
     </footer>
 
