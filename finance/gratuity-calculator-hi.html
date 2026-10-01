@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>ग्रेच्युटी कैलकुलेटर - अपनी ग्रेच्युटी राशि की गणना करें</title>
+    <meta name="description" content="मुफ्त ग्रेच्युटी कैलकुलेटर - अपनी अंतिम सैलरी और सेवा वर्षों के आधार पर ग्रेच्युटी राशि की गणना करें। ₹20 लाख तक कर मुक्त।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/gratuity-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/gratuity-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="gst-calculator-hi.html">GST</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="salary-calculator-hi.html">सैलरी</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="loan-eligibility-calculator-hi.html">लोन पात्रता</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="gratuity-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>ग्रेच्युटी कैलकुलेटर</h1>
+        <p>अपनी अंतिम सैलरी और सेवा वर्षों के आधार पर ग्रेच्युटी राशि की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>अंतिम मासिक सैलरी (बेसिक + DA) (₹)</p>
+            <input type="number" id="lastSalary" placeholder="जैसे 50000" min="1000">
+
+            <p>सेवा के वर्ष</p>
+            <input type="number" id="serviceYears" placeholder="जैसे 10" min="1" max="50" step="0.5">
+
+            <button type="button" onclick="calculateGratuity()">ग्रेच्युटी की गणना करें</button>
+        </form>
+        <div id="gratuityResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>ग्रेच्युटी क्या है?</h2>
+        <p>ग्रेच्युटी एकमुश्त राशि है जो नियोक्ता कर्मचारी की सेवा के बदले में देता है। यह भुगतान ग्रेच्युटी अधिनियम, 1972 के तहत आता है।</p>
+
+        <h3>पात्रता</h3>
+        <ul>
+            <li>कर्मचारी ने <strong>5 वर्ष</strong> की निरंतर सेवा पूरी की हो</li>
+            <li>सेवानिवृत्ति, इस्तीफा, या मृत्यु पर देय</li>
+            <li>अपवाद: मृत्यु या विकलांगता की स्थिति में 5-वर्ष नियम माफ</li>
+        </ul>
+
+        <h3>सूत्र</h3>
+        <p><strong>ग्रेच्युटी = (15 × अंतिम सैलरी × सेवा वर्ष) / 26</strong></p>
+        <ul>
+            <li>प्रत्येक पूर्ण वर्ष के लिए 15 दिन की सैलरी</li>
+            <li>26 = महीने में कार्य दिवस</li>
+            <li>अंतिम सैलरी = बेसिक + महंगाई भत्ता</li>
+        </ul>
+
+        <h3>कर छूट</h3>
+        <ul>
+            <li>पात्र कर्मचारियों के लिए <strong>₹20 लाख</strong> तक ग्रेच्युटी कर मुक्त</li>
+            <li>₹20 लाख से अधिक राशि पर आयकर नियमानुसार कर लगेगा</li>
+            <li>यह ग्रेच्युटी अधिनियम के तहत आने वाले कर्मचारियों पर लागू होता है</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>यदि अंतिम वर्ष में आपकी सेवा 6 महीने से अधिक है, तो इसे अगले पूर्ण वर्ष में गिना जाता है। 6 महीने से कम होने पर इसे छोड़ दिया जाता है।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

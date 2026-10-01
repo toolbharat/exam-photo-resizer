@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>SWP Calculator - Systematic Withdrawal Plan Calculator</title>
+    <meta name="description" content="Free SWP calculator for India. Calculate how long your mutual fund corpus will last with regular monthly withdrawals.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/swp-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/swp-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="nps-calculator.html">NPS</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>SWP Calculator</h1>
+        <p>Calculate how long your mutual fund corpus will last with regular monthly withdrawals.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your SWP Details</h2>
+        <form onsubmit="return false;">
+            <p>Total Investment (₹)</p>
+            <input type="number" id="swpInvestment" placeholder="e.g. 1000000" min="10000" value="1000000">
+
+            <p>Monthly Withdrawal (₹)</p>
+            <input type="number" id="swpWithdrawal" placeholder="e.g. 10000" min="500" value="10000">
+
+            <p>Expected Annual Return (%)</p>
+            <input type="number" id="swpReturn" placeholder="e.g. 8" step="0.1" min="1" max="20" value="8">
+
+            <p>Withdrawal Period (Years)</p>
+            <input type="number" id="swpYears" placeholder="e.g. 10" min="1" max="40" value="10">
+
+            <button type="button" onclick="calculateSWP()">Calculate SWP</button>
+        </form>
+        <div id="swpResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is SWP?</h2>
+        <p>SWP (Systematic Withdrawal Plan) is a facility where you withdraw a fixed amount from your mutual fund investment at regular intervals. It is commonly used by retirees to generate a regular income from their corpus.</p>
+
+        <h3>How SWP Works</h3>
+        <ul>
+            <li>You invest a lump sum in a mutual fund scheme</li>
+            <li>You set a fixed withdrawal amount (monthly, quarterly, etc.)</li>
+            <li>The remaining corpus continues to earn returns</li>
+            <li>The corpus depletes over time depending on withdrawal vs returns</li>
+        </ul>
+
+        <h3>Why SWP is Useful</h3>
+        <ul>
+            <li><strong>Regular income:</strong> Like a pension from your investments</li>
+            <li><strong>Tax efficient:</strong> Only the capital gains portion is taxed</li>
+            <li><strong>Flexible:</strong> You can change withdrawal amount anytime</li>
+            <li><strong>Better than FD:</strong> Potentially higher returns than fixed deposits</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>SWP returns are market-linked and not guaranteed. If the fund performs poorly, your corpus may deplete faster than expected. Consider a conservative withdrawal rate (4-6% annually) for long-term sustainability.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

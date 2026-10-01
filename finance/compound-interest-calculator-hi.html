@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>चक्रवृद्धि ब्याज कैलकुलेटर - Compound Interest Calculator</title>
+    <meta name="description" content="मुफ्त चक्रवृद्धि ब्याज कैलकुलेटर - मासिक, त्रैमासिक, अर्ध-वार्षिक या वार्षिक चक्रवृद्धि के साथ ब्याज की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/compound-interest-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/compound-interest-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="rd-calculator-hi.html">RD</a>
+            <a href="ppf-calculator-hi.html">PPF</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="compound-interest-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>चक्रवृद्धि ब्याज कैलकुलेटर</h1>
+        <p>चक्रवृद्धि की शक्ति से अपने पैसे की वृद्धि की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>मूलधन राशि (₹)</p>
+            <input type="number" id="ciPrincipal" placeholder="जैसे 100000" min="1000" value="100000">
+
+            <p>ब्याज दर (% प्रति वर्ष)</p>
+            <input type="number" id="ciRate" placeholder="जैसे 8" step="0.1" min="0.1" max="30" value="8">
+
+            <p>समय अवधि (वर्ष)</p>
+            <input type="number" id="ciYears" placeholder="जैसे 10" min="1" max="50" value="10">
+
+            <p>चक्रवृद्धि आवृत्ति</p>
+            <select id="ciFrequency">
+                <option value="1">वार्षिक</option>
+                <option value="2">अर्ध-वार्षिक</option>
+                <option value="4" selected>त्रैमासिक</option>
+                <option value="12">मासिक</option>
+                <option value="365">दैनिक</option>
+            </select>
+
+            <button type="button" onclick="calculateCompoundInterest()">चक्रवृद्धि ब्याज की गणना करें</button>
+        </form>
+        <div id="ciResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>चक्रवृद्धि ब्याज क्या है?</h2>
+        <p>चक्रवृद्धि ब्याज वह ब्याज है जो प्रारंभिक मूलधन और पिछली अवधियों के संचित ब्याज दोनों पर गणना किया जाता है। इसे अक्सर "ब्याज पर ब्याज" कहा जाता है और यह समय के साथ आपके पैसे को काफी बढ़ा सकता है।</p>
+
+        <h3>सूत्र</h3>
+        <p><strong>A = P × (1 + r/n)^(n×t)</strong></p>
+        <ul>
+            <li><strong>A</strong> = अंतिम राशि (मैच्योरिटी मूल्य)</li>
+            <li><strong>P</strong> = मूलधन राशि</li>
+            <li><strong>r</strong> = वार्षिक ब्याज दर (दशमलव में)</li>
+            <li><strong>n</strong> = प्रति वर्ष चक्रवृद्धि की संख्या</li>
+            <li><strong>t</strong> = वर्षों में समय</li>
+        </ul>
+
+        <h3>चक्रवृद्धि ब्याज बनाम साधारण ब्याज</h3>
+        <ul>
+            <li><strong>साधारण ब्याज:</strong> केवल मूलधन पर ब्याज (P × r × t)</li>
+            <li><strong>चक्रवृद्धि ब्याज:</strong> मूलधन + संचित ब्याज पर ब्याज</li>
+            <li>लंबी अवधि में चक्रवृद्धि ब्याज अधिक रिटर्न देता है</li>
+        </ul>
+
+        <h3>उदाहरण</h3>
+        <p>₹1,00,000, 8% पर 10 वर्ष के लिए:</p>
+        <ul>
+            <li><strong>साधारण ब्याज:</strong> ₹1,80,000 (ब्याज: ₹80,000)</li>
+            <li><strong>चक्रवृद्धि ब्याज (वार्षिक):</strong> ₹2,15,892 (ब्याज: ₹1,15,892)</li>
+            <li><strong>अंतर:</strong> चक्रवृद्धि से ₹35,892 अधिक</li>
+        </ul>
+
+        <h3>चक्रवृद्धि ब्याज कहाँ उपयोग होता है?</h3>
+        <ul>
+            <li>फिक्स्ड डिपॉजिट (FD)</li>
+            <li>आवर्ती जमा (RD)</li>
+            <li>पब्लिक प्रोविडेंट फंड (PPF)</li>
+            <li>म्यूचुअल फंड (SIP, लम्पसम)</li>
+            <li>नेशनल पेंशन सिस्टम (NPS)</li>
+            <li>बचत खाता ब्याज</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>जितनी बार ब्याज चक्रवृद्धि होता है, उतनी अधिक अंतिम राशि मिलती है। दैनिक चक्रवृद्धि सबसे अधिक रिटर्न देती है, उसके बाद मासिक, त्रैमासिक, अर्ध-वार्षिक और वार्षिक।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

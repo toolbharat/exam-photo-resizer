@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>PPF Calculator - Public Provident Fund Maturity Calculator</title>
+    <meta name="description" content="Free PPF calculator for India. Calculate your Public Provident Fund maturity amount, interest earned, and tax-free returns at current rates.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/ppf-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/ppf-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="fd-calculator.html">FD</a>
+            <a href="nps-calculator.html">NPS</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>PPF Calculator</h1>
+        <p>Calculate your PPF maturity amount and tax-free returns.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your PPF Details</h2>
+        <form onsubmit="return false;">
+            <p>Yearly Investment (₹)</p>
+            <input type="number" id="ppfAmount" placeholder="e.g. 150000" min="500" max="150000" value="150000">
+
+            <p>Interest Rate (% per year)</p>
+            <input type="number" id="ppfRate" placeholder="e.g. 7.1" step="0.1" min="1" max="15" value="7.1">
+
+            <p>Investment Period (Years)</p>
+            <input type="number" id="ppfYears" placeholder="e.g. 15" min="1" max="50" value="15">
+
+            <button type="button" onclick="calculatePPF()">Calculate PPF</button>
+        </form>
+        <div id="ppfResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is PPF?</h2>
+        <p>PPF (Public Provident Fund) is a long-term savings scheme backed by the Government of India. It offers guaranteed returns and is one of the most popular tax-saving instruments under Section 80C.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Tenure:</strong> 15 years (extendable in blocks of 5 years)</li>
+            <li><strong>Minimum investment:</strong> ₹500 per year</li>
+            <li><strong>Maximum investment:</strong> ₹1,50,000 per year</li>
+            <li><strong>Interest rate:</strong> Government-notified, revised quarterly (currently ~7.1%)</li>
+            <li><strong>Tax status:</strong> EEE (Exempt-Exempt-Exempt)</li>
+        </ul>
+
+        <h3>Tax Benefits</h3>
+        <ul>
+            <li><strong>Investment:</strong> Deductible under Section 80C (up to ₹1.5 lakh)</li>
+            <li><strong>Interest:</strong> Fully tax-free</li>
+            <li><strong>Maturity:</strong> Fully tax-free</li>
+            <li><strong>Note:</strong> 80C deduction is available only under the Old Tax Regime</li>
+        </ul>
+
+        <h3>PPF Interest Calculation</h3>
+        <p>PPF interest is calculated on the <strong>minimum balance between the 5th and last day of each month</strong>. Interest is credited annually on 31st March.</p>
+
+        <h3>Important Note</h3>
+        <p>PPF interest rates are subject to change every quarter. The calculator uses the rate you enter. Check the current rate from the National Savings Institute before investing.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

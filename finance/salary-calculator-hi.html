@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>सैलरी कैलकुलेटर - इंडिया फाइनेंस कैलकुलेटर</title>
+    <meta name="description" content="मुफ्त सैलरी कैलकुलेटर - अपनी बेसिक सैलरी, HRA, PF और कटौतियों से सटीक मासिक इन-हैंड सैलरी की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/salary-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/salary-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="gst-calculator-hi.html">GST</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="salary-calculator-hi.html">सैलरी</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="salary-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>सैलरी कैलकुलेटर</h1>
+        <p>अपनी सैलरी कटौती और मासिक इन-हैंड सैलरी की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>मासिक सैलरी घटक (₹)</h2>
+        <form onsubmit="return false;">
+
+            <p>बेसिक सैलरी</p>
+            <input type="number" id="basicSalary" placeholder="जैसे 25000" min="0">
+
+            <p>HRA (हाउस रेंट अलाउंस)</p>
+            <input type="number" id="hra" placeholder="जैसे 10000" min="0">
+
+            <p>स्पेशल अलाउंस</p>
+            <input type="number" id="specialAllowance" placeholder="जैसे 8000" min="0">
+
+            <p>अन्य अलाउंस (LTA, भोजन, आदि)</p>
+            <input type="number" id="otherAllowances" placeholder="जैसे 2000" min="0">
+
+            <h2>कटौतियाँ (मासिक)</h2>
+
+            <p>कर्मचारी PF (बेसिक का 12%)</p>
+            <input type="number" id="empPF" placeholder="जैसे 3000" min="0">
+
+            <p>प्रोफेशनल टैक्स</p>
+            <input type="number" id="profTax" placeholder="जैसे 200" min="0">
+
+            <p>अन्य कटौतियाँ (बीमा, लोन, आदि)</p>
+            <input type="number" id="otherDeductions" placeholder="जैसे 500" min="0">
+
+            <p>इनकम टैक्स लागू करें (अनुमानित)</p>
+            <select id="applyTax">
+                <option value="no" selected>नहीं (टैक्स छोड़ें)</option>
+                <option value="yes">हाँ (टैक्स की गणना करें)</option>
+            </select>
+
+            <button type="button" onclick="calculateSalary()">सैलरी की गणना करें</button>
+        </form>
+        <div id="salaryResult"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>NPS कैलकुलेटर - नेशनल पेंशन सिस्टम रिटर्न और पेंशन की गणना</title>
+    <meta name="description" content="मुफ्त NPS कैलकुलेटर - अपनी नेशनल पेंशन सिस्टम कॉर्पस, मासिक पेंशन और धारा 80CCD(1B) के तहत कर बचत की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/nps-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/nps-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="insurance-calculator-hi.html">बीमा</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="nps-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>NPS कैलकुलेटर</h1>
+        <p>अपनी नेशनल पेंशन सिस्टम कॉर्पस, मासिक पेंशन और कर बचत की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी NPS जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>आपकी वर्तमान आयु (वर्ष)</p>
+            <input type="number" id="npsAge" placeholder="जैसे 30" min="18" max="60" value="30">
+
+            <p>मासिक योगदान (₹)</p>
+            <input type="number" id="npsMonthly" placeholder="जैसे 5000" min="500" value="5000">
+
+            <p>अपेक्षित वार्षिक रिटर्न (%)</p>
+            <input type="number" id="npsReturn" placeholder="जैसे 10" step="0.1" min="5" max="15" value="10">
+
+            <p>सेवानिवृत्ति आयु</p>
+            <select id="npsRetireAge">
+                <option value="60" selected>60 वर्ष</option>
+                <option value="65">65 वर्ष</option>
+                <option value="70">70 वर्ष</option>
+            </select>
+
+            <button type="button" onclick="calculateNPS()">NPS की गणना करें</button>
+        </form>
+        <div id="npsResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>NPS क्या है?</h2>
+        <p>नेशनल पेंशन सिस्टम (NPS) एक सरकार प्रायोजित सेवानिवृत्ति बचत योजना है। यह आपको नियमित योगदान के माध्यम से सेवानिवृत्ति कॉर्पस बनाने की अनुमति देता है, जिसमें धारा 80CCD के तहत कर लाभ मिलता है।</p>
+
+        <h3>NPS कैसे काम करता है</h3>
+        <ul>
+            <li>आप सेवानिवृत्ति (60 वर्ष) तक नियमित योगदान करते हैं</li>
+            <li>धन इक्विटी, कॉर्पोरेट बॉन्ड और सरकारी प्रतिभूतियों में निवेश किया जाता है</li>
+            <li>सेवानिवृत्ति पर, आप <strong>60% एकमुश्त निकाल सकते हैं</strong> (कर मुक्त)</li>
+            <li><strong>40% का उपयोग वार्षिकी खरीदने के लिए करना होगा</strong> (मासिक पेंशन)</li>
+        </ul>
+
+        <h3>कर लाभ</h3>
+        <ul>
+            <li><strong>धारा 80CCD(1):</strong> ₹1.5 लाख की संयुक्त सीमा का हिस्सा (पुरानी व्यवस्था)</li>
+            <li><strong>धारा 80CCD(1B):</strong> अतिरिक्त ₹50,000 कटौती (पुरानी व्यवस्था)</li>
+            <li><strong>धारा 80CCD(2):</strong> नियोक्ता योगदान — नई व्यवस्था में भी उपलब्ध</li>
+        </ul>
+
+        <h3>वार्षिकी विकल्प</h3>
+        <p>40% वार्षिकी भाग का उपयोग बीमा कंपनी से पेंशन योजना खरीदने के लिए किया जाता है। सामान्य विकल्प:</p>
+        <ul>
+            <li>जीवन भर पेंशन (केवल स्वयं)</li>
+            <li>जीवन भर पेंशन खरीद मूल्य की वापसी के साथ</li>
+            <li>जीवन भर पेंशन, पति/पत्नी को 50%</li>
+            <li>जीवन भर पेंशन, पति/पत्नी को 100%</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>NPS रिटर्न मार्केट-लिंक्ड हैं और गारंटीड नहीं हैं। इक्विटी एक्सपोजर 75% तक सीमित है (निजी क्षेत्र के लिए)। यह कैलकुलेटर आपके इनपुट के आधार पर अनुमान प्रदान करता है।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

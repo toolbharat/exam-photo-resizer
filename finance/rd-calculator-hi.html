@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>RD कैलकुलेटर - आवर्ती जमा मैच्योरिटी कैलकुलेटर</title>
+    <meta name="description" content="मुफ्त RD कैलकुलेटर - अपनी आवर्ती जमा मैच्योरिटी राशि, अर्जित ब्याज और मासिक निवेश रिटर्न की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/rd-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/rd-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="ppf-calculator-hi.html">PPF</a>
+            <a href="nps-calculator-hi.html">NPS</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="rd-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>RD कैलकुलेटर</h1>
+        <p>अपनी आवर्ती जमा मैच्योरिटी राशि और अर्जित ब्याज की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी RD जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>मासिक जमा (₹)</p>
+            <input type="number" id="rdAmount" placeholder="जैसे 5000" min="100" value="5000">
+
+            <p>ब्याज दर (% प्रति वर्ष)</p>
+            <input type="number" id="rdRate" placeholder="जैसे 7" step="0.1" min="1" max="15" value="7">
+
+            <p>अवधि (महीने)</p>
+            <input type="number" id="rdMonths" placeholder="जैसे 24" min="6" max="120" value="24">
+
+            <button type="button" onclick="calculateRD()">RD की गणना करें</button>
+        </form>
+        <div id="rdResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>RD क्या है?</h2>
+        <p>RD (आवर्ती जमा) बैंकों और डाकघरों द्वारा प्रदान की जाने वाली एक बचत योजना है जहां आप एक निश्चित अवधि के लिए हर महीने एक निश्चित राशि जमा करते हैं। यह फिक्स्ड डिपॉजिट के समान ब्याज दर अर्जित करता है और नियमित बचतकर्ताओं के लिए आदर्श है।</p>
+
+        <h3>मुख्य विशेषताएं</h3>
+        <ul>
+            <li><strong>मासिक जमा:</strong> हर महीने निश्चित राशि</li>
+            <li><strong>अवधि:</strong> 6 महीने से 10 वर्ष</li>
+            <li><strong>ब्याज दर:</strong> FD दरों के समान (आमतौर पर 7-8%)</li>
+            <li><strong>चक्रवृद्धि:</strong> त्रैमासिक (अधिकांश बैंक)</li>
+            <li><strong>न्यूनतम जमा:</strong> ₹100 प्रति माह (बैंक के अनुसार भिन्न)</li>
+        </ul>
+
+        <h3>RD बनाम FD</h3>
+        <ul>
+            <li><strong>FD:</strong> एकमुश्त जमा</li>
+            <li><strong>RD:</strong> अवधि के दौरान मासिक जमा</li>
+            <li><strong>दोनों:</strong> समान ब्याज दरें, समान कर उपचार</li>
+        </ul>
+
+        <h3>RD ब्याज पर कर</h3>
+        <ul>
+            <li>ब्याज आपके आयकर स्लैब के अनुसार कर योग्य है</li>
+            <li>यदि वार्षिक ब्याज ₹40,000 से अधिक है तो TDS (10%) लागू होता है (वरिष्ठ नागरिकों के लिए ₹50,000)</li>
+            <li>Form 15G/15H जमा करने पर TDS नहीं</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>RD ब्याज दरें बैंक और अवधि के अनुसार भिन्न होती हैं। वरिष्ठ नागरिकों को आमतौर पर 0.5% अधिक दर मिलती है। यह कैलकुलेटर त्रैमासिक चक्रवृद्धि का उपयोग करता है, जो अधिकांश बैंकों के लिए मानक है।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

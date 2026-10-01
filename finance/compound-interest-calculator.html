@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>Compound Interest Calculator - Calculate CI with Formula</title>
+    <meta name="description" content="Free compound interest calculator for India. Calculate compound interest with monthly, quarterly, half-yearly, or yearly compounding.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/compound-interest-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/compound-interest-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="fd-calculator.html">FD</a>
+            <a href="rd-calculator.html">RD</a>
+            <a href="ppf-calculator.html">PPF</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Compound Interest Calculator</h1>
+        <p>Calculate how your money grows with the power of compounding.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your Details</h2>
+        <form onsubmit="return false;">
+            <p>Principal Amount (₹)</p>
+            <input type="number" id="ciPrincipal" placeholder="e.g. 100000" min="1000" value="100000">
+
+            <p>Interest Rate (% per year)</p>
+            <input type="number" id="ciRate" placeholder="e.g. 8" step="0.1" min="0.1" max="30" value="8">
+
+            <p>Time Period (Years)</p>
+            <input type="number" id="ciYears" placeholder="e.g. 10" min="1" max="50" value="10">
+
+            <p>Compounding Frequency</p>
+            <select id="ciFrequency">
+                <option value="1">Yearly</option>
+                <option value="2">Half-Yearly</option>
+                <option value="4" selected>Quarterly</option>
+                <option value="12">Monthly</option>
+                <option value="365">Daily</option>
+            </select>
+
+            <button type="button" onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+        </form>
+        <div id="ciResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is Compound Interest?</h2>
+        <p>Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. It is often called "interest on interest" and can significantly grow your money over time.</p>
+
+        <h3>Formula</h3>
+        <p><strong>A = P × (1 + r/n)^(n×t)</strong></p>
+        <ul>
+            <li><strong>A</strong> = Final amount (maturity value)</li>
+            <li><strong>P</strong> = Principal amount</li>
+            <li><strong>r</strong> = Annual interest rate (as decimal)</li>
+            <li><strong>n</strong> = Number of times interest compounds per year</li>
+            <li><strong>t</strong> = Time in years</li>
+        </ul>
+
+        <h3>Compound Interest vs Simple Interest</h3>
+        <ul>
+            <li><strong>Simple Interest:</strong> Interest only on principal (P × r × t)</li>
+            <li><strong>Compound Interest:</strong> Interest on principal + accumulated interest</li>
+            <li>Compound interest gives higher returns over long periods</li>
+        </ul>
+
+        <h3>Example</h3>
+        <p>₹1,00,000 at 8% for 10 years:</p>
+        <ul>
+            <li><strong>Simple Interest:</strong> ₹1,80,000 (interest: ₹80,000)</li>
+            <li><strong>Compound Interest (yearly):</strong> ₹2,15,892 (interest: ₹1,15,892)</li>
+            <li><strong>Difference:</strong> ₹35,892 more with compounding</li>
+        </ul>
+
+        <h3>Where is Compound Interest Used?</h3>
+        <ul>
+            <li>Fixed Deposits (FD)</li>
+            <li>Recurring Deposits (RD)</li>
+            <li>Public Provident Fund (PPF)</li>
+            <li>Mutual Funds (SIP, Lumpsum)</li>
+            <li>National Pension System (NPS)</li>
+            <li>Savings Account interest</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>The more frequently interest is compounded, the higher the final amount. Daily compounding gives the highest returns, followed by monthly, quarterly, half-yearly, and yearly.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

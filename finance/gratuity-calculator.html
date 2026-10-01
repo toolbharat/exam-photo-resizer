@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>Gratuity Calculator - Calculate Your Gratuity Amount (India)</title>
+    <meta name="description" content="Free gratuity calculator for India. Calculate your gratuity amount based on last drawn salary and years of service. Tax exemption up to ₹20 lakh.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/gratuity-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/gratuity-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="gst-calculator.html">GST</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="fd-calculator.html">FD</a>
+            <a href="salary-calculator.html">Salary</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="loan-eligibility-calculator.html">Loan Eligibility</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Gratuity Calculator</h1>
+        <p>Calculate your gratuity amount based on your last drawn salary and years of service.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your Details</h2>
+        <form onsubmit="return false;">
+            <p>Last Drawn Monthly Salary (Basic + DA) (₹)</p>
+            <input type="number" id="lastSalary" placeholder="e.g. 50000" min="1000">
+
+            <p>Years of Service</p>
+            <input type="number" id="serviceYears" placeholder="e.g. 10" min="1" max="50" step="0.5">
+
+            <button type="button" onclick="calculateGratuity()">Calculate Gratuity</button>
+        </form>
+        <div id="gratuityResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is Gratuity?</h2>
+        <p>Gratuity is a lump sum payment made by an employer to an employee as a token of appreciation for their service. It is governed by the Payment of Gratuity Act, 1972.</p>
+
+        <h3>Eligibility</h3>
+        <ul>
+            <li>Employee must have completed <strong>5 years</strong> of continuous service</li>
+            <li>Payable on retirement, resignation, superannuation, or death</li>
+            <li>Exception: 5-year rule waived in case of death or disability</li>
+        </ul>
+
+        <h3>Formula</h3>
+        <p><strong>Gratuity = (15 × Last Drawn Salary × Years of Service) / 26</strong></p>
+        <ul>
+            <li>15 days' salary for each completed year</li>
+            <li>26 = number of working days in a month</li>
+            <li>Last drawn salary = Basic + Dearness Allowance</li>
+        </ul>
+
+        <h3>Tax Exemption</h3>
+        <ul>
+            <li>Gratuity up to <strong>₹20 lakh</strong> is tax-free for eligible employees</li>
+            <li>Amount above ₹20 lakh is taxable as per income tax rules</li>
+            <li>Applies to employees covered under the Gratuity Act</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>If your service is more than 6 months in the last year, it is rounded up to the next full year. If less than 6 months, it is ignored.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

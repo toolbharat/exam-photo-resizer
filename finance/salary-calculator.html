@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>Salary Calculator - India Finance Calculator</title>
+    <meta name="description" content="Free Salary Calculator for India. Enter your basic salary, HRA, PF, and deductions to calculate accurate monthly in-hand salary.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="gst-calculator.html">GST</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="fd-calculator.html">FD</a>
+            <a href="salary-calculator.html">Salary</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Salary Calculator</h1>
+        <p>Enter your salary components to calculate accurate in-hand salary.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Monthly Salary Components (₹)</h2>
+        <form onsubmit="return false;">
+
+            <p>Basic Salary</p>
+            <input type="number" id="basicSalary" placeholder="e.g. 25000" min="0">
+
+            <p>HRA (House Rent Allowance)</p>
+            <input type="number" id="hra" placeholder="e.g. 10000" min="0">
+
+            <p>Special Allowance</p>
+            <input type="number" id="specialAllowance" placeholder="e.g. 8000" min="0">
+
+            <p>Other Allowances (LTA, Food, etc.)</p>
+            <input type="number" id="otherAllowances" placeholder="e.g. 2000" min="0">
+
+            <h2>Deductions (Monthly)</h2>
+
+            <p>Employee PF (12% of Basic, if applicable)</p>
+            <input type="number" id="empPF" placeholder="e.g. 3000" min="0">
+
+            <p>Professional Tax</p>
+            <input type="number" id="profTax" placeholder="e.g. 200" min="0">
+
+            <p>Other Deductions (Insurance, Loans, etc.)</p>
+            <input type="number" id="otherDeductions" placeholder="e.g. 500" min="0">
+
+            <p>Apply Income Tax (approx, based on annual gross)</p>
+            <select id="applyTax">
+                <option value="no" selected>No (Exclude Tax)</option>
+                <option value="yes">Yes (Calculate Tax)</option>
+            </select>
+
+            <button type="button" onclick="calculateSalary()">Calculate Salary</button>
+        </form>
+        <div id="salaryResult"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

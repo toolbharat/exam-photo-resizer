@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>Lumpsum Calculator - Mutual Fund One-Time Investment Returns</title>
+    <meta name="description" content="Free lumpsum calculator for India. Calculate returns on your one-time mutual fund investment with compound growth.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/lumpsum-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/lumpsum-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="swp-calculator.html">SWP</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Lumpsum Calculator</h1>
+        <p>Calculate returns on your one-time mutual fund investment.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your Investment Details</h2>
+        <form onsubmit="return false;">
+            <p>Investment Amount (₹)</p>
+            <input type="number" id="lsAmount" placeholder="e.g. 500000" min="1000" value="500000">
+
+            <p>Expected Annual Return (%)</p>
+            <input type="number" id="lsReturn" placeholder="e.g. 12" step="0.1" min="1" max="30" value="12">
+
+            <p>Investment Period (Years)</p>
+            <input type="number" id="lsYears" placeholder="e.g. 10" min="1" max="40" value="10">
+
+            <button type="button" onclick="calculateLumpsum()">Calculate Returns</button>
+        </form>
+        <div id="lsResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is Lumpsum Investment?</h2>
+        <p>Lumpsum investment means investing a large amount of money at once into a mutual fund scheme, instead of investing in regular installments (SIP).</p>
+
+        <h3>When to Choose Lumpsum?</h3>
+        <ul>
+            <li>You have received a windfall (bonus, inheritance, property sale)</li>
+            <li>You have a large surplus sitting idle</li>
+            <li>You have a long investment horizon (10+ years)</li>
+            <li>You are comfortable with short-term market volatility</li>
+        </ul>
+
+        <h3>Lumpsum vs SIP</h3>
+        <ul>
+            <li><strong>Lumpsum:</strong> Entire amount invested from day one</li>
+            <li><strong>SIP:</strong> Amount invested gradually over time</li>
+            <li><strong>Best strategy:</strong> Depends on your cash flow and market conditions</li>
+        </ul>
+
+        <h3>Formula Used</h3>
+        <p><strong>Maturity Value = P × (1 + r)^n</strong></p>
+        <ul>
+            <li>P = Principal (investment amount)</li>
+            <li>r = Annual return rate (as decimal)</li>
+            <li>n = Number of years</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>Mutual fund returns are market-linked and not guaranteed. The 12% assumed return is only an illustration. Actual returns may be higher or lower.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

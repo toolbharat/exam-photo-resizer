@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>SWP कैलकुलेटर - सिस्टमैटिक विथड्रॉल प्लान कैलकुलेटर</title>
+    <meta name="description" content="मुफ्त SWP कैलकुलेटर - जानें आपकी म्यूचुअल फंड कॉर्पस नियमित मासिक निकासी के साथ कितने समय तक चलेगी।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/swp-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/swp-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="nps-calculator-hi.html">NPS</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="swp-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>SWP कैलकुलेटर</h1>
+        <p>जानें आपकी म्यूचुअल फंड कॉर्पस नियमित मासिक निकासी के साथ कितने समय तक चलेगी।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी SWP जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>कुल निवेश (₹)</p>
+            <input type="number" id="swpInvestment" placeholder="जैसे 1000000" min="10000" value="1000000">
+
+            <p>मासिक निकासी (₹)</p>
+            <input type="number" id="swpWithdrawal" placeholder="जैसे 10000" min="500" value="10000">
+
+            <p>अपेक्षित वार्षिक रिटर्न (%)</p>
+            <input type="number" id="swpReturn" placeholder="जैसे 8" step="0.1" min="1" max="20" value="8">
+
+            <p>निकासी अवधि (वर्ष)</p>
+            <input type="number" id="swpYears" placeholder="जैसे 10" min="1" max="40" value="10">
+
+            <button type="button" onclick="calculateSWP()">SWP की गणना करें</button>
+        </form>
+        <div id="swpResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>SWP क्या है?</h2>
+        <p>SWP (सिस्टमैटिक विथड्रॉल प्लान) एक सुविधा है जहां आप अपने म्यूचुअल फंड निवेश से नियमित अंतराल पर एक निश्चित राशि निकालते हैं। यह आमतौर पर सेवानिवृत्त लोगों द्वारा अपनी कॉर्पस से नियमित आय उत्पन्न करने के लिए उपयोग किया जाता है।</p>
+
+        <h3>SWP कैसे काम करता है</h3>
+        <ul>
+            <li>आप म्यूचुअल फंड योजना में एकमुश्त निवेश करते हैं</li>
+            <li>आप एक निश्चित निकासी राशि निर्धारित करते हैं (मासिक, त्रैमासिक, आदि)</li>
+            <li>शेष कॉर्पस रिटर्न कमाता रहता है</li>
+            <li>निकासी बनाम रिटर्न के आधार पर कॉर्पस समय के साथ कम होता जाता है</li>
+        </ul>
+
+        <h3>SWP क्यों उपयोगी है</h3>
+        <ul>
+            <li><strong>नियमित आय:</strong> आपके निवेश से पेंशन की तरह</li>
+            <li><strong>कर कुशल:</strong> केवल पूंजीगत लाभ भाग पर कर लगता है</li>
+            <li><strong>लचीला:</strong> आप कभी भी निकासी राशि बदल सकते हैं</li>
+            <li><strong>FD से बेहतर:</strong> फिक्स्ड डिपॉजिट से संभावित उच्च रिटर्न</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>SWP रिटर्न मार्केट-लिंक्ड हैं और गारंटीड नहीं हैं। यदि फंड खराब प्रदर्शन करता है, तो आपकी कॉर्पस अपेक्षा से तेजी से कम हो सकती है। दीर्घकालिक स्थिरता के लिए रूढ़िवादी निकासी दर (वार्षिक 4-6%) पर विचार करें।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

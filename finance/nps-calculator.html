@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>NPS Calculator - Calculate National Pension System Returns & Pension</title>
+    <meta name="description" content="Free NPS calculator for India. Calculate your National Pension System corpus, monthly pension, and tax savings under Section 80CCD(1B).">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/nps-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/nps-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="insurance-calculator.html">Insurance</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>NPS Calculator</h1>
+        <p>Calculate your National Pension System corpus, monthly pension, and tax savings.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your NPS Details</h2>
+        <form onsubmit="return false;">
+            <p>Your Current Age (Years)</p>
+            <input type="number" id="npsAge" placeholder="e.g. 30" min="18" max="60" value="30">
+
+            <p>Monthly Contribution (₹)</p>
+            <input type="number" id="npsMonthly" placeholder="e.g. 5000" min="500" value="5000">
+
+            <p>Expected Annual Return (%)</p>
+            <input type="number" id="npsReturn" placeholder="e.g. 10" step="0.1" min="5" max="15" value="10">
+
+            <p>Retirement Age</p>
+            <select id="npsRetireAge">
+                <option value="60" selected>60 years</option>
+                <option value="65">65 years</option>
+                <option value="70">70 years</option>
+            </select>
+
+            <button type="button" onclick="calculateNPS()">Calculate NPS</button>
+        </form>
+        <div id="npsResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is NPS?</h2>
+        <p>The National Pension System (NPS) is a government-sponsored retirement savings scheme. It allows you to build a retirement corpus through regular contributions, with tax benefits under Section 80CCD.</p>
+
+        <h3>How NPS Works</h3>
+        <ul>
+            <li>You contribute regularly until retirement (age 60)</li>
+            <li>Funds are invested in equity, corporate bonds, and government securities</li>
+            <li>At retirement, you can withdraw <strong>60% as lump sum</strong> (tax-free)</li>
+            <li><strong>40% must be used to buy an annuity</strong> (monthly pension)</li>
+        </ul>
+
+        <h3>Tax Benefits</h3>
+        <ul>
+            <li><strong>Section 80CCD(1):</strong> Part of the ₹1.5 lakh combined limit (Old Regime)</li>
+            <li><strong>Section 80CCD(1B):</strong> Additional ₹50,000 deduction (Old Regime)</li>
+            <li><strong>Section 80CCD(2):</strong> Employer contribution — available in New Regime too</li>
+        </ul>
+
+        <h3>Annuity Options</h3>
+        <p>The 40% annuity portion is used to buy a pension plan from an insurance company. Common options include:</p>
+        <ul>
+            <li>Pension for life (self only)</li>
+            <li>Pension for life with return of purchase price</li>
+            <li>Pension for life with 50% to spouse</li>
+            <li>Pension for life with 100% to spouse</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>NPS returns are market-linked and not guaranteed. Equity exposure is capped at 75% (for private sector). This calculator provides an estimate based on your inputs.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

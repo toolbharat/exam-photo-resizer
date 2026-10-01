@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>RD Calculator - Recurring Deposit Maturity Calculator</title>
+    <meta name="description" content="Free RD calculator for India. Calculate your Recurring Deposit maturity amount, interest earned, and monthly investment returns.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/rd-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/rd-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="fd-calculator.html">FD</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="ppf-calculator.html">PPF</a>
+            <a href="nps-calculator.html">NPS</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>RD Calculator</h1>
+        <p>Calculate your Recurring Deposit maturity amount and interest earned.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your RD Details</h2>
+        <form onsubmit="return false;">
+            <p>Monthly Deposit (₹)</p>
+            <input type="number" id="rdAmount" placeholder="e.g. 5000" min="100" value="5000">
+
+            <p>Interest Rate (% per year)</p>
+            <input type="number" id="rdRate" placeholder="e.g. 7" step="0.1" min="1" max="15" value="7">
+
+            <p>Tenure (Months)</p>
+            <input type="number" id="rdMonths" placeholder="e.g. 24" min="6" max="120" value="24">
+
+            <button type="button" onclick="calculateRD()">Calculate RD</button>
+        </form>
+        <div id="rdResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is RD?</h2>
+        <p>RD (Recurring Deposit) is a savings scheme offered by banks and post offices where you deposit a fixed amount every month for a fixed tenure. It earns interest at a rate similar to fixed deposits and is ideal for regular savers.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Monthly deposit:</strong> Fixed amount every month</li>
+            <li><strong>Tenure:</strong> 6 months to 10 years</li>
+            <li><strong>Interest rate:</strong> Similar to FD rates (7-8% typically)</li>
+            <li><strong>Compounding:</strong> Quarterly (most banks)</li>
+            <li><strong>Minimum deposit:</strong> ₹100 per month (varies by bank)</li>
+        </ul>
+
+        <h3>RD vs FD</h3>
+        <ul>
+            <li><strong>FD:</strong> One-time lump sum deposit</li>
+            <li><strong>RD:</strong> Monthly deposits over the tenure</li>
+            <li><strong>Both:</strong> Same interest rates, same tax treatment</li>
+        </ul>
+
+        <h3>Tax on RD Interest</h3>
+        <ul>
+            <li>Interest is taxable as per your income tax slab</li>
+            <li>TDS (10%) applies if annual interest exceeds ₹40,000 (₹50,000 for senior citizens)</li>
+            <li>No TDS if you submit Form 15G/15H</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>RD interest rates vary by bank and tenure. Senior citizens usually get 0.5% higher rates. This calculator uses quarterly compounding, which is standard for most banks.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

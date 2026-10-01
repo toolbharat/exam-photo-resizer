@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>GST Calculator - India Finance Calculator</title>
+    <meta name="description" content="Free GST Calculator for India. Calculate GST amount, net price, and gross price with 5%, 12%, 18%, 28% slabs instantly.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="gst-calculator.html">GST</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="fd-calculator.html">FD</a>
+            <a href="salary-calculator.html">Salary</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+                        <a href="blog.html">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>GST Calculator</h1>
+        <p>Calculate GST amount and final price instantly.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>GST Details</h2>
+        <form onsubmit="return false;">
+            <p>Amount (₹)</p>
+            <input type="number" id="gstAmount" placeholder="e.g. 10000" min="1">
+
+            <p>GST Rate (%)</p>
+            <select id="gstRate">
+                <option value="5">5%</option>
+                <option value="12">12%</option>
+                <option value="18" selected>18%</option>
+                <option value="28">28%</option>
+            </select>
+
+            <p>Calculation Type</p>
+            <select id="gstType">
+                <option value="add">Add GST (Exclusive)</option>
+                <option value="remove">Remove GST (Inclusive)</option>
+            </select>
+
+            <button type="button" onclick="calculateGST()">Calculate GST</button>
+        </form>
+        <div id="gstResult"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

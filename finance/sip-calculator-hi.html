@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>SIP कैलकुलेटर - इंडिया फाइनेंस कैलकुलेटर</title>
+    <meta name="description" content="मुफ्त SIP कैलकुलेटर - अपने म्यूचुअल फंड SIP निवेश की वृद्धि, निवेश राशि और मैच्योरिटी वैल्यू का अनुमान लगाएं।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/sip-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/sip-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="gst-calculator-hi.html">GST</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="salary-calculator-hi.html">सैलरी</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="sip-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>SIP कैलकुलेटर</h1>
+        <p>अपने SIP निवेश की वृद्धि और रिटर्न का अनुमान लगाएं।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>SIP की जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>मासिक निवेश (₹)</p>
+            <input type="number" id="sipAmount" placeholder="जैसे 5000" min="100">
+
+            <p>अपेक्षित रिटर्न दर (% प्रति वर्ष)</p>
+            <input type="number" id="sipRate" placeholder="जैसे 12" step="0.1" min="0.1" max="50">
+
+            <p>निवेश अवधि (वर्ष)</p>
+            <input type="number" id="sipYears" placeholder="जैसे 10" min="1" max="50">
+
+            <button type="button" onclick="calculateSIP()">SIP की गणना करें</button>
+        </form>
+        <div id="sipResult"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

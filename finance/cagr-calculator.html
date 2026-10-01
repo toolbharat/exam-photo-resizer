@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>CAGR Calculator - Compound Annual Growth Rate Calculator</title>
+    <meta name="description" content="Free CAGR calculator for India. Calculate Compound Annual Growth Rate of your investments, mutual funds, and stocks.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/cagr-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/cagr-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="lumpsum-calculator.html">Lumpsum</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>CAGR Calculator</h1>
+        <p>Calculate the Compound Annual Growth Rate of your investments.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your Investment Details</h2>
+        <form onsubmit="return false;">
+            <p>Initial Investment Value (₹)</p>
+            <input type="number" id="cagrInitial" placeholder="e.g. 100000" min="1" value="100000">
+
+            <p>Final Investment Value (₹)</p>
+            <input type="number" id="cagrFinal" placeholder="e.g. 250000" min="1" value="250000">
+
+            <p>Investment Period (Years)</p>
+            <input type="number" id="cagrYears" placeholder="e.g. 5" min="0.5" max="50" step="0.5" value="5">
+
+            <button type="button" onclick="calculateCAGR()">Calculate CAGR</button>
+        </form>
+        <div id="cagrResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is CAGR?</h2>
+        <p>CAGR (Compound Annual Growth Rate) is the average annual growth rate of an investment over a specific period. It smooths out the returns and gives a single number that represents how much your investment grew each year.</p>
+
+        <h3>Formula</h3>
+        <p><strong>CAGR = [(Final Value / Initial Value)^(1/n) − 1] × 100</strong></p>
+        <ul>
+            <li>n = Number of years</li>
+        </ul>
+
+        <h3>Why CAGR is Useful</h3>
+        <ul>
+            <li>Compare different investments over the same period</li>
+            <li>Measure mutual fund and stock performance</li>
+            <li>Track business revenue growth</li>
+            <li>Plan long-term financial goals</li>
+        </ul>
+
+        <h3>CAGR vs Absolute Return</h3>
+        <ul>
+            <li><strong>Absolute Return:</strong> Total return (e.g., 100% in 5 years)</li>
+            <li><strong>CAGR:</strong> Average annual return (e.g., 14.87% per year)</li>
+            <li>CAGR gives a better picture of performance over time</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>CAGR assumes steady growth, but in reality, investments fluctuate. It is a useful metric for comparison, but it does not show the volatility of returns.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

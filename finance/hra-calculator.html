@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>HRA Exemption Calculator - House Rent Allowance Tax Exemption</title>
+    <meta name="description" content="Free HRA exemption calculator for India. Calculate your House Rent Allowance tax exemption under Section 10(13A) for FY 2025-26.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/hra-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/hra-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="salary-calculator.html">Salary</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="ppf-calculator.html">PPF</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>HRA Exemption Calculator</h1>
+        <p>Calculate your House Rent Allowance tax exemption under Section 10(13A).</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your Details</h2>
+        <form onsubmit="return false;">
+            <p>Basic Salary (Monthly) (₹)</p>
+            <input type="number" id="hraBasic" placeholder="e.g. 30000" min="1000" value="30000">
+
+            <p>Dearness Allowance (Monthly) (₹) — Enter 0 if not applicable</p>
+            <input type="number" id="hraDA" placeholder="e.g. 0" min="0" value="0">
+
+            <p>HRA Received (Monthly) (₹)</p>
+            <input type="number" id="hraReceived" placeholder="e.g. 12000" min="0" value="12000">
+
+            <p>Total Rent Paid (Monthly) (₹)</p>
+            <input type="number" id="hraRent" placeholder="e.g. 15000" min="0" value="15000">
+
+            <p>City Type</p>
+            <select id="hraCity">
+                <option value="metro">Metro (Delhi, Mumbai, Kolkata, Chennai)</option>
+                <option value="nonmetro" selected>Non-Metro</option>
+            </select>
+
+            <button type="button" onclick="calculateHRA()">Calculate HRA Exemption</button>
+        </form>
+        <div id="hraResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>What is HRA Exemption?</h2>
+        <p>HRA (House Rent Allowance) is a salary component provided by employers to meet rental expenses. Under Section 10(13A), a portion of HRA is exempt from tax if you live in a rented house.</p>
+
+        <h3>Exemption Calculation</h3>
+        <p>The exempt HRA is the <strong>minimum of these three</strong>:</p>
+        <ol>
+            <li><strong>Actual HRA received</strong> from employer</li>
+            <li><strong>Rent paid − 10% of (Basic + DA)</strong></li>
+            <li><strong>50% of (Basic + DA)</strong> for metro cities, <strong>40%</strong> for non-metro</li>
+        </ol>
+
+        <h3>Key Conditions</h3>
+        <ul>
+            <li>Available only under the <strong>Old Tax Regime</strong></li>
+            <li>You must actually live in a rented house</li>
+            <li>Rent must be paid to the landlord</li>
+            <li>If rent exceeds ₹1 lakh/year, landlord's PAN is required</li>
+            <li>You cannot claim HRA if you own the house you live in</li>
+        </ul>
+
+        <h3>Metro Cities (50%)</h3>
+        <ul>
+            <li>Delhi</li>
+            <li>Mumbai</li>
+            <li>Kolkata</li>
+            <li>Chennai</li>
+        </ul>
+        <p>All other cities are considered non-metro (40%).</p>
+
+        <h3>Important Note</h3>
+        <p>HRA exemption is <strong>not available</strong> under the New Tax Regime. Compare both regimes before deciding which is better for you.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

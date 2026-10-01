@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>HRA छूट कैलकुलेटर - हाउस रेंट अलाउंस कर छूट</title>
+    <meta name="description" content="मुफ्त HRA छूट कैलकुलेटर - धारा 10(13A) के तहत अपनी हाउस रेंट अलाउंस कर छूट की गणना करें। FY 2025-26 के लिए।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/hra-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/hra-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="salary-calculator-hi.html">सैलरी</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="ppf-calculator-hi.html">PPF</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="hra-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>HRA छूट कैलकुलेटर</h1>
+        <p>धारा 10(13A) के तहत अपनी हाउस रेंट अलाउंस कर छूट की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>बेसिक सैलरी (मासिक) (₹)</p>
+            <input type="number" id="hraBasic" placeholder="जैसे 30000" min="1000" value="30000">
+
+            <p>महंगाई भत्ता (मासिक) (₹) — लागू न हो तो 0 डालें</p>
+            <input type="number" id="hraDA" placeholder="जैसे 0" min="0" value="0">
+
+            <p>प्राप्त HRA (मासिक) (₹)</p>
+            <input type="number" id="hraReceived" placeholder="जैसे 12000" min="0" value="12000">
+
+            <p>कुल भुगतान किया गया किराया (मासिक) (₹)</p>
+            <input type="number" id="hraRent" placeholder="जैसे 15000" min="0" value="15000">
+
+            <p>शहर प्रकार</p>
+            <select id="hraCity">
+                <option value="metro">मेट्रो (दिल्ली, मुंबई, कोलकाता, चेन्नई)</option>
+                <option value="nonmetro" selected>गैर-मेट्रो</option>
+            </select>
+
+            <button type="button" onclick="calculateHRA()">HRA छूट की गणना करें</button>
+        </form>
+        <div id="hraResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>HRA छूट क्या है?</h2>
+        <p>HRA (हाउस रेंट अलाउंस) नियोक्ता द्वारा किराये के खर्चों को पूरा करने के लिए प्रदान किया जाने वाला वेतन घटक है। धारा 10(13A) के तहत, यदि आप किराए के घर में रहते हैं तो HRA का एक हिस्सा कर से मुक्त है।</p>
+
+        <h3>छूट की गणना</h3>
+        <p>छूट प्राप्त HRA इन <strong>तीनों में से न्यूनतम</strong> है:</p>
+        <ol>
+            <li><strong>नियोक्ता से प्राप्त वास्तविक HRA</strong></li>
+            <li><strong>भुगतान किया गया किराया − (बेसिक + DA) का 10%</strong></li>
+            <li><strong>(बेसिक + DA) का 50%</strong> मेट्रो शहरों के लिए, <strong>40%</strong> गैर-मेट्रो के लिए</li>
+        </ol>
+
+        <h3>मुख्य शर्तें</h3>
+        <ul>
+            <li>केवल <strong>पुरानी कर व्यवस्था</strong> में उपलब्ध</li>
+            <li>आपको वास्तव में किराए के घर में रहना चाहिए</li>
+            <li>किराया मकान मालिक को भुगतान किया जाना चाहिए</li>
+            <li>यदि किराया ₹1 लाख/वर्ष से अधिक है, तो मकान मालिक का PAN आवश्यक है</li>
+            <li>यदि आप अपने घर के मालिक हैं तो HRA का दावा नहीं कर सकते</li>
+        </ul>
+
+        <h3>मेट्रो शहर (50%)</h3>
+        <ul>
+            <li>दिल्ली</li>
+            <li>मुंबई</li>
+            <li>कोलकाता</li>
+            <li>चेन्नई</li>
+        </ul>
+        <p>अन्य सभी शहर गैर-मेट्रो (40%) माने जाते हैं।</p>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>HRA छूट <strong>नई कर व्यवस्था में उपलब्ध नहीं है</strong>। तय करने से पहले दोनों व्यवस्थाओं की तुलना करें।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

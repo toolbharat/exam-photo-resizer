@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>PPF कैलकुलेटर - पब्लिक प्रोविडेंट फंड मैच्योरिटी कैलकुलेटर</title>
+    <meta name="description" content="मुफ्त PPF कैलकुलेटर - अपनी पब्लिक प्रोविडेंट फंड मैच्योरिटी राशि, अर्जित ब्याज और कर-मुक्त रिटर्न की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/ppf-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/ppf-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="nps-calculator-hi.html">NPS</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="ppf-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>PPF कैलकुलेटर</h1>
+        <p>अपनी PPF मैच्योरिटी राशि और कर-मुक्त रिटर्न की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी PPF जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>वार्षिक निवेश (₹)</p>
+            <input type="number" id="ppfAmount" placeholder="जैसे 150000" min="500" max="150000" value="150000">
+
+            <p>ब्याज दर (% प्रति वर्ष)</p>
+            <input type="number" id="ppfRate" placeholder="जैसे 7.1" step="0.1" min="1" max="15" value="7.1">
+
+            <p>निवेश अवधि (वर्ष)</p>
+            <input type="number" id="ppfYears" placeholder="जैसे 15" min="1" max="50" value="15">
+
+            <button type="button" onclick="calculatePPF()">PPF की गणना करें</button>
+        </form>
+        <div id="ppfResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>PPF क्या है?</h2>
+        <p>PPF (पब्लिक प्रोविडेंट फंड) भारत सरकार द्वारा समर्थित एक दीर्घकालिक बचत योजना है। यह गारंटीड रिटर्न प्रदान करती है और धारा 80C के तहत सबसे लोकप्रिय कर-बचत साधनों में से एक है।</p>
+
+        <h3>मुख्य विशेषताएं</h3>
+        <ul>
+            <li><strong>अवधि:</strong> 15 वर्ष (5 वर्ष के ब्लॉक में बढ़ाई जा सकती है)</li>
+            <li><strong>न्यूनतम निवेश:</strong> ₹500 प्रति वर्ष</li>
+            <li><strong>अधिकतम निवेश:</strong> ₹1,50,000 प्रति वर्ष</li>
+            <li><strong>ब्याज दर:</strong> सरकार-अधिसूचित, त्रैमासिक संशोधित (वर्तमान में ~7.1%)</li>
+            <li><strong>कर स्थिति:</strong> EEE (छूट-छूट-छूट)</li>
+        </ul>
+
+        <h3>कर लाभ</h3>
+        <ul>
+            <li><strong>निवेश:</strong> धारा 80C के तहत कटौती योग्य (₹1.5 लाख तक)</li>
+            <li><strong>ब्याज:</strong> पूरी तरह कर-मुक्त</li>
+            <li><strong>मैच्योरिटी:</strong> पूरी तरह कर-मुक्त</li>
+            <li><strong>नोट:</strong> 80C कटौती केवल पुरानी कर व्यवस्था में उपलब्ध है</li>
+        </ul>
+
+        <h3>PPF ब्याज गणना</h3>
+        <p>PPF ब्याज की गणना <strong>प्रत्येक माह की 5वीं और अंतिम तारीख के बीच न्यूनतम शेष</strong> पर की जाती है। ब्याज वार्षिक रूप से 31 मार्च को जमा किया जाता है।</p>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>PPF ब्याज दरें हर तिमाही बदल सकती हैं। कैलकुलेटर आपके द्वारा दर्ज की गई दर का उपयोग करता है। निवेश से पहले राष्ट्रीय बचत संस्थान से वर्तमान दर की जांच करें।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

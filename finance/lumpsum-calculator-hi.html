@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>लम्पसम कैलकुलेटर - एकमुश्त म्यूचुअल फंड निवेश रिटर्न</title>
+    <meta name="description" content="मुफ्त लम्पसम कैलकुलेटर - अपने एकमुश्त म्यूचुअल फंड निवेश पर चक्रवृद्धि वृद्धि के साथ रिटर्न की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/lumpsum-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/lumpsum-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="swp-calculator-hi.html">SWP</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="lumpsum-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>लम्पसम कैलकुलेटर</h1>
+        <p>अपने एकमुश्त म्यूचुअल फंड निवेश पर रिटर्न की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी निवेश जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>निवेश राशि (₹)</p>
+            <input type="number" id="lsAmount" placeholder="जैसे 500000" min="1000" value="500000">
+
+            <p>अपेक्षित वार्षिक रिटर्न (%)</p>
+            <input type="number" id="lsReturn" placeholder="जैसे 12" step="0.1" min="1" max="30" value="12">
+
+            <p>निवेश अवधि (वर्ष)</p>
+            <input type="number" id="lsYears" placeholder="जैसे 10" min="1" max="40" value="10">
+
+            <button type="button" onclick="calculateLumpsum()">रिटर्न की गणना करें</button>
+        </form>
+        <div id="lsResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>लम्पसम निवेश क्या है?</h2>
+        <p>लम्पसम निवेश का मतलब है एक बार में बड़ी राशि म्यूचुअल फंड योजना में निवेश करना, नियमित किश्तों (SIP) में नहीं।</p>
+
+        <h3>लम्पसम कब चुनें?</h3>
+        <ul>
+            <li>आपको अचानक बड़ी राशि मिली हो (बोनस, विरासत, संपत्ति बिक्री)</li>
+            <li>आपके पास बड़ी अधिशेष राशि हो</li>
+            <li>आपकी निवेश अवधि लंबी हो (10+ वर्ष)</li>
+            <li>आप अल्पकालिक बाजार अस्थिरता से सहज हों</li>
+        </ul>
+
+        <h3>लम्पसम बनाम SIP</h3>
+        <ul>
+            <li><strong>लम्पसम:</strong> पूरी राशि पहले दिन से निवेशित</li>
+            <li><strong>SIP:</strong> राशि समय के साथ धीरे-धीरे निवेशित</li>
+            <li><strong>सर्वोत्तम रणनीति:</strong> आपकी नकदी प्रवाह और बाजार स्थितियों पर निर्भर करती है</li>
+        </ul>
+
+        <h3>उपयोग किया गया सूत्र</h3>
+        <p><strong>मैच्योरिटी मूल्य = P × (1 + r)^n</strong></p>
+        <ul>
+            <li>P = मूलधन (निवेश राशि)</li>
+            <li>r = वार्षिक रिटर्न दर (दशमलव में)</li>
+            <li>n = वर्षों की संख्या</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>म्यूचुअल फंड रिटर्न मार्केट-लिंक्ड हैं और गारंटीड नहीं हैं। 12% का अनुमानित रिटर्न केवल एक उदाहरण है। वास्तविक रिटर्न अधिक या कम हो सकते हैं।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

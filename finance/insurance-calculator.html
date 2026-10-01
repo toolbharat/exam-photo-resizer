@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>Term Insurance Premium Calculator - How Much Cover Do You Need?</title>
+    <meta name="description" content="Free term insurance calculator for India. Calculate how much life insurance cover you need and estimate your annual premium based on age and income.">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/insurance-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/insurance-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">India Finance Calculator</div>
+        <p class="tagline">Free Online Financial Calculators</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="emi-calculator.html">EMI</a>
+            <a href="sip-calculator.html">SIP</a>
+            <a href="income-tax-calculator.html">Income Tax</a>
+            <a href="loan-eligibility-calculator.html">Loan Eligibility</a>
+            <a href="gratuity-calculator.html">Gratuity</a>
+            <a href="blog.html">Blog</a>
+            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Term Insurance Calculator</h1>
+        <p>Find out how much life insurance cover you need — and how much it may cost.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Your Details</h2>
+        <form onsubmit="return false;">
+            <p>Your Age (Years)</p>
+            <input type="number" id="insAge" placeholder="e.g. 30" min="18" max="65" value="30">
+
+            <p>Annual Income (₹)</p>
+            <input type="number" id="insIncome" placeholder="e.g. 1200000" min="100000">
+
+            <p>Current Age of Youngest Child (Years) — Enter 0 if no children</p>
+            <input type="number" id="insChildAge" placeholder="e.g. 5" min="0" max="25" value="0">
+
+            <p>Outstanding Loans (₹)</p>
+            <input type="number" id="insLoans" placeholder="e.g. 3000000" min="0" value="0">
+
+            <p>Current Savings & Investments (₹)</p>
+            <input type="number" id="insSavings" placeholder="e.g. 1000000" min="0" value="0">
+
+            <p>Gender</p>
+            <select id="insGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <p>Smoking / Tobacco Use</p>
+            <select id="insSmoker">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <button type="button" onclick="calculateInsurance()">Calculate Cover & Premium</button>
+        </form>
+        <div id="insuranceResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>How is Insurance Cover Calculated?</h2>
+        <p>We use the <strong>Human Life Value (HLV)</strong> method, which is the standard approach used by financial planners.</p>
+
+        <h3>Formula</h3>
+        <ul>
+            <li><strong>Annual Income × 15</strong> (replacement income for family)</li>
+            <li><strong>+ Outstanding Loans</strong> (to clear debts)</li>
+            <li><strong>+ Child Education Corpus</strong> (if children)</li>
+            <li><strong>− Current Savings</strong> (already available)</li>
+            <li><strong>= Recommended Cover</strong></li>
+        </ul>
+
+        <h3>Premium Estimation</h3>
+        <p>Term insurance premiums depend on age, gender, smoking status, and health. Our estimate is indicative and may vary by insurer.</p>
+
+        <h3>Why Term Insurance?</h3>
+        <ul>
+            <li>Lowest premium among all life insurance types</li>
+            <li>Pure protection — no investment mixing</li>
+            <li>Tax benefit under Section 80C (Old Regime)</li>
+            <li>Death benefit is tax-free under Section 10(10D)</li>
+        </ul>
+
+        <h3>Important Note</h3>
+        <p>This is an estimate only. Actual premiums depend on the insurer's underwriting, your medical history, and the specific policy terms. Always compare plans before buying.</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 India Finance Calculator</p>
+        <nav class="footer-nav">
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

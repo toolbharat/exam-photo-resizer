@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>इनकम टैक्स कैलकुलेटर FY 2025-26 - इंडिया फाइनेंस कैलकुलेटर</title>
+    <meta name="description" content="मुफ्त इनकम टैक्स कैलकुलेटर FY 2025-26 - पुरानी और नई व्यवस्था की तुलना करें और जानें कौन सी व्यवस्था आपके लिए बेहतर है।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/income-tax-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/income-tax-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="gst-calculator-hi.html">GST</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="fd-calculator-hi.html">FD</a>
+            <a href="salary-calculator-hi.html">सैलरी</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="income-tax-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>इनकम टैक्स कैलकुलेटर FY 2025-26</h1>
+        <p>पुरानी बनाम नई व्यवस्था — तुलना करें और बचाएं</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आय विवरण</h2>
+        <form onsubmit="return false;">
+            <p>आयु</p>
+            <select id="taxAge">
+                <option value="below60">60 से कम</option>
+                <option value="60to80">60 से 80 (वरिष्ठ नागरिक)</option>
+                <option value="above80">80 से अधिक (सुपर सीनियर)</option>
+            </select>
+
+            <p>वार्षिक आय (₹)</p>
+            <input type="number" id="taxIncome" placeholder="जैसे 1000000" min="0">
+
+            <p>80C कटौती (अधिकतम ₹1,50,000)</p>
+            <input type="number" id="ded80c" placeholder="PF, LIC, ELSS..." min="0" max="150000">
+
+            <p>80D स्वास्थ्य बीमा (अधिकतम ₹25,000)</p>
+            <input type="number" id="ded80d" placeholder="स्वास्थ्य बीमा" min="0" max="100000">
+
+            <p>होम लोन ब्याज 24(b) (अधिकतम ₹2,00,000)</p>
+            <input type="number" id="ded24b" placeholder="होम लोन ब्याज" min="0" max="200000">
+
+            <p>NPS 80CCD(1B) (अधिकतम ₹50,000)</p>
+            <input type="number" id="dednps" placeholder="NPS योगदान" min="0" max="50000">
+
+            <button type="button" onclick="calculateIncomeTax()">टैक्स की गणना करें</button>
+        </form>
+        <div id="taxResult"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>

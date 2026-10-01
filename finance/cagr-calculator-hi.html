@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XDWGNTC1J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
+    </script>
+
+    <title>CAGR कैलकुलेटर - चक्रवृद्धि वार्षिक वृद्धि दर</title>
+    <meta name="description" content="मुफ्त CAGR कैलकुलेटर - अपने निवेश, म्यूचुअल फंड और स्टॉक्स की चक्रवृद्धि वार्षिक वृद्धि दर की गणना करें।">
+
+    <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/cagr-calculator.html" />
+    <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/cagr-calculator-hi.html" />
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">इंडिया फाइनेंस कैलकुलेटर</div>
+        <p class="tagline">मुफ्त ऑनलाइन वित्तीय कैलकुलेटर</p>
+        <nav class="main-nav">
+            <a href="index-hi.html">होम</a>
+            <a href="emi-calculator-hi.html">EMI</a>
+            <a href="sip-calculator-hi.html">SIP</a>
+            <a href="lumpsum-calculator-hi.html">लम्पसम</a>
+            <a href="income-tax-calculator-hi.html">इनकम टैक्स</a>
+            <a href="blog.html">ब्लॉग</a>
+            <a href="cagr-calculator.html" class="lang-switch">🌐 English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>CAGR कैलकुलेटर</h1>
+        <p>अपने निवेश की चक्रवृद्धि वार्षिक वृद्धि दर की गणना करें।</p>
+    </section>
+
+    <section class="info-section">
+        <h2>आपकी निवेश जानकारी</h2>
+        <form onsubmit="return false;">
+            <p>प्रारंभिक निवेश मूल्य (₹)</p>
+            <input type="number" id="cagrInitial" placeholder="जैसे 100000" min="1" value="100000">
+
+            <p>अंतिम निवेश मूल्य (₹)</p>
+            <input type="number" id="cagrFinal" placeholder="जैसे 250000" min="1" value="250000">
+
+            <p>निवेश अवधि (वर्ष)</p>
+            <input type="number" id="cagrYears" placeholder="जैसे 5" min="0.5" max="50" step="0.5" value="5">
+
+            <button type="button" onclick="calculateCAGR()">CAGR की गणना करें</button>
+        </form>
+        <div id="cagrResult"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>CAGR क्या है?</h2>
+        <p>CAGR (चक्रवृद्धि वार्षिक वृद्धि दर) एक विशिष्ट अवधि में निवेश की औसत वार्षिक वृद्धि दर है। यह रिटर्न को सुचारू करता है और एक ही संख्या देता है जो दर्शाता है कि आपका निवेश हर साल कितना बढ़ा।</p>
+
+        <h3>सूत्र</h3>
+        <p><strong>CAGR = [(अंतिम मूल्य / प्रारंभिक मूल्य)^(1/n) − 1] × 100</strong></p>
+        <ul>
+            <li>n = वर्षों की संख्या</li>
+        </ul>
+
+        <h3>CAGR क्यों उपयोगी है</h3>
+        <ul>
+            <li>एक ही अवधि में विभिन्न निवेशों की तुलना करें</li>
+            <li>म्यूचुअल फंड और स्टॉक प्रदर्शन मापें</li>
+            <li>व्यवसाय राजस्व वृद्धि को ट्रैक करें</li>
+            <li>दीर्घकालिक वित्तीय लक्ष्यों की योजना बनाएं</li>
+        </ul>
+
+        <h3>CAGR बनाम पूर्ण रिटर्न</h3>
+        <ul>
+            <li><strong>पूर्ण रिटर्न:</strong> कुल रिटर्न (जैसे 5 साल में 100%)</li>
+            <li><strong>CAGR:</strong> औसत वार्षिक रिटर्न (जैसे 14.87% प्रति वर्ष)</li>
+            <li>CAGR समय के साथ प्रदर्शन की बेहतर तस्वीर देता है</li>
+        </ul>
+
+        <h3>महत्वपूर्ण नोट</h3>
+        <p>CAGR स्थिर वृद्धि मानता है, लेकिन वास्तविकता में निवेश में उतार-चढ़ाव होता है। यह तुलना के लिए एक उपयोगी मीट्रिक है, लेकिन यह रिटर्न की अस्थिरता नहीं दिखाता।</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 इंडिया फाइनेंस कैलकुलेटर</p>
+        <nav class="footer-nav">
+            <a href="about.html">हमारे बारे में</a> |
+            <a href="contact.html">संपर्क करें</a> |
+            <a href="privacy-policy.html">गोपनीयता नीति</a> |
+            <a href="disclaimer.html">अस्वीकरण</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="js/main-hi.js"></script>
+</body>
+</html>
