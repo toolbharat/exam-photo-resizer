@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Merger — Free Online Tool | PixSathi</title>
+    <meta name="description" content="Free Excel merger. Merge multiple Excel files into one, keeping only one header. No sign-up, 100% private. — PixSathi">
+    <link rel="canonical" href="https://pixsathi.in/excel-merger">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tool-container { max-width: 700px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; }
+        .upload-area:hover { border-color: #667eea; background: #edf2f7; }
+        .upload-area h3 { color: #2d3748; margin-bottom: 8px; font-size: 20px; }
+        .upload-area p { color: #718096; font-size: 14px; }
+        .upload-area input { display: none; }
+        .file-list { display: none; margin-top: 24px; }
+        .file-list h3 { color: #2d3748; margin-bottom: 12px; font-size: 16px; }
+        .file-item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 8px; }
+        .file-item .file-icon { font-size: 24px; flex-shrink: 0; }
+        .file-item .file-info { flex: 1; min-width: 0; }
+        .file-item .file-name { color: #2d3748; font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .file-item .file-size { color: #718096; font-size: 12px; }
+        .file-item .remove-btn { background: #fed7d7; color: #c53030; border: none; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 12px; font-weight: 600; }
+        .file-item .remove-btn:hover { background: #fc8181; color: #ffffff; }
+        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 16px; }
+        .btn:hover { background: #5a67d8; }
+        .btn:disabled { background: #a3bffa; cursor: not-allowed; }
+        .success-box { display: none; margin-top: 20px; padding: 20px; background: #f0fff4; border-left: 4px solid #48bb78; border-radius: 8px; text-align: center; }
+        .success-box h4 { color: #22543d; margin-bottom: 8px; }
+        .success-box p { color: #2f855a; font-size: 14px; margin-bottom: 12px; }
+        .btn-download { display: inline-block; padding: 12px 28px; background: #48bb78; color: #ffffff; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; }
+        .btn-download:hover { background: #38a169; }
+        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/about">ℹ️ About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>📊 Excel Merger</h1>
+            <p>Multiple Excel files ko ek file mein merge karo — sirf ek header ke saath.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" multiple>
+                <h3>📊 Excel files upload karo</h3>
+                <p>Click karo ya drag karo — .xlsx, .xls, .csv</p>
+            </div>
+
+            <div class="file-list" id="fileList">
+                <h3>Files (<span id="fileCount">0</span>)</h3>
+                <div id="fileItems"></div>
+                <button class="btn" id="mergeBtn">Merge Karo</button>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h4>✅ Excel merge ho gaya!</h4>
+                <p>Merged file download karne ke liye ready hai.</p>
+                <a class="btn-download" id="downloadBtn" download="pixsathi-merged.xlsx">⬇️ Download Excel</a>
+            </div>
+
+            <div class="info-box">
+                <strong>ℹ️ Note:</strong> Pehli file ka header rakha jayega. Baaki files ke headers skip ho jayenge.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Free Excel Merger Online</h2>
+            <p>PixSathi ka Excel Merger ek free online tool hai jo multiple Excel files ko ek file mein merge kar deta hai — bina header repeat kiye.</p>
+
+            <h2>Kaise Use Karein</h2>
+            <ol>
+                <li>Excel files upload karo (.xlsx, .xls, .csv)</li>
+                <li>"Merge Karo" button dabao</li>
+                <li>Merged Excel file download karo</li>
+            </ol>
+
+            <h2>Features</h2>
+            <ul>
+                <li>Smart merge — sirf ek header</li>
+                <li>Multiple files supported</li>
+                <li>100% free, no signup</li>
+                <li>Files device par hi rehti hain</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const fileItems = document.getElementById('fileItems');
+        const fileCount = document.getElementById('fileCount');
+        const mergeBtn = document.getElementById('mergeBtn');
+        const successBox = document.getElementById('successBox');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        let excelFiles = [];
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => {
+            Array.from(e.target.files).forEach(file => {
+                const ext = file.name.toLowerCase().split('.').pop();
+                if (['xlsx', 'xls', 'csv'].includes(ext)) excelFiles.push(file);
+            });
+            renderFiles();
+        });
+
+        function renderFiles() {
+            fileItems.innerHTML = '';
+            excelFiles.forEach((file, i) => {
+                const item = document.createElement('div');
+                item.className = 'file-item';
+                item.innerHTML = `
+                    <div class="file-icon">📊</div>
+                    <div class="file-info">
+                        <div class="file-name">${file.name}</div>
+                        <div class="file-size">${(file.size / 1024).toFixed(1)} KB</div>
+                    </div>
+                    <button class="remove-btn" onclick="removeFile(${i})">✕</button>
+                `;
+                fileItems.appendChild(item);
+            });
+            fileCount.textContent = excelFiles.length;
+            fileList.style.display = excelFiles.length > 0 ? 'block' : 'none';
+            successBox.style.display = 'none';
+        }
+
+        window.removeFile = (i) => { excelFiles.splice(i, 1); renderFiles(); };
+
+        mergeBtn.addEventListener('click', async () => {
+            if (excelFiles.length < 2) return alert('Kam se kam 2 files upload karo');
+            mergeBtn.disabled = true;
+            mergeBtn.textContent = 'Merge ho raha hai...';
+
+            try {
+                let mergedRows = [];
+                let headers = null;
+
+                for (let i = 0; i < excelFiles.length; i++) {
+                    const arrayBuffer = await excelFiles[i].arrayBuffer();
+                    const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+                    const sheet = workbook.Sheets[workbook.SheetNames[0]];
+                    const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+                    if (data.length === 0) continue;
+
+                    if (i === 0) {
+                        headers = data[0];
+                        mergedRows = data.slice(1);
+                    } else {
+                        mergedRows = mergedRows.concat(data.slice(1));
+                    }
+                }
+
+                const mergedData = [headers, ...mergedRows];
+                const newWb = XLSX.utils.book_new();
+                const newSheet = XLSX.utils.aoa_to_sheet(mergedData);
+                XLSX.utils.book_append_sheet(newWb, newSheet, 'Merged');
+
+                const buf = XLSX.write(newWb, { bookType: 'xlsx', type: 'array' });
+                const blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+                downloadBtn.href = URL.createObjectURL(blob);
+                successBox.style.display = 'block';
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+
+            mergeBtn.disabled = false;
+            mergeBtn.textContent = 'Merge Karo';
+        });
+    </script>
+</body>
+</html>
