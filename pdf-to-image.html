@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Image Converter — Free Online Tool | PixSathi</title>
+    <meta name="description" content="Free PDF to Image converter. Convert PDF pages to JPG or PNG in seconds. 100% private, no upload. — PixSathi">
+    <link rel="canonical" href="https://pixsathi.in/pdf-to-image">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tool-container { max-width: 800px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; }
+        .upload-area:hover { border-color: #667eea; background: #edf2f7; }
+        .upload-area h3 { color: #2d3748; margin-bottom: 8px; font-size: 20px; }
+        .upload-area p { color: #718096; font-size: 14px; }
+        .upload-area input { display: none; }
+        .options { display: none; margin-top: 24px; padding: 16px; background: #f7fafc; border-radius: 8px; }
+        .options label { display: block; margin-bottom: 6px; color: #2d3748; font-weight: 600; font-size: 14px; }
+        .options select { width: 100%; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; }
+        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 12px; }
+        .btn:hover { background: #5a67d8; }
+        .btn:disabled { background: #a3bffa; cursor: not-allowed; }
+        .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; margin-top: 20px; }
+        .preview-item { padding: 8px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
+        .preview-item img { width: 100%; height: 120px; object-fit: contain; background: #ffffff; border-radius: 4px; margin-bottom: 6px; }
+        .preview-item .page-num { font-size: 12px; color: #4a5568; font-weight: 600; margin-bottom: 4px; }
+        .preview-item .download-page { display: inline-block; padding: 4px 10px; background: #667eea; color: #ffffff; border-radius: 4px; font-size: 11px; text-decoration: none; font-weight: 600; }
+        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/about">ℹ️ About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>🖼️ PDF to Image</h1>
+            <p>PDF ke har page ko JPG ya PNG mein convert karo.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept="application/pdf">
+                <h3>📄 PDF upload karo</h3>
+                <p>Click karo ya drag karo — PDF file</p>
+            </div>
+
+            <div class="options" id="options">
+                <label for="imgFormat">Image Format</label>
+                <select id="imgFormat">
+                    <option value="image/jpeg">JPG (chhoti file)</option>
+                    <option value="image/png">PNG (better quality)</option>
+                </select>
+                <button class="btn" id="convertBtn">Images Banao</button>
+            </div>
+
+            <div class="preview-grid" id="previewGrid"></div>
+
+            <div class="info-box">
+                <strong>ℹ️ Note:</strong> Sab processing aapke browser mein hoti hai. PDF kisi server par upload nahi hoti.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Free PDF to Image Converter Online</h2>
+            <p>PixSathi ka PDF to Image converter ek free online tool hai jo PDF ke har page ko JPG ya PNG image mein convert kar deta hai.</p>
+
+            <h2>Kaise Use Karein</h2>
+            <ol>
+                <li>PDF file upload karo</li>
+                <li>Format choose karo (JPG ya PNG)</li>
+                <li>"Images Banao" button dabao</li>
+                <li>Ek-ek image download karo</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const options = document.getElementById('options');
+        const convertBtn = document.getElementById('convertBtn');
+        const previewGrid = document.getElementById('previewGrid');
+        const imgFormat = document.getElementById('imgFormat');
+
+        let pdfFile = null;
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file && file.type === 'application/pdf') {
+                pdfFile = file;
+                options.style.display = 'block';
+                previewGrid.innerHTML = '';
+            } else {
+                alert('Sirf PDF files allowed hain');
+            }
+        });
+
+        convertBtn.addEventListener('click', async () => {
+            if (!pdfFile) return;
+            convertBtn.disabled = true;
+            convertBtn.textContent = 'Converting...';
+            previewGrid.innerHTML = '';
+
+            const format = imgFormat.value;
+            const ext = format === 'image/jpeg' ? 'jpg' : 'png';
+
+            try {
+                const arrayBuffer = await pdfFile.arrayBuffer();
+                const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+
+                for (let i = 1; i <= pdf.numPages; i++) {
+                    const page = await pdf.getPage(i);
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    const canvas = document.createElement('canvas');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    const ctx = canvas.getContext('2d');
+                    await page.render({ canvasContext: ctx, viewport }).promise;
+
+                    const dataUrl = canvas.toDataURL(format, 0.92);
+
+                    const item = document.createElement('div');
+                    item.className = 'preview-item';
+                    item.innerHTML = `
+                        <img src="${dataUrl}">
+                        <div class="page-num">Page ${i}</div>
+                        <a class="download-page" download="page-${i}.${ext}" href="${dataUrl}">⬇️ Download</a>
+                    `;
+                    previewGrid.appendChild(item);
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Error: ' + err.message);
+            }
+
+            convertBtn.disabled = false;
+            convertBtn.textContent = 'Images Banao';
+        });
+    </script>
+</body>
+</html>
