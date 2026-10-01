@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
     { "source": "/gate.html", "destination": "/gate-photo-resizer", "permanent": true },
