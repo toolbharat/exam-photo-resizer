@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator — Free Online Tool | PixSathi</title>
+    <meta name="description" content="Free QR code generator. Text, URL, phone, email, WiFi — sab ka QR code banao. Download PNG. No sign-up. — PixSathi">
+    <link rel="canonical" href="https://pixsathi.in/qr-code-generator">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .qr-container { max-width: 600px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 6px; color: #2d3748; font-weight: 600; font-size: 14px; }
+        .form-group input, .form-group select { width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; font-family: inherit; outline: none; }
+        .form-group input:focus, .form-group select:focus { border-color: #667eea; }
+        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; }
+        .btn:hover { background: #5a67d8; }
+        .qr-result { display: none; margin-top: 24px; text-align: center; padding: 20px; background: #f7fafc; border-radius: 12px; }
+        .qr-result canvas, .qr-result img { max-width: 280px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .qr-actions { display: flex; gap: 10px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+        .qr-actions button { padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; border: none; }
+        .btn-download { background: #48bb78; color: #ffffff; }
+        .btn-download:hover { background: #38a169; }
+        .btn-reset { background: #e2e8f0; color: #2d3748; }
+        .btn-reset:hover { background: #cbd5e0; }
+        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/about">ℹ️ About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>🎯 QR Code Generator</h1>
+            <p>Text, URL, phone, email, WiFi — kisi bhi cheez ka QR code banao.</p>
+        </section>
+
+        <div class="qr-container">
+            <div class="form-group">
+                <label for="qrType">QR Code Type</label>
+                <select id="qrType">
+                    <option value="text">📝 Text</option>
+                    <option value="url">🔗 URL / Website</option>
+                    <option value="phone">📞 Phone Number</option>
+                    <option value="email">📧 Email</option>
+                    <option value="wifi">📶 WiFi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="qrInput">Content</label>
+                <input type="text" id="qrInput" placeholder="Yahan likho...">
+            </div>
+
+            <div class="form-group">
+                <label for="qrSize">Size</label>
+                <select id="qrSize">
+                    <option value="200">200 x 200</option>
+                    <option value="300" selected>300 x 300</option>
+                    <option value="400">400 x 400</option>
+                    <option value="500">500 x 500</option>
+                </select>
+            </div>
+
+            <button class="btn" id="generateBtn">QR Code Banao</button>
+
+            <div class="qr-result" id="qrResult">
+                <div id="qrcode"></div>
+                <div class="qr-actions">
+                    <button class="btn-download" id="downloadBtn">⬇️ Download PNG</button>
+                    <button class="btn-reset" id="resetBtn">Reset</button>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>ℹ️ Note:</strong> Sab kuch aapke browser mein hota hai — koi server upload nahi.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Free QR Code Generator Online</h2>
+            <p>PixSathi ka QR Code Generator ek free online tool hai jo kisi bhi text, URL, phone number, email, ya WiFi ke liye QR code bana deta hai.</p>
+
+            <h2>QR Code Kya Hai?</h2>
+            <p>QR (Quick Response) code ek 2D barcode hai jo mobile phone se scan kiya ja sakta hai. Ye India mein bahut popular hai — UPI payments, business cards, product packaging mein use hota hai.</p>
+
+            <h2>Features</h2>
+            <ul>
+                <li>5 types — Text, URL, Phone, Email, WiFi</li>
+                <li>4 sizes — 200px to 500px</li>
+                <li>Download PNG</li>
+                <li>100% free, no signup</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        const qrType = document.getElementById('qrType');
+        const qrInput = document.getElementById('qrInput');
+        const qrSize = document.getElementById('qrSize');
+        const generateBtn = document.getElementById('generateBtn');
+        const qrResult = document.getElementById('qrResult');
+        const qrCodeDiv = document.getElementById('qrcode');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        qrType.addEventListener('change', () => {
+            const placeholders = {
+                text: 'Yahan text likho...',
+                url: 'https://example.com',
+                phone: '+91 98765 43210',
+                email: 'example@email.com',
+                wifi: 'WiFi Name'
+            };
+            qrInput.placeholder = placeholders[qrType.value] || '';
+        });
+
+        generateBtn.addEventListener('click', () => {
+            const content = qrInput.value.trim();
+            if (!content) return alert('Pehle content daalo');
+
+            const size = parseInt(qrSize.value);
+            let qrData = content;
+
+            switch (qrType.value) {
+                case 'url':
+                    if (!content.startsWith('http')) qrData = 'https://' + content;
+                    break;
+                case 'phone':
+                    qrData = 'tel:' + content.replace(/\s/g, '');
+                    break;
+                case 'email':
+                    qrData = 'mailto:' + content;
+                    break;
+                case 'wifi':
+                    qrData = 'WIFI:T:WPA;S:' + content + ';;';
+                    break;
+            }
+
+            qrCodeDiv.innerHTML = '';
+            new QRCode(qrCodeDiv, {
+                text: qrData,
+                width: size,
+                height: size,
+                colorDark: '#000000',
+                colorLight: '#FFFFFF',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            qrResult.style.display = 'block';
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const canvas = qrCodeDiv.querySelector('canvas');
+            if (!canvas) return alert('Pehle QR code banao');
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'pixsathi-qrcode.png';
+            link.click();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            qrInput.value = '';
+            qrCodeDiv.innerHTML = '';
+            qrResult.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
