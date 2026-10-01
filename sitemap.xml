@@ -101,5 +101,14 @@
   <url><loc>https://pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+    <!-- Blog Posts -->
+  <url><loc>https://pixsathi.in/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixsathi.in/blog/ssc-cgl-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixsathi.in/blog/ibps-po-photo-requirements-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixsathi.in/blog/image-compress-20kb</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixsathi.in/blog/neet-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixsathi.in/blog/pdf-merge-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixsathi.in/blog/cgpa-to-percentage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixsathi.in/blog/exam-photo-rejection-reasons</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>
