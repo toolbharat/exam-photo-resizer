@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter — JPG, PNG, WebP Free Online Tool | PixSathi</title>
+    <meta name="description" content="Free image converter. Convert JPG to PNG, PNG to JPG, WebP to JPG. 100% private, no upload. — PixSathi">
+    <link rel="canonical" href="https://pixsathi.in/image-converter">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tool-container { max-width: 800px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; }
+        .upload-area:hover { border-color: #667eea; background: #edf2f7; }
+        .upload-area h3 { color: #2d3748; margin-bottom: 8px; font-size: 20px; }
+        .upload-area p { color: #718096; font-size: 14px; }
+        .upload-area input { display: none; }
+        .options { display: none; margin-top: 24px; padding: 16px; background: #f7fafc; border-radius: 8px; }
+        .options label { display: block; margin-bottom: 6px; color: #2d3748; font-weight: 600; font-size: 14px; }
+        .options select { width: 100%; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; }
+        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 12px; }
+        .btn:hover { background: #5a67d8; }
+        .btn:disabled { background: #a3bffa; cursor: not-allowed; }
+        .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; margin-top: 20px; }
+        .preview-item { padding: 8px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
+        .preview-item img { width: 100%; height: 100px; object-fit: contain; background: #ffffff; border-radius: 4px; margin-bottom: 6px; }
+        .preview-item .filename { font-size: 11px; color: #4a5568; font-weight: 600; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .preview-item .download-page { display: inline-block; padding: 4px 10px; background: #667eea; color: #ffffff; border-radius: 4px; font-size: 11px; text-decoration: none; font-weight: 600; }
+        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/about">ℹ️ About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>🔄 Image Converter</h1>
+            <p>JPG, PNG, WebP — kisi bhi format mein convert karo.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept="image/*" multiple>
+                <h3>🔄 Images upload karo</h3>
+                <p>Click karo ya drag karo — JPG, PNG, WebP</p>
+            </div>
+
+            <div class="options" id="options">
+                <label for="outputFormat">Convert To</label>
+                <select id="outputFormat">
+                    <option value="image/jpeg">JPG / JPEG</option>
+                    <option value="image/png" selected>PNG</option>
+                    <option value="image/webp">WebP</option>
+                </select>
+                <button class="btn" id="convertBtn">Convert Karo</button>
+            </div>
+
+            <div class="preview-grid" id="previewGrid"></div>
+
+            <div class="info-box">
+                <strong>ℹ️ Note:</strong> Sab processing aapke browser mein hoti hai. Images kisi server par upload nahi hoti.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Free Image Converter Online</h2>
+            <p>PixSathi ka Image Converter ek free online tool hai jo aapki images ko ek format se doosre format mein convert kar deta hai.</p>
+
+            <h2>Supported Conversions</h2>
+            <ul>
+                <li><strong>JPG to PNG</strong> — Transparent background ke liye</li>
+                <li><strong>PNG to JPG</strong> — Chhoti file size ke liye</li>
+                <li><strong>WebP to JPG/PNG</strong> — Modern format se purane format mein</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const options = document.getElementById('options');
+        const convertBtn = document.getElementById('convertBtn');
+        const previewGrid = document.getElementById('previewGrid');
+        const outputFormat = document.getElementById('outputFormat');
+
+        let uploadedFiles = [];
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => {
+            uploadedFiles = Array.from(e.target.files).filter(f => f.type.startsWith('image/'));
+            if (uploadedFiles.length > 0) options.style.display = 'block';
+        });
+
+        convertBtn.addEventListener('click', async () => {
+            if (uploadedFiles.length === 0) return;
+            convertBtn.disabled = true;
+            convertBtn.textContent = 'Converting...';
+            previewGrid.innerHTML = '';
+
+            const format = outputFormat.value;
+            const ext = format === 'image/jpeg' ? 'jpg' : format === 'image/png' ? 'png' : 'webp';
+
+            for (const file of uploadedFiles) {
+                const dataUrl = await convertImage(file, format);
+                const name = file.name.replace(/\.[^.]+$/, '') + '.' + ext;
+
+                const item = document.createElement('div');
+                item.className = 'preview-item';
+                item.innerHTML = `
+                    <img src="${dataUrl}">
+                    <div class="filename">${name}</div>
+                    <a class="download-page" download="${name}" href="${dataUrl}">⬇️ Download</a>
+                `;
+                previewGrid.appendChild(item);
+            }
+
+            convertBtn.disabled = false;
+            convertBtn.textContent = 'Convert Karo';
+        });
+
+        function convertImage(file, format) {
+            return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        const ctx = canvas.getContext('2d');
+                        if (format === 'image/jpeg') {
+                            ctx.fillStyle = '#FFFFFF';
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        }
+                        ctx.drawImage(img, 0, 0);
+                        resolve(canvas.toDataURL(format, 0.92));
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
+</body>
+</html>
