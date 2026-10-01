@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word to PDF Converter — Free Online Tool | PixSathi</title>
+    <meta name="description" content="Free Word to PDF converter. Convert DOC, DOCX files to PDF in seconds. No sign-up, no upload, 100% private. — PixSathi">
+    <link rel="canonical" href="https://pixsathi.in/word-to-pdf">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tool-container { max-width: 700px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 50px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; }
+        .upload-area:hover { border-color: #667eea; background: #edf2f7; }
+        .upload-area h3 { color: #2d3748; margin-bottom: 8px; font-size: 20px; }
+        .upload-area p { color: #718096; font-size: 14px; }
+        .upload-area input { display: none; }
+        .file-info { display: none; margin-top: 20px; padding: 16px; background: #f7fafc; border-radius: 8px; border-left: 4px solid #667eea; }
+        .file-info h4 { color: #2d3748; margin-bottom: 6px; font-size: 15px; }
+        .file-info p { color: #718096; font-size: 13px; }
+        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 16px; }
+        .btn:hover { background: #5a67d8; }
+        .btn:disabled { background: #a3bffa; cursor: not-allowed; }
+        .success-box { display: none; margin-top: 20px; padding: 20px; background: #f0fff4; border-left: 4px solid #48bb78; border-radius: 8px; text-align: center; }
+        .success-box h4 { color: #22543d; margin-bottom: 8px; }
+        .success-box p { color: #2f855a; font-size: 14px; margin-bottom: 12px; }
+        .btn-download { display: inline-block; padding: 12px 28px; background: #48bb78; color: #ffffff; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; }
+        .btn-download:hover { background: #38a169; }
+        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/about">ℹ️ About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>📝 Word to PDF</h1>
+            <p>Word document (DOC, DOCX) ko PDF mein convert karo.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                <h3>📝 Word file upload karo</h3>
+                <p>Click karo ya drag karo — .doc ya .docx</p>
+            </div>
+
+            <div class="file-info" id="fileInfo">
+                <h4 id="fileName">File name</h4>
+                <p id="fileSize">Size</p>
+                <button class="btn" id="convertBtn">PDF Banao</button>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h4>✅ PDF ban gaya!</h4>
+                <p>Tumhara PDF download karne ke liye ready hai.</p>
+                <a class="btn-download" id="downloadBtn" download="pixsathi-document.pdf">⬇️ Download PDF</a>
+            </div>
+
+            <div class="info-box">
+                <strong>ℹ️ Note:</strong> Sab processing aapke browser mein hoti hai. Word file kisi server par upload nahi hoti.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Free Word to PDF Converter Online</h2>
+            <p>PixSathi ka Word to PDF converter ek free online tool hai jo aapki DOC aur DOCX files ko PDF mein convert kar deta hai.</p>
+
+            <h2>Kaise Use Karein</h2>
+            <ol>
+                <li>Word file upload karo (.doc ya .docx)</li>
+                <li>"PDF Banao" button dabao</li>
+                <li>PDF download karo</li>
+            </ol>
+
+            <h2>Features</h2>
+            <ul>
+                <li>DOC aur DOCX dono supported</li>
+                <li>Fast conversion — seconds mein</li>
+                <li>100% free, no signup</li>
+                <li>100% private — file device par hi rehti hai</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const convertBtn = document.getElementById('convertBtn');
+        const successBox = document.getElementById('successBox');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        let wordFile = null;
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) handleFile(file);
+        });
+
+        uploadArea.addEventListener('dragover', (e) => e.preventDefault());
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            if (file) handleFile(file);
+        });
+
+        function handleFile(file) {
+            const ext = file.name.toLowerCase().split('.').pop();
+            if (ext !== 'doc' && ext !== 'docx') {
+                alert('Sirf .doc ya .docx files allowed hain');
+                return;
+            }
+            wordFile = file;
+            fileName.textContent = file.name;
+            fileSize.textContent = (file.size / 1024).toFixed(1) + ' KB';
+            fileInfo.style.display = 'block';
+            successBox.style.display = 'none';
+        }
+
+        convertBtn.addEventListener('click', async () => {
+            if (!wordFile) return;
+            convertBtn.disabled = true;
+            convertBtn.textContent = 'Converting...';
+
+            try {
+                const arrayBuffer = await wordFile.arrayBuffer();
+                const result = await mammoth.extractRawText({ arrayBuffer });
+                const text = result.value;
+
+                if (!text || text.trim() === '') throw new Error('File mein text nahi mila');
+
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+                const margin = 15;
+                const maxWidth = 180;
+                const lineHeight = 7;
+                let y = margin;
+
+                pdf.setFont('helvetica');
+                pdf.setFontSize(11);
+
+                const paragraphs = text.split('\n');
+                for (const para of paragraphs) {
+                    if (para.trim() === '') { y += lineHeight; continue; }
+                    const lines = pdf.splitTextToSize(para, maxWidth);
+                    for (const line of lines) {
+                        if (y > 280) { pdf.addPage(); y = margin; }
+                        pdf.text(line, margin, y);
+                        y += lineHeight;
+                    }
+                }
+
+                const blob = pdf.output('blob');
+                downloadBtn.href = URL.createObjectURL(blob);
+                downloadBtn.download = wordFile.name.replace(/\.[^.]+$/, '') + '.pdf';
+                successBox.style.display = 'block';
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+
+            convertBtn.disabled = false;
+            convertBtn.textContent = 'PDF Banao';
+        });
+    </script>
+</body>
+</html>
