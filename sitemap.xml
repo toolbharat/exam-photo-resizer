@@ -87,5 +87,19 @@
   <url><loc>https://pixsathi.in/cuet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/duet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/ipu-cet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <!-- New Tool Pages -->
+  <url><loc>https://pixsathi.in/image-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/jpg-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/pdf-to-image</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/word-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/cgpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/qr-code-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/excel-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Main Pages -->
+  <url><loc>https://pixsathi.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 
 </urlset>
