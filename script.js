@@ -373,7 +373,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
     
     if (sizeKB <= targetKB) {
         // Pad to minimum size for exam requirements
-    const minKB = Math.max(10, Math.min(20, Math.round(targetKB * 0.5)));
+    const minKB = Math.max(15, Math.min(25, Math.round(targetKB * 0.55)));
     if (sizeKB < minKB) {
         dataUrl = padJpegToMinSize(dataUrl, minKB);
         sizeKB = (dataUrl.length * 0.75) / 1024;
@@ -434,7 +434,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
     }
     
     // Pad to minimum size for exam requirements
-    const minKB = Math.max(10, Math.min(20, Math.round(targetKB * 0.5)));
+    const minKB = Math.max(15, Math.min(25, Math.round(targetKB * 0.55)));
     if (sizeKB < minKB) {
         dataUrl = padJpegToMinSize(dataUrl, minKB);
         sizeKB = (dataUrl.length * 0.75) / 1024;
