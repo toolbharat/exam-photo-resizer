@@ -1340,10 +1340,6 @@ function compressImageFile(img, targetKB, callback) {
     }
     tryCompress();
 }
-        }, 'image/jpeg', quality);
-    }
-    tryCompress();
-}
 
 if (compressBtn) {
     compressBtn.addEventListener('click', function() {
