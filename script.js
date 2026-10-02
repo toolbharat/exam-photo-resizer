@@ -1,4 +1,4 @@
-// ============ JPEG PADDING (Min size for exam photos) ============
+﻿// ============ JPEG PADDING (Min size for exam photos) ============
 function padJpegToMinSize(dataUrl, minKB) {
     try {
         const base64 = dataUrl.split(',')[1];
@@ -107,8 +107,8 @@ function loadPhoto(file) {
             if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
 
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
+                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
                 <img src="${event.target.result}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -137,7 +137,7 @@ function removePhoto() {
     if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
     photoImageArea.innerHTML = `
         <div class="empty-state">
-            <p>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‚Â Click to select a photo</p>
+            <p>ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒâ€šÃ‚Â Click to select a photo</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -164,10 +164,10 @@ if (photoResizeBtn) {
         photoCanvas = result.canvas;
         if (photoDownloadBtn) {
             photoDownloadBtn.style.display = 'block';
-            photoDownloadBtn.textContent = `⬇ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
+            photoDownloadBtn.textContent = `â¬‡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
+            <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
             <img src="${result.dataUrl}" id="photoPreviewImg">
         `;
         document.getElementById('photoRemoveBtn').addEventListener('click', function(e) {
@@ -233,8 +233,8 @@ function loadSign(file) {
             if (signDownloadBtn) signDownloadBtn.style.display = 'none';
 
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
+                <button class="crop-btn-icon" id="signCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
                 <img src="${event.target.result}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -263,7 +263,7 @@ function removeSign() {
     if (signDownloadBtn) signDownloadBtn.style.display = 'none';
     signImageArea.innerHTML = `
         <div class="empty-state">
-            <p>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‚Â Click to select a signature</p>
+            <p>ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒâ€šÃ‚Â Click to select a signature</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -290,10 +290,10 @@ if (signResizeBtn) {
         signCanvas = result.canvas;
         if (signDownloadBtn) {
             signDownloadBtn.style.display = 'block';
-            signDownloadBtn.textContent = `⬇ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
+            signDownloadBtn.textContent = `â¬‡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
+            <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
             <img src="${result.dataUrl}" id="signPreviewImg">
         `;
         document.getElementById('signRemoveBtn').addEventListener('click', function(e) {
@@ -486,7 +486,7 @@ function openCropModal(target) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop Image</h3>
+                <h3>ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="cropCanvas"></canvas>
@@ -714,8 +714,8 @@ function saveCrop() {
         if (cropTarget === 'photo') {
             photoImg = croppedImg;
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
+                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
                 <img src="${dataUrl}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -732,8 +732,8 @@ function saveCrop() {
         } else {
             signImg = croppedImg;
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
+                <button class="crop-btn-icon" id="signCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
                 <img src="${dataUrl}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -798,8 +798,8 @@ function renderMergeGrid() {
         const div = document.createElement('div');
         div.className = 'merge-item';
         div.innerHTML = `
-            <button class="crop-btn" data-index="${index}">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
-            <button class="remove-btn" data-index="${index}">ÃƒÆ’Ã¢â‚¬â€</button>
+            <button class="crop-btn" data-index="${index}">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
+            <button class="remove-btn" data-index="${index}">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
             <img src="${photo.croppedImg.src}" alt="Photo">
             <div class="file-name">${photo.name || 'Photo ' + (index + 1)}</div>
         `;
@@ -839,7 +839,7 @@ function renderMergeGrid() {
         } else if (mergePhotos.length === 1) {
             mergeStatus.textContent = '1 image selected. Add 1 more.';
         } else {
-            mergeStatus.textContent = `ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ ${mergePhotos.length} images selected.`;
+            mergeStatus.textContent = `ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ ${mergePhotos.length} images selected.`;
         }
     }
     if (mergeBtn) mergeBtn.disabled = mergePhotos.length < 2;
@@ -870,7 +870,7 @@ function openMergeCropModal(index) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop Image</h3>
+                <h3>ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="mergeCropCanvas"></canvas>
@@ -1119,7 +1119,7 @@ if (mergeBtn) {
 
         let canvasW, canvasH;
 
-        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ PI7 STYLE: Horizontal ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â same height, aspect ratio maintain
+        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ PI7 STYLE: Horizontal ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â same height, aspect ratio maintain
         if (direction === 'horizontal') {
             canvasH = Math.max(...images.map(img => img.height));
             
@@ -1151,7 +1151,7 @@ if (mergeBtn) {
                 x += drawW;
             });
         }
-        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ PI7 STYLE: Vertical ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â same width, aspect ratio maintain
+        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ PI7 STYLE: Vertical ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â same width, aspect ratio maintain
         else if (direction === 'vertical') {
             canvasW = Math.max(...images.map(img => img.width));
             
@@ -1183,7 +1183,7 @@ if (mergeBtn) {
                 y += drawH;
             });
         }
-        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ Grid ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2 columns
+        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ Grid ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 2 columns
         else {
             const cols = 2;
             const rows = Math.ceil(images.length / cols);
@@ -1229,7 +1229,7 @@ if (mergeBtn) {
 
         if (mergePreviewBox) mergePreviewBox.style.display = 'block';
         
-        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ HIGH QUALITY output ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 0.98 (PI7 jaisa)
+        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ HIGH QUALITY output ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 0.98 (PI7 jaisa)
         mergeCanvas.toBlob(function(blob) {
             mergedBlob = blob;
             if (mergeDownloadBtn) mergeDownloadBtn.style.display = 'block';
@@ -1290,35 +1290,56 @@ if (compressInput) {
 function compressImageFile(img, targetKB, callback) {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    let width = img.width;
-    let height = img.height;
+    let maxDim = Math.max(img.width, img.height);
+    let width, height;
 
-    if (width > 1200 || height > 1200) {
-        if (width > height) {
-            height = (height / width) * 1200;
-            width = 1200;
+    function drawScaled(maxSize) {
+        if (img.width > img.height) {
+            width = Math.min(img.width, maxSize);
+            height = Math.round(img.height * (width / img.width));
         } else {
-            width = (width / height) * 1200;
-            height = 1200;
+            height = Math.min(img.height, maxSize);
+            width = Math.round(img.width * (height / img.height));
         }
+        canvas.width = width;
+        canvas.height = height;
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(img, 0, 0, width, height);
     }
 
-    canvas.width = width;
-    canvas.height = height;
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(img, 0, 0, width, height);
+    let scale = maxDim;
+    const minScale = 200;
 
-    let quality = 1.0;
     function tryCompress() {
-        canvas.toBlob(function(blob) {
-            const sizeKB = blob.size / 1024;
-            if (sizeKB <= targetKB || quality <= 0.5) {
-                callback(blob);
-            } else {
-                quality -= 0.05;
-                tryCompress();
-            }
+        drawScaled(scale);
+        let quality = 0.95;
+        let attempts = 0;
+        const maxAttempts = 20;
+
+        function tryQuality() {
+            attempts++;
+            canvas.toBlob(function(blob) {
+                const sizeKB = blob.size / 1024;
+                if (sizeKB <= targetKB) {
+                    callback(blob);
+                } else if (quality > 0.1 && attempts < maxAttempts) {
+                    quality -= 0.05;
+                    tryQuality();
+                } else if (scale > minScale) {
+                    scale = Math.round(scale * 0.85);
+                    tryCompress();
+                } else {
+                    callback(blob);
+                }
+            }, 'image/jpeg', quality);
+        }
+        tryQuality();
+    }
+    tryCompress();
+}
         }, 'image/jpeg', quality);
     }
     tryCompress();
@@ -1338,7 +1359,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `✅ Compressed: ${sizeKB.toFixed(1)} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `âœ… Compressed: ${sizeKB.toFixed(1)} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
@@ -1845,8 +1866,8 @@ document.addEventListener('mousemove', function(e) {
 // ============ FIX GARBLED BUTTON TEXT ============
 function fixButtonText() {
     const fixes = [
-        { id: 'photoDownloadBtn', base: '⬇ Download Photo' },
-        { id: 'signDownloadBtn', base: '⬇ Download Signature' }
+        { id: 'photoDownloadBtn', base: 'â¬‡ Download Photo' },
+        { id: 'signDownloadBtn', base: 'â¬‡ Download Signature' }
     ];
     fixes.forEach(function(f) {
         const btn = document.getElementById(f.id);
@@ -1854,7 +1875,7 @@ function fixButtonText() {
         const current = btn.textContent || '';
         const match = current.match(/\([\d.]+\s*KB\)/);
         const size = match ? ' ' + match[0] : '';
-        if (!current.startsWith('⬇')) {
+        if (!current.startsWith('â¬‡')) {
             btn.textContent = f.base + size;
         }
     });
