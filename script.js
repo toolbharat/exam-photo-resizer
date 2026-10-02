@@ -327,9 +327,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
         step1Ctx.imageSmoothingQuality = 'high';
         step1Ctx.drawImage(sourceImg, 0, 0, step1W, step1H);
         
-        const step1Img = new Image();
-        step1Img.src = step1Canvas.toDataURL('image/png');
-        currentImg = step1Img;
+        currentImg = step1Canvas;
         
         if (step1W > targetW * 2 || step1H > targetH * 2) {
             const step2W = Math.round(step1W / 2);
@@ -343,9 +341,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
             step2Ctx.imageSmoothingQuality = 'high';
             step2Ctx.drawImage(currentImg, 0, 0, step2W, step2H);
             
-            const step2Img = new Image();
-            step2Img.src = step2Canvas.toDataURL('image/png');
-            currentImg = step2Img;
+            currentImg = step2Canvas;
         }
     }
     
