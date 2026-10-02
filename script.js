@@ -107,8 +107,8 @@ function loadPhoto(file) {
             if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
 
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">Ãƒâ€”</button>
+                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
                 <img src="${event.target.result}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -137,7 +137,7 @@ function removePhoto() {
     if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
     photoImageArea.innerHTML = `
         <div class="empty-state">
-            <p>Ã°Å¸â€œÂ Click to select a photo</p>
+            <p>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‚Â Click to select a photo</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -164,10 +164,10 @@ if (photoResizeBtn) {
         photoCanvas = result.canvas;
         if (photoDownloadBtn) {
             photoDownloadBtn.style.display = 'block';
-            photoDownloadBtn.textContent = `Ã¢Â¬â€¡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
+            photoDownloadBtn.textContent = `ÃƒÂ¢Ã‚Â¬Ã¢â‚¬Â¡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="photoRemoveBtn">Ãƒâ€”</button>
+            <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
             <img src="${result.dataUrl}" id="photoPreviewImg">
         `;
         document.getElementById('photoRemoveBtn').addEventListener('click', function(e) {
@@ -233,8 +233,8 @@ function loadSign(file) {
             if (signDownloadBtn) signDownloadBtn.style.display = 'none';
 
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">Ãƒâ€”</button>
+                <button class="crop-btn-icon" id="signCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
                 <img src="${event.target.result}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -263,7 +263,7 @@ function removeSign() {
     if (signDownloadBtn) signDownloadBtn.style.display = 'none';
     signImageArea.innerHTML = `
         <div class="empty-state">
-            <p>Ã°Å¸â€œÂ Click to select a signature</p>
+            <p>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‚Â Click to select a signature</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -290,10 +290,10 @@ if (signResizeBtn) {
         signCanvas = result.canvas;
         if (signDownloadBtn) {
             signDownloadBtn.style.display = 'block';
-            signDownloadBtn.textContent = `Ã¢Â¬â€¡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
+            signDownloadBtn.textContent = `ÃƒÂ¢Ã‚Â¬Ã¢â‚¬Â¡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="signRemoveBtn">Ãƒâ€”</button>
+            <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
             <img src="${result.dataUrl}" id="signPreviewImg">
         `;
         document.getElementById('signRemoveBtn').addEventListener('click', function(e) {
@@ -486,7 +486,7 @@ function openCropModal(target) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>Ã¢Å“â€šÃ¯Â¸Â Crop Image</h3>
+                <h3>ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="cropCanvas"></canvas>
@@ -714,8 +714,8 @@ function saveCrop() {
         if (cropTarget === 'photo') {
             photoImg = croppedImg;
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">Ãƒâ€”</button>
+                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
                 <img src="${dataUrl}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -732,8 +732,8 @@ function saveCrop() {
         } else {
             signImg = croppedImg;
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">Ãƒâ€”</button>
+                <button class="crop-btn-icon" id="signCropBtn">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
                 <img src="${dataUrl}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -798,8 +798,8 @@ function renderMergeGrid() {
         const div = document.createElement('div');
         div.className = 'merge-item';
         div.innerHTML = `
-            <button class="crop-btn" data-index="${index}">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
-            <button class="remove-btn" data-index="${index}">Ãƒâ€”</button>
+            <button class="crop-btn" data-index="${index}">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop</button>
+            <button class="remove-btn" data-index="${index}">ÃƒÆ’Ã¢â‚¬â€</button>
             <img src="${photo.croppedImg.src}" alt="Photo">
             <div class="file-name">${photo.name || 'Photo ' + (index + 1)}</div>
         `;
@@ -839,7 +839,7 @@ function renderMergeGrid() {
         } else if (mergePhotos.length === 1) {
             mergeStatus.textContent = '1 image selected. Add 1 more.';
         } else {
-            mergeStatus.textContent = `Ã¢Å“â€¦ ${mergePhotos.length} images selected.`;
+            mergeStatus.textContent = `ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ ${mergePhotos.length} images selected.`;
         }
     }
     if (mergeBtn) mergeBtn.disabled = mergePhotos.length < 2;
@@ -870,7 +870,7 @@ function openMergeCropModal(index) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>Ã¢Å“â€šÃ¯Â¸Â Crop Image</h3>
+                <h3>ÃƒÂ¢Ã…â€œÃ¢â‚¬Å¡ÃƒÂ¯Ã‚Â¸Ã‚Â Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="mergeCropCanvas"></canvas>
@@ -1119,7 +1119,7 @@ if (mergeBtn) {
 
         let canvasW, canvasH;
 
-        // Ã¢Å“â€¦ PI7 STYLE: Horizontal Ã¢â‚¬â€ same height, aspect ratio maintain
+        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ PI7 STYLE: Horizontal ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â same height, aspect ratio maintain
         if (direction === 'horizontal') {
             canvasH = Math.max(...images.map(img => img.height));
             
@@ -1151,7 +1151,7 @@ if (mergeBtn) {
                 x += drawW;
             });
         }
-        // Ã¢Å“â€¦ PI7 STYLE: Vertical Ã¢â‚¬â€ same width, aspect ratio maintain
+        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ PI7 STYLE: Vertical ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â same width, aspect ratio maintain
         else if (direction === 'vertical') {
             canvasW = Math.max(...images.map(img => img.width));
             
@@ -1183,7 +1183,7 @@ if (mergeBtn) {
                 y += drawH;
             });
         }
-        // Ã¢Å“â€¦ Grid Ã¢â‚¬â€ 2 columns
+        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ Grid ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2 columns
         else {
             const cols = 2;
             const rows = Math.ceil(images.length / cols);
@@ -1229,7 +1229,7 @@ if (mergeBtn) {
 
         if (mergePreviewBox) mergePreviewBox.style.display = 'block';
         
-        // Ã¢Å“â€¦ HIGH QUALITY output Ã¢â‚¬â€ 0.98 (PI7 jaisa)
+        // ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ HIGH QUALITY output ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 0.98 (PI7 jaisa)
         mergeCanvas.toBlob(function(blob) {
             mergedBlob = blob;
             if (mergeDownloadBtn) mergeDownloadBtn.style.display = 'block';
@@ -1338,7 +1338,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `Ã¢Å“â€¦ Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¦ Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
@@ -1374,8 +1374,13 @@ function fitImageToArea(area, target) {
     const displayW = img.naturalWidth * scale;
     const displayH = img.naturalHeight * scale;
     
-    img.style.width = displayW + 'px';
-    img.style.height = displayH + 'px';
+    img.style.setProperty('width', displayW + 'px', 'important');
+    img.style.setProperty('height', displayH + 'px', 'important');
+    img.style.setProperty('max-width', 'none', 'important');
+    img.style.setProperty('max-height', 'none', 'important');
+    img.style.setProperty('position', 'absolute', 'important');
+    img.style.setProperty('top', '0', 'important');
+    img.style.setProperty('left', '0', 'important');
     
     panState[target].imgW = displayW;
     panState[target].imgH = displayH;
@@ -1419,8 +1424,8 @@ function clampPan(target) {
 function applyPan(area, target) {
     const img = area.querySelector('img');
     if (!img) return;
-    img.style.left = panState[target].x + 'px';
-    img.style.top = panState[target].y + 'px';
+    img.style.setProperty('left', panState[target].x + 'px', 'important');
+    img.style.setProperty('top', panState[target].y + 'px', 'important');
 }
 
 function setupPanDrag(areaId, target) {
