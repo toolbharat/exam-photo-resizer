@@ -1617,3 +1617,68 @@ function hideEmptyState() {
 }
 
 setInterval(hideEmptyState, 500);
+
+// ============ PAN FRAME MANAGER v3 ============
+function initPanFrames() {
+    const configs = [
+        { area: 'photoImageArea', wId: 'photoWidth', hId: 'photoHeight', target: 'photo', maxW: 240 },
+        { area: 'signImageArea', wId: 'signWidth', hId: 'signHeight', target: 'signature', maxW: 340 }
+    ];
+    
+    configs.forEach(function(cfg) {
+        const area = document.getElementById(cfg.area);
+        if (!area) return;
+        
+        area.classList.add('pan-frame');
+        
+        const wEl = document.getElementById(cfg.wId);
+        const hEl = document.getElementById(cfg.hId);
+        const tw = parseInt(wEl ? wEl.value : 100) || 100;
+        const th = parseInt(hEl ? hEl.value : 120) || 120;
+        
+        const aspect = tw / th;
+        const displayW = cfg.maxW;
+        const displayH = Math.round(displayW / aspect);
+        
+        // Force dimensions
+        area.style.cssText = 'width:' + displayW + 'px !important;' +
+                              'height:' + displayH + 'px !important;' +
+                              'max-width:' + displayW + 'px !important;' +
+                              'max-height:' + displayH + 'px !important;' +
+                              'min-height:' + displayH + 'px !important;' +
+                              'margin: 0 auto !important;' +
+                              'position: relative !important;' +
+                              'overflow: hidden !important;' +
+                              'border: 2px solid #4f46e5 !important;' +
+                              'background: #f0f0f5 !important;' +
+                              'border-radius: 8px !important;';
+        
+        // Set pan state area dimensions
+        if (window.panState && panState[cfg.target]) {
+            panState[cfg.target].areaW = displayW;
+            panState[cfg.target].areaH = displayH;
+        }
+        
+        // Fit image
+        const img = area.querySelector('img');
+        if (img && img.naturalWidth) {
+            fitImageToArea(area, cfg.target);
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initPanFrames();
+    setTimeout(initPanFrames, 200);
+    setTimeout(initPanFrames, 500);
+});
+
+// Re-run on width/height input change
+document.addEventListener('input', function(e) {
+    if (e.target && (e.target.id === 'photoWidth' || e.target.id === 'photoHeight' ||
+                     e.target.id === 'signWidth' || e.target.id === 'signHeight')) {
+        initPanFrames();
+    }
+});
+
+setInterval(initPanFrames, 1500);
