@@ -1,4 +1,4 @@
-﻿// ============ JPEG PADDING (Min size for exam photos) ============
+// ============ JPEG PADDING (Min size for exam photos) ============
 function padJpegToMinSize(dataUrl, minKB) {
     try {
         const base64 = dataUrl.split(',')[1];
@@ -1355,7 +1355,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `âœ… Compressed: ${sizeKB.toFixed(1)} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `âœ… Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
