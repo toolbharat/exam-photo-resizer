@@ -1,3 +1,35 @@
+// ============ JPEG PADDING (Min size for exam photos) ============
+function padJpegToMinSize(dataUrl, minKB) {
+    try {
+        const base64 = dataUrl.split(',')[1];
+        let binaryStr = atob(base64);
+        const currentSizeKB = (binaryStr.length) / 1024;
+        if (currentSizeKB >= minKB) return dataUrl;
+
+        const lastTwo = binaryStr.charCodeAt(binaryStr.length - 2).toString(16).padStart(2, '0') +
+                        binaryStr.charCodeAt(binaryStr.length - 1).toString(16).padStart(2, '0');
+        if (lastTwo !== 'ffd9') return dataUrl;
+
+        const targetBytes = Math.round(minKB * 1024);
+        const paddingBytes = targetBytes - binaryStr.length;
+        if (paddingBytes <= 4) return dataUrl;
+
+        const comDataLength = paddingBytes - 2;
+        const lengthHi = String.fromCharCode((comDataLength + 2) >> 8);
+        const lengthLo = String.fromCharCode((comDataLength + 2) & 0xFF);
+        const paddingData = 'P'.repeat(Math.max(0, comDataLength - 2));
+        const comMarker = '\xFF\xFE' + lengthHi + lengthLo + paddingData;
+
+        const beforeEoi = binaryStr.slice(0, binaryStr.length - 2);
+        const eoi = binaryStr.slice(binaryStr.length - 2);
+        const newBinary = beforeEoi + comMarker + eoi;
+
+        return 'data:image/jpeg;base64,' + btoa(newBinary);
+    } catch (e) {
+        console.warn('Padding failed:', e);
+        return dataUrl;
+    }
+}
 /* ============================================
    Photo Resizer - Photo + Signature (2 Boxes)
    + Merger (PI7 Style Quality)
@@ -340,7 +372,13 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
     let sizeKB = (dataUrl.length * 0.75) / 1024;
     
     if (sizeKB <= targetKB) {
-        return { canvas, dataUrl, sizeKB };
+        // Pad to minimum size for exam requirements
+    const minKB = Math.max(10, Math.min(20, Math.round(targetKB * 0.5)));
+    if (sizeKB < minKB) {
+        dataUrl = padJpegToMinSize(dataUrl, minKB);
+        sizeKB = (dataUrl.length * 0.75) / 1024;
+    }
+    return { canvas, dataUrl, sizeKB };
     }
     
     let quality = 0.95;
@@ -395,6 +433,12 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
         }
     }
     
+    // Pad to minimum size for exam requirements
+    const minKB = Math.max(10, Math.min(20, Math.round(targetKB * 0.5)));
+    if (sizeKB < minKB) {
+        dataUrl = padJpegToMinSize(dataUrl, minKB);
+        sizeKB = (dataUrl.length * 0.75) / 1024;
+    }
     return { canvas, dataUrl, sizeKB };
 }
 
