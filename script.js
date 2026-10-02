@@ -1355,7 +1355,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `âœ… Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `✅ Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
