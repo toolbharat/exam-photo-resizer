@@ -583,3 +583,79 @@ body {
         max-height: 130px !important;
     }
 }
+
+/* ============ PAN/DRAG IMAGE ============ */
+.image-area {
+    position: relative;
+    overflow: hidden !important;
+    background: #f0f0f5;
+    border-radius: 8px;
+    cursor: grab;
+    user-select: none;
+}
+
+.image-area.dragging {
+    cursor: grabbing;
+}
+
+.image-area img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: 50% 50%;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    display: block !important;
+    border-radius: 0 !important;
+}
+
+.pan-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    pointer-events: none;
+    z-index: 5;
+    white-space: nowrap;
+}
+
+/* ============ PAN/DRAG IMAGE v2 (overrides) ============ */
+.image-area {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #f0f0f5;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    min-height: 200px;
+}
+
+.image-area.dragging {
+    cursor: grabbing;
+}
+
+.image-area img {
+    position: absolute !important;
+    max-width: none !important;
+    max-height: none !important;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    display: block !important;
+    border-radius: 0 !important;
+    left: 0;
+    top: 0;
+}
+
+.image-area .empty-state {
+    position: relative;
+    z-index: 2;
+}
