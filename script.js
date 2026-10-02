@@ -164,7 +164,7 @@ if (photoResizeBtn) {
         photoCanvas = result.canvas;
         if (photoDownloadBtn) {
             photoDownloadBtn.style.display = 'block';
-            photoDownloadBtn.textContent = `ÃƒÂ¢Ã‚Â¬Ã¢â‚¬Â¡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
+            photoDownloadBtn.textContent = `⬇ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
             <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
@@ -290,7 +290,7 @@ if (signResizeBtn) {
         signCanvas = result.canvas;
         if (signDownloadBtn) {
             signDownloadBtn.style.display = 'block';
-            signDownloadBtn.textContent = `ÃƒÂ¢Ã‚Â¬Ã¢â‚¬Â¡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
+            signDownloadBtn.textContent = `⬇ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
             <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã¢â‚¬â€</button>
@@ -1841,3 +1841,28 @@ document.addEventListener('mousemove', function(e) {
         }
     });
 });
+
+// ============ FIX GARBLED BUTTON TEXT ============
+function fixButtonText() {
+    const fixes = [
+        { id: 'photoDownloadBtn', base: '⬇ Download Photo' },
+        { id: 'signDownloadBtn', base: '⬇ Download Signature' }
+    ];
+    fixes.forEach(function(f) {
+        const btn = document.getElementById(f.id);
+        if (!btn) return;
+        const current = btn.textContent || '';
+        const match = current.match(/\([\d.]+\s*KB\)/);
+        const size = match ? ' ' + match[0] : '';
+        if (!current.startsWith('⬇')) {
+            btn.textContent = f.base + size;
+        }
+    });
+}
+
+// Fix on load and periodically
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(fixButtonText, 200);
+    setTimeout(fixButtonText, 1000);
+});
+setInterval(fixButtonText, 500);
