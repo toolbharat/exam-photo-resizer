@@ -14,10 +14,10 @@ function padJpegToMinSize(dataUrl, minKB) {
         const paddingBytes = targetBytes - binaryStr.length;
         if (paddingBytes <= 4) return dataUrl;
 
-        const comDataLength = paddingBytes - 2;
-        const lengthHi = String.fromCharCode((comDataLength + 2) >> 8);
+        const comDataLength = paddingBytes - 4;
+        const lengthHi = String.fromCharCode(((comDataLength + 2) >> 8) & 0xFF);
         const lengthLo = String.fromCharCode((comDataLength + 2) & 0xFF);
-        const paddingData = 'P'.repeat(Math.max(0, comDataLength - 2));
+        const paddingData = 'P'.repeat(Math.max(0, comDataLength));
         const comMarker = '\xFF\xFE' + lengthHi + lengthLo + paddingData;
 
         const beforeEoi = binaryStr.slice(0, binaryStr.length - 2);
@@ -373,9 +373,9 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
     
     if (sizeKB <= targetKB) {
         // Pad to minimum size for exam requirements
-    const minKB = Math.max(15, Math.min(25, Math.round(targetKB * 0.55)));
+    const minKB = 0;
     if (sizeKB < minKB) {
-        dataUrl = padJpegToMinSize(dataUrl, minKB);
+        // DISABLED FOR TEST
         sizeKB = (dataUrl.length * 0.75) / 1024;
     }
     return { canvas, dataUrl, sizeKB };
@@ -434,9 +434,9 @@ function resizeImage(sourceImg, targetW, targetH, targetKB) {
     }
     
     // Pad to minimum size for exam requirements
-    const minKB = Math.max(15, Math.min(25, Math.round(targetKB * 0.55)));
+    const minKB = 0;
     if (sizeKB < minKB) {
-        dataUrl = padJpegToMinSize(dataUrl, minKB);
+        // DISABLED FOR TEST
         sizeKB = (dataUrl.length * 0.75) / 1024;
     }
     return { canvas, dataUrl, sizeKB };
