@@ -1,4 +1,4 @@
-// ============ JPEG PADDING (Min size for exam photos) ============
+﻿// ============ JPEG PADDING (Min size for exam photos) ============
 function padJpegToMinSize(dataUrl, minKB) {
     try {
         const base64 = dataUrl.split(',')[1];
@@ -107,7 +107,7 @@ function loadPhoto(file) {
             if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
 
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">✂️ Crop</button>
+                <button class="crop-btn-icon" id="photoCropBtn">Crop</button>
                 <button class="remove-btn-icon" id="photoRemoveBtn">X</button>
                 <img src="${event.target.result}" id="photoPreviewImg">
             `;
@@ -233,7 +233,7 @@ function loadSign(file) {
             if (signDownloadBtn) signDownloadBtn.style.display = 'none';
 
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">✂️ Crop</button>
+                <button class="crop-btn-icon" id="signCropBtn">Crop</button>
                 <button class="remove-btn-icon" id="signRemoveBtn">X</button>
                 <img src="${event.target.result}" id="signPreviewImg">
             `;
@@ -714,7 +714,7 @@ function saveCrop() {
         if (cropTarget === 'photo') {
             photoImg = croppedImg;
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">✂️ Crop</button>
+                <button class="crop-btn-icon" id="photoCropBtn">Crop</button>
                 <button class="remove-btn-icon" id="photoRemoveBtn">X</button>
                 <img src="${dataUrl}" id="photoPreviewImg">
             `;
@@ -732,7 +732,7 @@ function saveCrop() {
         } else {
             signImg = croppedImg;
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">✂️ Crop</button>
+                <button class="crop-btn-icon" id="signCropBtn">Crop</button>
                 <button class="remove-btn-icon" id="signRemoveBtn">X</button>
                 <img src="${dataUrl}" id="signPreviewImg">
             `;
@@ -798,7 +798,7 @@ function renderMergeGrid() {
         const div = document.createElement('div');
         div.className = 'merge-item';
         div.innerHTML = `
-            <button class="crop-btn" data-index="${index}">X</button>
+            <button class="crop-btn" data-index="${index}">Crop</button>
             <button class="remove-btn" data-index="${index}">X</button>
             <img src="${photo.croppedImg.src}" alt="Photo">
             <div class="file-name">${photo.name || 'Photo ' + (index + 1)}</div>
@@ -839,7 +839,7 @@ function renderMergeGrid() {
         } else if (mergePhotos.length === 1) {
             mergeStatus.textContent = '1 image selected. Add 1 more.';
         } else {
-            mergeStatus.textContent = `images selected.`;
+            mergeStatus.textContent = `${mergePhotos.length} images selected.`;
         }
     }
     if (mergeBtn) mergeBtn.disabled = mergePhotos.length < 2;
@@ -1891,7 +1891,6 @@ function fixGarbledText() {
     let node;
     const fixes = [
         { pattern: /Ã[^\s<]{0,30}?Crop/g, replace: '✂️ Crop' },
-        { pattern: /Ã[^\s<]{0,30}?images selected/g, replace: '✅ images selected' },
         { pattern: /Ã[^\s<]{0,30}?Photo/g, replace: '📸 Photo' },
         { pattern: /Ã[^\s<]{0,30}?Add Photo/g, replace: '➕ Add Photo' },
         { pattern: /Ã[^\s<]{0,30}?Join Images/g, replace: '🔗 Join Images' },
@@ -1924,7 +1923,6 @@ function fixGarbledTextV2() {
     let node;
     const fixes = [
         { pattern: /[ÃÂ][\s\S]{0,80}?Crop/g, replace: '✂️ Crop' },
-        { pattern: /[ÃÂ][\s\S]{0,80}?images selected/g, replace: '✅ images selected' },
         { pattern: /[ÃÂ][\s\S]{0,80}?Add Photo/g, replace: '➕ Add Photo' },
         { pattern: /[ÃÂ][\s\S]{0,80}?Join Images/g, replace: '🔗 Join Images' },
         { pattern: /[ÃÂ][\s\S]{0,80}?Download Merged Photo/g, replace: '⬇ Download Merged Photo' },
@@ -1966,20 +1964,9 @@ function fixGarbledDash() {
     }
 }
 
-// Also fix the "2 images selected" to preserve number
-function fixImagesCount() {
-    document.querySelectorAll('*').forEach(function(el) {
-        if (el.children.length === 0 && el.textContent.includes('images selected')) {
-            if (!el.textContent.includes('2 ') && !el.textContent.match(/\d+\s+images/)) {
-                el.textContent = el.textContent.replace('✅ images selected', '✅ 2 images selected');
-            }
-        }
-    });
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     fixGarbledDash();
-    fixImagesCount();
     setTimeout(fixGarbledDash, 500);
     setTimeout(fixGarbledDash, 1500);
 });
