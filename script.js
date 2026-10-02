@@ -1,4 +1,4 @@
-﻿// ============ JPEG PADDING (Min size for exam photos) ============
+// ============ JPEG PADDING (Min size for exam photos) ============
 function padJpegToMinSize(dataUrl, minKB) {
     try {
         const base64 = dataUrl.split(',')[1];
@@ -1388,9 +1388,10 @@ function fitImageToArea(area, target) {
     panState[target].areaH = areaH;
     
     // Center initially
-    if (panState[target].x === 0 && panState[target].y === 0) {
+    if (panState[target].initializedFor !== img) {
         panState[target].x = (areaW - displayW) / 2;
         panState[target].y = (areaH - displayH) / 2;
+        panState[target].initializedFor = img;
     } else {
         // Clamp existing position
         clampPan(target);
