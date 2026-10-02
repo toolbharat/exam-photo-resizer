@@ -713,3 +713,82 @@ body {
 #signImageArea {
     display: block !important;
 }
+
+/* ============ MERGE PHOTO TOOL ============ */
+.merge-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+}
+
+.merge-item {
+    position: relative !important;
+    background: #f8f8fb !important;
+    border: 2px solid #e5e5ea !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    min-height: 200px !important;
+    max-height: 280px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.merge-item img {
+    max-width: 100% !important;
+    max-height: 200px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 6px !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.merge-item canvas {
+    max-width: 100% !important;
+    max-height: 200px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 6px !important;
+}
+
+.add-photo-inner {
+    cursor: pointer !important;
+    text-align: center !important;
+    padding: 20px !important;
+    color: #667eea !important;
+    font-weight: 600 !important;
+}
+
+.merge-item .crop-btn,
+.merge-item button {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin: 4px 2px 0 2px !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .merge-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+    }
+    .merge-item {
+        min-height: 150px !important;
+        max-height: 200px !important;
+    }
+    .merge-item img,
+    .merge-item canvas {
+        max-height: 130px !important;
+    }
+}
