@@ -49,5 +49,6 @@
     { "source": "/photo-merger.html", "destination": "/pdf-merger", "permanent": true },
     { "source": "/bitsat.html", "destination": "/bitsat-photo-resizer", "permanent": true },
     { "source": "/viteee.html", "destination": "/viteee-photo-resizer", "permanent": true }
+    ,{ "source": "/india", "destination": "/", "permanent": true }
   ]
 }
