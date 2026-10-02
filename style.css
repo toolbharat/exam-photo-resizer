@@ -684,3 +684,13 @@ body {
     z-index: 3;
     white-space: nowrap;
 }
+
+/* ============ TOOL BOX CONSTRAINT ============ */
+.tool-box {
+    max-width: 100% !important;
+    width: auto !important;
+    display: block !important;
+    min-height: auto !important;
+    padding: 15px !important;
+    text-align: center !important;
+}

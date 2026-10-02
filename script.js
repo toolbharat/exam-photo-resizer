@@ -1682,3 +1682,83 @@ document.addEventListener('input', function(e) {
 });
 
 setInterval(initPanFrames, 1500);
+
+// ============ PAN FRAME MANAGER v4 (Fixed) ============
+function setImp(el, prop, val) {
+    if (el && el.style) el.style.setProperty(prop, val, 'important');
+}
+
+function initPanFrames() {
+    const configs = [
+        { area: 'photoImageArea', wId: 'photoWidth', hId: 'photoHeight', target: 'photo', maxW: 240 },
+        { area: 'signImageArea', wId: 'signWidth', hId: 'signHeight', target: 'signature', maxW: 340 }
+    ];
+    
+    configs.forEach(function(cfg) {
+        const area = document.getElementById(cfg.area);
+        if (!area) return;
+        
+        area.classList.add('pan-frame');
+        
+        const wEl = document.getElementById(cfg.wId);
+        const hEl = document.getElementById(cfg.hId);
+        const tw = parseInt(wEl ? wEl.value : 100) || 100;
+        const th = parseInt(hEl ? hEl.value : 120) || 120;
+        
+        const aspect = tw / th;
+        const displayW = cfg.maxW;
+        const displayH = Math.round(displayW / aspect);
+        
+        // Use setProperty with important flag (cssText doesn't support !important)
+        setImp(area, 'width', displayW + 'px');
+        setImp(area, 'height', displayH + 'px');
+        setImp(area, 'max-width', displayW + 'px');
+        setImp(area, 'max-height', displayH + 'px');
+        setImp(area, 'min-height', displayH + 'px');
+        setImp(area, 'min-width', displayW + 'px');
+        setImp(area, 'margin', '0 auto');
+        setImp(area, 'position', 'relative');
+        setImp(area, 'overflow', 'hidden');
+        setImp(area, 'border', '2px solid #4f46e5');
+        setImp(area, 'background', '#f0f0f5');
+        setImp(area, 'border-radius', '8px');
+        setImp(area, 'padding', '0');
+        
+        // Update pan state
+        if (window.panState && panState[cfg.target]) {
+            panState[cfg.target].areaW = displayW;
+            panState[cfg.target].areaH = displayH;
+        }
+        
+        // Fit image
+        const img = area.querySelector('img');
+        if (img && img.naturalWidth) {
+            img.style.setProperty('position', 'absolute', 'important');
+            img.style.setProperty('max-width', 'none', 'important');
+            img.style.setProperty('max-height', 'none', 'important');
+            img.style.setProperty('pointer-events', 'none', 'important');
+            
+            if (typeof fitImageToArea === 'function') {
+                fitImageToArea(area, cfg.target);
+            }
+        }
+    });
+}
+
+// Remove old manager if exists
+window.initPanFrames = initPanFrames;
+
+document.addEventListener('DOMContentLoaded', function() {
+    initPanFrames();
+    setTimeout(initPanFrames, 200);
+    setTimeout(initPanFrames, 500);
+});
+
+document.addEventListener('input', function(e) {
+    if (e.target && (e.target.id === 'photoWidth' || e.target.id === 'photoHeight' ||
+                     e.target.id === 'signWidth' || e.target.id === 'signHeight')) {
+        initPanFrames();
+    }
+});
+
+setInterval(initPanFrames, 1000);
