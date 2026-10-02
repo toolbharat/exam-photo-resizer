@@ -18,10 +18,10 @@
     <link rel="alternate" hreflang="en" href="https://pixsathi.in/finance/loan-eligibility-calculator.html" />
     <link rel="alternate" hreflang="hi" href="https://pixsathi.in/finance/loan-eligibility-calculator-hi.html" />
 
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="/finance/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/finance/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/finance/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/finance/apple-touch-icon.png">
 <style>
 /* ========== RESET & BASE ========== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -582,15 +582,15 @@ body {
         <div class="logo">India Finance Calculator</div>
         <p class="tagline">Free Online Financial Calculators</p>
         <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="emi-calculator.html">EMI</a>
-            <a href="gst-calculator.html">GST</a>
-            <a href="sip-calculator.html">SIP</a>
-            <a href="fd-calculator.html">FD</a>
-            <a href="salary-calculator.html">Salary</a>
-            <a href="income-tax-calculator.html">Income Tax</a>
-            <a href="blog.html">Blog</a>
-            <a href="index-hi.html" class="lang-switch">🌐 हिंदी</a>
+            <a href="/finance/index.html">Home</a>
+            <a href="/finance/emi-calculator.html">EMI</a>
+            <a href="/finance/gst-calculator.html">GST</a>
+            <a href="/finance/sip-calculator.html">SIP</a>
+            <a href="/finance/fd-calculator.html">FD</a>
+            <a href="/finance/salary-calculator.html">Salary</a>
+            <a href="/finance/income-tax-calculator.html">Income Tax</a>
+            <a href="/finance/blog.html">Blog</a>
+            <a href="/finance/index-hi.html" class="lang-switch">🌐 हिंदी</a>
         </nav>
     </div>
 </header>
@@ -648,10 +648,10 @@ body {
     <div class="container">
         <p>© 2026 India Finance Calculator</p>
         <nav class="footer-nav">
-            <a href="about.html">About</a> |
-            <a href="contact.html">Contact</a> |
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="disclaimer.html">Disclaimer</a>
+            <a href="/finance/about.html">About</a> |
+            <a href="/finance/contact.html">Contact</a> |
+            <a href="/finance/privacy-policy.html">Privacy Policy</a> |
+            <a href="/finance/disclaimer.html">Disclaimer</a>
         </nav>
     </div>
 </footer>
@@ -744,7 +744,7 @@ function calculateEMI() {
 
         <p class="note">💡 Tip: A higher down payment or shorter tenure reduces total interest.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -795,7 +795,7 @@ function calculateGST() {
 
         <p class="note">💡 Tip: GST rates in India are 5%, 12%, 18%, and 28%.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -849,7 +849,7 @@ function calculateSIP() {
 
         <p class="note">💡 Tip: The longer you stay invested in SIP, the more you benefit from compounding.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -901,7 +901,7 @@ function calculateFD() {
 
         <p class="note">💡 Tip: FD interest is taxable. TDS applies if interest exceeds ₹40,000 per year.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -999,7 +999,7 @@ function calculateSalary() {
 
         <p class="note">💡 Tip: Tax is calculated using the New Regime with ₹75,000 standard deduction. Verify PF and other deductions from your salary slip.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1128,7 +1128,7 @@ function calculateIncomeTax() {
 
         <p class="note">✅ <strong>${better} Regime</strong> is better for you — You save ${formatINR(saving)}!</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1211,7 +1211,7 @@ function calculateLoanEligibility() {
         <p class="note">💡 Your FOIR for this loan type is <strong>${(foir * 100)}%</strong>. Existing EMIs of ${formatINR(existingEmi)} have been deducted.</p>
         ${tenureWarning}
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1273,7 +1273,7 @@ function calculateGratuity() {
         <p class="note">💡 Gratuity up to ₹20 lakh is tax-exempt. Amount above ₹20 lakh is taxable.</p>
         <p class="note">📊 Formula: (15 × ₹${lastSalary.toLocaleString('en-IN')} × ${roundedYears}) / 26 = ${formatINR(gratuity)}</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1360,7 +1360,7 @@ function calculateInsurance() {
         <p class="note">💡 This is an indicative estimate. Actual premium depends on your medical history, the insurer, and policy terms.</p>
         <p class="note">📊 Cover = (Income × 15) + Loans + Child Education − Savings</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1449,7 +1449,7 @@ function calculateNPS() {
         <p class="note">💡 Pension is estimated at 6% annuity rate. Actual rates vary by insurer and annuity option.</p>
         <p class="note">📊 Tax benefit: Additional ₹50,000 deduction under Section 80CCD(1B) in Old Regime.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1537,7 +1537,7 @@ function calculateSWP() {
 
         <p class="note">📊 Initial Investment: ${formatINR(investment)} | Monthly Withdrawal: ${formatINR(monthlyWithdrawal)} | Expected Return: ${annualReturn}%</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1593,7 +1593,7 @@ function calculateLumpsum() {
         <p class="note">📊 Formula: ${formatINR(amount)} × (1 + ${annualReturn}%)^${years} = ${formatINR(maturity)}</p>
         <p class="note">⚠️ Returns are market-linked and not guaranteed. This is an estimate.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1645,7 +1645,7 @@ function calculateCAGR() {
         <p class="note">💡 Your investment grew at an average rate of <strong>${cagr.toFixed(2)}% per year</strong> over ${years} years.</p>
         <p class="note">📊 Formula: [(${formatINR(final)} / ${formatINR(initial)})^(1/${years}) − 1] × 100 = ${cagr.toFixed(2)}%</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1709,7 +1709,7 @@ function calculatePPF() {
         <p class="note">📊 Investment under Section 80C eligible for deduction up to ₹1.5 lakh (Old Regime).</p>
         <p class="note">⚠️ PPF interest rates are revised quarterly. Rate used: ${annualRate}%</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1784,7 +1784,7 @@ function calculateHRA() {
         <p class="note">💡 Available only under the Old Tax Regime.</p>
         <p class="note">📊 If annual rent exceeds ₹1,00,000, landlord's PAN is required.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1848,7 +1848,7 @@ function calculateRD() {
         <p class="note">📊 Interest is compounded quarterly. Actual rates may vary by bank.</p>
         <p class="note">⚠️ Interest is taxable. TDS applies if annual interest exceeds ₹40,000.</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
@@ -1926,7 +1926,7 @@ function calculateCompoundInterest() {
         <p class="note">💡 Compounding ${freqNames[n].toLowerCase()} gives you ${formatINR(difference)} more than simple interest.</p>
         <p class="note">📊 Formula: ${formatINR(principal)} × (1 + ${annualRate}%/${n})^(${n}×${years}) = ${formatINR(maturity)}</p>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index.html" class="back-link">← Back to Home</a>
     `;
 }
 
