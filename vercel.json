@@ -46,7 +46,9 @@
     { "source": "/bihar-police.html", "destination": "/bihar-police-photo-resizer", "permanent": true },
     { "source": "/delhi-police.html", "destination": "/delhi-police-photo-resizer", "permanent": true },
     { "source": "/compressor.html", "destination": "/image-compressor", "permanent": true },
-    { "source": "/photo-merger.html", "destination": "/pdf-merger", "permanent": true },
+    { "source": "/photo-merger.html", "destination": "/photo-merger", "permanent": true }
+    ,{ "source": "/pdf-merger", "destination": "/photo-merger", "permanent": true }
+    ,{ "source": "/pdf-merger.html", "destination": "/photo-merger", "permanent": true },
     { "source": "/bitsat.html", "destination": "/bitsat-photo-resizer", "permanent": true },
     { "source": "/viteee.html", "destination": "/viteee-photo-resizer", "permanent": true }
     ,{ "source": "/india", "destination": "/", "permanent": true }

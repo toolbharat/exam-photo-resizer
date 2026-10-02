@@ -1883,3 +1883,36 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(fixButtonText, 1000);
 });
 setInterval(fixButtonText, 500);
+
+// ============ FIX GARBLED TEXT (Photo Merger) ============
+function fixGarbledText() {
+    if (!document.body) return;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    const fixes = [
+        { pattern: /Ã[^\s<]{0,30}?Crop/g, replace: '✂️ Crop' },
+        { pattern: /Ã[^\s<]{0,30}?images selected/g, replace: '✅ images selected' },
+        { pattern: /Ã[^\s<]{0,30}?Photo/g, replace: '📸 Photo' },
+        { pattern: /Ã[^\s<]{0,30}?Add Photo/g, replace: '➕ Add Photo' },
+        { pattern: /Ã[^\s<]{0,30}?Join Images/g, replace: '🔗 Join Images' },
+        { pattern: /Ã[^\s<]{0,30}?Direction:/g, replace: 'Direction:' },
+        { pattern: /Ã[^\s<]{0,30}?Arrange:/g, replace: 'Arrange:' }
+    ];
+    while (node = walker.nextNode()) {
+        let text = node.nodeValue;
+        let changed = false;
+        fixes.forEach(function(f) {
+            if (f.pattern.test(text)) {
+                text = text.replace(f.pattern, f.replace);
+                changed = true;
+            }
+        });
+        if (changed) node.nodeValue = text;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fixGarbledText();
+    setTimeout(fixGarbledText, 500);
+    setTimeout(fixGarbledText, 1500);
+});
