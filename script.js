@@ -1507,3 +1507,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setupPanDrag('signImageArea', 'signature');
     setInterval(autoFitAll, 500);
 });
+
+// ============ REMOVE CROP BUTTONS ON LOAD ============
+function removeCropButtons() {
+    document.querySelectorAll('.crop-btn-icon').forEach(function(btn) {
+        btn.remove();
+    });
+}
+document.addEventListener('DOMContentLoaded', removeCropButtons);
+setInterval(removeCropButtons, 500);

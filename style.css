@@ -674,3 +674,58 @@ body {
     pointer-events: none;
     user-select: none;
 }
+
+/* ============ HIDE CROP BUTTON + FRAME ASPECT ============ */
+.crop-btn-icon {
+    display: none !important;
+}
+
+.remove-btn-icon {
+    display: flex !important;
+}
+
+/* Photo frame - 100:120 aspect (SSC CGL) */
+#photoImageArea {
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    aspect-ratio: 100 / 120 !important;
+    max-height: 340px !important;
+    min-height: 280px !important;
+    border: 2px solid #4f46e5 !important;
+    background: #ffffff !important;
+}
+
+/* Signature frame - 140:60 aspect */
+#signImageArea {
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    aspect-ratio: 140 / 60 !important;
+    max-height: 180px !important;
+    min-height: 150px !important;
+    border: 2px solid #4f46e5 !important;
+    background: #ffffff !important;
+}
+
+/* Move hint text */
+.image-area::after {
+    content: '↔ Move to adjust';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(79, 70, 229, 0.85);
+    color: white;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.image-area .empty-state ~ * {
+    display: none;
+}
+
+.image-area .empty-state::after {
+    content: '';
+}
