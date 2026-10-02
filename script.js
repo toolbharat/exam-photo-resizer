@@ -107,8 +107,8 @@ function loadPhoto(file) {
             if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
 
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+                <button class="crop-btn-icon" id="photoCropBtn">✂️ Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
                 <img src="${event.target.result}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -137,7 +137,7 @@ function removePhoto() {
     if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
     photoImageArea.innerHTML = `
         <div class="empty-state">
-            <p>ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒâ€šÃ‚Â Click to select a photo</p>
+            <p>📁 Click to select a photo</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -167,7 +167,7 @@ if (photoResizeBtn) {
             photoDownloadBtn.textContent = `â¬‡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+            <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
             <img src="${result.dataUrl}" id="photoPreviewImg">
         `;
         document.getElementById('photoRemoveBtn').addEventListener('click', function(e) {
@@ -233,8 +233,8 @@ function loadSign(file) {
             if (signDownloadBtn) signDownloadBtn.style.display = 'none';
 
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+                <button class="crop-btn-icon" id="signCropBtn">✂️ Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
                 <img src="${event.target.result}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -263,7 +263,7 @@ function removeSign() {
     if (signDownloadBtn) signDownloadBtn.style.display = 'none';
     signImageArea.innerHTML = `
         <div class="empty-state">
-            <p>ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒâ€šÃ‚Â Click to select a signature</p>
+            <p>📁 Click to select a signature</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -293,7 +293,7 @@ if (signResizeBtn) {
             signDownloadBtn.textContent = `â¬‡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+            <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
             <img src="${result.dataUrl}" id="signPreviewImg">
         `;
         document.getElementById('signRemoveBtn').addEventListener('click', function(e) {
@@ -486,7 +486,7 @@ function openCropModal(target) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop Image</h3>
+                <h3>✂️ Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="cropCanvas"></canvas>
@@ -714,8 +714,8 @@ function saveCrop() {
         if (cropTarget === 'photo') {
             photoImg = croppedImg;
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+                <button class="crop-btn-icon" id="photoCropBtn">✂️ Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
                 <img src="${dataUrl}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -732,8 +732,8 @@ function saveCrop() {
         } else {
             signImg = croppedImg;
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+                <button class="crop-btn-icon" id="signCropBtn">✂️ Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
                 <img src="${dataUrl}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -798,8 +798,8 @@ function renderMergeGrid() {
         const div = document.createElement('div');
         div.className = 'merge-item';
         div.innerHTML = `
-            <button class="crop-btn" data-index="${index}">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop</button>
-            <button class="remove-btn" data-index="${index}">ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+            <button class="crop-btn" data-index="${index}">Ã—</button>
+            <button class="remove-btn" data-index="${index}">Ã—</button>
             <img src="${photo.croppedImg.src}" alt="Photo">
             <div class="file-name">${photo.name || 'Photo ' + (index + 1)}</div>
         `;
@@ -839,7 +839,7 @@ function renderMergeGrid() {
         } else if (mergePhotos.length === 1) {
             mergeStatus.textContent = '1 image selected. Add 1 more.';
         } else {
-            mergeStatus.textContent = `ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ ${mergePhotos.length} images selected.`;
+            mergeStatus.textContent = `âœ… ${mergePhotos.length} images selected.`;
         }
     }
     if (mergeBtn) mergeBtn.disabled = mergePhotos.length < 2;
@@ -870,7 +870,7 @@ function openMergeCropModal(index) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â Crop Image</h3>
+                <h3>✂️ Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="mergeCropCanvas"></canvas>
@@ -1119,7 +1119,7 @@ if (mergeBtn) {
 
         let canvasW, canvasH;
 
-        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ PI7 STYLE: Horizontal ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â same height, aspect ratio maintain
+        // PI7 STYLE: Horizontal - same height, aspect ratio maintain
         if (direction === 'horizontal') {
             canvasH = Math.max(...images.map(img => img.height));
             
@@ -1151,7 +1151,7 @@ if (mergeBtn) {
                 x += drawW;
             });
         }
-        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ PI7 STYLE: Vertical ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â same width, aspect ratio maintain
+        // PI7 STYLE: Vertical - same width, aspect ratio maintain
         else if (direction === 'vertical') {
             canvasW = Math.max(...images.map(img => img.width));
             
@@ -1183,7 +1183,7 @@ if (mergeBtn) {
                 y += drawH;
             });
         }
-        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ Grid ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 2 columns
+        // Grid â€“ 2 columns
         else {
             const cols = 2;
             const rows = Math.ceil(images.length / cols);
@@ -1229,7 +1229,7 @@ if (mergeBtn) {
 
         if (mergePreviewBox) mergePreviewBox.style.display = 'block';
         
-        // ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ HIGH QUALITY output ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 0.98 (PI7 jaisa)
+        // HIGH QUALITY output â€“ 0.98 (PI7 jaisa)
         mergeCanvas.toBlob(function(blob) {
             mergedBlob = blob;
             if (mergeDownloadBtn) mergeDownloadBtn.style.display = 'block';
@@ -1355,7 +1355,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `✅ Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `âœ… Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
