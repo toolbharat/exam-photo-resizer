@@ -1,4 +1,4 @@
-// ============ JPEG PADDING (Min size for exam photos) ============
+﻿// ============ JPEG PADDING (Min size for exam photos) ============
 function padJpegToMinSize(dataUrl, minKB) {
     try {
         const base64 = dataUrl.split(',')[1];
@@ -70,8 +70,13 @@ let signName = '';
 
 // ============ PHOTO SETUP ============
 if (photoImageArea) {
-    photoImageArea.addEventListener('click', function() {
-        photoInput.click();
+    photoImageArea.addEventListener('click', function(e) {
+        if (window.dragTracker && dragTracker.photo && dragTracker.photo.moved) {
+            e.preventDefault(); e.stopPropagation();
+            dragTracker.photo.moved = false; dragTracker.photo.distance = 0;
+            return false;
+        }
+        if (!photoImg) { photoInput.click(); } else { e.preventDefault(); }
     });
     photoImageArea.addEventListener('dragover', function(e) {
         e.preventDefault();
@@ -102,8 +107,8 @@ function loadPhoto(file) {
             if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
 
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">âœ‚ï¸ Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
+                <button class="crop-btn-icon" id="photoCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">Ãƒâ€”</button>
                 <img src="${event.target.result}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -132,7 +137,7 @@ function removePhoto() {
     if (photoDownloadBtn) photoDownloadBtn.style.display = 'none';
     photoImageArea.innerHTML = `
         <div class="empty-state">
-            <p>ðŸ“ Click to select a photo</p>
+            <p>Ã°Å¸â€œÂ Click to select a photo</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -159,10 +164,10 @@ if (photoResizeBtn) {
         photoCanvas = result.canvas;
         if (photoDownloadBtn) {
             photoDownloadBtn.style.display = 'block';
-            photoDownloadBtn.textContent = `â¬‡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
+            photoDownloadBtn.textContent = `Ã¢Â¬â€¡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
+            <button class="remove-btn-icon" id="photoRemoveBtn">Ãƒâ€”</button>
             <img src="${result.dataUrl}" id="photoPreviewImg">
         `;
         document.getElementById('photoRemoveBtn').addEventListener('click', function(e) {
@@ -191,8 +196,13 @@ if (photoDownloadBtn) {
 
 // ============ SIGNATURE SETUP ============
 if (signImageArea) {
-    signImageArea.addEventListener('click', function() {
-        signInput.click();
+    signImageArea.addEventListener('click', function(e) {
+        if (window.dragTracker && dragTracker.signature && dragTracker.signature.moved) {
+            e.preventDefault(); e.stopPropagation();
+            dragTracker.signature.moved = false; dragTracker.signature.distance = 0;
+            return false;
+        }
+        if (!signImg) { signInput.click(); } else { e.preventDefault(); }
     });
     signImageArea.addEventListener('dragover', function(e) {
         e.preventDefault();
@@ -223,8 +233,8 @@ function loadSign(file) {
             if (signDownloadBtn) signDownloadBtn.style.display = 'none';
 
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">âœ‚ï¸ Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
+                <button class="crop-btn-icon" id="signCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">Ãƒâ€”</button>
                 <img src="${event.target.result}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -253,7 +263,7 @@ function removeSign() {
     if (signDownloadBtn) signDownloadBtn.style.display = 'none';
     signImageArea.innerHTML = `
         <div class="empty-state">
-            <p>ðŸ“ Click to select a signature</p>
+            <p>Ã°Å¸â€œÂ Click to select a signature</p>
             <p style="font-size:13px;color:#999;">or drag & drop here</p>
         </div>
     `;
@@ -280,10 +290,10 @@ if (signResizeBtn) {
         signCanvas = result.canvas;
         if (signDownloadBtn) {
             signDownloadBtn.style.display = 'block';
-            signDownloadBtn.textContent = `â¬‡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
+            signDownloadBtn.textContent = `Ã¢Â¬â€¡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
+            <button class="remove-btn-icon" id="signRemoveBtn">Ãƒâ€”</button>
             <img src="${result.dataUrl}" id="signPreviewImg">
         `;
         document.getElementById('signRemoveBtn').addEventListener('click', function(e) {
@@ -476,7 +486,7 @@ function openCropModal(target) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>âœ‚ï¸ Crop Image</h3>
+                <h3>Ã¢Å“â€šÃ¯Â¸Â Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="cropCanvas"></canvas>
@@ -704,8 +714,8 @@ function saveCrop() {
         if (cropTarget === 'photo') {
             photoImg = croppedImg;
             photoImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="photoCropBtn">âœ‚ï¸ Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
+                <button class="crop-btn-icon" id="photoCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">Ãƒâ€”</button>
                 <img src="${dataUrl}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -722,8 +732,8 @@ function saveCrop() {
         } else {
             signImg = croppedImg;
             signImageArea.innerHTML = `
-                <button class="crop-btn-icon" id="signCropBtn">âœ‚ï¸ Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
+                <button class="crop-btn-icon" id="signCropBtn">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">Ãƒâ€”</button>
                 <img src="${dataUrl}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -788,8 +798,8 @@ function renderMergeGrid() {
         const div = document.createElement('div');
         div.className = 'merge-item';
         div.innerHTML = `
-            <button class="crop-btn" data-index="${index}">âœ‚ï¸ Crop</button>
-            <button class="remove-btn" data-index="${index}">Ã—</button>
+            <button class="crop-btn" data-index="${index}">Ã¢Å“â€šÃ¯Â¸Â Crop</button>
+            <button class="remove-btn" data-index="${index}">Ãƒâ€”</button>
             <img src="${photo.croppedImg.src}" alt="Photo">
             <div class="file-name">${photo.name || 'Photo ' + (index + 1)}</div>
         `;
@@ -829,7 +839,7 @@ function renderMergeGrid() {
         } else if (mergePhotos.length === 1) {
             mergeStatus.textContent = '1 image selected. Add 1 more.';
         } else {
-            mergeStatus.textContent = `âœ… ${mergePhotos.length} images selected.`;
+            mergeStatus.textContent = `Ã¢Å“â€¦ ${mergePhotos.length} images selected.`;
         }
     }
     if (mergeBtn) mergeBtn.disabled = mergePhotos.length < 2;
@@ -860,7 +870,7 @@ function openMergeCropModal(index) {
         modal.className = 'crop-modal';
         modal.innerHTML = `
             <div class="crop-modal-content">
-                <h3>âœ‚ï¸ Crop Image</h3>
+                <h3>Ã¢Å“â€šÃ¯Â¸Â Crop Image</h3>
                 <p style="font-size:13px; color:#718096;">Drag corners to resize. Drag inside to move.</p>
                 <div class="crop-canvas-wrapper">
                     <canvas id="mergeCropCanvas"></canvas>
@@ -1109,7 +1119,7 @@ if (mergeBtn) {
 
         let canvasW, canvasH;
 
-        // âœ… PI7 STYLE: Horizontal â€” same height, aspect ratio maintain
+        // Ã¢Å“â€¦ PI7 STYLE: Horizontal Ã¢â‚¬â€ same height, aspect ratio maintain
         if (direction === 'horizontal') {
             canvasH = Math.max(...images.map(img => img.height));
             
@@ -1141,7 +1151,7 @@ if (mergeBtn) {
                 x += drawW;
             });
         }
-        // âœ… PI7 STYLE: Vertical â€” same width, aspect ratio maintain
+        // Ã¢Å“â€¦ PI7 STYLE: Vertical Ã¢â‚¬â€ same width, aspect ratio maintain
         else if (direction === 'vertical') {
             canvasW = Math.max(...images.map(img => img.width));
             
@@ -1173,7 +1183,7 @@ if (mergeBtn) {
                 y += drawH;
             });
         }
-        // âœ… Grid â€” 2 columns
+        // Ã¢Å“â€¦ Grid Ã¢â‚¬â€ 2 columns
         else {
             const cols = 2;
             const rows = Math.ceil(images.length / cols);
@@ -1219,7 +1229,7 @@ if (mergeBtn) {
 
         if (mergePreviewBox) mergePreviewBox.style.display = 'block';
         
-        // âœ… HIGH QUALITY output â€” 0.98 (PI7 jaisa)
+        // Ã¢Å“â€¦ HIGH QUALITY output Ã¢â‚¬â€ 0.98 (PI7 jaisa)
         mergeCanvas.toBlob(function(blob) {
             mergedBlob = blob;
             if (mergeDownloadBtn) mergeDownloadBtn.style.display = 'block';
@@ -1328,7 +1338,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `âœ… Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `Ã¢Å“â€¦ Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
@@ -1762,3 +1772,66 @@ document.addEventListener('input', function(e) {
 });
 
 setInterval(initPanFrames, 1000);
+
+// ============ CLICK VS DRAG FIX ============
+const dragTracker = {
+    photo: { moved: false, distance: 0 },
+    signature: { moved: false, distance: 0 }
+};
+
+// Block file picker if drag happened
+document.addEventListener('click', function(e) {
+    ['photoImageArea', 'signImageArea'].forEach(function(id) {
+        const area = document.getElementById(id);
+        if (!area) return;
+        const target = id === 'photoImageArea' ? 'photo' : 'signature';
+        if (area.contains(e.target) && dragTracker[target].moved) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            dragTracker[target].moved = false;
+            dragTracker[target].distance = 0;
+            return false;
+        }
+    });
+}, true); // Capture phase
+
+// Reset tracker at mousedown
+document.addEventListener('mousedown', function(e) {
+    ['photoImageArea', 'signImageArea'].forEach(function(id) {
+        const area = document.getElementById(id);
+        if (!area) return;
+        const target = id === 'photoImageArea' ? 'photo' : 'signature';
+        if (area.contains(e.target)) {
+            dragTracker[target].moved = false;
+            dragTracker[target].distance = 0;
+        }
+    });
+}, true);
+
+document.addEventListener('touchstart', function(e) {
+    ['photoImageArea', 'signImageArea'].forEach(function(id) {
+        const area = document.getElementById(id);
+        if (!area) return;
+        const target = id === 'photoImageArea' ? 'photo' : 'signature';
+        if (area.contains(e.target)) {
+            dragTracker[target].moved = false;
+            dragTracker[target].distance = 0;
+        }
+    });
+}, true);
+
+// Track mouse movement to determine drag
+document.addEventListener('mousemove', function(e) {
+    ['photoImageArea', 'signImageArea'].forEach(function(id) {
+        const area = document.getElementById(id);
+        if (!area) return;
+        const target = id === 'photoImageArea' ? 'photo' : 'signature';
+        if (panState[target].dragging) {
+            dragTracker[target].distance += 1;
+            if (dragTracker[target].distance > 5) {
+                dragTracker[target].moved = true;
+            }
+        }
+    });
+});
