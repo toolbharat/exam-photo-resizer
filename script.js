@@ -1516,3 +1516,104 @@ function removeCropButtons() {
 }
 document.addEventListener('DOMContentLoaded', removeCropButtons);
 setInterval(removeCropButtons, 500);
+
+// ============ FORCE FRAME DIMENSIONS ============
+function forceFrameAspect() {
+    const photoArea = document.getElementById('photoImageArea');
+    const signArea = document.getElementById('signImageArea');
+    const pw = document.getElementById('photoWidth');
+    const ph = document.getElementById('photoHeight');
+    const sw = document.getElementById('signWidth');
+    const sh = document.getElementById('signHeight');
+    
+    if (photoArea && pw && ph) {
+        const tw = parseInt(pw.value) || 100;
+        const th = parseInt(ph.value) || 120;
+        const aspect = tw / th;
+        const displayW = 240;
+        const displayH = Math.round(displayW / aspect);
+        
+        photoArea.style.setProperty('width', displayW + 'px', 'important');
+        photoArea.style.setProperty('height', displayH + 'px', 'important');
+        photoArea.style.setProperty('max-width', displayW + 'px', 'important');
+        photoArea.style.setProperty('max-height', displayH + 'px', 'important');
+        photoArea.style.setProperty('min-height', displayH + 'px', 'important');
+        photoArea.style.setProperty('margin', '0 auto', 'important');
+        photoArea.style.setProperty('position', 'relative', 'important');
+        photoArea.style.setProperty('overflow', 'hidden', 'important');
+        photoArea.style.setProperty('border', '2px solid #4f46e5', 'important');
+        photoArea.style.setProperty('background', '#ffffff', 'important');
+        photoArea.style.setProperty('border-radius', '8px', 'important');
+    }
+    
+    if (signArea && sw && sh) {
+        const tw = parseInt(sw.value) || 140;
+        const th = parseInt(sh.value) || 60;
+        const aspect = tw / th;
+        const displayW = 320;
+        const displayH = Math.round(displayW / aspect);
+        
+        signArea.style.setProperty('width', displayW + 'px', 'important');
+        signArea.style.setProperty('height', displayH + 'px', 'important');
+        signArea.style.setProperty('max-width', displayW + 'px', 'important');
+        signArea.style.setProperty('max-height', displayH + 'px', 'important');
+        signArea.style.setProperty('min-height', displayH + 'px', 'important');
+        signArea.style.setProperty('margin', '0 auto', 'important');
+        signArea.style.setProperty('position', 'relative', 'important');
+        signArea.style.setProperty('overflow', 'hidden', 'important');
+        signArea.style.setProperty('border', '2px solid #4f46e5', 'important');
+        signArea.style.setProperty('background', '#ffffff', 'important');
+        signArea.style.setProperty('border-radius', '8px', 'important');
+    }
+}
+
+// Call on load and on input change
+document.addEventListener('DOMContentLoaded', function() {
+    forceFrameAspect();
+    setTimeout(forceFrameAspect, 300);
+    setTimeout(forceFrameAspect, 1000);
+    
+    ['photoWidth', 'photoHeight', 'signWidth', 'signHeight'].forEach(function(id) {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('input', forceFrameAspect);
+    });
+});
+
+setInterval(forceFrameAspect, 1000);
+
+// ============ FORCE IMAGE POSITION ============
+function forceImageStyle() {
+    ['photoImageArea', 'signImageArea'].forEach(function(id) {
+        const area = document.getElementById(id);
+        if (!area) return;
+        const img = area.querySelector('img');
+        if (!img || !img.naturalWidth) return;
+        img.style.setProperty('position', 'absolute', 'important');
+        img.style.setProperty('top', img.style.top || '0px', 'important');
+        img.style.setProperty('left', img.style.left || '0px', 'important');
+        img.style.setProperty('max-width', 'none', 'important');
+        img.style.setProperty('max-height', 'none', 'important');
+        img.style.setProperty('pointer-events', 'none', 'important');
+        img.style.setProperty('user-select', 'none', 'important');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    forceImageStyle();
+    setInterval(forceImageStyle, 500);
+});
+
+// ============ HIDE EMPTY STATE WHEN IMAGE PRESENT ============
+function hideEmptyState() {
+    ['photoImageArea', 'signImageArea'].forEach(function(id) {
+        const area = document.getElementById(id);
+        if (!area) return;
+        const emptyState = area.querySelector('.empty-state');
+        const img = area.querySelector('img');
+        if (emptyState && img && img.naturalWidth) {
+            emptyState.style.display = 'none';
+        }
+    });
+}
+
+setInterval(hideEmptyState, 500);
