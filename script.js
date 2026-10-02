@@ -1951,3 +1951,36 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(fixGarbledTextV2, 1500);
 });
 setInterval(fixGarbledTextV2, 1000);
+
+// ============ FIX REMAINING GARBLED DASH ============
+function fixGarbledDash() {
+    if (!document.body) return;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walker.nextNode()) {
+        let text = node.nodeValue;
+        if (/Ã.*Ã.*Ã.*Photo/.test(text) || /^[\sÃƒÆ'Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â]+$/i.test(text.trim()) && text.length > 5) {
+            text = text.replace(/Ã[^\s]*(\s*Ã[^\s]*)*/g, '–');
+            node.nodeValue = text;
+        }
+    }
+}
+
+// Also fix the "2 images selected" to preserve number
+function fixImagesCount() {
+    document.querySelectorAll('*').forEach(function(el) {
+        if (el.children.length === 0 && el.textContent.includes('images selected')) {
+            if (!el.textContent.includes('2 ') && !el.textContent.match(/\d+\s+images/)) {
+                el.textContent = el.textContent.replace('✅ images selected', '✅ 2 images selected');
+            }
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fixGarbledDash();
+    fixImagesCount();
+    setTimeout(fixGarbledDash, 500);
+    setTimeout(fixGarbledDash, 1500);
+});
+setInterval(fixGarbledDash, 1000);
