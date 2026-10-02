@@ -559,3 +559,27 @@ body {
         width: 75px;
     }
 }
+/* ============ PREVIEW BOX (Image Compressor) ============ */
+.preview-box {
+    text-align: center;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.preview-box img {
+    max-width: 240px !important;
+    max-height: 160px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .preview-box img {
+        max-width: 200px !important;
+        max-height: 130px !important;
+    }
+}
