@@ -1916,3 +1916,38 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(fixGarbledText, 500);
     setTimeout(fixGarbledText, 1500);
 });
+
+// ============ FIX GARBLED TEXT v2 (Better Regex) ============
+function fixGarbledTextV2() {
+    if (!document.body) return;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    const fixes = [
+        { pattern: /[ÃÂ][\s\S]{0,80}?Crop/g, replace: '✂️ Crop' },
+        { pattern: /[ÃÂ][\s\S]{0,80}?images selected/g, replace: '✅ images selected' },
+        { pattern: /[ÃÂ][\s\S]{0,80}?Add Photo/g, replace: '➕ Add Photo' },
+        { pattern: /[ÃÂ][\s\S]{0,80}?Join Images/g, replace: '🔗 Join Images' },
+        { pattern: /[ÃÂ][\s\S]{0,80}?Download Merged Photo/g, replace: '⬇ Download Merged Photo' },
+        { pattern: /[ÃÂ][\s\S]{0,80}?Photo Merger/g, replace: '🔗 Photo Merger' },
+        { pattern: /[ÃÂ][\s\S]{0,80}?Home/g, replace: '🏠 Home' }
+    ];
+    while (node = walker.nextNode()) {
+        let text = node.nodeValue;
+        let changed = false;
+        fixes.forEach(function(f) {
+            if (f.pattern.test(text)) {
+                text = text.replace(f.pattern, f.replace);
+                changed = true;
+            }
+        });
+        if (changed) node.nodeValue = text;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fixGarbledTextV2();
+    setTimeout(fixGarbledTextV2, 300);
+    setTimeout(fixGarbledTextV2, 800);
+    setTimeout(fixGarbledTextV2, 1500);
+});
+setInterval(fixGarbledTextV2, 1000);
