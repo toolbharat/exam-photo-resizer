@@ -1984,3 +1984,25 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(fixGarbledDash, 1500);
 });
 setInterval(fixGarbledDash, 1000);
+
+// ============ FIX REMAINING GARBLED DASH ============
+function fixGarbledDash() {
+    if (!document.body) return;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walker.nextNode()) {
+        let text = node.nodeValue;
+        if (text.includes('Photo') && text.match(/[ÃÂ]/)) {
+            text = text.replace(/[ÃÂ][\s\S]{1,100}?(?=Photo)/g, '');
+            node.nodeValue = text;
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fixGarbledDash();
+    setTimeout(fixGarbledDash, 300);
+    setTimeout(fixGarbledDash, 800);
+    setTimeout(fixGarbledDash, 1500);
+});
+setInterval(fixGarbledDash, 1000);
