@@ -108,7 +108,7 @@ function loadPhoto(file) {
 
             photoImageArea.innerHTML = `
                 <button class="crop-btn-icon" id="photoCropBtn">✂️ Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">X</button>
                 <img src="${event.target.result}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -164,10 +164,10 @@ if (photoResizeBtn) {
         photoCanvas = result.canvas;
         if (photoDownloadBtn) {
             photoDownloadBtn.style.display = 'block';
-            photoDownloadBtn.textContent = `â¬‡ Download Photo (${result.sizeKB.toFixed(1)} KB)`;
+            photoDownloadBtn.textContent = `Download Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
+            <button class="remove-btn-icon" id="photoRemoveBtn">X</button>
             <img src="${result.dataUrl}" id="photoPreviewImg">
         `;
         document.getElementById('photoRemoveBtn').addEventListener('click', function(e) {
@@ -234,7 +234,7 @@ function loadSign(file) {
 
             signImageArea.innerHTML = `
                 <button class="crop-btn-icon" id="signCropBtn">✂️ Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">X</button>
                 <img src="${event.target.result}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -290,10 +290,10 @@ if (signResizeBtn) {
         signCanvas = result.canvas;
         if (signDownloadBtn) {
             signDownloadBtn.style.display = 'block';
-            signDownloadBtn.textContent = `â¬‡ Download Signature (${result.sizeKB.toFixed(1)} KB)`;
+            signDownloadBtn.textContent = `Download Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
-            <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
+            <button class="remove-btn-icon" id="signRemoveBtn">X</button>
             <img src="${result.dataUrl}" id="signPreviewImg">
         `;
         document.getElementById('signRemoveBtn').addEventListener('click', function(e) {
@@ -715,7 +715,7 @@ function saveCrop() {
             photoImg = croppedImg;
             photoImageArea.innerHTML = `
                 <button class="crop-btn-icon" id="photoCropBtn">✂️ Crop</button>
-                <button class="remove-btn-icon" id="photoRemoveBtn">Ã—</button>
+                <button class="remove-btn-icon" id="photoRemoveBtn">X</button>
                 <img src="${dataUrl}" id="photoPreviewImg">
             `;
             document.getElementById('photoCropBtn').addEventListener('click', function(e) {
@@ -733,7 +733,7 @@ function saveCrop() {
             signImg = croppedImg;
             signImageArea.innerHTML = `
                 <button class="crop-btn-icon" id="signCropBtn">✂️ Crop</button>
-                <button class="remove-btn-icon" id="signRemoveBtn">Ã—</button>
+                <button class="remove-btn-icon" id="signRemoveBtn">X</button>
                 <img src="${dataUrl}" id="signPreviewImg">
             `;
             document.getElementById('signCropBtn').addEventListener('click', function(e) {
@@ -798,8 +798,8 @@ function renderMergeGrid() {
         const div = document.createElement('div');
         div.className = 'merge-item';
         div.innerHTML = `
-            <button class="crop-btn" data-index="${index}">Ã—</button>
-            <button class="remove-btn" data-index="${index}">Ã—</button>
+            <button class="crop-btn" data-index="${index}">X</button>
+            <button class="remove-btn" data-index="${index}">X</button>
             <img src="${photo.croppedImg.src}" alt="Photo">
             <div class="file-name">${photo.name || 'Photo ' + (index + 1)}</div>
         `;
@@ -839,7 +839,7 @@ function renderMergeGrid() {
         } else if (mergePhotos.length === 1) {
             mergeStatus.textContent = '1 image selected. Add 1 more.';
         } else {
-            mergeStatus.textContent = `âœ… ${mergePhotos.length} images selected.`;
+            mergeStatus.textContent = `images selected.`;
         }
     }
     if (mergeBtn) mergeBtn.disabled = mergePhotos.length < 2;
@@ -1355,7 +1355,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `âœ… Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `OK: Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
@@ -1862,8 +1862,8 @@ document.addEventListener('mousemove', function(e) {
 // ============ FIX GARBLED BUTTON TEXT ============
 function fixButtonText() {
     const fixes = [
-        { id: 'photoDownloadBtn', base: 'â¬‡ Download Photo' },
-        { id: 'signDownloadBtn', base: 'â¬‡ Download Signature' }
+        { id: 'photoDownloadBtn', base: 'Download Photo' },
+        { id: 'signDownloadBtn', base: 'Download Signature' }
     ];
     fixes.forEach(function(f) {
         const btn = document.getElementById(f.id);
@@ -1871,7 +1871,7 @@ function fixButtonText() {
         const current = btn.textContent || '';
         const match = current.match(/\([\d.]+\s*KB\)/);
         const size = match ? ' ' + match[0] : '';
-        if (!current.startsWith('â¬‡')) {
+        if (!current.startsWith('Download')) {
             btn.textContent = f.base + size;
         }
     });
