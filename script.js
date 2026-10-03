@@ -164,7 +164,7 @@ if (photoResizeBtn) {
         photoCanvas = result.canvas;
         if (photoDownloadBtn) {
             photoDownloadBtn.style.display = 'block';
-            photoDownloadBtn.textContent = `Download Download Photo (${result.sizeKB.toFixed(1)} KB)`;
+            photoDownloadBtn.textContent = `Download Photo (${result.sizeKB.toFixed(1)} KB)`;
         }
         photoImageArea.innerHTML = `
             <button class="remove-btn-icon" id="photoRemoveBtn">X</button>
@@ -290,7 +290,7 @@ if (signResizeBtn) {
         signCanvas = result.canvas;
         if (signDownloadBtn) {
             signDownloadBtn.style.display = 'block';
-            signDownloadBtn.textContent = `Download Download Signature (${result.sizeKB.toFixed(1)} KB)`;
+            signDownloadBtn.textContent = `Download Signature (${result.sizeKB.toFixed(1)} KB)`;
         }
         signImageArea.innerHTML = `
             <button class="remove-btn-icon" id="signRemoveBtn">X</button>
@@ -395,7 +395,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB, panOffset) {
     
     if (sizeKB <= targetKB) {
         // Pad to minimum size for exam requirements
-    const minKB = 0;
+    const minKB = Math.max(20, Math.min(30, Math.round(targetKB * 0.6)));
     if (sizeKB < minKB) {
         // DISABLED FOR TEST
         sizeKB = (dataUrl.length * 0.75) / 1024;
@@ -456,7 +456,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB, panOffset) {
     }
     
     // Pad to minimum size for exam requirements
-    const minKB = 0;
+    const minKB = Math.max(20, Math.min(30, Math.round(targetKB * 0.6)));
     if (sizeKB < minKB) {
         // DISABLED FOR TEST
         sizeKB = (dataUrl.length * 0.75) / 1024;
@@ -1355,7 +1355,7 @@ if (compressBtn) {
                 compressPreview.src = URL.createObjectURL(blob);
             }
             if (compressStatus) {
-                compressStatus.textContent = `OK: Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
+                compressStatus.textContent = `Compressed: ${sizeKB} KB (Target: ${targetKB} KB)`;
             }
             if (compressDownloadBtn) compressDownloadBtn.disabled = false;
         });
