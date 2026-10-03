@@ -1,4 +1,4 @@
-// ============ JPEG PADDING (Min size for exam photos) ============
+﻿// ============ JPEG PADDING (Min size for exam photos) ============
 function padJpegToMinSize(dataUrl, minKB) {
     try {
         const base64 = dataUrl.split(',')[1];
@@ -397,7 +397,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB, panOffset) {
         // Pad to minimum size for exam requirements
     const minKB = Math.max(20, Math.min(30, Math.round(targetKB * 0.6)));
     if (sizeKB < minKB) {
-        // DISABLED FOR TEST
+        dataUrl = padJpegToMinSize(dataUrl, minKB);
         sizeKB = (dataUrl.length * 0.75) / 1024;
     }
     return { canvas, dataUrl, sizeKB };
@@ -458,7 +458,7 @@ function resizeImage(sourceImg, targetW, targetH, targetKB, panOffset) {
     // Pad to minimum size for exam requirements
     const minKB = Math.max(20, Math.min(30, Math.round(targetKB * 0.6)));
     if (sizeKB < minKB) {
-        // DISABLED FOR TEST
+        dataUrl = padJpegToMinSize(dataUrl, minKB);
         sizeKB = (dataUrl.length * 0.75) / 1024;
     }
     return { canvas, dataUrl, sizeKB };
