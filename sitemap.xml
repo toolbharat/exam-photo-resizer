@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main Pages -->
@@ -82,7 +82,8 @@
   <url><loc>https://pixsathi.in/cuet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/duet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/ipu-cet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <!-- New Tool Pages -->
+
+  <!-- New Tool Pages -->
   <url><loc>https://pixsathi.in/image-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/jpg-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/pdf-to-image</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -90,13 +91,15 @@
   <url><loc>https://pixsathi.in/cgpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/qr-code-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pixsathi.in/excel-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixsathi.in/pdf-password-remover</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Main Pages -->
   <url><loc>https://pixsathi.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-    <!-- Blog Posts -->
+
+  <!-- Blog Posts -->
   <url><loc>https://pixsathi.in/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pixsathi.in/blog/ssc-cgl-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://pixsathi.in/blog/ibps-po-photo-requirements-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -105,7 +108,8 @@
   <url><loc>https://pixsathi.in/blog/pdf-merge-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://pixsathi.in/blog/cgpa-to-percentage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://pixsathi.in/blog/exam-photo-rejection-reasons</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <!-- Finance Calculators -->
+
+  <!-- Finance Calculators -->
   <url><loc>https://pixsathi.in/finance/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://pixsathi.in/finance/index-hi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
