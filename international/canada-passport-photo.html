@@ -84,11 +84,16 @@
             <input type="file" id="photoInput" accept="image/*">
             <button onclick="resizePhoto()">Resize to 5x7 cm</button>
             <div class="preview-box" id="previewBox" style="display:none;">
-                <img id="previewImg" src="" alt="Preview">
-                <br>
-                <a id="downloadLink" class="download-btn" download="canada-passport-photo.jpg">Download Photo</a>
+                <div class="zoom-controls">
+                    <button onclick="zoomIn()">🔍+ Zoom In</button>
+                    <button onclick="zoomOut()">🔍- Zoom Out</button>
+                    <button onclick="resetZoom()">↺ Reset</button>
+                </div>
+                <div class="preview-container" id="previewContainer">
+                    <img id="previewImg" src="" alt="Preview" draggable="false">
+                </div>
+                <a id="downloadLink" class="download-btn" download="photo.jpg">Download Photo</a>
             </div>
-        </div>
 
         <section class="content-section">
             <h2>Canada Passport Photo Requirements</h2>
@@ -206,5 +211,71 @@
     }
     </script>
 
+
+<style>
+.preview-container { position: relative; width: 100%; max-width: 400px; height: 350px; margin: 0 auto 15px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; cursor: grab; }
+.preview-container:active { cursor: grabbing; }
+.preview-container img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1); max-width: none; transition: transform 0.1s; user-select: none; -webkit-user-drag: none; }
+.zoom-controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+.zoom-controls button { background: #4f46e5; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.zoom-controls button:hover { background: #4338ca; }
+</style>
+
+<script>
+var currentScale = 1;
+var isDragging = false;
+var startX, startY, translateX = 0, translateY = 0;
+
+function updateTransform() {
+    var img = document.getElementById('previewImg');
+    if (img) {
+        img.style.transform = 'translate(calc(-50% + ' + translateX + 'px), calc(-50% + ' + translateY + 'px)) scale(' + currentScale + ')';
+    }
+}
+function zoomIn() { currentScale = Math.min(currentScale + 0.2, 3); updateTransform(); }
+function zoomOut() { currentScale = Math.max(currentScale - 0.2, 0.5); updateTransform(); }
+function resetZoom() { currentScale = 1; translateX = 0; translateY = 0; updateTransform(); }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var container = document.getElementById('previewContainer');
+    if (!container) return;
+    
+    container.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        if (e.deltaY < 0) zoomIn(); else zoomOut();
+    }, { passive: false });
+    
+    container.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX - translateX;
+        startY = e.clientY - translateY;
+    });
+    document.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            updateTransform();
+        }
+    });
+    document.addEventListener('mouseup', function() { isDragging = false; });
+    
+    container.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+            isDragging = true;
+            startX = e.touches[0].clientX - translateX;
+            startY = e.touches[0].clientY - translateY;
+        }
+    });
+    container.addEventListener('touchmove', function(e) {
+        if (isDragging && e.touches.length === 1) {
+            e.preventDefault();
+            translateX = e.touches[0].clientX - startX;
+            translateY = e.touches[0].clientY - startY;
+            updateTransform();
+        }
+    }, { passive: false });
+    container.addEventListener('touchend', function() { isDragging = false; });
+});
+</script>
 </body>
 </html>
