@@ -1,0 +1,69 @@
+[33m320cb4c[m Fix home button to use relative path
+[33m86b4ede[m Fix home button to use www domain
+[33m0c4d593[m Add exams page, update navigation with Exams tab
+[33mab4dba1[m Fix home button link in international page
+[33m5f7f84c[m Fix home button link in international page
+[33mc81b618[m Add 5 new tools to international index page
+[33m6e63d52[m Add 5 new tools to international index page
+[33m3a9a009[m Fix international tools card layout
+[33md6752f6[m Add 5 new international passport and visa photo tools
+[33mcae26c4[m Rename tab to International Tools
+[33mcb250f8[m Change International tab color to green
+[33mca665c7[m Add International tab to homepage header
+[33m02bc4aa[m Compact exam box and move international section up
+[33m7818173[m Add international section to homepage
+[33m96e5895[m Restore correct index.html from backup
+[33mf9a565f[m Fix encoding issues
+[33mecef13e[m Add international section to homepage
+[33mab8d7eb[m Fix canonical tag to www version
+[33m78141c0[m Add favicon to homepage
+[33m7de778c[m Add PDF Password Remover to sitemap and homepage
+[33m309453d[m Rename PDF Merger card to Photo Merger on homepage
+[33m6afdaca[m Hide stats section temporarily
+[33me1f15da[m Fix hero section text and trust badges
+[33m9f33fb1[m Make hero section compact
+[33ma67a2af[m Add clean hero section with exam dropdown, remove exam badges
+[33mf2e3bae[m Add preconnect and dns-prefetch for better performance
+[33mc62dc27[m Remove script.js from homepage for mobile performance
+[33m5d22e8a[m Add stats section with 6 key metrics
+[33m50c2199[m Rename pdf-merger to photo-merger + add runtime garbled text fix
+[33mb0663cc[m Fix preview image size on all pages
+[33mef610e3[m Fix CSS/JS paths to absolute - all pages now styled properly
+[33m9e03d0e[m Highlight Finance link in green on all pages
+[33m9c1d06c[m Remove India page, add redirect, update sitemap
+[33mac6d605[m Rebrand: Free Online Tools for Everyone - remove Exam from main site
+[33mf284c3e[m Add Open Graph and Twitter Card meta tags
+[33mb30de16[m Add WebApplication Schema for better Google visibility
+[33m93d9f4a[m Add FAQ Schema for Google Rich Results
+[33m4c0c3d6[m Add Finance Calculators section - merge india-finance-calculator. Fix canonical URLs + add Finance links to all pages + update sitemap
+[33m2ef0d72[m Add Blog link to nav
+[33m5b87b74[m Update intro to mention all tools
+[33m694fef9[m Fix duplicates + compact header
+[33m5b22ea4[m Add General Tools section
+[33ma06abc8[m Add Contact link to nav and footer
+[33m7e76a3a[m New dashboard: exam card + tool cards
+[33m5552af6[m Update internal links to new URLs
+[33me75f53f[m update new name
+[33mbe2d664[m emove old resizer section from homepage
+[33mb21a4e4[m Fix content section background, focus on India
+[33m7cec9f7[m Hide international pages, fix content color, focus on India
+[33mfd0083b[m Hide international pages, focus on India
+[33md5b521a[m Update index.html
+[33m9fd5775[m Update index.html
+[33mfb8a2d6[m Add SEO content section to homepage with exam specs
+[33m591b72f[m Fix SEO titles, meta descriptions, and sitemap
+[33mfefb96a[m Fix India link to india.html
+[33m53e0274[m Add merger link to all pages
+[33m65121dd[m update index html
+[33mdebb51a[m dd global cards and country specs
+[33m975a52a[m Add global country cards with document types
+[33md247333[m Update Analytics ID to G-L5K09RC5D2
+[33m74bf6ed[m Add photo compressor page
+[33m665c225[m dd drag and zoom feature
+[33m6ddf087[m Add labels and defer for accessibility
+[33m5943344[m Fix CSS classes in all pages
+[33m00d5afe[m Add Google Analytics to all pages
+[33m129e7e3[m Update index.html
+[33mdb6a7fe[m Update index.html
+[33m9eb4bf3[m Update index.html
+[33me6bb042[m Add files via upload
