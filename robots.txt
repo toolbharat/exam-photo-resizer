@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pixsathi.in/sitemap.xml 
+Sitemap: https://www.pixsathi.in/sitemap.xml
