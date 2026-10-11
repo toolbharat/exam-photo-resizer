@@ -1,0 +1,905 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <title>PixSathi â€” Free Online Tools for Everyone | Photo, PDF, Finance</title>
+    <meta name="description" content="Free online tools for everyone â€” Photo Resizer, PDF Merger, Image Compressor, EMI Calculator, GST, Income Tax & more. 40+ tools. 100% Free & Private.">
+        <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixsathi.in/">
+    <meta property="og:title" content="PixSathi â€” Free Online Tools for Everyone">
+    <meta property="og:description" content="40+ Free Tools â€” Photo, PDF, EMI, GST, Income Tax & more. For students, business, everyone. 100% Free & Private.">
+    <meta property="og:image" content="https://pixsathi.in/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PixSathi - Free Exam Photo Resizer and Finance Calculators">
+    <meta property="og:site_name" content="PixSathi">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pixsathi.in/">
+    <meta name="twitter:title" content="PixSathi â€” Free Online Tools for Everyone">
+    <meta name="twitter:description" content="40+ Free Tools â€” Photo, PDF, EMI, GST & more. 100% Free & Private.">
+    <meta name="twitter:image" content="https://pixsathi.in/og-image.png">
+    <meta name="twitter:image:alt" content="PixSathi - Free Exam Photo Resizer">
+
+    <meta name="keywords" content="exam photo resizer, signature resizer, ssc photo resizer, ibps photo resizer, cgpa calculator, image compressor">
+    <link rel="canonical" href="https://www.pixsathi.in/">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        /* Compact Header */
+        .header {
+            padding: 8px 20px !important;
+        }
+        .header .container {
+            gap: 10px !important;
+        }
+        .logo {
+            font-size: 16px !important;
+        }
+        .tagline {
+            font-size: 10px !important;
+            margin: 0 !important;
+        }
+        .nav a {
+            padding: 4px 10px !important;
+            font-size: 12px !important;
+        }
+
+        /* Compact Intro */
+        .intro-section {
+            padding: 14px 16px !important;
+            margin-bottom: 14px !important;
+        }
+        .intro-section h1 {
+            font-size: 20px !important;
+            margin-bottom: 4px !important;
+        }
+        .intro-section p {
+            font-size: 12px !important;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 15px !important;
+            margin: 16px 0 10px !important;
+        }
+
+        /* Dashboard Cards */
+        .dash-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+
+        .dash-card {
+            background: #ffffff;
+            border: 1px solid #e5e5ea;
+            border-radius: 10px;
+            padding: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dash-card:hover {
+            border-color: #4f46e5;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .dash-card-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dash-card-title span.icon {
+            font-size: 16px;
+        }
+
+        .exam-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .exam-badge {
+            display: inline-block;
+            padding: 4px 9px;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+            border: 1px solid transparent;
+        }
+
+        .exam-badge:hover {
+            background: #4f46e5;
+            color: #ffffff;
+            border-color: #4f46e5;
+        }
+
+        .tool-card {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 80px;
+        }
+
+        .tool-icon {
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .tool-info h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin: 0 0 2px 0;
+        }
+
+        .tool-info p {
+            font-size: 11px;
+            color: #6e6e73;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .tool-cta {
+            font-size: 11px;
+            color: #4f46e5;
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        .exam-card-wrapper {
+            grid-column: 1 / -1;
+        }
+
+        @media (min-width: 768px) {
+            .exam-card-wrapper {
+                grid-column: span 3;
+            }
+        }
+
+        /* Content Section Compact */
+        .content-section h2 {
+            font-size: 16px !important;
+            margin: 14px 0 8px !important;
+        }
+        .content-section h3 {
+            font-size: 14px !important;
+        }
+        .content-section p,
+        .content-section li {
+            font-size: 13px !important;
+        }
+
+        /* Footer Compact */
+        .footer {
+            padding: 14px !important;
+            margin-top: 20px !important;
+            font-size: 11px !important;
+        }
+    .preview-box img {
+    max-width: 240px !important;
+    max-height: 160px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.preview-box {
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
+        <!-- FAQ Schema for Google Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are these tools really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 100% free. No signup, no login, no hidden fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All processing happens in your browser. Your files never leave your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use these tools on mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all tools work on any device â€” mobile, tablet, or desktop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which exams are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SSC CGL, SSC CHSL, SSC MTS, IBPS PO, IBPS Clerk, IBPS SO, IBPS RRB, GATE, NEET, JEE Main, UPSC, RRB NTPC, RRB Group D, CTET, UGC NET, CLAT, AILET, CUET, DUET, and 45+ more Indian government exams."
+          }
+        }
+      ]
+    }
+</script>
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PixSathi - Free Exam Photo & Signature Resizer",
+      "alternateName": "PixSathi",
+      "url": "https://pixsathi.in/",
+      "description": "Free online exam photo & signature resizer for India. Resize photos for SSC, IBPS, GATE, NEET, JEE, UPSC and 45+ exams. Plus Image Compressor, PDF Merger, CGPA Calculator and 40+ Finance Calculators.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (Web-based)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": [
+        "Exam Photo Resizer (40+ exams)",
+        "Signature Resizer",
+        "Image Compressor",
+        "PDF Merger",
+        "Image Converter",
+        "JPG to PDF",
+        "PDF to Image",
+        "Word to PDF",
+        "CGPA Calculator",
+        "QR Code Generator",
+        "Excel Merger",
+        "EMI Calculator",
+        "SIP Calculator",
+        "Income Tax Calculator",
+        "GST Calculator",
+        "FD/RD/PPF/NPS Calculators"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "PixSathi",
+        "url": "https://pixsathi.in/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PixSathi",
+        "url": "https://pixsathi.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pixsathi.in/favicon-32x32.png"
+        }
+      },
+      "inLanguage": "en-IN",
+      "isAccessibleForFree": true
+    }
+    </script>
+
+
+
+    <!-- Hero Section CSS -->
+        <style>
+    .hero-new {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        border-radius: 12px;
+        padding: 20px 20px;
+        text-align: center;
+        color: #ffffff;
+        margin: 12px 0 16px;
+        box-shadow: 0 4px 15px rgba(79, 70, 229, 0.15);
+    }
+    .hero-new h1 {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 0 0 4px;
+        line-height: 1.3;
+    }
+    .hero-new > p {
+        font-size: 12px;
+        opacity: 0.9;
+        margin: 0 0 12px;
+        line-height: 1.4;
+    }
+    .hero-dropdown {
+        display: flex;
+        gap: 8px;
+        max-width: 520px;
+        margin: 0 auto 10px;
+        flex-wrap: wrap;
+    }
+    .hero-dropdown select {
+        flex: 1;
+        min-width: 180px;
+        padding: 10px 32px 10px 14px;
+        border-radius: 8px;
+        border: none;
+        font-size: 13px;
+        font-weight: 600;
+        background: #ffffff;
+        color: #1d1d1f;
+        cursor: pointer;
+        outline: none;
+        appearance: none;
+    }
+    .hero-dropdown select:focus {
+        box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.5);
+    }
+    .hero-cta {
+        padding: 10px 20px;
+        background: #fbbf24;
+        color: #1d1d1f;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+    .hero-cta:hover:not(:disabled) {
+        background: #f59e0b;
+    }
+    .hero-cta:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: #e5e7eb;
+        color: #9ca3af;
+    }
+    .hero-trust {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .hero-trust span {
+        background: rgba(255, 255, 255, 0.18);
+        padding: 3px 10px;
+        border-radius: 20px;
+    }
+    @media (max-width: 600px) {
+        .hero-new {
+            padding: 16px 14px;
+        }
+        .hero-new h1 {
+            font-size: 17px;
+        }
+        .hero-new > p {
+            font-size: 11px;
+        }
+        .hero-dropdown {
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hero-dropdown select {
+            padding: 9px 30px 9px 12px;
+            font-size: 12px;
+        }
+        .hero-cta {
+            width: 100%;
+            padding: 10px 16px;
+            font-size: 12px;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">ðŸ“¸ PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone â€¢ 100% Free â€¢ Private</p>
+            <nav class="nav" aria-label="Main navigation">
+    <a href="/">ðŸ  Home</a>
+    <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ’° Finance</a>
+    <a href="/blog">ðŸ“ Blog</a>
+    <a href="/contact">ðŸ“¬ Contact</a>
+</nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ============ NEW HERO ============ -->
+        <section class="hero-new">
+            <h1>Free Online Tools for Everyone</h1>
+            <p>Resize photos, compress images, merge PDFs, calculate EMI &mdash; 100% Free & Private</p>
+
+            <div class="hero-dropdown">
+                <select id="examSelect">
+                    <option value="">Choose Your Exam (45+ Exams)</option>
+                    <optgroup label="SSC Exams">
+                        <option value="/ssc-cgl-photo-resizer">SSC CGL</option>
+                        <option value="/ssc-chsl-photo-resizer">SSC CHSL</option>
+                        <option value="/ssc-mts-photo-resizer">SSC MTS</option>
+                        <option value="/ssc-gd-photo-resizer">SSC GD</option>
+                        <option value="/ssc-cpo-photo-resizer">SSC CPO</option>
+                        <option value="/ssc-je-photo-resizer">SSC JE</option>
+                    </optgroup>
+                    <optgroup label="Banking Exams">
+                        <option value="/ibps-po-photo-resizer">IBPS PO</option>
+                        <option value="/ibps-clerk-photo-resizer">IBPS Clerk</option>
+                        <option value="/ibps-so-photo-resizer">IBPS SO</option>
+                        <option value="/ibps-rrb-photo-resizer">IBPS RRB</option>
+                        <option value="/sbi-po-photo-resizer">SBI PO</option>
+                        <option value="/sbi-clerk-photo-resizer">SBI Clerk</option>
+                    </optgroup>
+                    <optgroup label="Railway Exams">
+                        <option value="/rrb-ntpc-photo-resizer">RRB NTPC</option>
+                        <option value="/rrb-group-d-photo-resizer">RRB Group D</option>
+                        <option value="/rrb-alp-photo-resizer">RRB ALP</option>
+                    </optgroup>
+                    <optgroup label="Medical/Engineering">
+                        <option value="/neet-photo-resizer">NEET</option>
+                        <option value="/neet-pg-photo-resizer">NEET PG</option>
+                        <option value="/jee-main-photo-resizer">JEE Main</option>
+                        <option value="/gate-photo-resizer">GATE</option>
+                        <option value="/aiims-photo-resizer">AIIMS</option>
+                    </optgroup>
+                    <optgroup label="Civil Services">
+                        <option value="/upsc-photo-resizer">UPSC</option>
+                        <option value="/state-psc-photo-resizer">State PSC</option>
+                        <option value="/mpsc-photo-resizer">MPSC</option>
+                        <option value="/bpsc-photo-resizer">BPSC</option>
+                        <option value="/uppsc-photo-resizer">UPPSC</option>
+                    </optgroup>
+                    <optgroup label="Police/Defence">
+                        <option value="/police-photo-resizer">Police</option>
+                        <option value="/up-police-photo-resizer">UP Police</option>
+                        <option value="/bihar-police-photo-resizer">Bihar Police</option>
+                        <option value="/delhi-police-photo-resizer">Delhi Police</option>
+                        <option value="/nda-photo-resizer">NDA</option>
+                        <option value="/cds-photo-resizer">CDS</option>
+                    </optgroup>
+                    <optgroup label="Teaching">
+                        <option value="/ctet-photo-resizer">CTET</option>
+                        <option value="/ugc-net-photo-resizer">UGC NET</option>
+                        <option value="/kvs-photo-resizer">KVS</option>
+                        <option value="/dsssb-photo-resizer">DSSSB</option>
+                    </optgroup>
+                    <optgroup label="Law/University">
+                        <option value="/clat-photo-resizer">CLAT</option>
+                        <option value="/ailet-photo-resizer">AILET</option>
+                        <option value="/cuet-photo-resizer">CUET</option>
+                        <option value="/duet-photo-resizer">DUET</option>
+                        <option value="/ipu-cet-photo-resizer">IPU CET</option>
+                    </optgroup>
+                </select>
+                <button class="hero-cta" id="startResizerBtn" disabled>Start Photo Resizer &rarr;</button>
+            </div>
+
+            <div class="hero-trust">
+                <span>&#10003; No Signup</span>
+                <span>&#10003; 100% Free</span>
+                <span>&#128274; Private</span>
+            </div>
+        </section>
+
+        <!-- STATS HIDDEN - Uncomment by removing this comment to restore
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);">ðŸ“„</div>
+                            <div class="stat-number">123+</div>
+                            <div class="stat-label">Free Tools</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:linear-gradient(135deg,#10b981,#059669);">ðŸ‘¥</div>
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Happy Users</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">â­</div>
+                            <div class="stat-number">4.8/5</div>
+                            <div class="stat-label">User Rating</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">ðŸ”’</div>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Private</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">âš¡</div>
+                            <div class="stat-number">0.5s</div>
+                            <div class="stat-label">Fast Loading</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626);">ðŸ‡®ðŸ‡³</div>
+                            <div class="stat-number">India</div>
+                            <div class="stat-label">Made For</div>
+                        </div>
+                    </div>
+                </section>
+        STATS HIDDEN END -->
+        <!-- ============ GENERAL TOOLS ============ -->
+        <section class="country-section">
+            <h2 class="section-title">ðŸ› ï¸ Free Online Tools</h2>
+            <div class="dash-grid">
+
+                <a href="/image-compressor" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ—œï¸</div>
+                    <div class="tool-info">
+                        <h3>Image Compressor</h3>
+                        <p>Reduce JPG/PNG size to exact KB</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/photo-merger" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ”—</div>
+                    <div class="tool-info">
+                        <h3>Photo Merger</h3>
+                        <p>Merge 2 or more photos into one</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/pdf-password-remover" class="dash-card tool-card">
+                    <div class="tool-icon">&#128273;</div>
+                    <div class="tool-info">
+                        <h3>PDF Password Remover</h3>
+                        <p>Remove password from PDF files</p>
+                        <div class="tool-cta">Open Tool &rarr;</div>
+                    </div>
+                </a>
+
+
+                <a href="/image-converter" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ”„</div>
+                    <div class="tool-info">
+                        <h3>Image Converter</h3>
+                        <p>JPG, PNG, WebP â€” any format</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/jpg-to-pdf" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ“„</div>
+                    <div class="tool-info">
+                        <h3>JPG to PDF</h3>
+                        <p>Convert images into PDF</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/pdf-to-image" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ–¼ï¸</div>
+                    <div class="tool-info">
+                        <h3>PDF to Image</h3>
+                        <p>Extract PDF pages as JPG/PNG</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/word-to-pdf" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ“</div>
+                    <div class="tool-info">
+                        <h3>Word to PDF</h3>
+                        <p>Convert DOC/DOCX to PDF</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/cgpa-calculator" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ§®</div>
+                    <div class="tool-info">
+                        <h3>CGPA Calculator</h3>
+                        <p>CGPA â†’ Percentage instantly</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/qr-code-generator" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸŽ¯</div>
+                    <div class="tool-info">
+                        <h3>QR Code Generator</h3>
+                        <p>Text / URL â†’ QR code</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/excel-merger" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ“Š</div>
+                    <div class="tool-info">
+                        <h3>Excel Merger</h3>
+                        <p>Merge multiple Excel files</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+            </div>
+        
+        <!-- ============ INTERNATIONAL TOOLS ============ -->
+        <section class="country-section">
+            <h2 class="section-title">🌍 For International Users (US/UK/Canada)</h2>
+            <div class="dash-grid">
+
+                <a href="/international/us-passport-photo.html" class="dash-card tool-card">
+                    <div class="tool-icon">🇺🇸</div>
+                    <div class="tool-info">
+                        <h3>US Passport Photo</h3>
+                        <p>2x2 inch, white background</p>
+                    </div>
+                </a>
+
+                <a href="/international/uk-visa-photo.html" class="dash-card tool-card">
+                    <div class="tool-icon">🇬🇧</div>
+                    <div class="tool-info">
+                        <h3>UK Visa Photo</h3>
+                        <p>3.5x4.5 cm, light grey</p>
+                    </div>
+                </a>
+
+                <a href="/international/canada-passport-photo.html" class="dash-card tool-card">
+                    <div class="tool-icon">🇨🇦</div>
+                    <div class="tool-info">
+                        <h3>Canada Passport Photo</h3>
+                        <p>5x7 cm, white background</p>
+                    </div>
+                </a>
+
+                <a href="/international/pdf-to-jpg.html" class="dash-card tool-card">
+                    <div class="tool-icon">📄</div>
+                    <div class="tool-info">
+                        <h3>PDF to JPG</h3>
+                        <p>Convert PDF pages to images</p>
+                    </div>
+                </a>
+
+                <a href="/international/image-compressor.html" class="dash-card tool-card">
+                    <div class="tool-icon">🖼️</div>
+                    <div class="tool-info">
+                        <h3>Image Compressor</h3>
+                        <p>Reduce to exact KB</p>
+                    </div>
+                </a>
+
+                <a href="/international/" class="dash-card tool-card">
+                    <div class="tool-icon">🌍</div>
+                    <div class="tool-info">
+                        <h3>All International Tools</h3>
+                        <p>Explore all →</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+</section>
+
+                <!-- ============ FINANCE CALCULATORS ============ -->
+        <section class="country-section">
+            <h2 class="section-title">ðŸ’° Finance Calculators</h2>
+            <div class="dash-grid">
+
+                <a href="/finance/emi-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ¦</div>
+                    <div class="tool-info">
+                        <h3>EMI Calculator</h3>
+                        <p>Loan EMI, interest à¤”à¤° total payment calculate à¤•à¤°à¥‡à¤‚</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/sip-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ“ˆ</div>
+                    <div class="tool-info">
+                        <h3>SIP Calculator</h3>
+                        <p>Mutual fund SIP returns à¤”à¤° maturity amount</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/income-tax-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ’¸</div>
+                    <div class="tool-info">
+                        <h3>Income Tax Calculator</h3>
+                        <p>Old vs New regime â€” tax liability calculate à¤•à¤°à¥‡à¤‚</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/gst-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ§¾</div>
+                    <div class="tool-info">
+                        <h3>GST Calculator</h3>
+                        <p>GST inclusive/exclusive â€” instant calculation</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/fd-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ’°</div>
+                    <div class="tool-info">
+                        <h3>FD Calculator</h3>
+                        <p>Fixed Deposit maturity à¤”à¤° interest amount</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/rd-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸª™</div>
+                    <div class="tool-info">
+                        <h3>RD Calculator</h3>
+                        <p>Recurring Deposit returns calculate à¤•à¤°à¥‡à¤‚</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/ppf-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ›ï¸</div>
+                    <div class="tool-info">
+                        <h3>PPF Calculator</h3>
+                        <p>Public Provident Fund â€” 15 à¤¸à¤¾à¤² à¤•à¤¾ returns</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/salary-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸ’¼</div>
+                    <div class="tool-info">
+                        <h3>Salary Calculator</h3>
+                        <p>In-hand salary â€” CTC à¤¸à¥‡ monthly take-home</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+                <a href="/finance/nps-calculator.html" class="dash-card tool-card">
+                    <div class="tool-icon">ðŸŽ¯</div>
+                    <div class="tool-info">
+                        <h3>NPS Calculator</h3>
+                        <p>National Pension Scheme â€” retirement corpus</p>
+                        <div class="tool-cta">Open Tool â†’</div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 24px;">
+                <a href="/finance/" style="display: inline-block; padding: 12px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">à¤¸à¤­à¥€ Finance Tools à¤¦à¥‡à¤–à¥‡à¤‚ â†’</a>
+            </div>
+        </section>
+
+
+
+        <!-- SEO Content -->
+        <section class="content-section">
+            <h2>Free Exam Photo & Signature Resizer for India</h2>
+            <p>PixSathi par aapko sabhi zaroori exam photo & signature tools milenge â€” bilkul free. Chahe aap SSC, IBPS, GATE, NEET, JEE, UPSC ka form bhar rahe ho, ya CGPA calculate kar rahe ho, ya image compress kar rahe ho â€” sab kuch ek jagah.</p>
+
+            <h2>Popular Tools</h2>
+            <ul>
+                <li><strong>Exam Photo Resizer:</strong> SSC, IBPS, GATE, NEET, UPSC ke liye exact photo size</li>
+                <li><strong>CGPA Calculator:</strong> CGPA ko percentage mein convert karo</li>
+                <li><strong>Image Compressor:</strong> JPG/PNG file size kam karo</li>
+                <li><strong>JPG to PDF:</strong> Images ko PDF mein convert karo</li>
+                <li><strong>PDF to Image:</strong> PDF pages ko JPG/PNG mein nikalo</li>
+                <li><strong>Image Converter:</strong> JPG, PNG, WebP, GIF â€” koi bhi format</li>
+                <li><strong>Photo Merger:</strong> Multiple photos ko jodo</li>
+                <li><strong>Word to PDF:</strong> Word document ko PDF mein convert karo</li>
+                <li><strong>QR Code Generator:</strong> Text/URL ka QR code banao</li>
+                <li><strong>Excel Merger:</strong> Multiple Excel files merge karo</li>
+            </ul>
+
+            <h2>Why Choose PixSathi?</h2>
+            <ul>
+                <li><strong>100% Free:</strong> No signup, no login, no hidden charges</li>
+                <li><strong>Privacy First:</strong> Files processed in your browser â€” never uploaded</li>
+                <li><strong>Exam-Ready:</strong> Har exam ke exact size ke hisaab se</li>
+                <li><strong>Works on Mobile:</strong> Use on any phone, tablet, or computer</li>
+                <li><strong>Fast:</strong> No waiting, instant results</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>Are these tools really free?</h3>
+            <p>Yes, 100% free. No signup, no login, no hidden fees.</p>
+
+            <h3>Are my files uploaded to a server?</h3>
+            <p>No. All processing happens in your browser. Your files never leave your device.</p>
+
+            <h3>Can I use these tools on mobile?</h3>
+            <p>Yes, all tools work on any device â€” mobile, tablet, or desktop.</p>
+
+            <h3>Which exams are supported?</h3>
+            <p>SSC CGL, SSC CHSL, SSC MTS, IBPS PO, IBPS Clerk, IBPS SO, IBPS RRB, GATE, NEET, JEE Main, UPSC, RRB NTPC, RRB Group D, CTET, UGC NET, CLAT, AILET, CUET, DUET, and 45+ more Indian government exams.</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Â© 2026 PixSathi | Made for India ðŸ‡®ðŸ‡³</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> Â· 
+                <a href="/about">About</a> Â· 
+                <a href="/privacy-policy">Privacy</a> Â· 
+                <a href="/disclaimer">Disclaimer</a> Â· 
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- script.js removed - homepage doesn't need it -->
+
+    <!-- Hero Dropdown Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var select = document.getElementById('examSelect');
+        var btn = document.getElementById('startResizerBtn');
+        if (select && btn) {
+            select.addEventListener('change', function() {
+                if (this.value) {
+                    btn.disabled = false;
+                } else {
+                    btn.disabled = true;
+                }
+            });
+            btn.addEventListener('click', function() {
+                if (select.value) {
+                    window.location.href = select.value;
+                }
+            });
+        }
+    });
+    </script>
+
+</body>
+</html>
+
