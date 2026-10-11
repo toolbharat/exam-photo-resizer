@@ -3,219 +3,219 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://pixsathi.in/</loc>
+    <loc>https://www.pixsathi.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/image-compressor</loc>
+    <loc>https://www.pixsathi.in/image-compressor</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/photo-merger</loc>
+    <loc>https://www.pixsathi.in/photo-merger</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- SSC Exams -->
-  <url><loc>https://pixsathi.in/ssc-cgl-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ssc-chsl-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ssc-mts-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ssc-gd-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ssc-cpo-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ssc-je-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ssc-cgl-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ssc-chsl-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ssc-mts-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ssc-gd-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ssc-cpo-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ssc-je-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Banking Exams -->
-  <url><loc>https://pixsathi.in/ibps-po-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ibps-clerk-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ibps-so-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ibps-rrb-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/sbi-po-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/sbi-clerk-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ibps-po-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ibps-clerk-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ibps-so-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ibps-rrb-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/sbi-po-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/sbi-clerk-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Railway Exams -->
-  <url><loc>https://pixsathi.in/rrb-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/rrb-ntpc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/rrb-group-d-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/rrb-alp-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/rrb-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/rrb-ntpc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/rrb-group-d-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/rrb-alp-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Police Exams -->
-  <url><loc>https://pixsathi.in/police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/up-police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/bihar-police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/delhi-police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/up-police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/bihar-police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/delhi-police-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Defence Exams -->
-  <url><loc>https://pixsathi.in/nda-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/cds-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/cisf-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/nda-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/cds-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/cisf-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Teaching Exams -->
-  <url><loc>https://pixsathi.in/ctet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ugc-net-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/kvs-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/dsssb-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ctet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ugc-net-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/kvs-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/dsssb-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Medical Exams -->
-  <url><loc>https://pixsathi.in/neet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/neet-pg-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/aiims-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/jipmer-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/neet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/neet-pg-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/aiims-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/jipmer-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Engineering Exams -->
-  <url><loc>https://pixsathi.in/jee-main-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/gate-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/bitsat-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/viteee-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/jee-main-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/gate-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/bitsat-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/viteee-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Civil Services -->
-  <url><loc>https://pixsathi.in/upsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/state-psc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/mpsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/bpsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/uppsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/upsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/state-psc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/mpsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/bpsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/uppsc-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Law & University -->
-  <url><loc>https://pixsathi.in/clat-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ailet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/cuet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/duet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/ipu-cet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/clat-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ailet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/cuet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/duet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/ipu-cet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- New Tool Pages -->
-  <url><loc>https://pixsathi.in/image-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/jpg-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/pdf-to-image</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/word-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/cgpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/qr-code-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/excel-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/pdf-password-remover</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/image-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/jpg-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/pdf-to-image</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/word-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/cgpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/qr-code-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/excel-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/pdf-password-remover</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Main Pages -->
   <!-- Exams Page -->
   <url>
-    <loc>https://pixsathi.in/exams/</loc>
+    <loc>https://www.pixsathi.in/exams/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- International Tools -->
   <url>
-    <loc>https://pixsathi.in/international/</loc>
+    <loc>https://www.pixsathi.in/international/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/us-passport-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/us-passport-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/uk-visa-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/uk-visa-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/canada-passport-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/canada-passport-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/australia-passport-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/australia-passport-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/germany-visa-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/germany-visa-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/france-passport-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/france-passport-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/japan-visa-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/japan-visa-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/china-visa-photo.html</loc>
+    <loc>https://www.pixsathi.in/international/china-visa-photo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/pdf-to-jpg.html</loc>
+    <loc>https://www.pixsathi.in/international/pdf-to-jpg.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixsathi.in/international/image-compressor.html</loc>
+    <loc>https://www.pixsathi.in/international/image-compressor.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://pixsathi.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.pixsathi.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 
   <!-- Blog Posts -->
-  <url><loc>https://pixsathi.in/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pixsathi.in/blog/ssc-cgl-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/blog/ibps-po-photo-requirements-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/blog/image-compress-20kb</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/blog/neet-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/blog/pdf-merge-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/blog/cgpa-to-percentage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/blog/exam-photo-rejection-reasons</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/ssc-cgl-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/ibps-po-photo-requirements-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/image-compress-20kb</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/neet-photo-size-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/pdf-merge-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/cgpa-to-percentage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/blog/exam-photo-rejection-reasons</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Finance Calculators -->
-  <url><loc>https://pixsathi.in/finance/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pixsathi.in/finance/index-hi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/index-hi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://pixsathi.in/finance/emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/emi-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/sip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/sip-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/income-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/income-tax-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/gst-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/gst-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/fd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/fd-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/rd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/rd-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/ppf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/ppf-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/nps-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/nps-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/salary-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/salary-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/hra-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/hra-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/gratuity-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/gratuity-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/loan-eligibility-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/loan-eligibility-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/lumpsum-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/lumpsum-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/swp-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/swp-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/cagr-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/cagr-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/compound-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/compound-interest-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/insurance-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pixsathi.in/finance/insurance-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/emi-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/sip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/sip-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/income-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/income-tax-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gst-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gst-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/fd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/fd-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/rd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/rd-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/ppf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/ppf-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/nps-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/nps-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/salary-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/salary-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/hra-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/hra-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gratuity-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gratuity-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/loan-eligibility-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/loan-eligibility-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/lumpsum-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/lumpsum-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/swp-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/swp-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/cagr-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/cagr-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/compound-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/compound-interest-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/insurance-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/insurance-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 
   <!-- Finance Blog Posts -->
-  <url><loc>https://pixsathi.in/finance/blog/80c-tax-saving-options.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/blog/home-loan-prepayment.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/blog/old-vs-new-tax-regime.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/blog/salary-structure-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pixsathi.in/finance/blog/sip-vs-lumpsum.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/80c-tax-saving-options.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/home-loan-prepayment.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/old-vs-new-tax-regime.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/salary-structure-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/sip-vs-lumpsum.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
