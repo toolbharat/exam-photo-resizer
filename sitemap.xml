@@ -233,4 +233,14 @@
   <url><loc>https://www.pixsathi.in/international/signature-resizer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/document-scanner.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- International Student Tools (Added 12 Oct 2026) -->
+  <url><loc>https://www.pixsathi.in/international/gpa-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/grade-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/citation-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/study-timer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/word-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/age-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/unit-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
