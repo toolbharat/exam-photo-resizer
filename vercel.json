@@ -14,6 +14,12 @@
       "destination": "https://www.pixsathi.in/$1",
       "permanent": true
     },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "pixsathi.in" }],
+      "destination": "https://www.pixsathi.in/$1",
+      "permanent": true
+    },
     { "source": "/gate.html", "destination": "/gate-photo-resizer", "permanent": true },
     { "source": "/ssc-cgl.html", "destination": "/ssc-cgl-photo-resizer", "permanent": true },
     { "source": "/ssc-chsl.html", "destination": "/ssc-chsl-photo-resizer", "permanent": true },
