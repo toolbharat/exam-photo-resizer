@@ -1,0 +1,1259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <title>Free Online Tools — Passport Photo, Exam Resizer & Finance | PixSathi</title>
+    <meta name="description" content="Free online tools for everyone — Passport photo maker for US, UK, Canada & more, Indian exam photo resizer for SSC, IBPS, NEET, UPSC, PDF tools, image compressor, and 40+ finance calculators. 100% free, no signup.">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pixsathi.in/">
+    <meta property="og:title" content="Free Online Tools — Passport Photo, Exam Resizer & Finance | PixSathi">
+    <meta property="og:description" content="Free passport photo maker, Indian exam photo resizer, PDF tools, image compressor, and 40+ finance calculators. 100% free, no signup.">
+    <meta property="og:image" content="https://www.pixsathi.in/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PixSathi - Free Online Tools">
+    <meta property="og:site_name" content="PixSathi">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.pixsathi.in/">
+    <meta name="twitter:title" content="Free Online Tools — Passport Photo, Exam Resizer & Finance | PixSathi">
+    <meta name="twitter:description" content="Free passport photo maker, exam photo resizer, PDF tools, and 40+ finance calculators. 100% free.">
+    <meta name="twitter:image" content="https://www.pixsathi.in/og-image.png">
+    <meta name="twitter:image:alt" content="PixSathi - Free Online Tools">
+
+    <meta name="keywords" content="passport photo maker, exam photo resizer, image compressor, pdf tools, finance calculator, free online tools">
+    <link rel="canonical" href="https://www.pixsathi.in/">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>/* ================================
+   PIXSATHI - MAIN STYLES
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* ============ HEADER (Compact) ============ */
+.header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.header .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 11px;
+    opacity: 0.95;
+    margin: 0;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 5px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.18);
+    transition: background 0.2s;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+/* ============ MAIN ============ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============ INTRO ============ */
+.intro-section {
+    text-align: center;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.intro-section h1,
+.intro-section h2 {
+    font-size: 20px;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.intro-section p {
+    font-size: 13px;
+    color: #6e6e73;
+    margin: 0;
+}
+
+/* ============ SECTION TITLE ============ */
+.section-title {
+    font-size: 16px;
+    color: #1d1d1f;
+    margin: 20px 0 12px;
+    font-weight: 700;
+}
+
+/* ============ CARDS GRID ============ */
+.country-section {
+    margin-bottom: 24px;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.country-card {
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-decoration: none;
+    color: #1d1d1f;
+    text-align: center;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.country-card:hover {
+    border-color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+    transform: translateY(-2px);
+}
+
+.country-flag {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.country-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.doc-types {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.doc-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.doc-size {
+    font-size: 11px;
+    color: #6e6e73;
+    margin: 0;
+}
+
+.card-cta {
+    font-size: 12px;
+    color: #4f46e5;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* ============ TOOL BOXES ============ */
+.tool-container {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.tool-title {
+    text-align: center;
+    font-size: 20px;
+    color: #1d1d1f;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.tool-title span {
+    color: #4f46e5;
+}
+
+.tool-box {
+    border: 2px solid #4f46e5;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafbff;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    max-height: 240px;
+    overflow: hidden;
+}
+
+.tool-box:hover {
+    background: #f0f4ff;
+}
+
+.image-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 140px;
+}
+
+.empty-state {
+    text-align: center;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.image-area img {
+    max-width: 240px;
+    max-height: 160px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+}
+
+.crop-btn-icon, .remove-btn-icon {
+    position: absolute;
+    top: 5px;
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.crop-btn-icon {
+    left: 5px;
+    background: #4f46e5;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.crop-btn-icon:hover {
+    background: #4338ca;
+}
+
+.remove-btn-icon {
+    right: 5px;
+    background: #dc2626;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-btn-icon:hover {
+    background: #b91c1c;
+}
+
+.file-name {
+    text-align: center;
+    font-size: 12px;
+    color: #6e6e73;
+    margin-bottom: 12px;
+    min-height: 18px;
+    word-break: break-all;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.badge {
+    background: #f0f0f5;
+    color: #3a3a3c;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.input-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group label {
+    font-size: 11px;
+    color: #3a3a3c;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 90px;
+    padding: 8px;
+    border: 1px solid #e5e5ea;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #4f46e5;
+}
+
+.x-sign {
+    font-size: 18px;
+    font-weight: 700;
+    color: #6e6e73;
+    padding-bottom: 8px;
+}
+
+.size-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.size-row label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.size-row input {
+    width: 90px;
+    padding: 8px;
+    border: 1px solid #e5e5ea;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    outline: none;
+}
+
+.size-row input:focus {
+    border-color: #4f46e5;
+}
+
+.kb-label {
+    background: #3a3a3c;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.resize-btn, .download-btn {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+
+.resize-btn {
+    background: #4f46e5;
+}
+
+.resize-btn:hover:not(:disabled) {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.resize-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.download-btn {
+    background: #16a34a;
+    margin-bottom: 0;
+}
+
+.download-btn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.content-section {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    line-height: 1.7;
+    color: #1d1d1f;
+}
+
+.content-section h2 {
+    font-size: 18px;
+    color: #1d1d1f;
+    margin: 20px 0 10px;
+    font-weight: 700;
+}
+
+.content-section h3 {
+    font-size: 15px;
+    color: #1d1d1f;
+    margin: 16px 0 8px;
+    font-weight: 600;
+}
+
+.content-section p {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: #3a3a3c;
+}
+
+.content-section ul,
+.content-section ol {
+    margin: 10px 0 16px 20px;
+    font-size: 13px;
+    color: #3a3a3c;
+}
+
+.content-section li {
+    margin-bottom: 4px;
+}
+
+.content-section a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 18px;
+    color: #6e6e73;
+    font-size: 12px;
+    border-top: 1px solid #e5e5ea;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+    }
+    .logo {
+        font-size: 15px;
+    }
+    .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .country-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .intro-section h1,
+    .intro-section h2 {
+        font-size: 17px;
+    }
+    .country-card {
+        padding: 12px 8px;
+    }
+    .country-flag {
+        font-size: 24px;
+    }
+    .content-section {
+        padding: 16px;
+    }
+    .image-area img {
+        max-width: 200px;
+        max-height: 130px;
+    }
+    .tool-box {
+        max-height: 200px;
+    }
+    .tool-container {
+        padding: 18px 14px;
+    }
+    .input-row {
+        gap: 8px;
+    }
+    .input-group input {
+        width: 75px;
+    }
+}
+/* ============ PREVIEW BOX (Image Compressor) ============ */
+.preview-box {
+    text-align: center;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.preview-box img {
+    max-width: 240px !important;
+    max-height: 160px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .preview-box img {
+        max-width: 200px !important;
+        max-height: 130px !important;
+    }
+}
+
+/* Photo frame - 100:120 aspect (SSC CGL) */
+#photoImageArea {
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    aspect-ratio: 100 / 120 !important;
+    max-height: 340px !important;
+    min-height: 280px !important;
+    border: 2px solid #4f46e5 !important;
+    background: #ffffff !important;
+}
+
+/* Signature frame - 140:60 aspect */
+#signImageArea {
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    aspect-ratio: 140 / 60 !important;
+    max-height: 180px !important;
+    min-height: 150px !important;
+    border: 2px solid #4f46e5 !important;
+    background: #ffffff !important;
+}
+
+/* Move hint text */
+.image-area::after {
+    content: 'â†” Move  â€¢  ðŸ” Scroll to Zoom';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(79, 70, 229, 0.85);
+    color: white;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.image-area .empty-state ~ * {
+    display: none;
+}
+
+.image-area .empty-state::after {
+    content: '';
+}
+
+/* ============ PAN/DRAG IMAGE (Clean) ============ */
+.pan-frame {
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    border: 2px solid #4f46e5 !important;
+    background: #f0f0f5 !important;
+    border-radius: 8px !important;
+    cursor: grab !important;
+    user-select: none !important;
+    touch-action: none !important;
+}
+
+.pan-frame.dragging {
+    cursor: grabbing !important;
+}
+
+.pan-frame img {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    max-width: none !important;
+    max-height: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+    pointer-events: none !important;
+    border-radius: 0 !important;
+}
+
+.pan-frame .empty-state {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.pan-hint {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(79, 70, 229, 0.9);
+    color: white;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+/* ============ TOOL BOX CONSTRAINT ============ */
+.tool-box {
+    max-width: 100% !important;
+    width: auto !important;
+    display: block !important;
+    min-height: auto !important;
+    padding: 15px !important;
+    text-align: center !important;
+}
+
+/* ============ TOOL-BOX CLEANUP ============ */
+.tool-box {
+    max-width: 320px !important;
+    width: 100% !important;
+    margin: 0 auto 15px auto !important;
+    padding: 12px !important;
+    border: none !important;
+    background: transparent !important;
+    min-height: auto !important;
+    display: block !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+#photoImageArea,
+#signImageArea {
+    display: block !important;
+}
+
+/* ============ MERGE PHOTO TOOL ============ */
+.merge-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+}
+
+.merge-item {
+    position: relative !important;
+    background: #f8f8fb !important;
+    border: 2px solid #e5e5ea !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    min-height: 200px !important;
+    max-height: 280px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.merge-item img {
+    max-width: 100% !important;
+    max-height: 200px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 6px !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.merge-item canvas {
+    max-width: 100% !important;
+    max-height: 200px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 6px !important;
+}
+
+.add-photo-inner {
+    cursor: pointer !important;
+    text-align: center !important;
+    padding: 20px !important;
+    color: #667eea !important;
+    font-weight: 600 !important;
+}
+
+.merge-item .crop-btn,
+.merge-item button {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin: 4px 2px 0 2px !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .merge-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+    }
+    .merge-item {
+        min-height: 150px !important;
+        max-height: 200px !important;
+    }
+    .merge-item img,
+    .merge-item canvas {
+        max-height: 130px !important;
+    }
+}
+
+/* ============ STATS SECTION ============ */
+.stats-section {
+    margin: 20px 0 24px;
+    padding: 0 4px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    border-radius: 12px;
+    padding: 16px 10px;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
+    border-color: #c7d2fe;
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1d1d1f;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #6e6e73;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .stat-card {
+        padding: 12px 6px;
+    }
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .stat-number {
+        font-size: 15px;
+    }
+    .stat-label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .section-title { font-size: 15px !important; margin: 16px 0 10px !important; }
+
+        /* दो-कॉलम ग्रिड */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        /* छोटे कॉम्पैक्ट कार्ड */
+        .compact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .compact-card {
+            background: #ffffff;
+            border: 1px solid #e5e5ea;
+            border-radius: 8px;
+            padding: 8px 10px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            font-size: 12px;
+        }
+
+        .compact-card:hover {
+            border-color: #4f46e5;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .compact-card .flag {
+            width: 24px;
+            height: 16px;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+
+        .compact-card .icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .compact-card .name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1d1d1f;
+            line-height: 1.2;
+        }
+
+        .compact-card .sub {
+            font-size: 10px;
+            color: #6e6e73;
+            margin-top: 1px;
+        }
+
+        /* Finance कार्ड */
+        .finance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .finance-card {
+            background: #ffffff;
+            border: 1px solid #e5e5ea;
+            border-radius: 10px;
+            padding: 12px 14px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s;
+        }
+
+        .finance-card:hover {
+            border-color: #4f46e5;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .finance-card .icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .finance-card .name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 2px;
+        }
+
+        .finance-card .sub {
+            font-size: 11px;
+            color: #6e6e73;
+        }
+
+        /* SEO Content */
+        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
+        .content-section p, .content-section li { font-size: 13px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+
+        /* मोबाइल */
+        @media (max-width: 700px) {
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
+            .compact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "Are these tools really free?","acceptedAnswer": {"@type": "Answer","text": "Yes, 100% free. No signup, no login, no hidden fees."}},
+        {"@type": "Question","name": "Are my files uploaded to a server?","acceptedAnswer": {"@type": "Answer","text": "No. All processing happens in your browser. Your files never leave your device."}},
+        {"@type": "Question","name": "Can I use these tools on mobile?","acceptedAnswer": {"@type": "Answer","text": "Yes, all tools work on any device — mobile, tablet, or desktop."}},
+        {"@type": "Question","name": "What tools does PixSathi offer?","acceptedAnswer": {"@type": "Answer","text": "PixSathi offers 90+ free tools: International passport & visa photos (US, UK, Canada, Australia, Germany, France, Japan, China, India, Italy, Spain, Netherlands, Sweden, Norway, South Korea, Singapore, New Zealand, Ireland, Poland), Indian exam tools (SSC, IBPS, SBI, RRB, NEET, JEE, UPSC, CTET, UGC NET, CLAT, and 45+ more), and finance calculators (EMI, SIP, Income Tax, GST, FD, RD, PPF, NPS, Salary, and more)."}}
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PixSathi - Free Online Tools",
+      "alternateName": "PixSathi",
+      "url": "https://pixsathi.in/",
+      "description": "Free online tools for passport photos, exam photo resizing, PDF, and finance.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (Web-based)",
+      "offers": {"@type": "Offer","price": "0","priceCurrency": "INR"},
+      "author": {"@type": "Organization","name": "PixSathi","url": "https://pixsathi.in/"},
+      "inLanguage": "en-IN",
+      "isAccessibleForFree": true
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">📝 Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- दो-कॉलम ग्रिड -->
+        <div class="two-column-grid">
+
+        <!-- 🌍 International Tools -->
+        <section class="country-section">
+            <h2 class="section-title">🌍 International Tools</h2>
+            <div class="compact-grid">
+
+                <a href="/international/us-passport-photo.html" class="compact-card">
+                    <img src="/flags/us.png" alt="US" class="flag">
+                    <div><div class="name">US Passport</div><div class="sub">2x2 inch</div></div>
+                </a>
+
+                <a href="/international/uk-visa-photo.html" class="compact-card">
+                    <img src="/flags/gb.png" alt="UK" class="flag">
+                    <div><div class="name">UK Visa</div><div class="sub">3.5x4.5 cm</div></div>
+                </a>
+
+                <a href="/international/canada-passport-photo.html" class="compact-card">
+                    <img src="/flags/ca.png" alt="Canada" class="flag">
+                    <div><div class="name">Canada Passport</div><div class="sub">5x7 cm</div></div>
+                </a>
+
+                <a href="/international/india-passport-photo.html" class="compact-card">
+                    <img src="/flags/in.png" alt="India" class="flag">
+                    <div><div class="name">India Passport</div><div class="sub">35x45 mm</div></div>
+                </a>
+
+                <a href="/international/" class="compact-card" style="grid-column: 1 / -1; justify-content: center; background: #eef2ff; border-color: #4f46e5;">
+                    <span class="icon">🌍</span>
+                    <div><div class="name">All International Tools →</div></div>
+                </a>
+
+            </div>
+        </section>
+
+            <!-- दाईं तरफ: Free Online Tools -->
+            <section class="country-section">
+                <h2 class="section-title">🛠️ Free Online Tools</h2>
+                <div class="compact-grid">
+
+                    <a href="/image-compressor" class="compact-card">
+                        <span class="icon">🗜️</span>
+                        <div><div class="name">Image Compressor</div><div class="sub">Exact KB</div></div>
+                    </a>
+
+                    <a href="/photo-merger" class="compact-card">
+                        <span class="icon">🔗</span>
+                        <div><div class="name">Photo Merger</div><div class="sub">Merge photos</div></div>
+                    </a>
+
+                    <a href="/pdf-password-remover" class="compact-card">
+                        <span class="icon">🔑</span>
+                        <div><div class="name">PDF Password</div><div class="sub">Remove</div></div>
+                    </a>
+
+                    <a href="/image-converter" class="compact-card">
+                        <span class="icon">🔄</span>
+                        <div><div class="name">Image Converter</div><div class="sub">Any format</div></div>
+                    </a>
+
+                    <a href="/jpg-to-pdf" class="compact-card">
+                        <span class="icon">📄</span>
+                        <div><div class="name">JPG to PDF</div><div class="sub">Convert</div></div>
+                    </a>
+
+                    <a href="/pdf-to-image" class="compact-card">
+                        <span class="icon">🖼️</span>
+                        <div><div class="name">PDF to Image</div><div class="sub">Extract</div></div>
+                    </a>
+
+                    <a href="/word-to-pdf" class="compact-card">
+                        <span class="icon">📝</span>
+                        <div><div class="name">Word to PDF</div><div class="sub">Convert</div></div>
+                    </a>
+
+                    <a href="/cgpa-calculator" class="compact-card">
+                        <span class="icon">🧮</span>
+                        <div><div class="name">CGPA Calculator</div><div class="sub">Percentage</div></div>
+                    </a>
+
+                    <a href="/qr-code-generator" class="compact-card">
+                        <span class="icon">🎯</span>
+                        <div><div class="name">QR Code</div><div class="sub">Generator</div></div>
+                    </a>
+
+                    <a href="/excel-merger" class="compact-card">
+                        <span class="icon">📊</span>
+                        <div><div class="name">Excel Merger</div><div class="sub">Merge files</div></div>
+                    </a>
+
+                </div>
+            </section>
+
+        </div>
+        <section class="content-section">
+            <h2>Free Online Tools for Everyone</h2>
+            <p>PixSathi offers free online tools for everyone — international passport & visa photo makers for US, UK, Canada, Australia, Germany, France, Japan, China, India, Italy, Spain, Netherlands, Sweden, Norway, South Korea, Singapore, New Zealand, Ireland, and Poland. Plus PDF tools, image compressors, and utility tools. All tools work directly in your browser — no signup, no watermark, and your files never leave your device.</p>
+
+            <h2>🌍 International Passport & Visa Photos</h2>
+            <p>Create perfect passport and visa photos for 20+ countries. Each tool follows the exact official requirements — size, background, head position, and more. Just upload your photo, and the tool automatically crops and resizes it to the correct dimensions.</p>
+
+            <h2>📄 Document Tools</h2>
+            <p>Convert PDF pages to JPG images, compress images to exact KB, resize signatures for US/UK visas, scan documents to PDF, and convert currencies with live exchange rates. All tools are 100% free and work directly in your browser.</p>
+
+            <h2>Why Choose PixSathi?</h2>
+            <ul>
+                <li><strong>100% Free:</strong> No signup, no login, no hidden charges</li>
+                <li><strong>Privacy First:</strong> Files processed in your browser — never uploaded</li>
+                <li><strong>International Ready:</strong> Passport & visa photos for 20+ countries</li>
+                <li><strong>Works on Mobile:</strong> Use on any phone, tablet, or computer</li>
+                <li><strong>Fast:</strong> No waiting, instant results</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>Are these tools really free?</h3>
+            <p>Yes, 100% free. No signup, no login, no hidden fees.</p>
+
+            <h3>Are my files uploaded to a server?</h3>
+            <p>No. All processing happens in your browser. Your files never leave your device.</p>
+
+            <h3>Can I use these tools on mobile?</h3>
+            <p>Yes, all tools work on any device — mobile, tablet, or desktop.</p>
+
+            <h3>What tools does PixSathi offer?</h3>
+            <p>PixSathi offers 90+ free tools: International passport & visa photos (20+ countries), Indian exam tools (45+ exams — see the Exams tab), and finance calculators (EMI, SIP, Income Tax, GST, FD, RD, PPF, NPS, Salary — see the Finance tab).</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
