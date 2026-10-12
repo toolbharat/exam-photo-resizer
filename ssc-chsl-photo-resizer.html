@@ -17,6 +17,19 @@
     <meta name="description" content="Free SSC CHSL photo and signature resizer. Resize photo to 100x120 px (20-50 KB) and signature to 140x60 px (10-20 KB). 100% private.">
     <link rel="canonical" href="https://www.pixsathi.in/ssc-chsl-photo-resizer">
     <link rel="stylesheet" href="/style.css">
+    <style>
+        .two-column-tools {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        @media (max-width: 700px) {
+            .two-column-tools {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -57,91 +70,96 @@
             </div>
         </section>
 
-        <!-- ============ PHOTO BOX ============ -->
-        <div class="two-column-tools">`n<div class="tool-container">
-            <h2 class="tool-title">Resize <span>Photo</span></h2>
+        <!-- ============ TWO COLUMN TOOLS ============ -->
+        <div class="two-column-tools">
 
-            <div class="tool-box" data-type="photo">
-                <div class="image-area" id="photoImageArea">
-                    <div class="empty-state">
-                        <p>📁 Click to select a photo</p>
-                        <p style="font-size:13px;color:#999;">or drag & drop here</p>
+            <!-- PHOTO BOX -->
+            <div class="tool-container">
+                <h2 class="tool-title">Resize <span>Photo</span></h2>
+
+                <div class="tool-box" data-type="photo">
+                    <div class="image-area" id="photoImageArea">
+                        <div class="empty-state">
+                            <p>📁 Click to select a photo</p>
+                            <p style="font-size:13px;color:#999;">or drag & drop here</p>
+                        </div>
+                    </div>
+                    <input type="file" id="photoInput" accept="image/*" style="display:none;">
+                </div>
+
+                <p class="file-name" id="photoFileName"></p>
+
+                <div class="badges">
+                    <span class="badge" id="photoBadgeW">W-100</span>
+                    <span class="badge" id="photoBadgeH">H-120</span>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Width (px)</label>
+                        <input type="number" id="photoWidth" value="100">
+                    </div>
+                    <span class="x-sign">X</span>
+                    <div class="input-group">
+                        <label>Height (px)</label>
+                        <input type="number" id="photoHeight" value="120">
                     </div>
                 </div>
-                <input type="file" id="photoInput" accept="image/*" style="display:none;">
-            </div>
 
-            <p class="file-name" id="photoFileName"></p>
-
-            <div class="badges">
-                <span class="badge" id="photoBadgeW">W-100</span>
-                <span class="badge" id="photoBadgeH">H-120</span>
-            </div>
-
-            <div class="input-row">
-                <div class="input-group">
-                    <label>Width (px)</label>
-                    <input type="number" id="photoWidth" value="100">
+                <div class="size-row">
+                    <label>Size:</label>
+                    <input type="number" id="photoSize" value="50">
+                    <span class="kb-label">Kb</span>
                 </div>
-                <span class="x-sign">X</span>
-                <div class="input-group">
-                    <label>Height (px)</label>
-                    <input type="number" id="photoHeight" value="120">
+
+                <button id="photoResizeBtn" class="resize-btn" disabled>Resize Photo</button>
+                <button id="photoDownloadBtn" class="download-btn" style="display:none;">⬇ Download Photo</button>
+            </div>
+
+            <!-- SIGNATURE BOX -->
+            <div class="tool-container">
+                <h2 class="tool-title">Resize <span>Signature</span></h2>
+
+                <div class="tool-box" data-type="signature">
+                    <div class="image-area" id="signImageArea">
+                        <div class="empty-state">
+                            <p>📁 Click to select a signature</p>
+                            <p style="font-size:13px;color:#999;">or drag & drop here</p>
+                        </div>
+                    </div>
+                    <input type="file" id="signInput" accept="image/*" style="display:none;">
                 </div>
+
+                <p class="file-name" id="signFileName"></p>
+
+                <div class="badges">
+                    <span class="badge" id="signBadgeW">W-140</span>
+                    <span class="badge" id="signBadgeH">H-60</span>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Width (px)</label>
+                        <input type="number" id="signWidth" value="140">
+                    </div>
+                    <span class="x-sign">X</span>
+                    <div class="input-group">
+                        <label>Height (px)</label>
+                        <input type="number" id="signHeight" value="60">
+                    </div>
+                </div>
+
+                <div class="size-row">
+                    <label>Size:</label>
+                    <input type="number" id="signSize" value="20">
+                    <span class="kb-label">Kb</span>
+                </div>
+
+                <button id="signResizeBtn" class="resize-btn" disabled>Resize Signature</button>
+                <button id="signDownloadBtn" class="download-btn" style="display:none;">⬇ Download Signature</button>
             </div>
 
-            <div class="size-row">
-                <label>Size:</label>
-                <input type="number" id="photoSize" value="50">
-                <span class="kb-label">Kb</span>
-            </div>
-
-            <button id="photoResizeBtn" class="resize-btn" disabled>Resize Photo</button>
-            <button id="photoDownloadBtn" class="download-btn" style="display:none;">⬇ Download Photo</button>
         </div>
-
-        <!-- ============ SIGNATURE BOX ============ -->
-        <div class="tool-container">
-            <h2 class="tool-title">Resize <span>Signature</span></h2>
-
-            <div class="tool-box" data-type="signature">
-                <div class="image-area" id="signImageArea">
-                    <div class="empty-state">
-                        <p>📁 Click to select a signature</p>
-                        <p style="font-size:13px;color:#999;">or drag & drop here</p>
-                    </div>
-                </div>
-                <input type="file" id="signInput" accept="image/*" style="display:none;">
-            </div>
-
-            <p class="file-name" id="signFileName"></p>
-
-            <div class="badges">
-                <span class="badge" id="signBadgeW">W-140</span>
-                <span class="badge" id="signBadgeH">H-60</span>
-            </div>
-
-            <div class="input-row">
-                <div class="input-group">
-                    <label>Width (px)</label>
-                    <input type="number" id="signWidth" value="140">
-                </div>
-                <span class="x-sign">X</span>
-                <div class="input-group">
-                    <label>Height (px)</label>
-                    <input type="number" id="signHeight" value="60">
-                </div>
-            </div>
-
-            <div class="size-row">
-                <label>Size:</label>
-                <input type="number" id="signSize" value="20">
-                <span class="kb-label">Kb</span>
-            </div>
-
-            <button id="signResizeBtn" class="resize-btn" disabled>Resize Signature</button>
-            <button id="signDownloadBtn" class="download-btn" style="display:none;">⬇ Download Signature</button>
-        </div>`n</div>
 
         <!-- TIPS -->
         <div class="card">
