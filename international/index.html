@@ -13,9 +13,9 @@
       gtag('config', 'G-L5K09RC5D2');
     </script>
 
-    <title>International Tools - Passport Photos & PDF Tools | PixSathi</title>
-    <meta name="description" content="Free international tools for US, UK, Canada, Australia, Germany, France, Japan, China. Passport photo maker, visa photo resizer, PDF converter, image compressor.">
-    <meta name="keywords" content="passport photo maker, visa photo, US passport photo, UK visa photo, Canada passport photo, Australia passport photo, Germany visa photo, France passport photo, Japan visa photo, China visa photo, PDF to JPG, image compressor">
+    <title>International Tools - Passport Photos, Visa Photos & Student Tools | PixSathi</title>
+    <meta name="description" content="Free international tools for US, UK, Canada, Australia, Germany, France, Japan, China, India, Italy, Spain, Netherlands, Sweden, Norway, South Korea, Singapore, New Zealand, Ireland, Poland. Passport photo maker, visa photo resizer, student tools, PDF tools.">
+    <meta name="keywords" content="passport photo maker, visa photo, GPA calculator, citation generator, study timer, PDF to JPG, image compressor">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,17 +24,17 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pixsathi.in/international/">
-    <meta property="og:title" content="International Tools - Passport Photos & PDF Tools">
-    <meta property="og:description" content="Free international tools for US, UK, Canada, Australia, Germany, France, Japan, China. Passport photo, visa photo, PDF converter.">
-    <meta property="og:image" content="https://pixsathi.in/og-image.png">
+    <meta property="og:url" content="https://www.pixsathi.in/international/">
+    <meta property="og:title" content="International Tools - Passport Photos, Visa Photos & Student Tools">
+    <meta property="og:description" content="Free international tools for 20+ countries. Passport photo maker, visa photo resizer, student tools, PDF tools.">
+    <meta property="og:image" content="https://www.pixsathi.in/og-image.png">
     <meta property="og:site_name" content="PixSathi">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="International Tools - Passport Photos & PDF Tools">
-    <meta name="twitter:description" content="Free international tools for US, UK, Canada, Australia.">
-    <meta name="twitter:image" content="https://pixsathi.in/og-image.png">
+    <meta name="twitter:title" content="International Tools - Passport Photos, Visa Photos & Student Tools">
+    <meta name="twitter:description" content="Free international tools for 20+ countries.">
+    <meta name="twitter:image" content="https://www.pixsathi.in/og-image.png">
 
     <link rel="canonical" href="https://www.pixsathi.in/international/">
     <link rel="stylesheet" href="/style.css">
@@ -46,15 +46,18 @@
         .tagline { font-size: 10px !important; margin: 0 !important; }
         .nav a { padding: 4px 10px !important; font-size: 12px !important; }
         .section-title { font-size: 15px !important; margin: 16px 0 10px !important; }
-        .dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-        .dash-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 10px; padding: 14px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); transition: all 0.2s; display: flex; flex-direction: column; }
+
         .dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
-.dash-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 8px; padding: 8px 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); transition: all 0.2s; display: flex; flex-direction: column; }
-.dash-card:hover { border-color: #4f46e5; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1); transform: translateY(-2px); }
-.tool-card { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; min-height: 50px; }
-.tool-icon { font-size: 20px; flex-shrink: 0; }
-.tool-info h3 { font-size: 11px; font-weight: 700; color: #1d1d1f; margin: 0 0 1px 0; }
-.tool-info p { font-size: 9px; color: #6e6e73; margin: 0; line-height: 1.3; }
+        .dash-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 8px; padding: 8px 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); transition: all 0.2s; display: flex; flex-direction: column; }
+        .dash-card:hover { border-color: #4f46e5; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1); transform: translateY(-2px); }
+        .tool-card { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; min-height: 50px; }
+        .tool-icon { font-size: 20px; flex-shrink: 0; }
+        .tool-info h3 { font-size: 11px; font-weight: 700; color: #1d1d1f; margin: 0 0 1px 0; }
+        .tool-info p { font-size: 9px; color: #6e6e73; margin: 0; line-height: 1.3; }
+        .country-dropdown { width: 100%; max-width: 400px; padding: 12px 15px; border: 2px solid #4f46e5; border-radius: 10px; font-size: 14px; font-weight: 600; color: #1d1d1f; background: #ffffff; cursor: pointer; outline: none; }
+        .country-dropdown:hover { border-color: #4338ca; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1); }
+        .country-dropdown:focus { box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); }
+
         .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
         .content-section p, .content-section li { font-size: 13px !important; }
         .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
@@ -68,8 +71,10 @@
             <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
             <nav class="nav" aria-label="Main navigation">
                 <a href="/">🏠 Home</a>
-                <a href="/international/" style="background:#4f46e5;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🌍 International</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">📝 Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
                 <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
                 <a href="/contact">📬 Contact</a>
             </nav>
         </div>
@@ -78,325 +83,64 @@
     <main class="container">
 
         <h1>🌍 International Tools</h1>
-        <p>Free tools for US, UK, Canada, Australia, Germany, France, Japan, China users — 100% free, no signup, no watermark.</p>
+        <p>Free tools for 20+ countries — 100% free, no signup, no watermark.</p>
 
-        <!-- Passport & Visa Photos -->
+     
+        <!-- 📸 Passport & Visa Photos -->
         <section class="country-section">
             <h2 class="section-title">📸 Passport & Visa Photos</h2>
-            <div class="dash-grid">
-
-                <a href="/international/us-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/us.png" alt="US" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>US Passport Photo</h3>
-                        <p>2x2 inch, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/uk-visa-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/gb.png" alt="UK" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>UK Visa Photo</h3>
-                        <p>3.5x4.5 cm, light grey</p>
-                    </div>
-                </a>
-
-                <a href="/international/canada-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/ca.png" alt="Canada" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Canada Passport Photo</h3>
-                        <p>5x7 cm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/australia-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/au.png" alt="Australia" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Australia Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/germany-visa-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/de.png" alt="Germany" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Germany Visa Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/france-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/fr.png" alt="France" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>France Passport Photo</h3>
-                        <p>35x45 mm, light grey</p>
-                    </div>
-                </a>
-
-                <a href="/international/japan-visa-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/jp.png" alt="Japan" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Japan Visa Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/china-visa-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/cn.png" alt="China" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>China Visa Photo</h3>
-                        <p>33x48 mm, white background</p>
-                    </div>
-                </a>
-                <a href="/international/india-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/in.png" alt="India" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>India Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/italy-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/it.png" alt="Italy" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Italy Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/spain-visa-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/es.png" alt="Spain" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Spain Visa Photo</h3>
-                        <p>32x26 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/netherlands-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Netherlands Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/sweden-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/se.png" alt="Sweden" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Sweden Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/norway-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/no.png" alt="Norway" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Norway Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/south-korea-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/kr.png" alt="South Korea" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>South Korea Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/singapore-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/sg.png" alt="Singapore" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Singapore Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/new-zealand-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/nz.png" alt="New Zealand" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>New Zealand Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/ireland-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/ie.png" alt="Ireland" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Ireland Passport Photo</h3>
-                        <p>35x45 mm, light grey background</p>
-                    </div>
-                </a>
-
-                <a href="/international/poland-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/pl.png" alt="Poland" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Poland Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/signature-resizer.html" class="dash-card tool-card">
-                    <div class="tool-icon">✍️</div>
-                    <div class="tool-info">
-                        <h3>Signature Resizer</h3>
-                        <p>US/UK visa signature</p>
-                    </div>
-                </a>
-
-                <a href="/international/document-scanner.html" class="dash-card tool-card">
-                    <div class="tool-icon">📄</div>
-                    <div class="tool-info">
-                        <h3>Document Scanner</h3>
-                        <p>Scan to PDF</p>
-                    </div>
-                </a>
-
-                <a href="/international/currency-converter.html" class="dash-card tool-card">
-                    <div class="tool-icon">💱</div>
-                    <div class="tool-info">
-                        <h3>Currency Converter</h3>
-                        <p>Live exchange rates</p>
-                    </div>
-                </a>
-                <a href="/international/india-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/in.png" alt="India" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>India Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/italy-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/it.png" alt="Italy" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Italy Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/spain-visa-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/es.png" alt="Spain" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Spain Visa Photo</h3>
-                        <p>32x26 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/netherlands-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Netherlands Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/sweden-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/se.png" alt="Sweden" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Sweden Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/norway-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/no.png" alt="Norway" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Norway Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/south-korea-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/kr.png" alt="South Korea" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>South Korea Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/singapore-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/sg.png" alt="Singapore" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Singapore Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/new-zealand-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/nz.png" alt="New Zealand" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>New Zealand Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/ireland-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/ie.png" alt="Ireland" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Ireland Passport Photo</h3>
-                        <p>35x45 mm, light grey background</p>
-                    </div>
-                </a>
-
-                <a href="/international/poland-passport-photo.html" class="dash-card tool-card">
-                    <div class="tool-icon"><img src="https://flagcdn.com/w40/pl.png" alt="Poland" style="width: 32px; height: auto;"></div>
-                    <div class="tool-info">
-                        <h3>Poland Passport Photo</h3>
-                        <p>35x45 mm, white background</p>
-                    </div>
-                </a>
-
-                <a href="/international/signature-resizer.html" class="dash-card tool-card">
-                    <div class="tool-icon">✍️</div>
-                    <div class="tool-info">
-                        <h3>Signature Resizer</h3>
-                        <p>US/UK visa signature</p>
-                    </div>
-                </a>
-
-                <a href="/international/document-scanner.html" class="dash-card tool-card">
-                    <div class="tool-icon">📄</div>
-                    <div class="tool-info">
-                        <h3>Document Scanner</h3>
-                        <p>Scan to PDF</p>
-                    </div>
-                </a>
-
-                <a href="/international/currency-converter.html" class="dash-card tool-card">
-                    <div class="tool-icon">💱</div>
-                    <div class="tool-info">
-                        <h3>Currency Converter</h3>
-                        <p>Live exchange rates</p>
-                    </div>
-                </a>
-
-            </div>
+            <p style="font-size: 12px; color: #6e6e73; margin: 0 0 10px 0;">Select your country:</p>
+            <select id="countrySelect" onchange="goToCountry()" class="country-dropdown">
+                <option value="">-- Choose Your Country --</option>
+                <option value="/international/us-passport-photo.html">🇺🇸 US Passport Photo</option>
+                <option value="/international/uk-visa-photo.html">🇬🇧 UK Visa Photo</option>
+                <option value="/international/canada-passport-photo.html">🇨🇦 Canada Passport Photo</option>
+                <option value="/international/australia-passport-photo.html">🇦🇺 Australia Passport Photo</option>
+                <option value="/international/germany-visa-photo.html">🇩🇪 Germany Visa Photo</option>
+                <option value="/international/france-passport-photo.html">🇫🇷 France Passport Photo</option>
+                <option value="/international/japan-visa-photo.html">🇯🇵 Japan Visa Photo</option>
+                <option value="/international/china-visa-photo.html">🇨🇳 China Visa Photo</option>
+                <option value="/international/india-passport-photo.html">🇮🇳 India Passport Photo</option>
+                <option value="/international/italy-passport-photo.html">🇮🇹 Italy Passport Photo</option>
+                <option value="/international/spain-visa-photo.html">🇪🇸 Spain Visa Photo</option>
+                <option value="/international/netherlands-passport-photo.html">🇳🇱 Netherlands Passport Photo</option>
+                <option value="/international/sweden-passport-photo.html">🇸🇪 Sweden Passport Photo</option>
+                <option value="/international/norway-passport-photo.html">🇳🇴 Norway Passport Photo</option>
+                <option value="/international/south-korea-passport-photo.html">🇰🇷 South Korea Passport Photo</option>
+                <option value="/international/singapore-passport-photo.html">🇸🇬 Singapore Passport Photo</option>
+                <option value="/international/new-zealand-passport-photo.html">🇳🇿 New Zealand Passport Photo</option>
+                <option value="/international/ireland-passport-photo.html">🇮🇪 Ireland Passport Photo</option>
+                <option value="/international/poland-passport-photo.html">🇵🇱 Poland Passport Photo</option>
+            </select>
         </section>
-
-        <!-- Document Tools -->
+        <!-- 📄 Document Tools -->
         <section class="country-section">
             <h2 class="section-title">📄 Document Tools</h2>
             <div class="dash-grid">
 
+                <a href="/international/signature-resizer.html" class="dash-card tool-card">
+                    <div class="tool-icon">✍️</div>
+                    <div class="tool-info"><h3>Signature Resizer</h3><p>US/UK visa</p></div>
+                </a>
+
+                <a href="/international/document-scanner.html" class="dash-card tool-card">
+                    <div class="tool-icon">📄</div>
+                    <div class="tool-info"><h3>Document Scanner</h3><p>Scan to PDF</p></div>
+                </a>
+
                 <a href="/international/pdf-to-jpg.html" class="dash-card tool-card">
                     <div class="tool-icon">📄</div>
-                    <div class="tool-info">
-                        <h3>PDF to JPG</h3>
-                        <p>Convert PDF pages to JPG images</p>
-                    </div>
+                    <div class="tool-info"><h3>PDF to JPG</h3><p>Convert pages</p></div>
                 </a>
 
                 <a href="/international/image-compressor.html" class="dash-card tool-card">
                     <div class="tool-icon">🖼️</div>
-                    <div class="tool-info">
-                        <h3>Image Compressor</h3>
-                        <p>Reduce image to exact KB</p>
-                    </div>
+                    <div class="tool-info"><h3>Image Compressor</h3><p>Exact KB</p></div>
                 </a>
 
             </div>
         </section>
+
         <!-- 🎓 Student Tools -->
         <section class="country-section">
             <h2 class="section-title">🎓 Student Tools</h2>
@@ -404,32 +148,32 @@
 
                 <a href="/international/gpa-calculator.html" class="dash-card tool-card">
                     <div class="tool-icon">🎓</div>
-                    <div class="tool-info"><h3>GPA Calculator</h3><p>Calculate GPA on 4.0 scale</p></div>
+                    <div class="tool-info"><h3>GPA Calculator</h3><p>4.0 scale</p></div>
                 </a>
 
                 <a href="/international/grade-calculator.html" class="dash-card tool-card">
                     <div class="tool-icon">📊</div>
-                    <div class="tool-info"><h3>Grade Calculator</h3><p>What grade do you need?</p></div>
+                    <div class="tool-info"><h3>Grade Calculator</h3><p>Final grade</p></div>
                 </a>
 
                 <a href="/international/citation-generator.html" class="dash-card tool-card">
                     <div class="tool-icon">📚</div>
-                    <div class="tool-info"><h3>Citation Generator</h3><p>APA, MLA, Chicago</p></div>
+                    <div class="tool-info"><h3>Citation Generator</h3><p>APA, MLA</p></div>
                 </a>
 
                 <a href="/international/study-timer.html" class="dash-card tool-card">
                     <div class="tool-icon">⏱️</div>
-                    <div class="tool-info"><h3>Study Timer</h3><p>Pomodoro 25 min</p></div>
+                    <div class="tool-info"><h3>Study Timer</h3><p>Pomodoro</p></div>
                 </a>
 
                 <a href="/international/word-counter.html" class="dash-card tool-card">
                     <div class="tool-icon">📝</div>
-                    <div class="tool-info"><h3>Word Counter</h3><p>Count words & characters</p></div>
+                    <div class="tool-info"><h3>Word Counter</h3><p>Count words</p></div>
                 </a>
 
                 <a href="/international/percentage-calculator.html" class="dash-card tool-card">
                     <div class="tool-icon">📊</div>
-                    <div class="tool-info"><h3>Percentage Calculator</h3><p>Calculate percentages</p></div>
+                    <div class="tool-info"><h3>Percentage</h3><p>Calculate %</p></div>
                 </a>
 
                 <a href="/international/age-calculator.html" class="dash-card tool-card">
@@ -439,7 +183,20 @@
 
                 <a href="/international/unit-converter.html" class="dash-card tool-card">
                     <div class="tool-icon">📏</div>
-                    <div class="tool-info"><h3>Unit Converter</h3><p>cm, inch, kg, lbs</p></div>
+                    <div class="tool-info"><h3>Unit Converter</h3><p>cm, kg, °C</p></div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 💱 Other Tools -->
+        <section class="country-section">
+            <h2 class="section-title">💱 Other Tools</h2>
+            <div class="dash-grid">
+
+                <a href="/international/currency-converter.html" class="dash-card tool-card">
+                    <div class="tool-icon">💱</div>
+                    <div class="tool-info"><h3>Currency Converter</h3><p>Live rates</p></div>
                 </a>
 
             </div>
@@ -448,18 +205,15 @@
         <!-- SEO Content -->
         <section class="content-section">
             <h2>About International Tools</h2>
-            <p>PixSathi offers free international tools for users in the United States, United Kingdom, Canada, Australia, Germany, France, Japan, and China. All tools work directly in your browser — no signup, no watermark, and your files never leave your device.</p>
+            <p>PixSathi offers free international tools for users in the United States, United Kingdom, Canada, Australia, Germany, France, Japan, China, India, Italy, Spain, Netherlands, Sweden, Norway, South Korea, Singapore, New Zealand, Ireland, and Poland. All tools work directly in your browser — no signup, no watermark, and your files never leave your device.</p>
 
             <h2>Popular International Tools</h2>
             <ul>
                 <li><strong>US Passport Photo Maker:</strong> Create 2x2 inch passport photos for US passport and visa applications</li>
                 <li><strong>UK Visa Photo Maker:</strong> Create 3.5x4.5 cm photos for UK visa applications</li>
                 <li><strong>Canada Passport Photo Maker:</strong> Create 5x7 cm photos for Canada passport applications</li>
-                <li><strong>Australia Passport Photo Maker:</strong> Create 35x45 mm photos for Australia passport applications</li>
-                <li><strong>Germany Visa Photo Maker:</strong> Create 35x45 mm photos for Germany visa applications</li>
-                <li><strong>France Passport Photo Maker:</strong> Create 35x45 mm photos for France passport applications</li>
-                <li><strong>Japan Visa Photo Maker:</strong> Create 35x45 mm photos for Japan visa applications</li>
-                <li><strong>China Visa Photo Maker:</strong> Create 33x48 mm photos for China visa applications</li>
+                <li><strong>GPA Calculator:</strong> Calculate GPA on 4.0 scale for US/Canada universities</li>
+                <li><strong>Citation Generator:</strong> Generate APA, MLA, and Chicago citations</li>
                 <li><strong>PDF to JPG:</strong> Convert PDF pages to JPG images</li>
                 <li><strong>Image Compressor:</strong> Reduce image file size to exact KB for online forms</li>
             </ul>
@@ -478,7 +232,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 PixSathi | Made for the World 🌍</p>
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
             <p style="margin-top: 6px; font-size: 12px;">
                 <a href="/">Home</a> · 
                 <a href="/about">About</a> · 
@@ -488,6 +242,13 @@
             </p>
         </div>
     </footer>
-
+    <script>
+    function goToCountry() {
+        var select = document.getElementById('countrySelect');
+        if (select.value) {
+            window.location.href = select.value;
+        }
+    }
+    </script>
 </body>
 </html>
