@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter Free - Count Words & Characters | PixSathi</title>
+    <meta name="description" content="Count words, characters, sentences, and paragraphs instantly. Free word counter for essays and assignments.">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
+        .content-section p, .content-section li { font-size: 13px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; margin: 20px 0; }
+        .tool-box textarea { width: 100%; height: 300px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; font-family: inherit; resize: vertical; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
+        .stat-card { background: white; border: 1px solid #e5e5ea; border-radius: 8px; padding: 15px; text-align: center; }
+        .stat-number { font-size: 28px; font-weight: 800; color: #4f46e5; }
+        .stat-label { font-size: 11px; color: #6e6e73; margin-top: 4px; }
+        @media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">📝 Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>📝 Word Counter</h1>
+        <p>Count words, characters, sentences, and paragraphs instantly.</p>
+
+        <div class="tool-box">
+            <textarea id="textInput" placeholder="Type or paste your text here..." oninput="countWords()"></textarea>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="wordCount">0</div>
+                    <div class="stat-label">Words</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="charCount">0</div>
+                    <div class="stat-label">Characters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="sentenceCount">0</div>
+                    <div class="stat-label">Sentences</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="paragraphCount">0</div>
+                    <div class="stat-label">Paragraphs</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Type or paste your text</li>
+                <li>See word, character, sentence, and paragraph count instantly</li>
+            </ol>
+
+            <h2>Related Tools</h2>
+            <ul>
+                <li><a href="/international/gpa-calculator.html">GPA Calculator</a></li>
+                <li><a href="/international/citation-generator.html">Citation Generator</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+        </div>
+    </footer>
+
+    <script>
+    function countWords() {
+        var text = document.getElementById('textInput').value;
+        var words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+        var chars = text.length;
+        var sentences = text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(function(s) { return s.trim().length > 0; }).length;
+        var paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(function(p) { return p.trim().length > 0; }).length;
+        
+        document.getElementById('wordCount').textContent = words;
+        document.getElementById('charCount').textContent = chars;
+        document.getElementById('sentenceCount').textContent = sentences;
+        document.getElementById('paragraphCount').textContent = paragraphs;
+    }
+    </script>
+
+</body>
+</html>
