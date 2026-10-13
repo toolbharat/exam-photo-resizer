@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citation Generator Free - APA, MLA, Chicago | PixSathi</title>
+    <meta name="description" content="Generate citations in APA, MLA, and Chicago format free. For essays, research papers, and assignments.">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
+        .content-section p, .content-section li { font-size: 13px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } .back-btn:hover { background: #4f46e5; color: white; }
+        .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; margin: 20px 0; }
+        .input-row { margin-bottom: 12px; }
+        .input-row label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+        .input-row input, .input-row select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+        .calc-btn { background: #4f46e5; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+        .result-box { margin-top: 20px; padding: 20px; background: white; border-radius: 10px; font-size: 14px; line-height: 1.6; word-wrap: break-word; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <a href="/international/" class="back-btn">← Back to International Tools</a>
+        <h1>📚 Citation Generator</h1>
+        <p>Generate citations in APA, MLA, and Chicago format — free.</p>
+
+        <div class="tool-box">
+            <div class="input-row">
+                <label>Author (Last, First)</label>
+                <input type="text" id="author" placeholder="e.g., Smith, John">
+            </div>
+            <div class="input-row">
+                <label>Title of Work</label>
+                <input type="text" id="title" placeholder="e.g., The Great Gatsby">
+            </div>
+            <div class="input-row">
+                <label>Publication Year</label>
+                <input type="text" id="year" placeholder="e.g., 2024">
+            </div>
+            <div class="input-row">
+                <label>Publisher / Website</label>
+                <input type="text" id="publisher" placeholder="e.g., Penguin Books">
+            </div>
+            <div class="input-row">
+                <label>URL (optional)</label>
+                <input type="text" id="url" placeholder="e.g., https://example.com">
+            </div>
+            <div class="input-row">
+                <label>Citation Style</label>
+                <select id="style">
+                    <option value="apa">APA</option>
+                    <option value="mla">MLA</option>
+                    <option value="chicago">Chicago</option>
+                </select>
+            </div>
+            <button class="calc-btn" onclick="generateCitation()">Generate Citation</button>
+            <div class="result-box" id="result" style="display:none;"></div>
+        </div>
+
+        <section class="content-section">
+            <h2>Related Tools</h2>
+            <ul>
+                <li><a href="/international/word-counter.html">Word Counter</a></li>
+                <li><a href="/international/gpa-calculator.html">GPA Calculator</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+        </div>
+    </footer>
+
+    <script>
+    function generateCitation() {
+        var author = document.getElementById('author').value.trim();
+        var title = document.getElementById('title').value.trim();
+        var year = document.getElementById('year').value.trim();
+        var publisher = document.getElementById('publisher').value.trim();
+        var url = document.getElementById('url').value.trim();
+        var style = document.getElementById('style').value;
+        
+        if (!author || !title || !year) {
+            alert('Please fill in Author, Title, and Year.');
+            return;
+        }
+        
+        var citation = '';
+        
+        if (style === 'apa') {
+            citation = author + ' (' + year + '). <em>' + title + '</em>. ' + publisher + '.';
+            if (url) citation += ' ' + url;
+        } else if (style === 'mla') {
+            citation = author + '. <em>' + title + '</em>. ' + publisher + ', ' + year + '.';
+            if (url) citation += ' ' + url + '.';
+        } else if (style === 'chicago') {
+            citation = author + '. <em>' + title + '</em>. ' + publisher + ', ' + year + '.';
+            if (url) citation += ' ' + url + '.';
+        }
+        
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('result').innerHTML = '<strong>' + style.toUpperCase() + ' Citation:</strong><br><br>' + citation;
+    }
+    </script>
+
+</body>
+</html>

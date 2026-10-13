@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter Free - cm, inch, kg, lbs | PixSathi</title>
+    <meta name="description" content="Free unit converter for length, weight, and temperature. Convert cm to inch, kg to lbs, Celsius to Fahrenheit.">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
+        .content-section p, .content-section li { font-size: 13px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } .back-btn:hover { background: #4f46e5; color: white; }
+        .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; margin: 20px 0; }
+        .conv-section { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .conv-section h3 { font-size: 14px; margin: 0 0 12px 0; color: #1d1d1f; }
+        .input-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .input-row input { padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; width: 120px; }
+        .input-row select { padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+        .input-row button { background: #4f46e5; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+        .result { margin-top: 10px; padding: 12px; background: #eef2ff; border-radius: 8px; font-size: 16px; font-weight: 700; color: #4f46e5; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <a href="/international/" class="back-btn">← Back to International Tools</a>
+        <h1>📏 Unit Converter</h1>
+        <p>Convert length, weight, and temperature — free, no signup.</p>
+
+        <div class="tool-box">
+            <div class="conv-section">
+                <h3>📏 Length</h3>
+                <div class="input-row">
+                    <input type="number" id="lenVal" placeholder="Value">
+                    <select id="lenFrom">
+                        <option value="cm">cm</option>
+                        <option value="inch">inch</option>
+                        <option value="m">m</option>
+                        <option value="ft">ft</option>
+                        <option value="km">km</option>
+                        <option value="mile">mile</option>
+                    </select>
+                    <span>to</span>
+                    <select id="lenTo">
+                        <option value="inch">inch</option>
+                        <option value="cm">cm</option>
+                        <option value="ft">ft</option>
+                        <option value="m">m</option>
+                        <option value="mile">mile</option>
+                        <option value="km">km</option>
+                    </select>
+                    <button onclick="convertLength()">Convert</button>
+                </div>
+                <div class="result" id="lenResult" style="display:none;"></div>
+            </div>
+
+            <div class="conv-section">
+                <h3>⚖️ Weight</h3>
+                <div class="input-row">
+                    <input type="number" id="wtVal" placeholder="Value">
+                    <select id="wtFrom">
+                        <option value="kg">kg</option>
+                        <option value="lbs">lbs</option>
+                        <option value="g">g</option>
+                        <option value="oz">oz</option>
+                    </select>
+                    <span>to</span>
+                    <select id="wtTo">
+                        <option value="lbs">lbs</option>
+                        <option value="kg">kg</option>
+                        <option value="oz">oz</option>
+                        <option value="g">g</option>
+                    </select>
+                    <button onclick="convertWeight()">Convert</button>
+                </div>
+                <div class="result" id="wtResult" style="display:none;"></div>
+            </div>
+
+            <div class="conv-section">
+                <h3>🌡️ Temperature</h3>
+                <div class="input-row">
+                    <input type="number" id="tempVal" placeholder="Value">
+                    <select id="tempFrom">
+                        <option value="c">Celsius</option>
+                        <option value="f">Fahrenheit</option>
+                    </select>
+                    <span>to</span>
+                    <select id="tempTo">
+                        <option value="f">Fahrenheit</option>
+                        <option value="c">Celsius</option>
+                    </select>
+                    <button onclick="convertTemp()">Convert</button>
+                </div>
+                <div class="result" id="tempResult" style="display:none;"></div>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Related Tools</h2>
+            <ul>
+                <li><a href="/international/percentage-calculator.html">Percentage Calculator</a></li>
+                <li><a href="/international/age-calculator.html">Age Calculator</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+        </div>
+    </footer>
+
+    <script>
+    var lengthRates = { cm: 1, inch: 2.54, m: 100, ft: 30.48, km: 100000, mile: 160934 };
+    function convertLength() {
+        var val = parseFloat(document.getElementById('lenVal').value);
+        var from = document.getElementById('lenFrom').value;
+        var to = document.getElementById('lenTo').value;
+        if (isNaN(val)) return alert('Please enter a value.');
+        var result = val * lengthRates[from] / lengthRates[to];
+        document.getElementById('lenResult').style.display = 'block';
+        document.getElementById('lenResult').textContent = val + ' ' + from + ' = ' + result.toFixed(4) + ' ' + to;
+    }
+    var weightRates = { kg: 1, lbs: 0.453592, g: 0.001, oz: 0.0283495 };
+    function convertWeight() {
+        var val = parseFloat(document.getElementById('wtVal').value);
+        var from = document.getElementById('wtFrom').value;
+        var to = document.getElementById('wtTo').value;
+        if (isNaN(val)) return alert('Please enter a value.');
+        var result = val * weightRates[from] / weightRates[to];
+        document.getElementById('wtResult').style.display = 'block';
+        document.getElementById('wtResult').textContent = val + ' ' + from + ' = ' + result.toFixed(4) + ' ' + to;
+    }
+    function convertTemp() {
+        var val = parseFloat(document.getElementById('tempVal').value);
+        var from = document.getElementById('tempFrom').value;
+        var to = document.getElementById('tempTo').value;
+        if (isNaN(val)) return alert('Please enter a value.');
+        var result;
+        if (from === 'c' && to === 'f') result = (val * 9/5) + 32;
+        else if (from === 'f' && to === 'c') result = (val - 32) * 5/9;
+        else result = val;
+        document.getElementById('tempResult').style.display = 'block';
+        document.getElementById('tempResult').textContent = val + '°' + from.toUpperCase() + ' = ' + result.toFixed(2) + '°' + to.toUpperCase();
+    }
+    </script>
+
+</body>
+</html>
