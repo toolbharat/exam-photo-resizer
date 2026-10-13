@@ -1,0 +1,6 @@
+_backup_final/
+_backup_*/
+*.ps1
+*.bak
+*.backup
+node_modules/
