@@ -2,21 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main Pages -->
-  <url>
-    <loc>https://www.pixsathi.in/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/image-compressor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/photo-merger</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://www.pixsathi.in/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.pixsathi.in/image-compressor</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/photo-merger</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/image-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/jpg-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/pdf-to-image</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/word-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/pdf-password-remover</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/excel-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/qr-code-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/cgpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Exams Page -->
+  <url><loc>https://www.pixsathi.in/exams/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- SSC Exams -->
   <url><loc>https://www.pixsathi.in/ssc-cgl-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -83,84 +82,85 @@
   <url><loc>https://www.pixsathi.in/duet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/ipu-cet-photo-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- New Tool Pages -->
-  <url><loc>https://www.pixsathi.in/image-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/jpg-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/pdf-to-image</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/word-to-pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/cgpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/qr-code-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/excel-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/pdf-password-remover</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Main Pages -->
-  <!-- Exams Page -->
-  <url>
-    <loc>https://www.pixsathi.in/exams/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- International Tools -->
-  <url>
-    <loc>https://www.pixsathi.in/international/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/us-passport-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/uk-visa-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/canada-passport-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/australia-passport-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/germany-visa-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/france-passport-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/japan-visa-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/china-visa-photo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/pdf-to-jpg.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/international/image-compressor.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url><loc>https://www.pixsathi.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.pixsathi.in/international/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pixsathi.in/international/india-passport-photo</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pixsathi.in/international/us-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/uk-visa-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/canada-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/australia-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/germany-visa-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/france-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/japan-visa-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/china-visa-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/italy-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/spain-visa-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/netherlands-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/sweden-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/norway-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/south-korea-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/singapore-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/new-zealand-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/ireland-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/poland-passport-photo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/signature-resizer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/document-scanner</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/currency-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- International Student Tools -->
+  <url><loc>https://www.pixsathi.in/international/gpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/grade-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/citation-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/study-timer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/word-counter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/percentage-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/age-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/unit-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Finance Calculators -->
+  <url><loc>https://www.pixsathi.in/finance/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/emi-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/emi-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/sip-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/sip-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/income-tax-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/income-tax-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gst-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gst-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/fd-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/fd-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/rd-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/rd-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/ppf-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/ppf-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/nps-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/nps-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/salary-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/salary-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/hra-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/hra-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gratuity-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/gratuity-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/loan-eligibility-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/loan-eligibility-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/lumpsum-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/lumpsum-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/swp-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/swp-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/cagr-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/cagr-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/compound-interest-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/compound-interest-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/insurance-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/insurance-calculator-hi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- Finance Blog Posts -->
+  <url><loc>https://www.pixsathi.in/finance/blog/80c-tax-saving-options</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/home-loan-prepayment</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/old-vs-new-tax-regime</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/salary-structure-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pixsathi.in/finance/blog/sip-vs-lumpsum</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Blog Posts -->
   <url><loc>https://www.pixsathi.in/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -172,75 +172,10 @@
   <url><loc>https://www.pixsathi.in/blog/cgpa-to-percentage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.pixsathi.in/blog/exam-photo-rejection-reasons</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- Finance Calculators -->
-  <url><loc>https://www.pixsathi.in/finance/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/index-hi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Static Pages -->
+  <url><loc>https://www.pixsathi.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 
-  <url><loc>https://www.pixsathi.in/finance/emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/emi-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/sip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/sip-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/income-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/income-tax-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/gst-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/gst-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/fd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/fd-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/rd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/rd-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/ppf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/ppf-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/nps-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/nps-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/salary-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/salary-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/hra-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/hra-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/gratuity-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/gratuity-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/loan-eligibility-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/loan-eligibility-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/lumpsum-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/lumpsum-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/swp-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/swp-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/cagr-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/cagr-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/compound-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/compound-interest-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/insurance-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/insurance-calculator-hi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-
-  <!-- Finance Blog Posts -->
-  <url><loc>https://www.pixsathi.in/finance/blog/80c-tax-saving-options.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/blog/home-loan-prepayment.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/blog/old-vs-new-tax-regime.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/blog/salary-structure-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.pixsathi.in/finance/blog/sip-vs-lumpsum.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- New International Tools (Added 12 Oct 2026) -->
-  <url><loc>https://www.pixsathi.in/international/india-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pixsathi.in/international/italy-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/spain-visa-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/netherlands-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/sweden-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/norway-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/south-korea-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/singapore-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/new-zealand-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/ireland-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/poland-passport-photo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/signature-resizer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/document-scanner.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- International Student Tools (Added 12 Oct 2026) -->
-  <url><loc>https://www.pixsathi.in/international/gpa-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/grade-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/citation-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/study-timer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/word-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/age-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/unit-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
