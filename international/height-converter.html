@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    <title>Height Converter — Feet, Inches, cm, Meters | PixSathi</title>
+    <meta name="description" content="Free height converter — convert between feet, inches, centimeters, and meters instantly. No signup, works in your browser.">
+    <meta name="keywords" content="height converter, feet to cm, cm to feet, inches to cm, height converter online">
+    <link rel="canonical" href="https://www.pixsathi.in/international/height-converter">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .conv-container { max-width: 600px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .conv-container h1 { font-size: 28px; color: #1a202c; margin-bottom: 8px; }
+        .conv-container .subtitle { color: #718096; font-size: 15px; margin-bottom: 24px; }
+        .conv-row { margin-bottom: 16px; }
+        .conv-row label { display: block; font-weight: 600; margin-bottom: 6px; color: #2d3748; }
+        .conv-row input, .conv-row select { width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
+        .conv-row input:focus, .conv-row select:focus { outline: none; border-color: #4f46e5; }
+        .conv-result { margin-top: 20px; padding: 20px; background: #eef2ff; border-radius: 10px; text-align: center; }
+        .conv-result .value { font-size: 32px; font-weight: 800; color: #4f46e5; }
+        .conv-result .label { font-size: 14px; color: #6b7280; margin-top: 4px; }
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+        .faq-item h3 { font-size: 15px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/international/">🌍 International</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="conv-container">
+            <h1>📏 Height Converter</h1>
+            <p class="subtitle">Convert between feet, inches, centimeters, and meters instantly.</p>
+
+            <div class="conv-row">
+                <label>Enter Height</label>
+                <input type="number" id="heightInput" placeholder="Enter value" value="170" oninput="convertHeight()">
+            </div>
+
+            <div class="conv-row">
+                <label>From</label>
+                <select id="fromUnit" onchange="convertHeight()">
+                    <option value="cm">Centimeters (cm)</option>
+                    <option value="m">Meters (m)</option>
+                    <option value="ft">Feet (ft)</option>
+                    <option value="in">Inches (in)</option>
+                </select>
+            </div>
+
+            <div class="conv-row">
+                <label>To</label>
+                <select id="toUnit" onchange="convertHeight()">
+                    <option value="ft">Feet (ft)</option>
+                    <option value="cm">Centimeters (cm)</option>
+                    <option value="m">Meters (m)</option>
+                    <option value="in">Inches (in)</option>
+                </select>
+            </div>
+
+            <div class="conv-result">
+                <div class="value" id="resultValue">5.58</div>
+                <div class="label" id="resultLabel">Feet (ft)</div>
+            </div>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-size: 20px; margin: 30px 0 16px;">Height Converter FAQ</h2>
+
+            <div class="faq-item">
+                <h3>How do I convert cm to feet?</h3>
+                <p>Formula: feet = cm / 30.48. Example: 170 cm = 5.58 ft.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I convert feet to cm?</h3>
+                <p>Formula: cm = feet × 30.48. Example: 5.5 ft = 167.64 cm.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I convert inches to cm?</h3>
+                <p>Formula: cm = inches × 2.54. Example: 70 in = 177.8 cm.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this tool free?</h3>
+                <p>Yes, 100% free. No signup, no watermark.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function convertHeight() {
+            const input = parseFloat(document.getElementById('heightInput').value);
+            const from = document.getElementById('fromUnit').value;
+            const to = document.getElementById('toUnit').value;
+
+            if (isNaN(input)) {
+                document.getElementById('resultValue').textContent = '0.00';
+                return;
+            }
+
+            let meters;
+            if (from === 'cm') meters = input / 100;
+            else if (from === 'm') meters = input;
+            else if (from === 'ft') meters = input * 0.3048;
+            else meters = input * 0.0254;
+
+            let result, label;
+            if (to === 'cm') { result = meters * 100; label = 'Centimeters (cm)'; }
+            else if (to === 'm') { result = meters; label = 'Meters (m)'; }
+            else if (to === 'ft') { result = meters / 0.3048; label = 'Feet (ft)'; }
+            else { result = meters / 0.0254; label = 'Inches (in)'; }
+
+            document.getElementById('resultValue').textContent = result.toFixed(2);
+            document.getElementById('resultLabel').textContent = label;
+        }
+
+        convertHeight();
+    </script>
+
+    <script src="/script.js" defer></script>
+</body>
+</html>
