@@ -24,13 +24,13 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "toolsbharat.vercel.app" }],
+      "has": [{ "type": "host", "value": "pixsathi.in" }],
       "destination": "https://www.pixsathi.in/$1",
       "permanent": true
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "pixsathi.in" }],
+      "has": [{ "type": "host", "value": "toolsbharat.vercel.app" }],
       "destination": "https://www.pixsathi.in/$1",
       "permanent": true
     },
