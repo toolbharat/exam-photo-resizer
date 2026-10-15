@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    <title>Temperature Converter — Celsius, Fahrenheit, Kelvin | PixSathi</title>
+    <meta name="description" content="Free temperature converter — convert between Celsius, Fahrenheit, and Kelvin instantly. No signup, works in your browser.">
+    <meta name="keywords" content="temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin converter">
+    <link rel="canonical" href="https://www.pixsathi.in/international/temperature-converter">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .conv-container { max-width: 600px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .conv-container h1 { font-size: 28px; color: #1a202c; margin-bottom: 8px; }
+        .conv-container .subtitle { color: #718096; font-size: 15px; margin-bottom: 24px; }
+        .conv-row { margin-bottom: 16px; }
+        .conv-row label { display: block; font-weight: 600; margin-bottom: 6px; color: #2d3748; }
+        .conv-row input, .conv-row select { width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; }
+        .conv-row input:focus, .conv-row select:focus { outline: none; border-color: #4f46e5; }
+        .conv-result { margin-top: 20px; padding: 20px; background: #eef2ff; border-radius: 10px; text-align: center; }
+        .conv-result .value { font-size: 32px; font-weight: 800; color: #4f46e5; }
+        .conv-result .label { font-size: 14px; color: #6b7280; margin-top: 4px; }
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+        .faq-item h3 { font-size: 15px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/international/">🌍 International</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="conv-container">
+            <h1>🌡️ Temperature Converter</h1>
+            <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin instantly.</p>
+
+            <div class="conv-row">
+                <label>Enter Temperature</label>
+                <input type="number" id="tempInput" placeholder="Enter value" value="0" oninput="convertTemp()">
+            </div>
+
+            <div class="conv-row">
+                <label>From</label>
+                <select id="fromUnit" onchange="convertTemp()">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <div class="conv-row">
+                <label>To</label>
+                <select id="toUnit" onchange="convertTemp()">
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="C">Celsius (°C)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <div class="conv-result">
+                <div class="value" id="resultValue">32.00</div>
+                <div class="label" id="resultLabel">Fahrenheit (°F)</div>
+            </div>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-size: 20px; margin: 30px 0 16px;">Temperature Converter FAQ</h2>
+
+            <div class="faq-item">
+                <h3>How do I convert Celsius to Fahrenheit?</h3>
+                <p>Formula: °F = (°C × 9/5) + 32. Example: 25°C = 77°F.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I convert Fahrenheit to Celsius?</h3>
+                <p>Formula: °C = (°F - 32) × 5/9. Example: 77°F = 25°C.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I convert Celsius to Kelvin?</h3>
+                <p>Formula: K = °C + 273.15. Example: 25°C = 298.15 K.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this tool free?</h3>
+                <p>Yes, 100% free. No signup, no watermark.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function convertTemp() {
+            const input = parseFloat(document.getElementById('tempInput').value);
+            const from = document.getElementById('fromUnit').value;
+            const to = document.getElementById('toUnit').value;
+
+            if (isNaN(input)) {
+                document.getElementById('resultValue').textContent = '0.00';
+                return;
+            }
+
+            let celsius;
+            if (from === 'C') celsius = input;
+            else if (from === 'F') celsius = (input - 32) * 5 / 9;
+            else celsius = input - 273.15;
+
+            let result, label;
+            if (to === 'C') { result = celsius; label = 'Celsius (°C)'; }
+            else if (to === 'F') { result = (celsius * 9 / 5) + 32; label = 'Fahrenheit (°F)'; }
+            else { result = celsius + 273.15; label = 'Kelvin (K)'; }
+
+            document.getElementById('resultValue').textContent = result.toFixed(2);
+            document.getElementById('resultLabel').textContent = label;
+        }
+
+        convertTemp();
+    </script>
+
+    <script src="/script.js" defer></script>
+</body>
+</html>
