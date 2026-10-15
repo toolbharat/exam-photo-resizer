@@ -1,123 +1,48 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator Free - Exact Age in Years, Months, Days | PixSathi</title>
-    <meta name="description" content="Calculate your exact age in years, months, days, hours, and minutes. Free age calculator.">
-    <link rel="stylesheet" href="/style.css">
-    <style>
-        .header { padding: 8px 20px !important; }
-        .header .container { gap: 10px !important; }
-        .logo { font-size: 16px !important; }
-        .tagline { font-size: 10px !important; margin: 0 !important; }
-        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
-        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
-        .content-section p, .content-section li { font-size: 13px !important; }
-        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
-        .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } .back-btn:hover { background: #4f46e5; color: white; }
-        .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; margin: 20px 0; text-align: center; }
-        .tool-box label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 10px; }
-        .tool-box input[type="date"] { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; width: 100%; max-width: 300px; }
-        .calc-btn { background: #4f46e5; color: white; border: none; padding: 14px 40px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 15px; }
-        .result-box { margin-top: 25px; padding: 25px; background: white; border-radius: 12px; }
-        .result-item { font-size: 18px; margin: 8px 0; }
-        .result-item strong { color: #4f46e5; font-size: 24px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator — Exact Age | PixSathi</title>
+<meta name="description" content="Free age calculator — find your exact age in years, months, and days.">
+<link rel="canonical" href="https://www.pixsathi.in/international/age-calculator">
+<link rel="stylesheet" href="/style.css">
+<style>
+.conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
+.conv-row{margin-bottom:16px}
+.conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
+.conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
+.conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
+.conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
+.conv-result .label{font-size:14px;color:#6b7280;margin-top:4px}
+</style>
 </head>
 <body>
-
-    <header class="header">
-        <div class="container">
-            <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
-            <nav class="nav">
-                <a href="/">🏠 Home</a>
-                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
-                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/blog">📝 Blog</a>
-                <a href="/contact">📬 Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-
-        <a href="/international/" class="back-btn">← Back to International Tools</a>
-        <h1>🎂 Age Calculator</h1>
-        <p>Find your exact age in years, months, days, hours, and minutes.</p>
-
-        <div class="tool-box">
-            <label>Enter Your Date of Birth</label>
-            <input type="date" id="dob">
-            <button class="calc-btn" onclick="calculateAge()">Calculate Age</button>
-            <div class="result-box" id="result" style="display:none;">
-                <div class="result-item">You are <strong id="years">0</strong> years old</div>
-                <div class="result-item">or <strong id="months">0</strong> months</div>
-                <div class="result-item">or <strong id="days">0</strong> days</div>
-                <div class="result-item">or <strong id="hours">0</strong> hours</div>
-                <div class="result-item">or <strong id="minutes">0</strong> minutes</div>
-            </div>
-        </div>
-
-        <section class="content-section">
-            <h2>Related Tools</h2>
-            <ul>
-                <li><a href="/international/gpa-calculator.html">GPA Calculator</a></li>
-                <li><a href="/international/percentage-calculator.html">Percentage Calculator</a></li>
-                <li><a href="/international/">All International Tools</a></li>
-            </ul>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
-        </div>
-    </footer>
-
-    <script>
-    function calculateAge() {
-        var dob = new Date(document.getElementById('dob').value);
-        if (isNaN(dob.getTime())) {
-            alert('Please enter your date of birth.');
-            return;
-        }
-        var today = new Date();
-        if (dob > today) {
-            alert('Date of birth cannot be in the future.');
-            return;
-        }
-        
-        var years = today.getFullYear() - dob.getFullYear();
-        var months = today.getMonth() - dob.getMonth();
-        var days = today.getDate() - dob.getDate();
-        
-        if (days < 0) {
-            months--;
-            var lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-            days += lastMonth.getDate();
-        }
-        if (months < 0) {
-            years--;
-            months += 12;
-        }
-        
-        var totalDays = Math.floor((today - dob) / (1000 * 60 * 60 * 24));
-        var totalHours = totalDays * 24;
-        var totalMinutes = totalHours * 60;
-        var totalMonths = years * 12 + months;
-        
-        document.getElementById('years').textContent = years;
-        document.getElementById('months').textContent = totalMonths;
-        document.getElementById('days').textContent = totalDays.toLocaleString();
-        document.getElementById('hours').textContent = totalHours.toLocaleString();
-        document.getElementById('minutes').textContent = totalMinutes.toLocaleString();
-        document.getElementById('result').style.display = 'block';
-    }
-    </script>
-
+<header class="header"><div class="container"><div class="logo">📸 PixSathi</div><p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p><nav class="nav"><a href="/">🏠 Home</a><a href="/international/">🌍 International</a><a href="/contact">📬 Contact</a></nav></div></header>
+<main class="container">
+<div class="conv-container">
+<h1>🎂 Age Calculator</h1>
+<div class="conv-row"><label>Date of Birth</label><input type="date" id="dob" onchange="calcAge()"></div>
+<div class="conv-row"><label>Age at Date</label><input type="date" id="atDate" onchange="calcAge()"></div>
+<div class="conv-result"><div class="value" id="result">0 years, 0 months, 0 days</div><div class="label">Your Exact Age</div></div>
+</div>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 PixSathi | Made for Everyone 🌍</p></div></footer>
+<script>
+function calcAge(){
+var dob=new Date(document.getElementById('dob').value);
+var at=new Date(document.getElementById('atDate').value)||new Date();
+if(isNaN(dob))return;
+var y=at.getFullYear()-dob.getFullYear();
+var m=at.getMonth()-dob.getMonth();
+var d=at.getDate()-dob.getDate();
+if(d<0){m--;d+=new Date(at.getFullYear(),at.getMonth(),0).getDate();}
+if(m<0){y--;m+=12;}
+document.getElementById('result').textContent=y+' years, '+m+' months, '+d+' days';
+}
+document.getElementById('atDate').valueAsDate=new Date();
+calcAge();
+</script>
 </body>
 </html>

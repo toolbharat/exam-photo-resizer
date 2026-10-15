@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Calculator — Days Between Dates | PixSathi</title>
+<meta name="description" content="Free date calculator — find days between two dates instantly.">
+<link rel="canonical" href="https://www.pixsathi.in/international/date-calculator">
+<link rel="stylesheet" href="/style.css">
+<style>
+.conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
+.conv-row{margin-bottom:16px}
+.conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
+.conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
+.conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
+.conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
+</style>
+</head>
+<body>
+<header class="header"><div class="container"><div class="logo">📸 PixSathi</div><p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p><nav class="nav"><a href="/">🏠 Home</a><a href="/international/">🌍 International</a><a href="/contact">📬 Contact</a></nav></div></header>
+<main class="container">
+<div class="conv-container">
+<h1>📅 Date Calculator</h1>
+<div class="conv-row"><label>Start Date</label><input type="date" id="d1" onchange="calcDate()"></div>
+<div class="conv-row"><label>End Date</label><input type="date" id="d2" onchange="calcDate()"></div>
+<div class="conv-result"><div class="value" id="days">0 days</div><div class="label">Difference</div></div>
+</div>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 PixSathi | Made for Everyone 🌍</p></div></footer>
+<script>
+function calcDate(){
+var d1=new Date(document.getElementById('d1').value);
+var d2=new Date(document.getElementById('d2').value);
+if(isNaN(d1)||isNaN(d2))return;
+var diff=Math.abs(d2-d1);
+var days=Math.floor(diff/(1000*60*60*24));
+document.getElementById('days').textContent=days+' days';
+}
+document.getElementById('d1').valueAsDate=new Date();
+document.getElementById('d2').valueAsDate=new Date();
+calcDate();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Zone Converter — World Clock | PixSathi</title>
+<meta name="description" content="Free time zone converter — compare time across cities worldwide.">
+<link rel="canonical" href="https://www.pixsathi.in/international/time-zone-converter">
+<link rel="stylesheet" href="/style.css">
+<style>
+.conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
+.conv-row{margin-bottom:16px}
+.conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
+.conv-row input,.conv-row select{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
+.conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
+.conv-result .value{font-size:24px;font-weight:800;color:#4f46e5}
+.conv-result .label{font-size:14px;color:#6b7280;margin-top:4px}
+</style>
+</head>
+<body>
+<header class="header"><div class="container"><div class="logo">📸 PixSathi</div><p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p><nav class="nav"><a href="/">🏠 Home</a><a href="/international/">🌍 International</a><a href="/contact">📬 Contact</a></nav></div></header>
+<main class="container">
+<div class="conv-container">
+<h1>🌍 Time Zone Converter</h1>
+<div class="conv-row"><label>Date & Time</label><input type="datetime-local" id="dt" onchange="convertTZ()"></div>
+<div class="conv-row"><label>From Time Zone</label><select id="from" onchange="convertTZ()"></select></div>
+<div class="conv-row"><label>To Time Zone</label><select id="to" onchange="convertTZ()"></select></div>
+<div class="conv-result"><div class="value" id="result">--</div><div class="label" id="label">--</div></div>
+</div>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 PixSathi | Made for Everyone 🌍</p></div></footer>
+<script>
+var zones=['UTC','America/New_York','America/Los_Angeles','Europe/London','Europe/Paris','Asia/Kolkata','Asia/Tokyo','Asia/Shanghai','Asia/Dubai','Australia/Sydney'];
+function fillSelect(id){var s=document.getElementById(id);zones.forEach(function(z){var o=document.createElement('option');o.value=z;o.textContent=z;s.appendChild(o);});}
+fillSelect('from');fillSelect('to');
+document.getElementById('from').value='Asia/Kolkata';document.getElementById('to').value='America/New_York';
+function convertTZ(){
+var dt=document.getElementById('dt').value;
+if(!dt)return;
+var d=new Date(dt);
+var from=document.getElementById('from').value;
+var to=document.getElementById('to').value;
+var localStr=d.toLocaleString('en-US',{timeZone:from});
+var local=new Date(localStr);
+var offset=(new Date(d.toLocaleString('en-US',{timeZone:to}))-new Date(d.toLocaleString('en-US',{timeZone:from})))/60000;
+var result=new Date(local.getTime()+offset*60000);
+document.getElementById('result').textContent=result.toLocaleString('en-US');
+document.getElementById('label').textContent='in '+to;
+}
+document.getElementById('dt').value=new Date().toISOString().slice(0,16);
+convertTZ();
+</script>
+</body>
+</html>
