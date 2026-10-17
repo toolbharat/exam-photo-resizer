@@ -107,14 +107,28 @@
   <url><loc>https://www.pixsathi.in/international/document-scanner</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/currency-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- New International Tools -->
+  <url><loc>https://www.pixsathi.in/international/temperature-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/height-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/weight-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/bmi-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/percentage-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/age-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/discount-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/tip-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/date-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/time-zone-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/shoe-size-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/salary-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/fuel-cost-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pixsathi.in/international/calorie-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <!-- International Student Tools -->
   <url><loc>https://www.pixsathi.in/international/gpa-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/grade-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/citation-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/study-timer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/word-counter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/percentage-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pixsathi.in/international/age-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/unit-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Finance Calculators -->
@@ -177,5 +191,6 @@
   <url><loc>https://www.pixsathi.in/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.pixsathi.in/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.pixsathi.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.pixsathi.in/terms</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 
 </urlset>
