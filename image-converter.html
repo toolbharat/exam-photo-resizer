@@ -3,186 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Converter — JPG, PNG, WebP Free Online Tool | PixSathi</title>
-    <meta name="description" content="Free image converter. Convert JPG to PNG, PNG to JPG, WebP to JPG. 100% private, no upload. — PixSathi">
+    <title>Image Converter — Free Online Tool | PixSathi</title>
+    <meta name="description" content="Convert images between JPG, PNG, and WebP formats instantly. 100% free, no signup, works in your browser.">
     <link rel="canonical" href="https://www.pixsathi.in/image-converter">
-    <script defer src="/_vercel/insights/script.js"></script>
     <link rel="stylesheet" href="/style.css">
     <style>
-        .tool-container { max-width: 800px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; }
-        .upload-area:hover { border-color: #667eea; background: #edf2f7; }
-        .upload-area h3 { color: #2d3748; margin-bottom: 8px; font-size: 20px; }
-        .upload-area p { color: #718096; font-size: 14px; }
-        .upload-area input { display: none; }
-        .options { display: none; margin-top: 24px; padding: 16px; background: #f7fafc; border-radius: 8px; }
-        .options label { display: block; margin-bottom: 6px; color: #2d3748; font-weight: 600; font-size: 14px; }
-        .options select { width: 100%; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; }
-        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 12px; }
-        .btn:hover { background: #5a67d8; }
-        .btn:disabled { background: #a3bffa; cursor: not-allowed; }
-        .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; margin-top: 20px; }
-        .preview-item { padding: 8px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
-        .preview-item img { width: 100%; height: 100px; object-fit: contain; background: #ffffff; border-radius: 4px; margin-bottom: 6px; }
-        .preview-item .filename { font-size: 11px; color: #4a5568; font-weight: 600; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-        .preview-item .download-page { display: inline-block; padding: 4px 10px; background: #667eea; color: #ffffff; border-radius: 4px; font-size: 11px; text-decoration: none; font-weight: 600; }
-        .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
-    .preview-box img {
-    max-width: 240px !important;
-    max-height: 160px !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    border-radius: 6px;
-}
+        .tool-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        /* यहाँ असली जादू है - पूरा बॉक्स क्लिक करने लायक बनाया गया है */
+        .upload-area {
+            position: relative;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            background: #f8fafc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .upload-area:hover {
+            border-color: #4f46e5;
+            background: #eef2ff;
+        }
+        /* इनपुट को बॉक्स के ऊपर छिपा दिया गया है ताकि कहीं भी क्लिक करने पर फाइल खुले */
+        .upload-area input[type="file"] {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .upload-area h3 { margin-bottom: 8px; color: #1e293b; }
+        .upload-area p { color: #64748b; font-size: 14px; margin: 0; }
 
-.preview-box {
-    text-align: center;
-    padding: 10px;
-}
+        .options { margin-top: 25px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        .options label { font-weight: 600; color: #334155; }
+        .options select { padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; flex: 1; min-width: 150px; }
+        
+        .btn {
+            background: #4f46e5; color: #fff; border: none; padding: 12px 24px;
+            border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #4338ca; }
 
-</style>
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .preview-item {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;
+            padding: 10px; text-align: center;
+        }
+        .preview-item img {
+            max-width: 100%; height: 100px; object-fit: cover;
+            border-radius: 6px; margin-bottom: 8px;
+        }
+        .preview-item p { font-size: 11px; color: #64748b; margin: 0; word-break: break-all; }
+        
+        .info-box {
+            background: #f0fdf4; border-left: 4px solid #22c55e;
+            padding: 15px; border-radius: 8px; margin-top: 25px;
+            color: #166534; font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="container">
             <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
             <nav class="nav">
                 <a href="/">🏠 Home</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/about">ℹ️ About</a>
+                <a href="/exams/">📝 Exams</a>
+                <a href="/international/">🌍 International</a>
+                <a href="/finance/">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="intro-section">
-            <h1>🔄 Image Converter</h1>
-            <p>JPG, PNG, WebP — Convert it to any format.</p>
-        </section>
-
         <div class="tool-container">
+            <!-- यहाँ पूरा बॉक्स क्लिक करने लायक है -->
             <div class="upload-area" id="uploadArea">
-                <input type="file" id="imageInput" accept="image/jpeg, image/png, image/webp, image/gif, image/bmp, image/svg+xml, image/tiff, image/avif, image/x-icon, image/heic, .heic, .jpg, .png, .webp">
-                <h3>🔄 Upload images.</h3>
-                <p>Click or drag — JPG, PNG, WebP</p>
+                <input type="file" id="imageInput" accept="image/jpeg, image/png, image/webp, image/gif, image/bmp, image/svg+xml, image/tiff, image/avif, image/x-icon, image/heic, .heic, .jpg, .png, .webp" multiple>
+                <h3>🔄 Upload Images</h3>
+                <p>Click or drag — JPG, PNG, WebP, GIF, SVG, HEIC</p>
             </div>
 
-            <div class="options" id="options">
-                <label for="outputFormat">Convert To</label>
+            <div class="options" id="options" style="display: none;">
+                <label for="outputFormat">Convert To:</label>
                 <select id="outputFormat">
                     <option value="image/jpeg">JPG / JPEG</option>
                     <option value="image/png" selected>PNG</option>
                     <option value="image/webp">WebP</option>
                 </select>
-                <button class="btn" id="convertBtn">
-
-
-</button>
+                <button class="btn" id="convertBtn">Convert & Download</button>
             </div>
 
             <div class="preview-grid" id="previewGrid"></div>
 
             <div class="info-box">
-                <strong>ℹ️ Note:</strong> All processing takes place in your browser. Images are not uploaded to any server.
+                <strong>ℹ️ Note:</strong> All processing takes place in your browser. Your images are never uploaded to any server.
             </div>
         </div>
-
-        <section class="content-section">
-            <h2>Free Image Converter Online</h2>
-            <p>PixSathi's Image Converter is a free online tool that converts your images from one format to another.</p>
-
-            <h2>Supported Conversions</h2>
-            <ul>
-                <li><strong>JPG to PNG</strong> — For a transparent background</li>
-                <li><strong>PNG to JPG</strong> — For a smaller file size</li>
-                <li><strong>WebP to JPG/PNG</strong> — From the modern format to the old format</li>
-            </ul>
-        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
-            <p style="margin-top: 8px; font-size: 13px;">
-                <a href="/">Home</a> · 
-                <a href="/about">About</a> · 
-                <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a>
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
             </p>
         </div>
     </footer>
 
     <script>
-        const uploadArea = document.getElementById('uploadArea');
-        const fileInput = document.getElementById('fileInput');
-        const options = document.getElementById('options');
-        const convertBtn = document.getElementById('convertBtn');
+        const imageInput = document.getElementById('imageInput');
+        const optionsDiv = document.getElementById('options');
         const previewGrid = document.getElementById('previewGrid');
+        const convertBtn = document.getElementById('convertBtn');
         const outputFormat = document.getElementById('outputFormat');
-
+        
         let uploadedFiles = [];
 
-        uploadArea.addEventListener('click', () => fileInput.click());
+        // जब यूज़र फाइल अपलोड करे
+        imageInput.addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                optionsDiv.style.display = 'flex'; // Convert का बटन दिखाएं
+                
+                // पुराने प्रीव्यू हटाएं (अगर कोई हैं)
+                previewGrid.innerHTML = '';
+                uploadedFiles = [];
 
-        fileInput.addEventListener('change', (e) => {
-            uploadedFiles = Array.from(e.target.files).filter(f => f.type.startsWith('image/'));
-            if (uploadedFiles.length > 0) options.style.display = 'block';
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    uploadedFiles.push(file);
+
+                    // प्रीव्यू बनाएं
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        const div = document.createElement('div');
+                        div.className = 'preview-item';
+                        div.innerHTML = `
+                            <img src="${event.target.result}" alt="Preview">
+                            <p>${file.name}</p>
+                        `;
+                        previewGrid.appendChild(div);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
         });
 
-        convertBtn.addEventListener('click', async () => {
+        // जब यूज़र Convert बटन दबाए
+        convertBtn.addEventListener('click', function() {
             if (uploadedFiles.length === 0) return;
-            convertBtn.disabled = true;
-            convertBtn.textContent = 'Converting...';
-            previewGrid.innerHTML = '';
-
+            
             const format = outputFormat.value;
             const ext = format === 'image/jpeg' ? 'jpg' : format === 'image/png' ? 'png' : 'webp';
 
-            for (const file of uploadedFiles) {
-                const dataUrl = await convertImage(file, format);
-                const name = file.name.replace(/\.[^.]+$/, '') + '.' + ext;
+            convertBtn.textContent = "Converting...";
+            convertBtn.disabled = true;
 
-                const item = document.createElement('div');
-                item.className = 'preview-item';
-                item.innerHTML = `
-                    <img src="${dataUrl}">
-                    <div class="filename">${name}</div>
-                    <a class="download-page" download="${name}" href="${dataUrl}">⬇️ Download</a>
-                `;
-                previewGrid.appendChild(item);
-            }
-
-            convertBtn.disabled = false;
-            convertBtn.textContent = 'Convert';
-        });
-
-        function convertImage(file, format) {
-            return new Promise((resolve) => {
+            uploadedFiles.forEach((file, index) => {
                 const reader = new FileReader();
-                reader.onload = (e) => {
+                reader.onload = function(e) {
                     const img = new Image();
-                    img.onload = () => {
+                    img.onload = function() {
+                        // Canvas के जरिए इमेज कन्वर्ट करें
                         const canvas = document.createElement('canvas');
                         canvas.width = img.width;
                         canvas.height = img.height;
                         const ctx = canvas.getContext('2d');
+                        
+                        // अगर JPG है तो सफ़ेद बैकग्राउंड दें (क्योंकि JPG ट्रांसपेरेंट सपोर्ट नहीं करता)
                         if (format === 'image/jpeg') {
-                            ctx.fillStyle = '#FFFFFF';
+                            ctx.fillStyle = "#ffffff";
                             ctx.fillRect(0, 0, canvas.width, canvas.height);
                         }
+                        
                         ctx.drawImage(img, 0, 0);
-                        resolve(canvas.toDataURL(format, 0.92));
+
+                        // डाउनलोड लिंक बनाएं
+                        const dataUrl = canvas.toDataURL(format, 0.9);
+                        const link = document.createElement('a');
+                        link.download = file.name.split('.')[0] + '_converted.' + ext;
+                        link.href = dataUrl;
+                        link.click();
+                        
+                        // जब सारी फाइलें कन्वर्ट हो जाएं
+                        if (index === uploadedFiles.length - 1) {
+                            convertBtn.textContent = "Convert & Download";
+                            convertBtn.disabled = false;
+                        }
                     };
                     img.src = e.target.result;
                 };
                 reader.readAsDataURL(file);
             });
-        }
+        });
     </script>
 </body>
 </html>
