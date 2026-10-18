@@ -67,7 +67,7 @@
 
         <div class="tool-container">
             <div class="upload-area" id="uploadArea">
-                <input type="file" id="fileInput" accept="image/*" multiple>
+                <input type="file" id="imageInput" accept="image/jpeg, image/png, image/webp, image/gif, image/bmp, image/svg+xml, image/tiff, image/avif, image/x-icon, image/heic, .heic, .jpg, .png, .webp">
                 <h3>🔄 Upload images.</h3>
                 <p>Click or drag — JPG, PNG, WebP</p>
             </div>
@@ -79,7 +79,10 @@
                     <option value="image/png" selected>PNG</option>
                     <option value="image/webp">WebP</option>
                 </select>
-                <button class="btn" id="convertBtn">Convert Karo</button>
+                <button class="btn" id="convertBtn">
+
+
+</button>
             </div>
 
             <div class="preview-grid" id="previewGrid"></div>
@@ -155,7 +158,7 @@
             }
 
             convertBtn.disabled = false;
-            convertBtn.textContent = 'Convert Karo';
+            convertBtn.textContent = 'Convert';
         });
 
         function convertImage(file, format) {
