@@ -20,14 +20,10 @@
         .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; }
         .back-btn:hover { background: #4f46e5; color: white; }
         .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; text-align: center; margin: 20px 0; }
-        .tool-box input[type="file"] { display: block; margin: 0 auto 15px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background: white; width: 100%; max-width: 400px; }
+        .tool-box input[type="file"] { display: block; margin: 0 auto 15px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background: white; width: 100%; max-width: 400px; cursor: pointer; }
         .tool-box button { background: #4f46e5; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
         .tool-box button:hover { background: #4338ca; }
         .tool-box button:disabled { opacity: 0.5; cursor: not-allowed; }
-        .input-row { display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap; margin: 15px 0; }
-        .input-group { text-align: left; }
-        .input-group label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #4a5568; }
-        .input-group input { padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; width: 120px; }
         .preview-box { margin-top: 20px; text-align: center; }
         .download-btn { display: inline-block; background: #10b981; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 15px; font-size: 14px; }
         .download-btn:hover { background: #059669; }
@@ -54,18 +50,13 @@
     <main class="container">
         <section class="intro-section">
             <h2>📄 PDF Compressor</h2>
-            <p>Reduce PDF file size without losing quality — free, private, no signup.</p>
+            <p>Optimize PDF structure and remove unnecessary data to reduce file size — free, private, no signup.</p>
         </section>
         <a href="/international/" class="back-btn">← Back to International Tools</a>
         <div class="tool-box">
             <h3>Upload PDF File</h3>
             <input type="file" id="pdfInput" accept="application/pdf,.pdf">
-            <div class="input-row">
-                <div class="input-group">
-                    <label>Target size (KB) - Optional</label>
-                    <input type="number" id="targetSize" placeholder="e.g., 500" min="10" max="10000">
-                </div>
-            </div>
+            
             <button id="compressBtn" onclick="compressPDF()" disabled>Compress PDF</button>
             <div class="status-box" id="status" style="display:none;"></div>
             <div class="preview-box" id="previewBox" style="display:none;">
@@ -77,9 +68,8 @@
             <h2>How to Use</h2>
             <ol>
                 <li>Click "Upload PDF File" and select your PDF</li>
-                <li>Optionally enter a target size in KB</li>
                 <li>Click "Compress PDF"</li>
-                <li>Download your compressed PDF</li>
+                <li>Download your optimized PDF</li>
             </ol>
             <h2>Why Use Our Tool?</h2>
             <ul>
@@ -95,9 +85,9 @@
             <h3>Are my PDFs uploaded to a server?</h3>
             <p>No. All compression happens in your browser. Your files never leave your device.</p>
             <h3>How much can I compress a PDF?</h3>
-            <p>It depends on the PDF. Most PDFs can be reduced by 40-80% without visible quality loss.</p>
+            <p>It depends on the PDF. This tool removes unnecessary data and optimizes the internal structure. PDFs with a lot of redundant data can be reduced significantly.</p>
             <h3>Will the quality be reduced?</h3>
-            <p>Our tool uses smart compression to keep the quality as high as possible while reducing size.</p>
+            <p>No, your visual quality remains exactly the same. We only remove hidden metadata and unused objects.</p>
             <h2>Related Tools</h2>
             <ul>
                 <li><a href="/international/pdf-merger.html">PDF Merger</a></li>
@@ -124,6 +114,8 @@
     document.getElementById('pdfInput').addEventListener('change', function(e) {
         if (e.target.files.length > 0) {
             document.getElementById('compressBtn').disabled = false;
+        } else {
+            document.getElementById('compressBtn').disabled = true;
         }
     });
 
@@ -137,15 +129,17 @@
         var status = document.getElementById('status');
         status.style.display = 'block';
         status.textContent = 'Compressing PDF... Please wait.';
+        document.getElementById('previewBox').style.display = 'none';
 
         try {
             var file = input.files[0];
             var originalSize = file.size;
             var arrayBuffer = await file.arrayBuffer();
 
+            // Load the PDF
             var pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
 
-            // Compress by re-saving with object streams
+            // Save with object streams to optimize size
             var compressedBytes = await pdfDoc.save({
                 useObjectStreams: true,
                 addDefaultPage: false
