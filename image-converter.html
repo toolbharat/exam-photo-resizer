@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Converter — Free Online Tool | PixSathi</title>
-    <meta name="description" content="Convert images between JPG, PNG, and WebP formats instantly. 100% free, no signup, works in your browser.">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <title>Image Converter Online Free - Convert JPG, PNG, WebP | PixSathi</title>
+    <meta name="description" content="Free online image converter. Convert JPG, PNG, and WebP formats instantly. No signup, no watermark. The best free alternative to Canva and iLoveIMG.">
+    <meta name="keywords" content="image converter, convert jpg to png, png to jpg, webp converter, free image converter, Canva alternative, iLoveIMG alternative">
     <link rel="canonical" href="https://www.pixsathi.in/image-converter">
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    
     <link rel="stylesheet" href="/style.css">
     <style>
         .tool-container {
@@ -17,7 +33,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         
-        /* यहाँ असली जादू है - पूरा बॉक्स क्लिक करने लायक बनाया गया है */
         .upload-area {
             position: relative;
             border: 2px dashed #cbd5e1;
@@ -32,7 +47,6 @@
             border-color: #4f46e5;
             background: #eef2ff;
         }
-        /* इनपुट को बॉक्स के ऊपर छिपा दिया गया है ताकि कहीं भी क्लिक करने पर फाइल खुले */
         .upload-area input[type="file"] {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -74,6 +88,9 @@
             padding: 15px; border-radius: 8px; margin-top: 25px;
             color: #166534; font-size: 14px;
         }
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
     </style>
 </head>
 <body>
@@ -94,8 +111,12 @@
     </header>
 
     <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 30px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">🔄 Image Converter Online (Free)</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Convert images between JPG, PNG, and WebP formats instantly.</p>
+        </section>
+
         <div class="tool-container">
-            <!-- यहाँ पूरा बॉक्स क्लिक करने लायक है -->
             <div class="upload-area" id="uploadArea">
                 <input type="file" id="imageInput" accept="image/jpeg, image/png, image/webp, image/gif, image/bmp, image/svg+xml, image/tiff, image/avif, image/x-icon, image/heic, .heic, .jpg, .png, .webp" multiple>
                 <h3>🔄 Upload Images</h3>
@@ -118,6 +139,29 @@
                 <strong>ℹ️ Note:</strong> All processing takes place in your browser. Your images are never uploaded to any server.
             </div>
         </div>
+
+        <!-- SEO Content & FAQs -->
+        <section class="content-section" style="max-width: 700px; margin: 40px auto 0; padding: 0 20px; line-height: 1.6;">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Free Image Converter Online</h2>
+            <p style="margin-bottom: 20px; color: #4a5568;">PixSathi's Image Converter is a 100% free online tool that allows you to change the format of your images instantly. Whether you need to convert a JPG to PNG for a transparent background, or change WebP to JPG for compatibility, our tool does it all in seconds. If you are looking for a <strong>free alternative to Canva or iLoveIMG</strong>, you are at the right place. No signup, no watermark, and 100% private.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Is this a free alternative to Canva or iLoveIMG?</h3>
+                <p>Yes, PixSathi is completely free. You don't need to create an account or pay for a premium subscription to convert your images.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Are my images uploaded to a server?</h3>
+                <p>No. All processing happens locally in your browser using JavaScript. Your images never leave your device.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What image formats are supported?</h3>
+                <p>You can upload JPG, PNG, WebP, GIF, BMP, SVG, TIFF, AVIF, and HEIC (iPhone) images and convert them to JPG, PNG, or WebP.</p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -139,13 +183,10 @@
         
         let uploadedFiles = [];
 
-        // जब यूज़र फाइल अपलोड करे
         imageInput.addEventListener('change', function(e) {
             const files = e.target.files;
             if (files.length > 0) {
-                optionsDiv.style.display = 'flex'; // Convert का बटन दिखाएं
-                
-                // पुराने प्रीव्यू हटाएं (अगर कोई हैं)
+                optionsDiv.style.display = 'flex';
                 previewGrid.innerHTML = '';
                 uploadedFiles = [];
 
@@ -153,7 +194,6 @@
                     const file = files[i];
                     uploadedFiles.push(file);
 
-                    // प्रीव्यू बनाएं
                     const reader = new FileReader();
                     reader.onload = function(event) {
                         const div = document.createElement('div');
@@ -169,7 +209,6 @@
             }
         });
 
-        // जब यूज़र Convert बटन दबाए
         convertBtn.addEventListener('click', function() {
             if (uploadedFiles.length === 0) return;
             
@@ -184,13 +223,11 @@
                 reader.onload = function(e) {
                     const img = new Image();
                     img.onload = function() {
-                        // Canvas के जरिए इमेज कन्वर्ट करें
                         const canvas = document.createElement('canvas');
                         canvas.width = img.width;
                         canvas.height = img.height;
                         const ctx = canvas.getContext('2d');
                         
-                        // अगर JPG है तो सफ़ेद बैकग्राउंड दें (क्योंकि JPG ट्रांसपेरेंट सपोर्ट नहीं करता)
                         if (format === 'image/jpeg') {
                             ctx.fillStyle = "#ffffff";
                             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -198,14 +235,12 @@
                         
                         ctx.drawImage(img, 0, 0);
 
-                        // डाउनलोड लिंक बनाएं
                         const dataUrl = canvas.toDataURL(format, 0.9);
                         const link = document.createElement('a');
                         link.download = file.name.split('.')[0] + '_converted.' + ext;
                         link.href = dataUrl;
                         link.click();
                         
-                        // जब सारी फाइलें कन्वर्ट हो जाएं
                         if (index === uploadedFiles.length - 1) {
                             convertBtn.textContent = "Convert & Download";
                             convertBtn.disabled = false;
