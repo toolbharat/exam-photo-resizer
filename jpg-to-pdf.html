@@ -3,199 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPG to PDF Converter — Free Online Tool | PixSathi</title>
-    <meta name="description" content="Free JPG to PDF converter. Convert JPG, PNG, WebP images to PDF in seconds. No sign-up, no upload, 100% private. — PixSathi">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    
+    <title>JPG to PDF Converter Online Free - Convert Images to PDF | PixSathi</title>
+    <meta name="description" content="Free online JPG to PDF converter. Combine multiple JPG, PNG, or WebP images into a single PDF file instantly. No signup, 100% private, works in your browser.">
+    <meta name="keywords" content="jpg to pdf, image to pdf, convert jpg to pdf, png to pdf, combine images to pdf, jpg to pdf converter online free">
     <link rel="canonical" href="https://www.pixsathi.in/jpg-to-pdf">
     <script defer src="/_vercel/insights/script.js"></script>
+    
     <link rel="stylesheet" href="/style.css">
+    
+    <!-- jsPDF Library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <style>
-        .tool-container { max-width: 700px; margin: 0 auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; }
-        .upload-area:hover { border-color: #667eea; background: #edf2f7; }
+        .tool-container { max-width: 700px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .upload-area { border: 3px dashed #cbd5e0; border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #f7fafc; position: relative; }
+        .upload-area:hover { border-color: #4f46e5; background: #edf2f7; }
         .upload-area h3 { color: #2d3748; margin-bottom: 8px; font-size: 20px; }
         .upload-area p { color: #718096; font-size: 14px; }
-        .upload-area input { display: none; }
-        .preview-list { display: none; margin-top: 24px; }
-        .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; margin-bottom: 20px; }
-        .preview-item { position: relative; padding: 6px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
-        .preview-item img { width: 100%; height: 80px; object-fit: cover; border-radius: 4px; }
-        .preview-item .filename { font-size: 10px; color: #718096; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-        .preview-item .remove-btn { position: absolute; top: -6px; right: -6px; width: 22px; height: 22px; background: #f56565; color: #ffffff; border: none; border-radius: 50%; cursor: pointer; font-size: 12px; line-height: 1; }
-        .btn { width: 100%; padding: 14px; background: #667eea; color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; }
-        .btn:hover { background: #5a67d8; }
+        .upload-area input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+        .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin-top: 20px; }
+        .preview-item { border: 1px solid #e2e8f0; border-radius: 8px; padding: 5px; text-align: center; }
+        .preview-item img { max-width: 100%; height: 80px; object-fit: cover; border-radius: 4px; margin-bottom: 5px; }
+        .preview-item p { font-size: 10px; color: #718096; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .btn { width: 100%; padding: 14px; background: #4f46e5; color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 20px; transition: background 0.2s; display: none; }
+        .btn:hover { background: #4338ca; }
         .btn:disabled { background: #a3bffa; cursor: not-allowed; }
-        .options { margin: 16px 0; padding: 16px; background: #f7fafc; border-radius: 8px; }
-        .options label { display: block; margin-bottom: 8px; color: #2d3748; font-weight: 600; font-size: 14px; }
-        .options select { width: 100%; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; }
         .info-box { margin-top: 20px; padding: 14px; background: #ebf8ff; border-left: 4px solid #4299e1; border-radius: 8px; color: #2c5282; font-size: 14px; }
-    .preview-box img {
-    max-width: 240px !important;
-    max-height: 160px !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    border-radius: 6px;
-}
-
-.preview-box {
-    text-align: center;
-    padding: 10px;
-}
-
-</style>
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+        .faq-item h3 { font-size: 15px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
+    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="container">
             <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
             <nav class="nav">
                 <a href="/">🏠 Home</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/about">ℹ️ About</a>
+                <a href="/exams/">📝 Exams</a>
+                <a href="/international/">🌍 International</a>
+                <a href="/finance/">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="intro-section">
-            <h1>📄 JPG to PDF</h1>
-            <p>Convert images into a PDF. — free, fast, 100% private.</p>
+        <section class="intro-section" style="text-align: center; margin-top: 30px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">📄 JPG to PDF Converter Online</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Convert multiple JPG, PNG, and WebP images into one PDF file — free, fast, 100% private.</p>
         </section>
 
         <div class="tool-container">
-            <div class="upload-area" id="uploadArea">
-                <input type="file" id="fileInput" accept="image/*" multiple>
-                <h3>📄 upload Images</h3>
+            <div class="upload-area">
+                <input type="file" id="imageInput" accept="image/jpeg, image/png, image/webp" multiple>
+                <h3>📄 Upload Images</h3>
                 <p>Click or drag — JPG, PNG, WebP</p>
             </div>
 
-            <div class="preview-list" id="previewList">
-                <div class="preview-grid" id="previewGrid"></div>
-                <div class="options">
-                    <label for="pageSize">Page Size</label>
-                    <select id="pageSize">
-                        <option value="a4">A4 (210 x 297 mm)</option>
-                        <option value="letter">Letter (8.5 x 11 in)</option>
-                        <option value="fit">Fit to Image</option>
-                    </select>
-                </div>
-                <button class="btn" id="convertBtn">PDF Banao</button>
-            </div>
+            <div class="preview-grid" id="previewGrid"></div>
+
+            <button class="btn" id="createPdfBtn">Create PDF</button>
 
             <div class="info-box">
-                <strong>ℹ️ Note:</strong> All processing happens in your browser. Images are not uploaded to any server.
+                <strong>ℹ️ Note:</strong> All processing happens in your browser. Your images are never uploaded to any server.
             </div>
         </div>
 
-        <section class="content-section">
-            <h2>Free JPG to PDF Converter Online</h2>
-            <p>PixSathi's JPG to PDF converter is a free online tool that converts your JPG, PNG, and WebP images into PDF.</p>
+        <section class="content-section" style="max-width: 700px; margin: 40px auto 0;">
+            <h2 style="font-size: 20px; margin-bottom: 16px;">Free JPG to PDF Converter Online</h2>
+            <p style="margin-bottom: 20px;">PixSathi's JPG to PDF converter is a free online tool that lets you <strong>combine multiple images into a single PDF</strong> document. Whether you need to convert JPG to PDF for an exam form, job application, or office work, our tool makes it incredibly easy. No signup, no watermark, and your images stay 100% private on your device.</p>
 
-            <h2>How to Use</h2>
-            <ol>
-                <li>Upload the images</li>
-                <li>Choose page size</li>
-                <li>"Press the "Create PDF" button</li>
-                <li>Download the PDF</li>
+            <h2 style="font-size: 20px; margin-bottom: 16px;">How to Convert Images to PDF?</h2>
+            <ol style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Upload your JPG, PNG, or WebP images</li>
+                <li>Rearrange them if necessary</li>
+                <li>Click the "Create PDF" button</li>
+                <li>Download your combined PDF file</li>
             </ol>
+
+            <h2 style="font-size: 20px; margin-bottom: 16px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How do I combine multiple images into one PDF?</h3>
+                <p>Upload all your images to our free tool, click "Create PDF", and download the combined file instantly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this JPG to PDF converter free?</h3>
+                <p>Yes, 100% free. No signup, no payment, and no hidden charges.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Are my images uploaded to a server?</h3>
+                <p>No. All processing happens locally in your browser using JavaScript. Your files never leave your device.</p>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
-            <p style="margin-top: 8px; font-size: 13px;">
-                <a href="/">Home</a> · 
-                <a href="/about">About</a> · 
-                <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a>
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
             </p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
-        const uploadArea = document.getElementById('uploadArea');
-        const fileInput = document.getElementById('fileInput');
-        const previewList = document.getElementById('previewList');
+        const { jsPDF } = window.jspdf;
+        const imageInput = document.getElementById('imageInput');
         const previewGrid = document.getElementById('previewGrid');
-        const convertBtn = document.getElementById('convertBtn');
-        const pageSize = document.getElementById('pageSize');
+        const createPdfBtn = document.getElementById('createPdfBtn');
+        
+        let uploadedImages = [];
 
-        let images = [];
+        imageInput.addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                createPdfBtn.style.display = 'block';
+                previewGrid.innerHTML = '';
+                uploadedImages = [];
 
-        uploadArea.addEventListener('click', () => fileInput.click());
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    uploadedImages.push(file);
 
-        fileInput.addEventListener('change', (e) => {
-            Array.from(e.target.files).forEach(file => {
-                if (!file.type.startsWith('image/')) return;
-                const reader = new FileReader();
-                reader.onload = (ev) => {
-                    images.push({ name: file.name, dataUrl: ev.target.result });
-                    renderPreview();
-                };
-                reader.readAsDataURL(file);
-            });
-        });
-
-        function renderPreview() {
-            previewGrid.innerHTML = '';
-            images.forEach((img, i) => {
-                const item = document.createElement('div');
-                item.className = 'preview-item';
-                item.innerHTML = `
-                    <button class="remove-btn" onclick="removeImage(${i})">×</button>
-                    <img src="${img.dataUrl}">
-                    <div class="filename">${img.name}</div>
-                `;
-                previewGrid.appendChild(item);
-            });
-            previewList.style.display = images.length > 0 ? 'block' : 'none';
-        }
-
-        window.removeImage = (i) => { images.splice(i, 1); renderPreview(); };
-
-        convertBtn.addEventListener('click', async () => {
-            if (images.length === 0) return alert('Pehle images upload karo');
-            convertBtn.disabled = true;
-            convertBtn.textContent = 'PDF ban raha hai...';
-
-            const { jsPDF } = window.jspdf;
-            let pdf = null;
-
-            for (let i = 0; i < images.length; i++) {
-                const imgEl = await loadImage(images[i].dataUrl);
-                let pw, ph;
-                if (pageSize.value === 'a4') { pw = 210; ph = 297; }
-                else if (pageSize.value === 'letter') { pw = 215.9; ph = 279.4; }
-                else { pw = imgEl.width * 0.264583; ph = imgEl.height * 0.264583; }
-
-                const orientation = pw > ph ? 'landscape' : 'portrait';
-                if (i === 0) pdf = new jsPDF({ orientation, unit: 'mm', format: [pw, ph] });
-                else pdf.addPage([pw, ph], orientation);
-
-                const ratio = Math.min((pw - 10) / imgEl.width, (ph - 10) / imgEl.height);
-                const fw = imgEl.width * ratio, fh = imgEl.height * ratio;
-                pdf.addImage(images[i].dataUrl, 'JPEG', (pw - fw) / 2, (ph - fh) / 2, fw, fh);
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        const div = document.createElement('div');
+                        div.className = 'preview-item';
+                        div.innerHTML = `
+                            <img src="${event.target.result}" alt="Preview">
+                            <p>${file.name}</p>
+                        `;
+                        previewGrid.appendChild(div);
+                    };
+                    reader.readAsDataURL(file);
+                }
             }
-
-            pdf.save('pixsathi-images.pdf');
-            convertBtn.disabled = false;
-            convertBtn.textContent = 'PDF Banao';
         });
 
-        function loadImage(src) {
-            return new Promise((res, rej) => {
-                const img = new Image();
-                img.onload = () => res(img);
-                img.onerror = rej;
-                img.src = src;
-            });
-        }
+        createPdfBtn.addEventListener('click', async function() {
+            if (uploadedImages.length === 0) return;
+            
+            createPdfBtn.textContent = 'Creating PDF... Please wait.';
+            createPdfBtn.disabled = true;
+
+            try {
+                const pdf = new jsPDF();
+                let isFirstPage = true;
+
+                for (let i = 0; i < uploadedImages.length; i++) {
+                    const file = uploadedImages[i];
+                    const dataUrl = await new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onload = (e) => resolve(e.target.result);
+                        reader.readAsDataURL(file);
+                    });
+
+                    const img = new Image();
+                    await new Promise((resolve) => {
+                        img.onload = resolve;
+                        img.src = dataUrl;
+                    });
+
+                    if (!isFirstPage) {
+                        pdf.addPage();
+                    }
+
+                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                    const pdfHeight = pdf.internal.pageSize.getHeight();
+                    
+                    // Calculate image dimensions to fit the PDF page
+                    const imgRatio = img.width / img.height;
+                    const pdfRatio = pdfWidth / pdfHeight;
+                    
+                    let finalWidth = pdfWidth;
+                    let finalHeight = pdfHeight;
+                    let x = 0;
+                    let y = 0;
+
+                    if (imgRatio > pdfRatio) {
+                        finalHeight = pdfWidth / imgRatio;
+                        y = (pdfHeight - finalHeight) / 2;
+                    } else {
+                        finalWidth = pdfHeight * imgRatio;
+                        x = (pdfWidth - finalWidth) / 2;
+                    }
+
+                    pdf.addImage(dataUrl, 'JPEG', x, y, finalWidth, finalHeight);
+                    isFirstPage = false;
+                }
+
+                pdf.save('pixsathi-converted.pdf');
+            } catch (error) {
+                console.error(error);
+                alert('Error creating PDF. Please try again.');
+            } finally {
+                createPdfBtn.textContent = 'Create PDF';
+                createPdfBtn.disabled = false;
+            }
+        });
     </script>
 </body>
 </html>
