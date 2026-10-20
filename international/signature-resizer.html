@@ -6,6 +6,7 @@
     <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
     <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
     
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,13 +15,18 @@
       gtag('config', 'G-L5K09RC5D2');
     </script>
     
+    <!-- Vercel Insights -->
     <script defer src="/_vercel/insights/script.js"></script>
 
     <title>Signature Resizer Online Free - US/UK Visa Signature | PixSathi</title>
-    <meta name="description" content="Free online signature resizer for US and UK visa applications. Resize to exact pixels (140x60) and exact KB (20KB) instantly. No signup, 100% private.">
+    <meta name="description" content="Free online signature resizer for US and UK visa applications. Resize to exact pixels (140x60) and exact KB (20KB) instantly. Crop and adjust manually. No signup.">
     <meta name="keywords" content="signature resizer, signature resize in kb, us visa signature, uk visa signature, resize signature to 140x60">
     <link rel="canonical" href="https://www.pixsathi.in/international/signature-resizer">
     
+    <!-- Cropper.js CSS & JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
     <link rel="stylesheet" href="/style.css">
     
     <style>
@@ -43,19 +49,14 @@
         .upload-box h3 { color: #4f46e5; margin-bottom: 5px; font-size: 18px; }
         .upload-box p { color: #718096; font-size: 13px; }
         
-        /* Preview Area */
+        /* Preview / Crop Area */
         .preview-area { display: none; text-align: center; margin-bottom: 20px; position: relative; padding: 15px; background: #f8f9fa; border-radius: 10px; border: 1px solid #e2e8f0; }
-        .preview-area img { max-width: 100%; max-height: 200px; border-radius: 6px; object-fit: contain; }
-        .remove-btn { position: absolute; top: 10px; right: 10px; background: #ef4444; color: white; border: none; border-radius: 50%; width: 24px; height: 24px; cursor: pointer; font-weight: bold; }
+        .img-container { max-height: 400px; overflow: hidden; margin-bottom: 15px; border-radius: 8px; background: #e2e8f0; }
+        .img-container img { max-width: 100%; display: block; }
+        .remove-btn { position: absolute; top: 10px; right: 10px; background: #ef4444; color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; font-weight: bold; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
         
         /* Controls */
         .controls-area { display: none; margin-top: 20px; }
-        .size-badges { text-align: center; margin-bottom: 15px; font-weight: 600; color: #4a5568; font-size: 14px; }
-        .size-badges span { background: #e2e8f0; padding: 4px 10px; border-radius: 12px; margin: 0 5px; }
-        
-        .unit-toggle { text-align: center; margin-bottom: 15px; }
-        .unit-toggle input { margin-right: 5px; cursor: pointer; }
-        .unit-toggle label { margin-right: 20px; font-size: 14px; cursor: pointer; color: #4a5568; }
         
         .input-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
         .input-group { text-align: center; }
@@ -100,7 +101,7 @@
         
         <div style="text-align: center; margin-bottom: 25px;">
             <h1 style="font-size: 26px; color: #1e293b; margin-bottom: 8px;">✍️ Resize Signature - PixSathi Image Resizer</h1>
-            <p style="color: #64748b; font-size: 14px;">Resize your signature to exact Pixel size and exact KB.</p>
+            <p style="color: #64748b; font-size: 14px;">Crop and resize your signature to exact Pixel size and exact KB.</p>
         </div>
 
         <div class="resizer-wrapper">
@@ -111,25 +112,18 @@
                 <p>Supports JPG, PNG, WebP</p>
             </div>
 
-            <!-- Preview Area -->
+            <!-- Preview / Crop Area -->
             <div class="preview-area" id="previewArea">
                 <button class="remove-btn" onclick="removeImage()">✕</button>
-                <img id="previewImg" src="" alt="Signature Preview">
+                <div class="img-container" id="imgContainer">
+                    <img id="imageToCrop" src="" alt="Signature to crop">
+                </div>
                 <p id="fileName" style="font-size: 12px; color: #4a5568; margin-top: 8px; word-break: break-all;"></p>
             </div>
 
             <!-- Controls -->
             <div class="controls-area" id="controlsArea">
-                <div class="size-badges">
-                    <span>W: <span id="badgeW">140</span></span>
-                    <span>H: <span id="badgeH">60</span></span>
-                </div>
-
-                <div class="unit-toggle">
-                    <input type="radio" id="pxUnit" name="unit" checked> <label for="pxUnit">Pixel</label>
-                    <input type="radio" id="cmUnit" name="unit"> <label for="cmUnit">Centimeter</label>
-                </div>
-
+                
                 <div class="input-row">
                     <div class="input-group">
                         <label>Width (px)</label>
@@ -148,29 +142,31 @@
                     <span>KB</span>
                 </div>
 
-                <button class="action-btn" id="resizeBtn" onclick="processImage()" disabled>Resize Signature</button>
-                <p class="note-text">Note:- We process directly in your browser. 100% Private.</p>
+                <button class="action-btn" id="resizeBtn" onclick="processImage()" disabled>Resize & Download</button>
+                <p class="note-text">Drag the box on the image above to adjust your signature.</p>
             </div>
 
             <!-- Download Area -->
             <div class="download-area" id="downloadArea">
                 <h3 style="color: #065f46; margin-bottom: 10px; font-size: 16px;">✅ Signature Resized Successfully!</h3>
-                <p style="font-size: 13px; color: #047857; margin-bottom: 15px;">Your file is ready. Size: <strong id="finalSizeText">0</strong> KB</p>
+                <p style="font-size: 13px; color: #047857; margin-bottom: 15px;">Final Size: <strong id="finalSizeText">0</strong> KB | Dimensions: <span id="finalDimText"></span></p>
                 <a id="downloadLink" class="download-btn" download="resized_signature.jpg">⬇ Download Signature</a>
             </div>
         </div>
 
         <!-- SEO Content -->
         <section class="content-section" style="max-width: 700px; margin: 40px auto 0; line-height: 1.6;">
-            <h2 style="font-size: 22px; color: #1a202c; margin: 20px 0 10px;">Free Signature Resizer for Visas</h2>
-            <p style="font-size: 14px; color: #4a5568;">PixSathi's Signature Resizer helps you create exact pixel sizes (like 140x60) and compress them to exact KB (like 20KB) for US and UK visa applications. Unlike other tools, we process everything in your browser, ensuring 100% privacy.</p>
+            <h2 style="font-size: 22px; color: #1a202c; margin: 20px 0 10px;">Free Signature Resizer with Crop Tool</h2>
+            <p style="font-size: 14px; color: #4a5568;">PixSathi's Signature Resizer is a 100% free online tool designed for visa applicants. Whether you need a signature for a <strong>US Visa</strong> or a <strong>UK Visa</strong>, our tool allows you to manually crop your signature exactly how you want it, and then compress it to the exact KB size (like 20KB).</p>
 
-            <h2 style="font-size: 22px; color: #1a202c; margin: 20px 0 10px;">Signature Requirements</h2>
-            <ul style="font-size: 14px; color: #4a5568; margin-left: 20px;">
-                <li><strong>US Visa:</strong> 35x45 mm (approx 140x60 px), white background.</li>
-                <li><strong>UK Visa:</strong> 3.5x4.5 cm, light grey or white background.</li>
-                <li><strong>Size limit:</strong> Usually 10KB to 20KB.</li>
-            </ul>
+            <h2 style="font-size: 22px; color: #1a202c; margin: 20px 0 10px;">How to Crop and Resize?</h2>
+            <ol style="font-size: 14px; color: #4a5568; margin-left: 20px;">
+                <li>Upload your signature photo.</li>
+                <li>Drag the corners of the crop box on the image to select the exact area you want.</li>
+                <li>Enter your desired Width and Height (e.g., 140x60).</li>
+                <li>Enter the Target File Size in KB (e.g., 20).</li>
+                <li>Click "Resize & Download".</li>
+            </ol>
         </section>
     </main>
 
@@ -183,7 +179,7 @@
     <script>
         const fileInput = document.getElementById('fileInput');
         const previewArea = document.getElementById('previewArea');
-        const previewImg = document.getElementById('previewImg');
+        const imageToCrop = document.getElementById('imageToCrop');
         const controlsArea = document.getElementById('controlsArea');
         const resizeBtn = document.getElementById('resizeBtn');
         const downloadArea = document.getElementById('downloadArea');
@@ -192,15 +188,22 @@
         const widthInput = document.getElementById('widthInput');
         const heightInput = document.getElementById('heightInput');
         const sizeInput = document.getElementById('sizeInput');
-        const badgeW = document.getElementById('badgeW');
-        const badgeH = document.getElementById('badgeH');
         const finalSizeText = document.getElementById('finalSizeText');
+        const finalDimText = document.getElementById('finalDimText');
 
-        let uploadedImage = null;
+        let cropper = null;
 
-        // Live badge update
-        widthInput.addEventListener('input', () => badgeW.textContent = widthInput.value);
-        heightInput.addEventListener('input', () => badgeH.textContent = heightInput.value);
+        // Update Cropper aspect ratio when width/height changes
+        function updateAspectRatio() {
+            if (cropper) {
+                const w = parseInt(widthInput.value) || 140;
+                const h = parseInt(heightInput.value) || 60;
+                cropper.setAspectRatio(w / h);
+            }
+        }
+
+        widthInput.addEventListener('input', updateAspectRatio);
+        heightInput.addEventListener('input', updateAspectRatio);
 
         // Handle File Upload
         fileInput.addEventListener('change', function(e) {
@@ -209,16 +212,39 @@
                 fileName.textContent = file.name;
                 const reader = new FileReader();
                 reader.onload = function(event) {
-                    const img = new Image();
-                    img.onload = function() {
-                        uploadedImage = img;
-                        previewImg.src = event.target.result;
-                        previewArea.style.display = 'block';
-                        controlsArea.style.display = 'block';
+                    // Set image source
+                    imageToCrop.src = event.target.result;
+                    
+                    // Show areas
+                    previewArea.style.display = 'block';
+                    controlsArea.style.display = 'block';
+                    downloadArea.style.display = 'none';
+
+                    // Destroy old cropper if exists
+                    if (cropper) {
+                        cropper.destroy();
+                    }
+
+                    // Initialize Cropper
+                    imageToCrop.onload = function() {
+                        const w = parseInt(widthInput.value) || 140;
+                        const h = parseInt(heightInput.value) || 60;
+                        
+                        cropper = new Cropper(imageToCrop, {
+                            aspectRatio: w / h, // Set ratio based on inputs
+                            viewMode: 1,
+                            dragMode: 'move',
+                            autoCropArea: 1,
+                            restore: false,
+                            guides: true,
+                            center: true,
+                            highlight: false,
+                            cropBoxMovable: true,
+                            cropBoxResizable: true,
+                            toggleDragModeOnDblclick: false,
+                        });
                         resizeBtn.disabled = false;
-                        downloadArea.style.display = 'none';
                     };
-                    img.src = event.target.result;
                 };
                 reader.readAsDataURL(file);
             }
@@ -226,7 +252,11 @@
 
         function removeImage() {
             fileInput.value = '';
-            uploadedImage = null;
+            if (cropper) {
+                cropper.destroy();
+                cropper = null;
+            }
+            imageToCrop.src = '';
             previewArea.style.display = 'none';
             controlsArea.style.display = 'none';
             downloadArea.style.display = 'none';
@@ -235,12 +265,20 @@
 
         // The Resize & Compress Logic
         function processImage() {
-            if (!uploadedImage) return;
+            if (!cropper) return;
 
             const targetW = parseInt(widthInput.value) || 140;
             const targetH = parseInt(heightInput.value) || 60;
             const targetKB = parseInt(sizeInput.value) || 20;
 
+            // Get cropped canvas from Cropper.js
+            // We get it at a high resolution first to ensure quality
+            const croppedCanvas = cropper.getCroppedCanvas({
+                width: targetW,
+                height: targetH
+            });
+
+            // Create a new canvas to ensure exact dimensions and white background
             const canvas = document.createElement('canvas');
             canvas.width = targetW;
             canvas.height = targetH;
@@ -249,25 +287,9 @@
             // White Background
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, targetW, targetH);
-
-            // Center crop logic (Cover)
-            const imgRatio = uploadedImage.width / uploadedImage.height;
-            const targetRatio = targetW / targetH;
-            let sx, sy, sWidth, sHeight;
-
-            if (imgRatio > targetRatio) {
-                sHeight = uploadedImage.height;
-                sWidth = uploadedImage.height * targetRatio;
-                sx = (uploadedImage.width - sWidth) / 2;
-                sy = 0;
-            } else {
-                sWidth = uploadedImage.width;
-                sHeight = uploadedImage.width / targetRatio;
-                sx = 0;
-                sy = (uploadedImage.height - sHeight) / 2;
-            }
-
-            ctx.drawImage(uploadedImage, sx, sy, sWidth, sHeight, 0, 0, targetW, targetH);
+            
+            // Draw the cropped image
+            ctx.drawImage(croppedCanvas, 0, 0, targetW, targetH);
 
             // Compress to target KB
             let quality = 0.9;
@@ -283,8 +305,12 @@
 
             // Show Result
             finalSizeText.textContent = currentSizeKB;
+            finalDimText.textContent = targetW + 'x' + targetH + ' px';
             downloadLink.href = dataUrl;
             downloadArea.style.display = 'block';
+            
+            // Scroll to download area
+            downloadArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     </script>
 </body>
