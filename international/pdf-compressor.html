@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,8 +14,9 @@
       gtag('js', new Date());
       gtag('config', 'G-L5K09RC5D2');
     </script>
-    <title>PDF Compressor Free Online - Reduce PDF Size | PixSathi</title>
-    <meta name="description" content="Compress PDF files online free. Reduce PDF size significantly without losing visible quality. No signup, 100% private.">
+
+    <title>Compress PDF Online Free - Reduce PDF File Size | PixSathi</title>
+    <meta name="description" content="Compress PDF online free. Reduce PDF file size without losing quality. The best free alternative to iLovePDF and Smallpdf. No signup, 100% private.">
     <link rel="canonical" href="https://www.pixsathi.in/international/pdf-compressor.html">
     <link rel="stylesheet" href="/style.css">
     <style>
@@ -53,23 +57,30 @@
             <p>Significantly reduce your PDF file size by optimizing pages — free, private, no signup.</p>
         </section>
         <a href="/international/" class="back-btn">← Back to International Tools</a>
+        
+        <div style="background:#fffbeb; border-left: 4px solid #f59e0b; padding: 15px; margin: 20px 0; border-radius: 8px; color: #92400e; font-size: 14px; text-align: center;">
+            <strong>⚠️ Important:</strong> This tool works best for <strong>scanned or image-heavy PDFs</strong>. If your PDF is purely text, the file size might not decrease.
+        </div>
+
         <div class="tool-box">
             <h3>Upload PDF File</h3>
             <input type="file" id="pdfInput" accept="application/pdf,.pdf">
             
             <select id="compressionLevel">
-                <option value="0.8">Low Compression (Best Quality)</option>
-                <option value="0.5" selected>Medium Compression (Recommended)</option>
+                <option value="0.4">Medium Compression (Recommended)</option>
                 <option value="0.2">High Compression (Smallest Size)</option>
             </select>
 
             <button id="compressBtn" onclick="compressPDF()" disabled>Compress PDF</button>
+            
             <div class="status-box" id="status" style="display:none;"></div>
+            
             <div class="preview-box" id="previewBox" style="display:none;">
                 <div class="size-info" id="sizeInfo"></div>
                 <a id="downloadLink" class="download-btn" download="compressed.pdf">⬇ Download Compressed PDF</a>
             </div>
         </div>
+        
         <section class="content-section">
             <h2>How to Use</h2>
             <ol>
@@ -121,6 +132,8 @@
 
         var status = document.getElementById('status');
         status.style.display = 'block';
+        status.style.background = '#eef2ff';
+        status.style.color = '#4f46e5';
         status.textContent = 'Processing pages... Please wait. Do not close this tab.';
         document.getElementById('compressBtn').disabled = true;
 
@@ -142,8 +155,8 @@
             for (let i = 1; i <= pdf.numPages; i++) {
                 var page = await pdf.getPage(i);
                 
-                // Render at higher scale for better quality, then compress
-                var viewport = page.getViewport({ scale: 1.5 }); 
+                // स्केल को और कम कर दिया है (0.8) ताकि इमेज का साइज़ छोटा हो
+                var viewport = page.getViewport({ scale: 0.8 }); 
                 var canvas = document.createElement('canvas');
                 var context = canvas.getContext('2d');
                 canvas.height = viewport.height;
@@ -174,13 +187,21 @@
             var newSize = blob.size;
             var reduction = ((originalSize - newSize) / originalSize * 100).toFixed(1);
 
-            status.style.display = 'none';
-            document.getElementById('sizeInfo').innerHTML =
-                'Original: ' + (originalSize / 1024).toFixed(1) + ' KB<br>' +
-                'Compressed: <strong>' + (newSize / 1024).toFixed(1) + ' KB</strong><br>' +
-                'Reduction: <strong>' + reduction + '%</strong>';
-            document.getElementById('downloadLink').href = url;
-            document.getElementById('previewBox').style.display = 'block';
+            // अगर फाइल का साइज़ बढ़ गया है, तो डाउनलोड बटन न दिखाएं
+            if (newSize >= originalSize) {
+                status.textContent = '⚠️ Error: This PDF cannot be compressed further. It is likely a text-based PDF which increases in size when converted to images.';
+                status.style.background = '#fee2e2';
+                status.style.color = '#991b1b';
+                document.getElementById('previewBox').style.display = 'none';
+            } else {
+                status.style.display = 'none';
+                document.getElementById('sizeInfo').innerHTML =
+                    'Original: ' + (originalSize / 1024).toFixed(1) + ' KB<br>' +
+                    'Compressed: <strong>' + (newSize / 1024).toFixed(1) + ' KB</strong><br>' +
+                    'Reduction: <strong>' + reduction + '%</strong>';
+                document.getElementById('downloadLink').href = url;
+                document.getElementById('previewBox').style.display = 'block';
+            }
 
         } catch (error) {
             status.textContent = 'Error: ' + error.message;
