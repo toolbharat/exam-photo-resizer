@@ -1,55 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Date Calculator — Days Between Dates | PixSathi</title>
-<meta name="description" content="Free date calculator — find days between two dates instantly.">
-<link rel="canonical" href="https://www.pixsathi.in/international/date-calculator">
-<link rel="stylesheet" href="/style.css">
-<style>
-.conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
-.conv-row{margin-bottom:16px}
-.conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
-.conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
-.conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
-.conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>Date Calculator Online Free - Days Between Dates | PixSathi</title>
+    <meta name="description" content="Free online date calculator. Find days between two dates, date duration, and calculate due dates instantly. Best free alternative to Timeanddate.com.">
+    <meta name="keywords" content="date calculator, date calculator between two dates, days calculator, days between dates, due date calculator, date to date calculator">
+    <link rel="canonical" href="https://www.pixsathi.in/international/date-calculator">
+    
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        
+        .conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+        .conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
+        .conv-row{margin-bottom:16px}
+        .conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
+        .conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
+        .conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
+        .conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
+        .conv-result .label{font-size:14px;color:#4a5568;margin-top:4px}
+        
+        .content-section { max-width: 700px; margin: 40px auto 0; padding: 0 20px; line-height: 1.6; }
+        .content-section h2 { font-size: 22px; color: #1a202c; margin: 20px 0 10px; }
+        .content-section p, .content-section li { font-size: 14px; color: #4a5568; margin-bottom: 8px; }
+        .content-section ul, .content-section ol { margin: 10px 0 16px 20px; }
+        
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
+    </style>
 </head>
 <body>
-<header class="header"><div class="container"><div class="logo">📸 PixSathi</div><p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p><nav class="nav"><a href="/">🏠 Home</a><a href="/international/">🌍 International</a><a href="/contact">📬 Contact</a></nav></div></header>
-<main class="container">
-<div class="conv-container">
-<a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
-<h1>📅 Date Calculator</h1>
-<div class="conv-row"><label>Start Date</label><input type="date" id="d1" onchange="calcDate()"></div>
-<div class="conv-row"><label>End Date</label><input type="date" id="d2" onchange="calcDate()"></div>
-<div class="conv-result"><div class="value" id="days">0 days</div><div class="label">Difference</div></div>
-</div>
-</main>
-<div style="max-width: 600px; margin: 30px auto; padding: 20px; background: #f9fafb; border-radius: 10px; border: 1px solid #e5e7eb;">
-    <h3 style="font-size: 18px; margin-top: 0; margin-bottom: 15px; color: #1a202c;">Explore Other Tools</h3>
-    <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; margin: 0;">
-        <li><a href="/international/temperature-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌡️ Temperature Converter</a></li>
-        <li><a href="/international/height-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📏 Height Converter</a></li>
-        <li><a href="/international/bmi-calculator" style="color: #4f46e5; text-decoration: none; font-weight: 600;">⚖️ BMI Calculator</a></li>
-        <li><a href="/international/time-zone-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌍 Time Zone Converter</a></li>
-    </ul>
-</div>
-<footer class="footer"><div class="container"><p>© 2026 PixSathi | Made for Everyone 🌍</p></div></footer>
-<script>
-function calcDate(){
-var d1=new Date(document.getElementById('d1').value);
-var d2=new Date(document.getElementById('d2').value);
-if(isNaN(d1)||isNaN(d2))return;
-var diff=Math.abs(d2-d1);
-var days=Math.floor(diff/(1000*60*60*24));
-document.getElementById('days').textContent=days+' days';
-}
-document.getElementById('d1').valueAsDate=new Date();
-document.getElementById('d2').valueAsDate=new Date();
-calcDate();
-</script>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="conv-container">
+            <a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
+            
+            <h1>📅 Date Calculator (Days Between Dates)</h1>
+            <p style="color: #64748b; margin-bottom: 20px;">Find the exact duration between two dates instantly.</p>
+
+            <div class="conv-row">
+                <label>Start Date</label>
+                <input type="date" id="d1" onchange="calcDate()">
+            </div>
+            <div class="conv-row">
+                <label>End Date</label>
+                <input type="date" id="d2" onchange="calcDate()">
+            </div>
+            
+            <div class="conv-result">
+                <div class="value" id="days">0 days</div>
+                <div class="label">Difference</div>
+            </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <section class="content-section">
+            <h2>Free Date Calculator Online</h2>
+            <p>PixSathi's Date Calculator is a 100% free online tool that helps you find the <strong>days between two dates</strong> instantly. Whether you need to count down to an event, calculate the duration of a project, or figure out your pregnancy <strong>due date</strong>, our tool provides accurate results in seconds. If you are looking for a <strong>free alternative to Timeanddate.com or The Calculator Site</strong>, you are at the right place.</p>
+
+            <h2>How to Calculate Days Between Dates</h2>
+            <ol>
+                <li>Select your <strong>Start Date</strong> from the calendar.</li>
+                <li>Select your <strong>End Date</strong>.</li>
+                <li>The exact number of days between the two dates will appear instantly.</li>
+            </ol>
+
+            <h2>Due Date Calculator</h2>
+            <p>Many expectant mothers use this tool as a simple <strong>due date calculator</strong>. To estimate your due date, you can select the first day of your last menstrual period as the Start Date, and add 280 days. You can manually enter that future date into the End Date field above to see the exact number of days left!</p>
+
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How do I calculate days between two dates?</h3>
+                <p>Simply enter the start date and end date in the fields above. Our tool automatically calculates the exact number of days between them, accounting for leap years.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How do I calculate my due date?</h3>
+                <p>While this tool calculates the difference between two dates, you can use it for a due date by entering the first day of your last period as the start date, and estimating 280 days later as the end date.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this a free alternative to Timeanddate.com?</h3>
+                <p>Yes, PixSathi is completely free. No signups, no ads blocking your screen, and it works perfectly on mobile and desktop.</p>
+            </div>
+
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
+            <ul>
+                <li><a href="/international/age-calculator.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🎂 Age Calculator</a></li>
+                <li><a href="/international/time-zone-converter.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌍 Time Zone Converter</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    function calcDate(){
+        var d1 = new Date(document.getElementById('d1').value);
+        var d2 = new Date(document.getElementById('d2').value);
+        if (isNaN(d1) || isNaN(d2)) return;
+        
+        var diff = Math.abs(d2 - d1);
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        
+        document.getElementById('days').textContent = days + ' days';
+    }
+    
+    document.getElementById('d1').valueAsDate = new Date();
+    document.getElementById('d2').valueAsDate = new Date();
+    calcDate();
+    </script>
 </body>
 </html>

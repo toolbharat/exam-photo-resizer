@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Counter Free - Count Words & Characters | PixSathi</title>
-    <meta name="description" content="Count words, characters, sentences, and paragraphs instantly. Free word counter for essays and assignments.">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>Word Counter Online Free - Count Words & Characters | PixSathi</title>
+    <meta name="description" content="Free online word counter and character counter. Count words, characters, sentences, and paragraphs instantly. Best free alternative to WordCounter.net and Grammarly.">
+    <meta name="keywords" content="word counter, character counter, word count, count words online, wordcounter, grammarly alternative">
+    <link rel="canonical" href="https://www.pixsathi.in/international/word-counter">
+    
     <link rel="stylesheet" href="/style.css">
     <style>
         .header { padding: 8px 20px !important; }
@@ -12,16 +30,21 @@
         .logo { font-size: 16px !important; }
         .tagline { font-size: 10px !important; margin: 0 !important; }
         .nav a { padding: 4px 10px !important; font-size: 12px !important; }
-        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
-        .content-section p, .content-section li { font-size: 13px !important; }
+        .content-section h2 { font-size: 20px !important; margin: 20px 0 10px !important; color: #1a202c; }
+        .content-section h3 { font-size: 16px !important; margin: 16px 0 8px !important; color: #1a202c; }
+        .content-section p, .content-section li { font-size: 14px !important; color: #4a5568; }
         .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
-        .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } .back-btn:hover { background: #4f46e5; color: white; }
+        .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } 
+        .back-btn:hover { background: #4f46e5; color: white; }
         .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; margin: 20px 0; }
-        .tool-box textarea { width: 100%; height: 300px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; font-family: inherit; resize: vertical; }
+        .tool-box textarea { width: 100%; height: 300px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; font-family: inherit; resize: vertical; box-sizing: border-box; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
         .stat-card { background: white; border: 1px solid #e5e5ea; border-radius: 8px; padding: 15px; text-align: center; }
         .stat-number { font-size: 28px; font-weight: 800; color: #4f46e5; }
-        .stat-label { font-size: 11px; color: #6e6e73; margin-top: 4px; }
+        .stat-label { font-size: 11px; color: #4a5568; margin-top: 4px; text-transform: uppercase; font-weight: 600; }
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
         @media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
@@ -45,8 +68,9 @@
     <main class="container">
 
         <a href="/international/" class="back-btn">← Back to International Tools</a>
-        <h1>📝 Word Counter</h1>
-        <p>Count words, characters, sentences, and paragraphs instantly.</p>
+        
+        <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">📝 Word Counter & Character Counter</h1>
+        <p style="color: #64748b; margin-bottom: 25px;">Count words, characters, sentences, and paragraphs instantly.</p>
 
         <div class="tool-box">
             <textarea id="textInput" placeholder="Type or paste your text here..." oninput="countWords()"></textarea>
@@ -70,14 +94,36 @@
             </div>
         </div>
 
-        <section class="content-section">
+        <!-- SEO Content Section -->
+        <section class="content-section" style="max-width: 700px; margin: 40px auto 0; line-height: 1.6;">
+            <h2>Free Word Counter & Character Counter</h2>
+            <p>PixSathi's Word Counter is a 100% free online tool that helps you count words, characters, sentences, and paragraphs instantly. Whether you are a student writing an essay, a blogger writing an article, or a professional writing a report, our tool makes it incredibly easy to keep track of your text length. If you are looking for a <strong>free alternative to WordCounter.net or Grammarly</strong>, you are at the right place.</p>
+
             <h2>How to Use</h2>
-            <ol>
-                <li>Type or paste your text</li>
-                <li>See word, character, sentence, and paragraph count instantly</li>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li>Type or paste your text into the box above.</li>
+                <li>The tool will instantly count your words, characters, sentences, and paragraphs.</li>
+                <li>No signup, no limits, and your text never leaves your device.</li>
             </ol>
 
-            <h2>Related Tools</h2>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How to count characters in your text?</h3>
+                <p>Just paste your text into the box above. Our tool automatically counts both characters (with and without spaces) and words in real-time.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this a free alternative to WordCounter.net or Grammarly?</h3>
+                <p>Yes, PixSathi is completely free. We don't require a signup, and there is no character limit. Your data is processed locally in your browser.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my text safe?</h3>
+                <p>Absolutely. All counting happens instantly in your browser. Your text is never uploaded to any server.</p>
+            </div>
+
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
             <ul>
                 <li><a href="/international/gpa-calculator.html">GPA Calculator</a></li>
                 <li><a href="/international/citation-generator.html">Citation Generator</a></li>
@@ -90,15 +136,30 @@
     <footer class="footer">
         <div class="container">
             <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
+            </p>
         </div>
     </footer>
 
     <script>
     function countWords() {
         var text = document.getElementById('textInput').value;
+        
+        // Words count
         var words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+        
+        // Characters count
         var chars = text.length;
+        
+        // Sentences count
         var sentences = text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(function(s) { return s.trim().length > 0; }).length;
+        
+        // Paragraphs count
         var paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(function(p) { return p.trim().length > 0; }).length;
         
         document.getElementById('wordCount').textContent = words;

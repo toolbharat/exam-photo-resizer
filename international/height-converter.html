@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,24 +14,46 @@
       gtag('js', new Date());
       gtag('config', 'G-L5K09RC5D2');
     </script>
-    <title>Height Converter — Feet, Inches, cm, Meters | PixSathi</title>
-    <meta name="description" content="Free height converter — convert between feet, inches, centimeters, and meters instantly. No signup, works in your browser.">
-    <meta name="keywords" content="height converter, feet to cm, cm to feet, inches to cm, height converter online">
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>Height Converter Online Free - cm to feet & Height Chart | PixSathi</title>
+    <meta name="description" content="Free online height converter. Convert cm to feet, feet to cm, inches, and meters instantly. Includes a height conversion chart. Best free alternative to RapidTables and The Calculator Site.">
+    <meta name="keywords" content="height converter, cm to feet, feet to cm, height in cm, height conversion, height chart, foot to cm">
     <link rel="canonical" href="https://www.pixsathi.in/international/height-converter">
+    
     <link rel="stylesheet" href="/style.css">
+    
     <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        
         .conv-container { max-width: 600px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .conv-container h1 { font-size: 28px; color: #1a202c; margin-bottom: 8px; }
-        .conv-container .subtitle { color: #718096; font-size: 15px; margin-bottom: 24px; }
+        .conv-container .subtitle { color: #4a5568; font-size: 15px; margin-bottom: 24px; }
         .conv-row { margin-bottom: 16px; }
         .conv-row label { display: block; font-weight: 600; margin-bottom: 6px; color: #2d3748; }
         .conv-row input, .conv-row select { width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
         .conv-row input:focus, .conv-row select:focus { outline: none; border-color: #4f46e5; }
         .conv-result { margin-top: 20px; padding: 20px; background: #eef2ff; border-radius: 10px; text-align: center; }
         .conv-result .value { font-size: 32px; font-weight: 800; color: #4f46e5; }
-        .conv-result .label { font-size: 14px; color: #6b7280; margin-top: 4px; }
-        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
-        .faq-item h3 { font-size: 15px; margin: 0 0 6px 0; color: #1a202c; }
+        .conv-result .label { font-size: 14px; color: #4a5568; margin-top: 4px; }
+        
+        .content-section { max-width: 700px; margin: 40px auto 0; padding: 0 20px; line-height: 1.6; }
+        .content-section h2 { font-size: 22px; color: #1a202c; margin: 20px 0 10px; }
+        .content-section p, .content-section li { font-size: 14px; color: #4a5568; margin-bottom: 8px; }
+        .content-section ul, .content-section ol { margin: 10px 0 16px 20px; }
+        .content-section table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .content-section th, .content-section td { border: 1px solid #e2e8f0; padding: 8px 12px; text-align: center; }
+        .content-section th { background: #f7fafc; color: #1a202c; }
+        
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
         .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
     </style>
 </head>
@@ -40,7 +65,10 @@
             <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
             <nav class="nav">
                 <a href="/">🏠 Home</a>
-                <a href="/international/">🌍 International</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
                 <a href="/contact">📬 Contact</a>
             </nav>
         </div>
@@ -50,8 +78,9 @@
 
         <div class="conv-container">
             <a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
-<h1>📏 Height Converter</h1>
-            <p class="subtitle">Convert between feet, inches, centimeters, and meters instantly.</p>
+            
+            <h1>📏 Height Converter (cm to feet)</h1>
+            <p class="subtitle">Convert between feet, inches, centimeters, and meters instantly. Includes Height Chart.</p>
 
             <div class="conv-row">
                 <label>Enter Height</label>
@@ -84,29 +113,54 @@
             </div>
         </div>
 
-        <div style="max-width: 600px; margin: 0 auto;">
-            <h2 style="font-size: 20px; margin: 30px 0 16px;">Height Converter FAQ</h2>
+        <!-- SEO Content Section -->
+        <section class="content-section">
+            <h2>Free Height Converter Online</h2>
+            <p>PixSathi's Height Converter is a 100% free online tool that makes converting <strong>cm to feet</strong> and <strong>feet to cm</strong> incredibly easy. Whether you are filling out a form, checking your height for a sport, or just curious, our tool provides instant, accurate results. If you are looking for a <strong>free alternative to RapidTables or The Calculator Site</strong>, you are at the right place.</p>
 
+            <h2>How to Convert Height</h2>
+            <ol>
+                <li>Enter the height value you want to convert.</li>
+                <li>Select the "From" unit (e.g., Centimeters).</li>
+                <li>Select the "To" unit (e.g., Feet).</li>
+                <li>The tool will instantly display your converted height.</li>
+            </ol>
+
+            <h2>Height Conversion Chart (cm to feet)</h2>
+            <p>Here is a quick reference <strong>height chart</strong> to help you convert common heights without using the calculator:</p>
+            <table>
+                <tr><th>Height in cm</th><th>Height in Feet & Inches</th></tr>
+                <tr><td>150 cm</td><td>4 ft 11.1 in</td></tr>
+                <tr><td>160 cm</td><td>5 ft 3.0 in</td></tr>
+                <tr><td>170 cm</td><td>5 ft 6.9 in</td></tr>
+                <tr><td>180 cm</td><td>5 ft 10.9 in</td></tr>
+                <tr><td>190 cm</td><td>6 ft 2.8 in</td></tr>
+            </table>
+
+            <h2>Frequently Asked Questions</h2>
+            
             <div class="faq-item">
-                <h3>How do I convert cm to feet?</h3>
-                <p>Formula: feet = cm / 30.48. Example: 170 cm = 5.58 ft.</p>
+                <h3>How to convert cm to feet?</h3>
+                <p>To convert cm to feet, divide the number of centimeters by 30.48. For example, 170 cm ÷ 30.48 = 5.58 feet.</p>
             </div>
 
             <div class="faq-item">
-                <h3>How do I convert feet to cm?</h3>
-                <p>Formula: cm = feet × 30.48. Example: 5.5 ft = 167.64 cm.</p>
+                <h3>How to convert feet to cm?</h3>
+                <p>To convert feet to cm, multiply the number of feet by 30.48. For example, 5.5 ft × 30.48 = 167.64 cm.</p>
             </div>
 
             <div class="faq-item">
-                <h3>How do I convert inches to cm?</h3>
-                <p>Formula: cm = inches × 2.54. Example: 70 in = 177.8 cm.</p>
+                <h3>Is this a free alternative to RapidTables?</h3>
+                <p>Yes, PixSathi is completely free. No signups, no ads blocking your screen, and it works perfectly on mobile and desktop.</p>
             </div>
 
-            <div class="faq-item">
-                <h3>Is this tool free?</h3>
-                <p>Yes, 100% free. No signup, no watermark.</p>
-            </div>
-        </div>
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
+            <ul>
+                <li><a href="/international/weight-converter.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">Weight Converter</a></li>
+                <li><a href="/international/percentage-calculator.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">Percentage Calculator</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
 
     </main>
 
@@ -114,8 +168,11 @@
         <div class="container">
             <p>© 2026 PixSathi | Made for Everyone 🌍</p>
             <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
             </p>
         </div>
     </footer>

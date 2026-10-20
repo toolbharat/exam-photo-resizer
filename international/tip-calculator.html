@@ -1,55 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tip Calculator — Restaurant Bill | PixSathi</title>
-<meta name="description" content="Free tip calculator — calculate tip and split the bill instantly.">
-<link rel="canonical" href="https://www.pixsathi.in/international/tip-calculator">
-<link rel="stylesheet" href="/style.css">
-<style>
-.conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
-.conv-row{margin-bottom:16px}
-.conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
-.conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
-.conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
-.conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
-.conv-result .label{font-size:14px;color:#6b7280;margin-top:4px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>Tip Calculator Online Free - Calculate Tip & Split Bill | PixSathi</title>
+    <meta name="description" content="Free online tip calculator. Calculate tip percentage, total bill including tip, and split the bill instantly. Best free alternative to Calculator.net.">
+    <meta name="keywords" content="tip calculator, how to calculate tip percentage, how to calculate total bill including tip, split bill calculator, restaurant tip calculator">
+    <link rel="canonical" href="https://www.pixsathi.in/international/tip-calculator">
+    
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        
+        .conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+        .conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
+        .conv-row{margin-bottom:16px}
+        .conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
+        .conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
+        .conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
+        .conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
+        .conv-result .label{font-size:14px;color:#4a5568;margin-top:4px}
+        
+        .content-section { max-width: 700px; margin: 40px auto 0; padding: 0 20px; line-height: 1.6; }
+        .content-section h2 { font-size: 22px; color: #1a202c; margin: 20px 0 10px; }
+        .content-section p, .content-section li { font-size: 14px; color: #4a5568; margin-bottom: 8px; }
+        .content-section ul, .content-section ol { margin: 10px 0 16px 20px; }
+        
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
+    </style>
 </head>
 <body>
-<header class="header"><div class="container"><div class="logo">📸 PixSathi</div><p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p><nav class="nav"><a href="/">🏠 Home</a><a href="/international/">🌍 International</a><a href="/contact">📬 Contact</a></nav></div></header>
-<main class="container">
-<div class="conv-container">
-<a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
-<h1>🍽️ Tip Calculator</h1>
-<div class="conv-row"><label>Bill Amount</label><input type="number" id="bill" value="50" oninput="calcTip()"></div>
-<div class="conv-row"><label>Tip (%)</label><input type="number" id="tip" value="15" oninput="calcTip()"></div>
-<div class="conv-row"><label>Split Between (people)</label><input type="number" id="people" value="1" oninput="calcTip()"></div>
-<div class="conv-result"><div class="value" id="total">$57.50</div><div class="label" id="perPerson">Total per person: $57.50</div></div>
-</div>
-</main>
-<div style="max-width: 600px; margin: 30px auto; padding: 20px; background: #f9fafb; border-radius: 10px; border: 1px solid #e5e7eb;">
-    <h3 style="font-size: 18px; margin-top: 0; margin-bottom: 15px; color: #1a202c;">Explore Other Tools</h3>
-    <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; margin: 0;">
-        <li><a href="/international/temperature-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌡️ Temperature Converter</a></li>
-        <li><a href="/international/height-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📏 Height Converter</a></li>
-        <li><a href="/international/bmi-calculator" style="color: #4f46e5; text-decoration: none; font-weight: 600;">⚖️ BMI Calculator</a></li>
-        <li><a href="/international/time-zone-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌍 Time Zone Converter</a></li>
-    </ul>
-</div>
-<footer class="footer"><div class="container"><p>© 2026 PixSathi | Made for Everyone 🌍</p></div></footer>
-<script>
-function calcTip(){
-var b=parseFloat(document.getElementById('bill').value)||0;
-var t=parseFloat(document.getElementById('tip').value)||0;
-var p=parseInt(document.getElementById('people').value)||1;
-var total=b+b*t/100;
-document.getElementById('total').textContent='$'+total.toFixed(2);
-document.getElementById('perPerson').textContent='Total per person: $'+(total/p).toFixed(2);
-}
-calcTip();
-</script>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="conv-container">
+            <a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
+            
+            <h1>🍽️ Tip Calculator (Split Bill)</h1>
+            <p style="color: #64748b; margin-bottom: 20px;">Calculate tip and split the bill instantly.</p>
+
+            <div class="conv-row">
+                <label>Bill Amount</label>
+                <input type="number" id="bill" value="50" oninput="calcTip()">
+            </div>
+            <div class="conv-row">
+                <label>Tip (%)</label>
+                <input type="number" id="tip" value="15" oninput="calcTip()">
+            </div>
+            <div class="conv-row">
+                <label>Split Between (people)</label>
+                <input type="number" id="people" value="1" min="1" oninput="calcTip()">
+            </div>
+            
+            <div class="conv-result">
+                <div class="value" id="total">$57.50</div>
+                <div class="label" id="perPerson">Total per person: $57.50</div>
+            </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <section class="content-section">
+            <h2>Free Tip Calculator Online</h2>
+            <p>PixSathi's Tip Calculator is a 100% free online tool that helps you quickly figure out how much to tip and how to split the bill among friends. Whether you are at a restaurant in the US, a cafe in the UK, or anywhere else, our tool ensures you always leave the right amount. If you are looking for a <strong>free alternative to Calculator.net or CalculatorSoup</strong>, you are at the right place.</p>
+
+            <h2>How to Calculate Tip Percentage</h2>
+            <p>Calculating the tip percentage is straightforward. Here is the formula we use:</p>
+            <ul>
+                <li><strong>Tip Amount:</strong> Bill Amount × (Tip % / 100)</li>
+                <li><strong>Total Bill (including tip):</strong> Bill Amount + Tip Amount</li>
+                <li><strong>Amount per person:</strong> Total Bill / Number of People</li>
+            </ul>
+            <p>For example, if your bill is $50 and you want to leave a 15% tip, the tip amount is $7.50, making your total bill $57.50. If you split it among 2 people, each person pays $28.75.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How do I calculate a 15% tip?</h3>
+                <p>To calculate a 15% tip, multiply your bill amount by 0.15. For a $50 bill, 15% is $7.50, making the total $57.50. You can also just use the calculator above.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How to calculate total amount with tip?</h3>
+                <p>Enter your bill amount and desired tip percentage into the calculator. The tool will instantly show you the total amount including tip, as well as how much it is per person if you split the bill.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I split the bill evenly?</h3>
+                <p>Simply enter the number of people in the "Split Between" field. The calculator will automatically divide the total bill (including tip) by the number of people and show you the amount each person owes.</p>
+            </div>
+
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
+            <ul>
+                <li><a href="/international/discount-calculator.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">💰 Discount Calculator</a></li>
+                <li><a href="/international/percentage-calculator.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📊 Percentage Calculator</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    function calcTip(){
+        var b=parseFloat(document.getElementById('bill').value)||0;
+        var t=parseFloat(document.getElementById('tip').value)||0;
+        var p=parseInt(document.getElementById('people').value)||1;
+        
+        if(p < 1) p = 1; // Safety check for people count
+        
+        var total = b + (b * t / 100);
+        document.getElementById('total').textContent = '$' + total.toFixed(2);
+        document.getElementById('perPerson').textContent = 'Total per person: $' + (total / p).toFixed(2);
+    }
+    calcTip();
+    </script>
 </body>
 </html>

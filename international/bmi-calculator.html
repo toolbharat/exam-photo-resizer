@@ -1,58 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BMI Calculator — Body Mass Index | PixSathi</title>
-<meta name="description" content="Free BMI calculator — calculate your Body Mass Index instantly.">
-<link rel="canonical" href="https://www.pixsathi.in/international/bmi-calculator">
-<link rel="stylesheet" href="/style.css">
-<style>
-.conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
-.conv-row{margin-bottom:16px}
-.conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
-.conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
-.conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
-.conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
-.conv-result .label{font-size:14px;color:#6b7280;margin-top:4px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>BMI Calculator Online Free - Metric & Imperial (Men & Women) | PixSathi</title>
+    <meta name="description" content="Free online BMI calculator. Calculate your Body Mass Index (BMI) for men and women instantly. Metric (kg, cm). Best free alternative to NHS and Calculator.net.">
+    <meta name="keywords" content="bmi calculator, bmi calculator for women, bmi calculator metric, nhs bmi calculator, bmi calculator for men, how do i calculate my bmi">
+    <link rel="canonical" href="https://www.pixsathi.in/international/bmi-calculator">
+    
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        .header { padding: 8px 20px !important; }
+        .header .container { gap: 10px !important; }
+        .logo { font-size: 16px !important; }
+        .tagline { font-size: 10px !important; margin: 0 !important; }
+        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
+        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        
+        .conv-container{max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+        .conv-container h1{font-size:28px;color:#1a202c;margin-bottom:8px}
+        .conv-row{margin-bottom:16px}
+        .conv-row label{display:block;font-weight:600;margin-bottom:6px;color:#2d3748}
+        .conv-row input{width:100%;padding:12px;border:2px solid #e5e7eb;border-radius:8px;font-size:16px;box-sizing:border-box}
+        .conv-result{margin-top:20px;padding:20px;background:#eef2ff;border-radius:10px;text-align:center}
+        .conv-result .value{font-size:32px;font-weight:800;color:#4f46e5}
+        .conv-result .label{font-size:14px;color:#4a5568;margin-top:4px}
+        
+        .content-section { max-width: 700px; margin: 40px auto 0; padding: 0 20px; line-height: 1.6; }
+        .content-section h2 { font-size: 22px; color: #1a202c; margin: 20px 0 10px; }
+        .content-section p, .content-section li { font-size: 14px; color: #4a5568; margin-bottom: 8px; }
+        .content-section ul, .content-section ol { margin: 10px 0 16px 20px; }
+        .content-section table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .content-section th, .content-section td { border: 1px solid #e2e8f0; padding: 8px 12px; text-align: center; }
+        .content-section th { background: #f7fafc; color: #1a202c; }
+        
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
+    </style>
 </head>
 <body>
-<header class="header"><div class="container"><div class="logo">📸 PixSathi</div><p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p><nav class="nav"><a href="/">🏠 Home</a><a href="/international/">🌍 International</a><a href="/contact">📬 Contact</a></nav></div></header>
-<main class="container">
-<div class="conv-container">
-<a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
-<h1>⚖️ BMI Calculator</h1>
-<div class="conv-row"><label>Weight (kg)</label><input type="number" id="weight" value="70" oninput="calcBMI()"></div>
-<div class="conv-row"><label>Height (cm)</label><input type="number" id="height" value="170" oninput="calcBMI()"></div>
-<div class="conv-result"><div class="value" id="bmi">24.2</div><div class="label" id="cat">Normal weight</div></div>
-</div>
-</main>
-<div style="max-width: 600px; margin: 30px auto; padding: 20px; background: #f9fafb; border-radius: 10px; border: 1px solid #e5e7eb;">
-    <h3 style="font-size: 18px; margin-top: 0; margin-bottom: 15px; color: #1a202c;">Explore Other Tools</h3>
-    <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; margin: 0;">
-        <li><a href="/international/temperature-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌡️ Temperature Converter</a></li>
-        <li><a href="/international/height-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📏 Height Converter</a></li>
-        <li><a href="/international/bmi-calculator" style="color: #4f46e5; text-decoration: none; font-weight: 600;">⚖️ BMI Calculator</a></li>
-        <li><a href="/international/time-zone-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🌍 Time Zone Converter</a></li>
-    </ul>
-</div>
-<footer class="footer"><div class="container"><p>© 2026 PixSathi | Made for Everyone 🌍</p></div></footer>
-<script>
-function calcBMI(){
-var w=parseFloat(document.getElementById('weight').value)||0;
-var h=parseFloat(document.getElementById('height').value)/100||1;
-var bmi=w/(h*h);
-var cat='Normal weight';
-if(bmi<18.5)cat='Underweight';
-else if(bmi<25)cat='Normal weight';
-else if(bmi<30)cat='Overweight';
-else cat='Obese';
-document.getElementById('bmi').textContent=bmi.toFixed(1);
-document.getElementById('cat').textContent=cat;
-}
-calcBMI();
-</script>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="conv-container">
+            <a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
+            
+            <h1>⚖️ BMI Calculator (Metric) for Men & Women</h1>
+            <p style="color: #64748b; margin-bottom: 20px;">Calculate your Body Mass Index (BMI) instantly.</p>
+
+            <div class="conv-row">
+                <label>Weight (kg)</label>
+                <input type="number" id="weight" value="70" oninput="calcBMI()">
+            </div>
+            <div class="conv-row">
+                <label>Height (cm)</label>
+                <input type="number" id="height" value="170" oninput="calcBMI()">
+            </div>
+            
+            <div class="conv-result">
+                <div class="value" id="bmi">24.2</div>
+                <div class="label" id="cat">Normal weight</div>
+            </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <section class="content-section">
+            <h2>Free BMI Calculator Online</h2>
+            <p>PixSathi's BMI Calculator is a 100% free online tool that helps you calculate your Body Mass Index (BMI) instantly. Whether you are looking for a <strong>BMI calculator for women</strong>, a <strong>BMI calculator for men</strong>, or a standard metric calculator, our tool provides accurate results based on your height and weight. If you are looking for a <strong>free alternative to the NHS or Calculator.net</strong>, you are at the right place.</p>
+
+            <h2>How do I calculate my BMI?</h2>
+            <p>BMI is calculated by dividing your weight in kilograms by the square of your height in meters. The formula is: <strong>BMI = kg / m²</strong>. Our tool does this math for you automatically as you type in your weight and height above.</p>
+
+            <h2>BMI Chart for Women and Men</h2>
+            <p>Here is a standard <strong>BMI chart</strong> to help you understand your result:</p>
+            <table>
+                <tr><th>BMI Range</th><th>Category</th></tr>
+                <tr><td>Below 18.5</td><td>Underweight</td></tr>
+                <tr><td>18.5 – 24.9</td><td>Normal weight</td></tr>
+                <tr><td>25.0 – 29.9</td><td>Overweight</td></tr>
+                <tr><td>30.0 and Above</td><td>Obese</td></tr>
+            </table>
+
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Is this a free alternative to the NHS BMI calculator?</h3>
+                <p>Yes, PixSathi is completely free. It works exactly like the NHS BMI calculator but with no signups and no ads blocking your screen.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What is a healthy BMI for women?</h3>
+                <p>A healthy BMI range for both women and men is typically between 18.5 and 24.9. However, BMI is a general indicator and doesn't measure body fat directly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How accurate is this BMI calculator?</h3>
+                <p>Our BMI calculator uses the standard formula (kg/m²), which is used by health professionals worldwide, including the CDC and NHS.</p>
+            </div>
+
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
+            <ul>
+                <li><a href="/international/height-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📏 Height Converter</a></li>
+                <li><a href="/international/weight-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">⚖️ Weight Converter</a></li>
+                <li><a href="/international/percentage-calculator" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📊 Percentage Calculator</a></li>
+                <li><a href="/international/">All International Tools</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    function calcBMI(){
+        var w = parseFloat(document.getElementById('weight').value) || 0;
+        var h = parseFloat(document.getElementById('height').value) / 100 || 1;
+        var bmi = w / (h * h);
+        var cat = 'Normal weight';
+        
+        if (bmi < 18.5) cat = 'Underweight';
+        else if (bmi < 25) cat = 'Normal weight';
+        else if (bmi < 30) cat = 'Overweight';
+        else cat = 'Obese';
+        
+        document.getElementById('bmi').textContent = bmi.toFixed(1);
+        document.getElementById('cat').textContent = cat;
+    }
+    
+    calcBMI();
+    </script>
 </body>
 </html>

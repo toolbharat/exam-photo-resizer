@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA Calculator Free - 4.0 Scale | PixSathi</title>
-    <meta name="description" content="Calculate your GPA on 4.0 scale free. Add courses, grades, and credits to get your GPA instantly. For US, Canada, and international students.">
-    <meta name="keywords" content="GPA calculator, 4.0 scale GPA, college GPA, university GPA, grade point average">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>GPA Calculator Online Free - High School & College | PixSathi</title>
+    <meta name="description" content="Free GPA calculator for high school and college students. Calculate cumulative and weighted GPA on a 4.0 scale instantly. 100% free, no signup required.">
+    <meta name="keywords" content="gpa calculator high school, gpa calculator college, how to calculate gpa, cumulative gpa calculator, weighted gpa calculator, 4.0 scale">
+    <link rel="canonical" href="https://www.pixsathi.in/international/gpa-calculator">
+    
     <link rel="stylesheet" href="/style.css">
     <style>
         .header { padding: 8px 20px !important; }
@@ -13,13 +30,14 @@
         .logo { font-size: 16px !important; }
         .tagline { font-size: 10px !important; margin: 0 !important; }
         .nav a { padding: 4px 10px !important; font-size: 12px !important; }
-        .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
-        .content-section p, .content-section li { font-size: 13px !important; }
+        .content-section h2 { font-size: 20px !important; margin: 20px 0 10px !important; color: #1a202c; }
+        .content-section h3 { font-size: 16px !important; margin: 16px 0 8px !important; color: #1a202c; }
+        .content-section p, .content-section li { font-size: 14px !important; color: #4a5568; }
         .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
         .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } .back-btn:hover { background: #4f46e5; color: white; }
         .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; margin: 20px 0; }
         .course-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; }
-        .course-row input, .course-row select { padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; }
+        .course-row input, .course-row select { padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; box-sizing: border-box; }
         .course-row input { flex: 1; }
         .course-row select { width: 100px; }
         .course-row .credits { width: 80px; }
@@ -27,6 +45,9 @@
         .add-btn { background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; margin-top: 10px; }
         .calc-btn { background: #4f46e5; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 15px; width: 100%; }
         .result-box { margin-top: 20px; padding: 20px; background: #eef2ff; border-radius: 10px; font-size: 24px; font-weight: 700; color: #1d1d1f; text-align: center; }
+        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
+        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
     </style>
 </head>
 <body>
@@ -49,11 +70,11 @@
     <main class="container">
 
         <a href="/international/" class="back-btn">← Back to International Tools</a>
-        <h1>🎓 GPA Calculator</h1>
-        <p>Calculate your GPA on 4.0 scale — free, no signup.</p>
+        <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">🎓 GPA Calculator Online (High School & College)</h1>
+        <p style="color: #64748b; margin-bottom: 25px;">Calculate your cumulative and weighted GPA on a 4.0 scale — free, no signup.</p>
 
         <div class="tool-box">
-            <h2>Enter Your Courses</h2>
+            <h2 style="font-size: 18px; margin-bottom: 15px;">Enter Your Courses</h2>
             <div id="courses">
                 <div class="course-row">
                     <input type="text" placeholder="Course name" class="course-name">
@@ -79,17 +100,21 @@
             <div class="result-box" id="result" style="display:none;"></div>
         </div>
 
-        <section class="content-section">
-            <h2>How to Use</h2>
-            <ol>
-                <li>Enter your course name</li>
+        <!-- SEO Content Section -->
+        <section class="content-section" style="max-width: 700px; margin: 40px auto 0; line-height: 1.6;">
+            <h2 style="font-size: 22px; margin-bottom: 12px; color: #1a202c;">Free GPA Calculator for High School & College</h2>
+            <p style="margin-bottom: 20px;">PixSathi's GPA Calculator is a 100% free online tool that helps students calculate their <strong>High School GPA</strong> and <strong>College GPA</strong> instantly. Whether you need to find your <strong>cumulative GPA</strong> or calculate your <strong>weighted GPA</strong>, our tool makes the process incredibly easy on a standard 4.0 scale.</p>
+
+            <h2 style="font-size: 22px; margin-bottom: 16px; color: #1a202c;">How to Calculate GPA?</h2>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li>Enter your course names (optional, for your reference)</li>
                 <li>Select your grade (A, B+, etc.)</li>
-                <li>Enter credit hours</li>
-                <li>Click "Calculate GPA"</li>
+                <li>Enter the credit hours for each course</li>
+                <li>Click "Calculate GPA" to see your result instantly</li>
             </ol>
 
-            <h2>GPA Scale (4.0)</h2>
-            <ul>
+            <h2 style="font-size: 22px; margin-bottom: 16px; color: #1a202c;">GPA Scale (4.0)</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
                 <li><strong>A:</strong> 4.0 (Excellent)</li>
                 <li><strong>B:</strong> 3.0 (Good)</li>
                 <li><strong>C:</strong> 2.0 (Average)</li>
@@ -97,15 +122,29 @@
                 <li><strong>F:</strong> 0.0 (Fail)</li>
             </ul>
 
-            <h2>Why Use Our Tool?</h2>
-            <ul>
-                <li>✅ 100% Free</li>
-                <li>✅ No Signup Required</li>
-                <li>✅ Instant Results</li>
-                <li>✅ Works on Any Device</li>
-            </ul>
+            <h2 style="font-size: 22px; margin-bottom: 16px; color: #1a202c;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How to calculate GPA?</h3>
+                <p>To calculate GPA, multiply the grade point for each class by the credit hours, add them all up, and divide by the total number of credit hours.</p>
+            </div>
 
-            <h2>Related Tools</h2>
+            <div class="faq-item">
+                <h3>What is a cumulative GPA?</h3>
+                <p>Cumulative GPA (CGPA) is the average of all your grade points across all semesters or terms you have completed so far.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is a weighted GPA?</h3>
+                <p>A weighted GPA takes into account the difficulty of your courses. For example, an 'A' in an AP or Honors class might be worth 5.0 instead of 4.0.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is a good GPA?</h3>
+                <p>A GPA of 3.0 or higher is generally considered good, while a GPA of 3.5+ is excellent for college admissions.</p>
+            </div>
+
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
             <ul>
                 <li><a href="/international/grade-calculator.html">Grade Calculator</a></li>
                 <li><a href="/international/word-counter.html">Word Counter</a></li>
