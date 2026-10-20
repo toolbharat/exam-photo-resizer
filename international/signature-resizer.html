@@ -6,7 +6,6 @@
     <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
     <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,12 +14,11 @@
       gtag('config', 'G-L5K09RC5D2');
     </script>
     
-    <!-- Vercel Insights -->
     <script defer src="/_vercel/insights/script.js"></script>
 
     <title>Signature Resizer Online Free - US/UK Visa Signature | PixSathi</title>
-    <meta name="description" content="Free online signature resizer for US and UK visa applications. Resize and crop your signature to the exact size instantly. No signup, 100% private.">
-    <meta name="keywords" content="signature resizer, us visa signature, uk visa signature, resize signature online, signature for visa application">
+    <meta name="description" content="Free online signature resizer for US and UK visa applications. Resize to exact pixels (140x60) and exact KB (20KB) instantly. No signup, 100% private.">
+    <meta name="keywords" content="signature resizer, signature resize in kb, us visa signature, uk visa signature, resize signature to 140x60">
     <link rel="canonical" href="https://www.pixsathi.in/international/signature-resizer">
     
     <link rel="stylesheet" href="/style.css">
@@ -36,24 +34,48 @@
         .back-btn { display: inline-block; margin-bottom: 15px; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; } 
         .back-btn:hover { background: #4f46e5; color: white; }
         
-        .tool-box { background: #f8f9ff; border: 2px dashed #4f46e5; border-radius: 12px; padding: 24px; text-align: center; margin: 20px 0; }
-        .tool-box input[type="file"] { display: block; margin: 0 auto 15px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background: white; width: 100%; max-width: 350px; box-sizing: border-box; }
-        .tool-box button { background: #4f46e5; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-        .tool-box button:hover { background: #4338ca; }
+        .resizer-wrapper { max-width: 700px; margin: 0 auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         
-        .preview-box { margin-top: 20px; text-align: center; }
-        .preview-box img { max-width: 100%; height: auto; max-height: 200px; border-radius: 8px; border: 1px solid #ddd; background: #fff; }
-        .download-btn { display: inline-block; background: #10b981; color: white; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 15px; font-size: 14px; }
+        /* Upload Box */
+        .upload-box { border: 2px dashed #4f46e5; border-radius: 10px; padding: 40px 20px; text-align: center; background: #fafbff; cursor: pointer; position: relative; transition: 0.2s; margin-bottom: 20px; }
+        .upload-box:hover { background: #eef2ff; }
+        .upload-box input[type="file"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+        .upload-box h3 { color: #4f46e5; margin-bottom: 5px; font-size: 18px; }
+        .upload-box p { color: #718096; font-size: 13px; }
+        
+        /* Preview Area */
+        .preview-area { display: none; text-align: center; margin-bottom: 20px; position: relative; padding: 15px; background: #f8f9fa; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .preview-area img { max-width: 100%; max-height: 200px; border-radius: 6px; object-fit: contain; }
+        .remove-btn { position: absolute; top: 10px; right: 10px; background: #ef4444; color: white; border: none; border-radius: 50%; width: 24px; height: 24px; cursor: pointer; font-weight: bold; }
+        
+        /* Controls */
+        .controls-area { display: none; margin-top: 20px; }
+        .size-badges { text-align: center; margin-bottom: 15px; font-weight: 600; color: #4a5568; font-size: 14px; }
+        .size-badges span { background: #e2e8f0; padding: 4px 10px; border-radius: 12px; margin: 0 5px; }
+        
+        .unit-toggle { text-align: center; margin-bottom: 15px; }
+        .unit-toggle input { margin-right: 5px; cursor: pointer; }
+        .unit-toggle label { margin-right: 20px; font-size: 14px; cursor: pointer; color: #4a5568; }
+        
+        .input-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .input-group { text-align: center; }
+        .input-group label { display: block; font-size: 12px; color: #4a5568; font-weight: 600; margin-bottom: 5px; }
+        .input-group input { width: 90px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; text-align: center; font-size: 15px; font-weight: 600; }
+        
+        .size-input-group { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .size-input-group label { font-size: 14px; font-weight: 600; color: #4a5568; }
+        .size-input-group input { width: 90px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; text-align: center; font-size: 15px; font-weight: 600; }
+        .size-input-group span { background: #cbd5e1; padding: 10px 15px; border-radius: 0 6px 6px 0; font-weight: bold; margin-left: -12px; color: #334155; }
+        
+        .action-btn { display: block; width: 100%; max-width: 250px; margin: 0 auto; background: #4f46e5; color: white; border: none; padding: 14px; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+        .action-btn:hover { background: #4338ca; }
+        .action-btn:disabled { background: #a3bffa; cursor: not-allowed; }
+        
+        .note-text { text-align: center; font-size: 12px; color: #718096; margin-top: 15px; }
+        
+        .download-area { display: none; text-align: center; margin-top: 20px; padding: 20px; background: #ecfdf5; border-radius: 10px; border: 1px solid #a7f3d0; }
+        .download-btn { display: inline-block; background: #10b981; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; }
         .download-btn:hover { background: #059669; }
-        
-        .content-section { max-width: 700px; margin: 40px auto 0; padding: 0 20px; line-height: 1.6; }
-        .content-section h2 { font-size: 22px; color: #1a202c; margin: 20px 0 10px; }
-        .content-section p, .content-section li { font-size: 14px; color: #4a5568; margin-bottom: 8px; }
-        .content-section ul, .content-section ol { margin: 10px 0 16px 20px; }
-        
-        .faq-item { background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0; }
-        .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
-        .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
     </style>
 </head>
 <body>
@@ -76,64 +98,78 @@
     <main class="container">
         <a href="/international/" class="back-btn">← Back to International Tools</a>
         
-        <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">✍️ Signature Resizer (US/UK Visa)</h1>
-        <p style="color: #64748b; margin-bottom: 25px;">Resize your signature for visa applications instantly — free, private, no signup.</p>
+        <div style="text-align: center; margin-bottom: 25px;">
+            <h1 style="font-size: 26px; color: #1e293b; margin-bottom: 8px;">✍️ Resize Signature - PixSathi Image Resizer</h1>
+            <p style="color: #64748b; font-size: 14px;">Resize your signature to exact Pixel size and exact KB.</p>
+        </div>
 
-        <div class="tool-box">
-            <h2 style="font-size: 18px; margin-bottom: 15px;">Upload Your Signature</h2>
-            <input type="file" id="photoInput" accept="image/*">
-            <br>
-            <button onclick="resizePhoto()">Resize Signature</button>
-            
-            <div class="preview-box" id="previewBox" style="display:none;">
-                <img id="previewImg" src="" alt="Preview">
-                <br>
-                <a id="downloadLink" class="download-btn" download="visa-signature.jpg">⬇ Download Signature</a>
+        <div class="resizer-wrapper">
+            <!-- Upload Box -->
+            <div class="upload-box" id="uploadBox">
+                <input type="file" id="fileInput" accept="image/*">
+                <h3>Click or Drag to Upload Signature</h3>
+                <p>Supports JPG, PNG, WebP</p>
+            </div>
+
+            <!-- Preview Area -->
+            <div class="preview-area" id="previewArea">
+                <button class="remove-btn" onclick="removeImage()">✕</button>
+                <img id="previewImg" src="" alt="Signature Preview">
+                <p id="fileName" style="font-size: 12px; color: #4a5568; margin-top: 8px; word-break: break-all;"></p>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-area" id="controlsArea">
+                <div class="size-badges">
+                    <span>W: <span id="badgeW">140</span></span>
+                    <span>H: <span id="badgeH">60</span></span>
+                </div>
+
+                <div class="unit-toggle">
+                    <input type="radio" id="pxUnit" name="unit" checked> <label for="pxUnit">Pixel</label>
+                    <input type="radio" id="cmUnit" name="unit"> <label for="cmUnit">Centimeter</label>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Width (px)</label>
+                        <input type="number" id="widthInput" value="140">
+                    </div>
+                    <div class="input-group" style="display: flex; align-items: center; font-weight: bold; color: #718096; padding-top: 15px;">X</div>
+                    <div class="input-group">
+                        <label>Height (px)</label>
+                        <input type="number" id="heightInput" value="60">
+                    </div>
+                </div>
+                
+                <div class="size-input-group">
+                    <label>Target Size:</label>
+                    <input type="number" id="sizeInput" value="20">
+                    <span>KB</span>
+                </div>
+
+                <button class="action-btn" id="resizeBtn" onclick="processImage()" disabled>Resize Signature</button>
+                <p class="note-text">Note:- We process directly in your browser. 100% Private.</p>
+            </div>
+
+            <!-- Download Area -->
+            <div class="download-area" id="downloadArea">
+                <h3 style="color: #065f46; margin-bottom: 10px; font-size: 16px;">✅ Signature Resized Successfully!</h3>
+                <p style="font-size: 13px; color: #047857; margin-bottom: 15px;">Your file is ready. Size: <strong id="finalSizeText">0</strong> KB</p>
+                <a id="downloadLink" class="download-btn" download="resized_signature.jpg">⬇ Download Signature</a>
             </div>
         </div>
 
-        <!-- SEO Content Section -->
-        <section class="content-section">
-            <h2>Free Signature Resizer for Visas</h2>
-            <p>PixSathi's Signature Resizer is a 100% free online tool designed for visa applicants. Whether you need a signature for a <strong>US Visa</strong> or a <strong>UK Visa</strong>, our tool automatically fits your signature onto a clean white background without stretching or cropping the important parts.</p>
+        <!-- SEO Content -->
+        <section class="content-section" style="max-width: 700px; margin: 40px auto 0; line-height: 1.6;">
+            <h2 style="font-size: 22px; color: #1a202c; margin: 20px 0 10px;">Free Signature Resizer for Visas</h2>
+            <p style="font-size: 14px; color: #4a5568;">PixSathi's Signature Resizer helps you create exact pixel sizes (like 140x60) and compress them to exact KB (like 20KB) for US and UK visa applications. Unlike other tools, we process everything in your browser, ensuring 100% privacy.</p>
 
-            <h2>Signature Requirements</h2>
-            <ul>
-                <li><strong>US Visa:</strong> Typically requires a clear signature on a white background. Our tool creates a clean digital image ready for upload.</li>
-                <li><strong>UK Visa:</strong> Similar requirements — black ink, clear handwriting, no background clutter.</li>
-                <li><strong>Format:</strong> We output high-quality JPG.</li>
-            </ul>
-
-            <h2>How to Use</h2>
-            <ol>
-                <li>Click "Choose File" and upload a photo of your signature.</li>
-                <li>Click the "Resize Signature" button.</li>
-                <li>The tool will automatically center your signature on a white background.</li>
-                <li>Click "Download Signature" to save it to your device.</li>
-            </ol>
-
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <h3>Will my signature be stretched?</h3>
-                <p>No! Our smart formula resizes the image to fit inside the frame while maintaining its original aspect ratio, so your signature looks exactly as you drew it.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Is this tool free?</h3>
-                <p>Yes, 100% free. No signup, no watermark, and your files are never uploaded to a server.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Can I use this for other documents?</h3>
-                <p>Absolutely. You can use this signature resizer for bank forms, exam forms, or any other official document that requires a clean digital signature.</p>
-            </div>
-
-            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
-            <ul>
-                <li><a href="/international/us-passport-photo.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🇺🇸 US Passport Photo Maker</a></li>
-                <li><a href="/international/uk-visa-photo.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">🇬🇧 UK Visa Photo Maker</a></li>
-                <li><a href="/international/">All International Tools</a></li>
+            <h2 style="font-size: 22px; color: #1a202c; margin: 20px 0 10px;">Signature Requirements</h2>
+            <ul style="font-size: 14px; color: #4a5568; margin-left: 20px;">
+                <li><strong>US Visa:</strong> 35x45 mm (approx 140x60 px), white background.</li>
+                <li><strong>UK Visa:</strong> 3.5x4.5 cm, light grey or white background.</li>
+                <li><strong>Size limit:</strong> Usually 10KB to 20KB.</li>
             </ul>
         </section>
     </main>
@@ -141,66 +177,115 @@
     <footer class="footer">
         <div class="container">
             <p>© 2026 PixSathi | Made for Everyone 🌍</p>
-            <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">Home</a> · 
-                <a href="/about">About</a> · 
-                <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a> · 
-                <a href="/contact">Contact</a>
-            </p>
         </div>
     </footer>
 
     <script>
-    function resizePhoto() {
-        var input = document.getElementById('photoInput');
-        if (!input.files || !input.files[0]) {
-            alert('Please select a signature first.');
-            return;
+        const fileInput = document.getElementById('fileInput');
+        const previewArea = document.getElementById('previewArea');
+        const previewImg = document.getElementById('previewImg');
+        const controlsArea = document.getElementById('controlsArea');
+        const resizeBtn = document.getElementById('resizeBtn');
+        const downloadArea = document.getElementById('downloadArea');
+        const downloadLink = document.getElementById('downloadLink');
+        const fileName = document.getElementById('fileName');
+        const widthInput = document.getElementById('widthInput');
+        const heightInput = document.getElementById('heightInput');
+        const sizeInput = document.getElementById('sizeInput');
+        const badgeW = document.getElementById('badgeW');
+        const badgeH = document.getElementById('badgeH');
+        const finalSizeText = document.getElementById('finalSizeText');
+
+        let uploadedImage = null;
+
+        // Live badge update
+        widthInput.addEventListener('input', () => badgeW.textContent = widthInput.value);
+        heightInput.addEventListener('input', () => badgeH.textContent = heightInput.value);
+
+        // Handle File Upload
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                fileName.textContent = file.name;
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const img = new Image();
+                    img.onload = function() {
+                        uploadedImage = img;
+                        previewImg.src = event.target.result;
+                        previewArea.style.display = 'block';
+                        controlsArea.style.display = 'block';
+                        resizeBtn.disabled = false;
+                        downloadArea.style.display = 'none';
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function removeImage() {
+            fileInput.value = '';
+            uploadedImage = null;
+            previewArea.style.display = 'none';
+            controlsArea.style.display = 'none';
+            downloadArea.style.display = 'none';
+            resizeBtn.disabled = true;
         }
-        
-        var file = input.files[0];
-        var reader = new FileReader();
-        
-        reader.onload = function(e) {
-            var img = new Image();
-            img.onload = function() {
-                // Canvas size: 600x300 (Standard landscape aspect ratio for signatures)
-                var canvas = document.createElement('canvas');
-                var targetWidth = 600;
-                var targetHeight = 300;
-                canvas.width = targetWidth;
-                canvas.height = targetHeight;
-                
-                var ctx = canvas.getContext('2d');
-                
-                // Fill with white background
-                ctx.fillStyle = '#ffffff';
-                ctx.fillRect(0, 0, targetWidth, targetHeight);
-                
-                // Calculate scaling to fit (Contain)
-                var scale = Math.min(targetWidth / img.width, targetHeight / img.height);
-                var newWidth = img.width * scale;
-                var newHeight = img.height * scale;
-                
-                // Center the image
-                var x = (targetWidth - newWidth) / 2;
-                var y = (targetHeight - newHeight) / 2;
-                
-                // Draw the signature
-                ctx.drawImage(img, x, y, newWidth, newHeight);
-                
-                // Convert to JPG
-                var dataUrl = canvas.toDataURL('image/jpeg', 0.9);
-                
-                document.getElementById('previewImg').src = dataUrl;
-                document.getElementById('downloadLink').href = dataUrl;
-                document.getElementById('previewBox').style.display = 'block';
-            };
-            img.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
+
+        // The Resize & Compress Logic
+        function processImage() {
+            if (!uploadedImage) return;
+
+            const targetW = parseInt(widthInput.value) || 140;
+            const targetH = parseInt(heightInput.value) || 60;
+            const targetKB = parseInt(sizeInput.value) || 20;
+
+            const canvas = document.createElement('canvas');
+            canvas.width = targetW;
+            canvas.height = targetH;
+            const ctx = canvas.getContext('2d');
+
+            // White Background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, targetW, targetH);
+
+            // Center crop logic (Cover)
+            const imgRatio = uploadedImage.width / uploadedImage.height;
+            const targetRatio = targetW / targetH;
+            let sx, sy, sWidth, sHeight;
+
+            if (imgRatio > targetRatio) {
+                sHeight = uploadedImage.height;
+                sWidth = uploadedImage.height * targetRatio;
+                sx = (uploadedImage.width - sWidth) / 2;
+                sy = 0;
+            } else {
+                sWidth = uploadedImage.width;
+                sHeight = uploadedImage.width / targetRatio;
+                sx = 0;
+                sy = (uploadedImage.height - sHeight) / 2;
+            }
+
+            ctx.drawImage(uploadedImage, sx, sy, sWidth, sHeight, 0, 0, targetW, targetH);
+
+            // Compress to target KB
+            let quality = 0.9;
+            let dataUrl = canvas.toDataURL('image/jpeg', quality);
+            let currentSizeKB = Math.round((dataUrl.length * (3/4)) / 1024);
+
+            // Loop to reduce quality until under target KB
+            while (currentSizeKB > targetKB && quality > 0.1) {
+                quality -= 0.1;
+                dataUrl = canvas.toDataURL('image/jpeg', quality);
+                currentSizeKB = Math.round((dataUrl.length * (3/4)) / 1024);
+            }
+
+            // Show Result
+            finalSizeText.textContent = currentSizeKB;
+            downloadLink.href = dataUrl;
+            downloadArea.style.display = 'block';
+        }
     </script>
 </body>
 </html>
