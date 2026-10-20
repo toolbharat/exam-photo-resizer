@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <meta name="msvalidate.01" content="0579ECBF01B02FE80D1C3CA91617173D" />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
@@ -13,40 +14,80 @@
       gtag('js', new Date());
       gtag('config', 'G-L5K09RC5D2');
     </script>
+    
+    <!-- Vercel Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
 
-    <title>Image Compressor Online Free - Best TinyPNG Alternative | PixSathi</title>
-<meta name="description" content="Free online image compressor. Compress JPG, PNG to 20KB, 50KB, 100KB instantly. Works in browser, files never uploaded. The best free alternative to TinyPNG and iLoveIMG.">
-<meta name="keywords" content="image compressor, compress image to 20KB, compress JPG online, reduce image size, TinyPNG alternative, iLovePDF alternative, free image compressor">
+    <title>Image Compressor Online Free - Compress Photo & Reduce Size | PixSathi</title>
+    <meta name="description" content="Free online image compressor. Easily compress images, reduce image size, and compress photos to exact KB (20KB, 50KB). The best free alternative to iLoveIMG and FreeConvert.">
+    <meta name="keywords" content="image compressor, compress image, photo compressor, image compressor free, compress photo, image size reducer, reduce image size, iLoveIMG alternative, FreeConvert alternative">
     <link rel="canonical" href="https://www.pixsathi.in/image-compressor">
+    
     <link rel="stylesheet" href="/style.css">
+    <style>
+        /* CSS from your previous code */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+        .card h2 {
+            font-size: 17px;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .preview-box {
+            text-align: center;
+            padding: 10px;
+            max-width: 100%;
+        }
+        .preview-box img {
+            max-width: 240px !important;
+            max-height: 160px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-                        <h1 class="logo">📸 Photo Resizer</h1>
-            <p class="tagline">Free • Fast • 100% Private (files never leave your device)</p>
-                        <nav class="nav">
-    <a href="/">🏠 Home</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-    <a href="/image-compressor">🗜️ Compressor</a>
-    <a href="/photo-merger">🔗 Merger</a>
-</nav>
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
+                <a href="/exams/">📝 Exams</a>
+                <a href="/international/">🌍 International</a>
+                <a href="/finance/">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
+            </nav>
         </div>
     </header>
 
     <main class="container">
+        
+        <h1 style="text-align: center; font-size: 28px; color: #1e293b; margin: 30px 0 10px;">📸 Image Compressor Online</h1>
+        <p style="text-align: center; color: #64748b; margin-bottom: 25px;">Compress images, reduce image size to exact KB, and compress photos — 100% free & private.</p>
 
         <div class="card">
             <h2>1. Select Your Photo</h2>
-            <label for="compressInput">Photo select karein</label>
-            <input type="file" id="compressInput" accept="image/*" aria-label="Photo upload karein">
+            <label for="compressInput">Choose Image</label>
+            <input type="file" id="compressInput" accept="image/*" aria-label="Upload image to compress">
         </div>
 
         <div class="card">
             <h2>2. Choose Target Size</h2>
             <label for="targetSize">Target Size (KB)</label>
-            <select id="targetSize" aria-label="Target size select karein">
+            <select id="targetSize" aria-label="Select target file size">
                 <option value="10">10 KB</option>
                 <option value="20">20 KB</option>
                 <option value="50" selected>50 KB</option>
@@ -58,86 +99,90 @@
         <div class="card">
             <h2>3. Compress & Download</h2>
             <div class="preview-box">
-                <img id="compressPreview" alt="Preview" style="display:none; border-radius:6px;">
+                <img id="compressPreview" alt="Image Preview" style="display:none; border-radius:6px; margin: 0 auto;">
                 <p id="compressStatus">Preview will appear here after you select a photo.</p>
             </div>
-            <button id="compressBtn" disabled aria-label="Photo compress karein">Compress Photo</button>
-            <button id="compressDownloadBtn" disabled aria-label="Compressed photo download karein" style="margin-top:10px;">Download Compressed</button>
+            <button id="compressBtn" disabled aria-label="Compress image">Compress Image</button>
+            <button id="compressDownloadBtn" disabled aria-label="Download compressed image" style="margin-top:10px;">Download Compressed</button>
         </div>
 
-                <div class="card">
+        <div class="card">
             <h2>📌 How to Use</h2>
             <ol style="margin-left: 20px; line-height: 1.8;">
-                <li>Select your photo</li>
+                <li>Select your photo (JPG, PNG, WebP)</li>
                 <li>Choose target size (e.g. 20 KB, 50 KB)</li>
-                <li>Click "Compress Photo" button</li>
-                <li>Preview and click "Download"</li>
+                <li>Click the "Compress Image" button</li>
+                <li>Preview and click "Download Compressed"</li>
             </ol>
         </div>
 
         <!-- SEO Content Section -->
-<section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <section class="content-section" style="max-width:900px; margin:40px auto; padding:30px; line-height:1.7; color:#2d3748; background:#ffffff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
 
-<h2>Free Image Compressor — Reduce Photo Size to 20KB, 50KB, 100KB</h2>
-<p>This free image compressor helps you reduce the file size of any JPG, PNG, or WebP image without losing visible quality. Perfect for exam forms, job applications, passport photos, and visa photos where file size limits are strict.</p>
+            <h2>Free Image Compressor — Compress Photo & Reduce Image Size</h2>
+            <p>This free image compressor helps you reduce the file size of any JPG, PNG, or WebP image without losing visible quality. Whether you need to <strong>compress images</strong> for exam forms, job applications, or passport photos, our tool is the perfect solution. It is an excellent <strong>free alternative to iLoveIMG and FreeConvert</strong>.</p>
 
-<p>Unlike other tools, your images are compressed directly in your browser using JavaScript. No upload, no server, no waiting. Your photos never leave your device.</p>
+            <p>Unlike other tools, your images are compressed directly in your browser using JavaScript. No upload, no server, no waiting. Your photos never leave your device.</p>
 
-<h2>Why Use This Image Compressor?</h2>
-<ul>
-<li><strong>100% private:</strong> Files are processed on your device, never uploaded</li>
-<li><strong>Exact target size:</strong> Compress to exactly 20KB, 50KB, 100KB, or 200KB</li>
-<li><strong>No quality loss:</strong> Smart compression keeps your photo clear</li>
-<li><strong>Works on mobile:</strong> Use it on any phone, tablet, or computer</li>
-<li><strong>Free forever:</strong> No signup, no login, no hidden charges</li>
-</ul>
+            <h2>Why Use This Image Size Reducer?</h2>
+            <ul>
+                <li><strong>100% private:</strong> Files are processed on your device, never uploaded</li>
+                <li><strong>Exact target size:</strong> Compress photos to exactly 20KB, 50KB, 100KB, or 200KB</li>
+                <li><strong>No quality loss:</strong> Smart compression keeps your image clear</li>
+                <li><strong>Works on mobile:</strong> Use it on any phone, tablet, or computer</li>
+                <li><strong>Free forever:</strong> No signup, no login, no hidden charges</li>
+            </ul>
 
-<h2>When Do You Need an Image Compressor?</h2>
-<ul>
-<li>SSC CGL, CHSL, MTS — photo must be 20-50 KB</li>
-<li>IBPS PO, Clerk, SO — photo must be 20-50 KB, signature 10-20 KB</li>
-<li>RRB NTPC, Group D — photo 15-40 KB, signature 10-20 KB</li>
-<li>UPSC — photo 20-300 KB</li>
-<li>NEET — photo 10-200 KB</li>
-</ul>
+            <h2>When Do You Need to Compress an Image?</h2>
+            <ul>
+                <li>SSC CGL, CHSL, MTS — photo must be 20-50 KB</li>
+                <li>IBPS PO, Clerk, SO — photo must be 20-50 KB, signature 10-20 KB</li>
+                <li>RRB NTPC, Group D — photo 15-40 KB, signature 10-20 KB</li>
+                <li>UPSC — photo 20-300 KB</li>
+                <li>NEET — photo 10-200 KB</li>
+            </ul>
 
-<h2>How to Compress an Image</h2>
-<ol>
-<li>Select your image (JPG, PNG, or WebP)</li>
-<li>Choose your target size (10 KB, 20 KB, 50 KB, 100 KB, or 200 KB)</li>
-<li>Click "Compress Photo"</li>
-<li>Preview the compressed image</li>
-<li>Download it — it will be under your target size</li>
-</ol>
+            <h2>How to Reduce Image Size</h2>
+            <ol>
+                <li>Select your image (JPG, PNG, or WebP)</li>
+                <li>Choose your target size (10 KB, 20 KB, 50 KB, 100 KB, or 200 KB)</li>
+                <li>Click "Compress Image"</li>
+                <li>Preview the compressed photo</li>
+                <li>Download it — it will be under your target size</li>
+            </ol>
 
-<h2>Frequently Asked Questions</h2>
+            <h2>Frequently Asked Questions</h2>
 
-<h3>Is this image compressor really free?</h3>
-<p>Yes, 100% free. No signup, no login, no hidden fees.</p>
+            <h3>Is this a free alternative to iLoveIMG or FreeConvert?</h3>
+            <p>Yes, PixSathi is a 100% free alternative. No signup, no login, no hidden fees, and no watermark on your images.</p>
 
-<h3>Are my images uploaded to a server?</h3>
-<p>No. All compression happens in your browser. Your images never leave your device.</p>
+            <h3>How do I compress a photo to 20KB?</h3>
+            <p>Upload your photo, select "20 KB" from the target size dropdown, and click compress. The tool will automatically reduce your image file size to 20KB.</p>
 
-<h3>What image formats are supported?</h3>
-<p>JPG, JPEG, PNG, and WebP.</p>
+            <h3>Are my images uploaded to a server?</h3>
+            <p>No. All compression happens in your browser. Your images never leave your device.</p>
 
-<h3>Can I use this on my mobile phone?</h3>
-<p>Yes, this tool works on any device — mobile, tablet, or desktop.</p>
+            <h3>Can I use this image size reducer on my mobile phone?</h3>
+            <p>Yes, this tool works on any device — mobile, tablet, or desktop.</p>
 
-<h2>Related Tools</h2>
-<p>
-<a href="/">Photo Resizer</a> |
-<a href="/ibps-po-photo-resizer">IBPS Photo Resizer</a> |
-<a href="/ssc-cgl-photo-resizer">SSC CGL Photo Resizer</a> |
-<a href="/photo-merger">Merge Photo & Signature</a>
-</p>
+            <h2>Related Tools</h2>
+            <p>
+                <a href="/">Photo Resizer</a> |
+                <a href="/ibps-po-photo-resizer">IBPS Photo Resizer</a> |
+                <a href="/ssc-cgl-photo-resizer">SSC CGL Photo Resizer</a> |
+                <a href="/photo-merger">Merge Photo & Signature</a>
+            </p>
 
-</section>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Exam Photo Resizer</p>
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p style="margin-top: 6px; font-size: 12px;">
+                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
+            </p>
         </div>
     </footer>
 
