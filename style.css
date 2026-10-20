@@ -93,7 +93,7 @@ body {
 
 .intro-section p {
     font-size: 13px;
-    color: #6e6e73;
+    color: #4a5568; /* गहरा ग्रे किया गया */
     margin: 0;
 }
 
@@ -168,7 +168,7 @@ body {
 
 .doc-size {
     font-size: 11px;
-    color: #6e6e73;
+    color: #4a5568; /* गहरा ग्रे किया गया */
     margin: 0;
 }
 
@@ -289,7 +289,7 @@ body {
 .file-name {
     text-align: center;
     font-size: 12px;
-    color: #6e6e73;
+    color: #4a5568; /* गहरा ग्रे किया गया */
     margin-bottom: 12px;
     min-height: 18px;
     word-break: break-all;
@@ -351,7 +351,7 @@ body {
 .x-sign {
     font-size: 18px;
     font-weight: 700;
-    color: #6e6e73;
+    color: #4a5568; /* गहरा ग्रे किया गया */
     padding-bottom: 8px;
 }
 
@@ -501,7 +501,7 @@ body {
 .footer {
     text-align: center;
     padding: 18px;
-    color: #6e6e73;
+    color: #4a5568; /* गहरा ग्रे किया गया */
     font-size: 12px;
     border-top: 1px solid #e5e5ea;
     margin-top: 30px;
@@ -764,7 +764,7 @@ body {
     cursor: pointer !important;
     text-align: center !important;
     padding: 20px !important;
-    color: #667eea !important;
+    color: #4f46e5 !important; /* गहरा रंग किया गया */
     font-weight: 600 !important;
 }
 
@@ -843,7 +843,7 @@ body {
 
 .stat-label {
     font-size: 11px;
-    color: #6e6e73;
+    color: #4a5568; /* गहरा ग्रे किया गया */
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.3px;
