@@ -18,8 +18,8 @@
     <!-- Vercel Insights -->
     <script defer src="/_vercel/insights/script.js"></script>
 
-    <title>GPA Calculator Online Free - High School & College | PixSathi</title>
-    <meta name="description" content="Free GPA calculator for high school and college students. Calculate cumulative and weighted GPA on a 4.0 scale instantly. 100% free, no signup required.">
+    <title>GPA Calculator Free - High School & College (4.0 Scale) | PixSathi</title>
+    <meta name="description" content="Free GPA calculator for high school and college students. Calculate your cumulative, weighted, and semester GPA instantly on a 4.0 scale. No signup required.">
     <meta name="keywords" content="gpa calculator high school, gpa calculator college, how to calculate gpa, cumulative gpa calculator, weighted gpa calculator, 4.0 scale">
     <link rel="canonical" href="https://www.pixsathi.in/international/gpa-calculator">
     
@@ -113,14 +113,23 @@
                 <li>Click "Calculate GPA" to see your result instantly</li>
             </ol>
 
-            <h2 style="font-size: 22px; margin-bottom: 16px; color: #1a202c;">GPA Scale (4.0)</h2>
-            <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>A:</strong> 4.0 (Excellent)</li>
-                <li><strong>B:</strong> 3.0 (Good)</li>
-                <li><strong>C:</strong> 2.0 (Average)</li>
-                <li><strong>D:</strong> 1.0 (Below Average)</li>
-                <li><strong>F:</strong> 0.0 (Fail)</li>
-            </ul>
+            <!-- NEW GPA SCALE TABLE ADDED HERE -->
+            <h2 style="font-size: 22px; margin-bottom: 16px; color: #1a202c;">Standard 4.0 GPA Scale Chart</h2>
+            <div class="table-wrap" style="overflow-x: auto; margin-bottom: 20px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: center;">
+                    <tr style="background: #f7fafc; color: #1a202c;">
+                        <th style="border: 1px solid #e2e8f0; padding: 10px;">Letter Grade</th>
+                        <th style="border: 1px solid #e2e8f0; padding: 10px;">Grade Points</th>
+                        <th style="border: 1px solid #e2e8f0; padding: 10px;">Percentage (Approx)</th>
+                    </tr>
+                    <tr><td style="border: 1px solid #e2e8f0; padding: 8px;">A</td><td style="border: 1px solid #e2e8f0; padding: 8px;">4.0</td><td style="border: 1px solid #e2e8f0; padding: 8px;">93% - 100%</td></tr>
+                    <tr><td style="border: 1px solid #e2e8f0; padding: 8px;">A-</td><td style="border: 1px solid #e2e8f0; padding: 8px;">3.7</td><td style="border: 1px solid #e2e8f0; padding: 8px;">90% - 92%</td></tr>
+                    <tr><td style="border: 1px solid #e2e8f0; padding: 8px;">B+</td><td style="border: 1px solid #e2e8f0; padding: 8px;">3.3</td><td style="border: 1px solid #e2e8f0; padding: 8px;">87% - 89%</td></tr>
+                    <tr><td style="border: 1px solid #e2e8f0; padding: 8px;">B</td><td style="border: 1px solid #e2e8f0; padding: 8px;">3.0</td><td style="border: 1px solid #e2e8f0; padding: 8px;">83% - 86%</td></tr>
+                    <tr><td style="border: 1px solid #e2e8f0; padding: 8px;">C</td><td style="border: 1px solid #e2e8f0; padding: 8px;">2.0</td><td style="border: 1px solid #e2e8f0; padding: 8px;">73% - 76%</td></tr>
+                    <tr><td style="border: 1px solid #e2e8f0; padding: 8px;">F</td><td style="border: 1px solid #e2e8f0; padding: 8px;">0.0</td><td style="border: 1px solid #e2e8f0; padding: 8px;">Below 65%</td></tr>
+                </table>
+            </div>
 
             <h2 style="font-size: 22px; margin-bottom: 16px; color: #1a202c;">Frequently Asked Questions</h2>
             
@@ -219,6 +228,24 @@
             var gpa = (totalPoints / totalCredits).toFixed(2);
             resultBox.innerHTML = 'Your GPA: <span style="color: #4f46e5;">' + gpa + ' / 4.0</span>';
         }
+    }
+    </script>
+
+    <!-- NEW SCHEMA MARKUP ADDED HERE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GPA Calculator",
+      "url": "https://www.pixsathi.in/international/gpa-calculator",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "description": "Free online GPA calculator for high school and college students. Calculate cumulative and weighted GPA instantly.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
     </script>
 
