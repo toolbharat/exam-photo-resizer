@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,22 +47,22 @@
 
     <header class="header">
         <div class="container">
-            <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <div class="logo">ðŸ“¸ PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone â€¢ 100% Free â€¢ Private</p>
             <nav class="nav">
-                <a href="/">🏠 Home</a>
-                <a href="/exams/">📝 Exams</a>
-                <a href="/international/">🌍 International</a>
-                <a href="/finance/">💰 Finance</a>
-                <a href="/blog">📝 Blog</a>
-                <a href="/contact">📬 Contact</a>
+                <a href="/">ðŸ  Home</a>
+                <a href="/exams/">ðŸ“ Exams</a>
+                <a href="/international/">ðŸŒ International</a>
+                <a href="/finance/">ðŸ’° Finance</a>
+                <a href="/blog">ðŸ“ Blog</a>
+                <a href="/contact">ðŸ“¬ Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <section class="intro-section" style="text-align: center; margin-top: 30px;">
-            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">🧮 CGPA Calculator Online (Free)</h1>
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">ðŸ§® CGPA Calculator Online (Free)</h1>
             <p style="color: #64748b; margin-bottom: 25px;">Calculate your cumulative GPA (4.0, 10.0 scale) and get the exact percentage.</p>
         </section>
 
@@ -70,9 +70,9 @@
             <div class="form-group">
                 <label for="university">Select Grading Scale / University</label>
                 <select id="university">
-                    <option value="9.5">CBSE / India (10.0 Scale: CGPA × 9.5)</option>
-                    <option value="10-7.5">Engineering (10.0 Scale: CGPA × 10 - 7.5)</option>
-                    <option value="9">Medical (10.0 Scale: CGPA × 9)</option>
+                    <option value="9.5">CBSE / India (10.0 Scale: CGPA Ã— 9.5)</option>
+                    <option value="10-7.5">Engineering (10.0 Scale: CGPA Ã— 10 - 7.5)</option>
+                    <option value="9">Medical (10.0 Scale: CGPA Ã— 9)</option>
                     <option value="custom">Custom Formula</option>
                 </select>
             </div>
@@ -96,11 +96,11 @@
             </div>
 
             <div class="formula-info">
-                <strong>Formula Used:</strong> <span id="formulaText">Percentage = CGPA × 9.5</span>
+                <strong>Formula Used:</strong> <span id="formulaText">Percentage = CGPA Ã— 9.5</span>
             </div>
 
             <div class="info-box">
-                <strong>ℹ️ Note:</strong> The formula varies for every university. Please check the correct formula from your university's official website.
+                <strong>â„¹ï¸ Note:</strong> The formula varies for every university. Please check the correct formula from your university's official website.
             </div>
         </div>
 
@@ -111,9 +111,9 @@
 
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Common CGPA to Percentage Formulas</h2>
             <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
-                <li><strong>CBSE:</strong> Percentage = CGPA × 9.5</li>
-                <li><strong>Engineering (Many Universities):</strong> Percentage = (CGPA × 10) - 7.5</li>
-                <li><strong>Medical:</strong> Percentage = CGPA × 9</li>
+                <li><strong>CBSE:</strong> Percentage = CGPA Ã— 9.5</li>
+                <li><strong>Engineering (Many Universities):</strong> Percentage = (CGPA Ã— 10) - 7.5</li>
+                <li><strong>Medical:</strong> Percentage = CGPA Ã— 9</li>
             </ul>
 
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions</h2>
@@ -125,7 +125,7 @@
             
             <div class="faq-item">
                 <h3>What is the CBSE formula for CGPA to percentage?</h3>
-                <p>The CBSE formula is: Percentage = CGPA × 9.5. For example, if your CGPA is 8.5, your percentage is 80.75%.</p>
+                <p>The CBSE formula is: Percentage = CGPA Ã— 9.5. For example, if your CGPA is 8.5, your percentage is 80.75%.</p>
             </div>
 
             <div class="faq-item">
@@ -137,10 +137,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p>Â© 2026 PixSathi | Made for Everyone ðŸŒ</p>
             <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
+                <a href="/">Home</a> Â· <a href="/about">About</a> Â· <a href="/privacy-policy">Privacy</a> Â· 
+                <a href="/disclaimer">Disclaimer</a> Â· <a href="/contact">Contact</a>
             </p>
         </div>
     </footer>
@@ -159,7 +159,7 @@
         university.addEventListener('change', () => {
             if (university.value === 'custom') {
                 customGroup.style.display = 'block';
-                formulaText.textContent = 'Percentage = CGPA × ' + customMultiplier.value;
+                formulaText.textContent = 'Percentage = CGPA Ã— ' + customMultiplier.value;
             } else {
                 customGroup.style.display = 'none';
                 updateFormulaText();
@@ -167,14 +167,14 @@
         });
 
         customMultiplier.addEventListener('input', () => {
-            formulaText.textContent = 'Percentage = CGPA × ' + customMultiplier.value;
+            formulaText.textContent = 'Percentage = CGPA Ã— ' + customMultiplier.value;
         });
 
         function updateFormulaText() {
             const v = university.value;
-            if (v === '9.5') formulaText.textContent = 'Percentage = CGPA × 9.5 (CBSE)';
-            else if (v === '10-7.5') formulaText.textContent = 'Percentage = (CGPA × 10) - 7.5 (Engineering)';
-            else if (v === '9') formulaText.textContent = 'Percentage = CGPA × 9 (Medical)';
+            if (v === '9.5') formulaText.textContent = 'Percentage = CGPA Ã— 9.5 (CBSE)';
+            else if (v === '10-7.5') formulaText.textContent = 'Percentage = (CGPA Ã— 10) - 7.5 (Engineering)';
+            else if (v === '9') formulaText.textContent = 'Percentage = CGPA Ã— 9 (Medical)';
         }
 
         function getGrade(p) {

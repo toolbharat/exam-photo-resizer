@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <meta name="description" content="Free Excel merger online. Combine multiple Excel files into one sheet instantly. No signup, no watermark. Try the best free alternative to iLovePDF.">
     <link rel="canonical" href="https://www.pixsathi.in/excel-merger">
     
-    <!-- यहाँ </script> टैग जोड़ दिया गया है जो पहले गायब था -->
+    <!-- à¤¯à¤¹à¤¾à¤ </script> à¤Ÿà¥ˆà¤— à¤œà¥‹à¤¡à¤¼ à¤¦à¤¿à¤¯à¤¾ à¤—à¤¯à¤¾ à¤¹à¥ˆ à¤œà¥‹ à¤ªà¤¹à¤²à¥‡ à¤—à¤¾à¤¯à¤¬ à¤¥à¤¾ -->
     <script defer src="/_vercel/insights/script.js"></script>
     
     <link rel="stylesheet" href="/style.css">
@@ -51,30 +51,30 @@
 
     <header class="header">
         <div class="container">
-            <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <div class="logo">ðŸ“¸ PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone â€¢ 100% Free â€¢ Private</p>
             <nav class="nav">
-                <a href="/">🏠 Home</a>
-                <a href="/exams/">📝 Exams</a>
-                <a href="/international/">🌍 International</a>
-                <a href="/finance/">💰 Finance</a>
-                <a href="/blog">📝 Blog</a>
-                <a href="/contact">📬 Contact</a>
+                <a href="/">ðŸ  Home</a>
+                <a href="/exams/">ðŸ“ Exams</a>
+                <a href="/international/">ðŸŒ International</a>
+                <a href="/finance/">ðŸ’° Finance</a>
+                <a href="/blog">ðŸ“ Blog</a>
+                <a href="/contact">ðŸ“¬ Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <section class="intro-section" style="text-align: center; margin-top: 30px;">
-            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">📊 Excel Merger Online (Free & Private)</h1>
-            <p style="color: #64748b; margin-bottom: 25px;">Merge multiple Excel files into one sheet — with only one header.</p>
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">ðŸ“Š Excel Merger Online (Free & Private)</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Merge multiple Excel files into one sheet â€” with only one header.</p>
         </section>
 
         <div class="tool-container">
             <div class="upload-area" id="uploadArea">
                 <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" multiple>
-                <h3>📊 Upload Excel Files</h3>
-                <p>Click or drag — .xlsx, .xls, .csv</p>
+                <h3>ðŸ“Š Upload Excel Files</h3>
+                <p>Click or drag â€” .xlsx, .xls, .csv</p>
             </div>
 
             <div class="file-list" id="fileList">
@@ -84,13 +84,13 @@
             </div>
 
             <div class="success-box" id="successBox">
-                <h4>✅ Excel Merged Successfully!</h4>
+                <h4>âœ… Excel Merged Successfully!</h4>
                 <p>Your merged file is ready to download.</p>
-                <a class="btn-download" id="downloadBtn" download="pixsathi-merged.xlsx">⬇️ Download Excel</a>
+                <a class="btn-download" id="downloadBtn" download="pixsathi-merged.xlsx">â¬‡ï¸ Download Excel</a>
             </div>
 
             <div class="info-box">
-                <strong>ℹ️ Note:</strong> The header of the first file will be retained. The headers of the remaining files will be skipped.
+                <strong>â„¹ï¸ Note:</strong> The header of the first file will be retained. The headers of the remaining files will be skipped.
             </div>
         </div>
 
@@ -107,7 +107,7 @@
 
             <h2 style="font-size: 20px; margin-bottom: 16px;">Features</h2>
             <ul style="margin-left: 20px; line-height: 1.8; margin-bottom: 30px;">
-                <li>Smart merge — Only one header</li>
+                <li>Smart merge â€” Only one header</li>
                 <li>Multiple files supported</li>
                 <li>100% free, no signup</li>
                 <li>Files stay on your device</li>
@@ -134,10 +134,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
+            <p>Â© 2026 PixSathi | Made for Everyone ðŸŒ</p>
             <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a>
+                <a href="/">Home</a> Â· <a href="/about">About</a> Â· <a href="/privacy-policy">Privacy</a> Â· 
+                <a href="/disclaimer">Disclaimer</a> Â· <a href="/contact">Contact</a>
             </p>
         </div>
     </footer>
@@ -172,12 +172,12 @@
                 const item = document.createElement('div');
                 item.className = 'file-item';
                 item.innerHTML = `
-                    <div class="file-icon">📊</div>
+                    <div class="file-icon">ðŸ“Š</div>
                     <div class="file-info">
                         <div class="file-name">${file.name}</div>
                         <div class="file-size">${(file.size / 1024).toFixed(1)} KB</div>
                     </div>
-                    <button class="remove-btn" onclick="removeFile(${i})">✕</button>
+                    <button class="remove-btn" onclick="removeFile(${i})">âœ•</button>
                 `;
                 fileItems.appendChild(item);
             });

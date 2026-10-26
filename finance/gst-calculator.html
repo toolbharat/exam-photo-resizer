@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -467,15 +467,15 @@ body {
         <a href="/" style="text-decoration:none;color:inherit;"><div class="logo">PixSathi Finance</div></a>
         <p class="tagline">Free Online Financial Calculators</p>
         <nav class="main-nav">
-            <a href="/" style="background:#10b981;color:white;padding:5px 12px;border-radius:6px;font-weight:600;">🔧 All Tools</a>
-            <a href="/finance/index.html">Home</a>
-            <a href="/finance/emi-calculator.html">EMI</a>
-            <a href="/finance/gst-calculator.html">GST</a>
-            <a href="/finance/sip-calculator.html">SIP</a>
-            <a href="/finance/fd-calculator.html">FD</a>
-            <a href="/finance/salary-calculator.html">Salary</a>
-            <a href="/finance/income-tax-calculator.html">Income Tax</a>
-            <a href="/finance/blog.html">Blog</a>
+            <a href="/" style="background:#10b981;color:white;padding:5px 12px;border-radius:6px;font-weight:600;">ðŸ”§ All Tools</a>
+            <a href="/finance/index">Home</a>
+            <a href="/finance/emi-calculator">EMI</a>
+            <a href="/finance/gst-calculator">GST</a>
+            <a href="/finance/sip-calculator">SIP</a>
+            <a href="/finance/fd-calculator">FD</a>
+            <a href="/finance/salary-calculator">Salary</a>
+            <a href="/finance/income-tax-calculator">Income Tax</a>
+            <a href="/finance/blog">Blog</a>
         </nav>
     </div>
 </header>
@@ -490,7 +490,7 @@ body {
     <section class="info-section">
         <h2>GST Details</h2>
         <form onsubmit="return false;">
-            <p>Amount (₹)</p>
+            <p>Amount (â‚¹)</p>
             <input type="number" id="gstAmount" placeholder="e.g. 10000" min="1">
 
             <p>GST Rate (%)</p>
@@ -516,12 +516,12 @@ body {
 
 <footer class="site-footer">
     <div class="container">
-        <p>© 2026 India Finance Calculator</p>
+        <p>Â© 2026 India Finance Calculator</p>
         <nav class="footer-nav">
-            <a href="/finance/about.html">About</a> |
-            <a href="/finance/contact.html">Contact</a> |
-            <a href="/finance/privacy-policy.html">Privacy Policy</a> |
-            <a href="/finance/disclaimer.html">Disclaimer</a>
+            <a href="/finance/about">About</a> |
+            <a href="/finance/contact">Contact</a> |
+            <a href="/finance/privacy-policy">Privacy Policy</a> |
+            <a href="/finance/disclaimer">Disclaimer</a>
         </nav>
     </div>
 </footer>
@@ -532,7 +532,7 @@ body {
    ============================================ */
 
 function formatINR(num) {
-    return '₹ ' + Math.round(num).toLocaleString('en-IN');
+    return 'â‚¹ ' + Math.round(num).toLocaleString('en-IN');
 }
 
 function calculateGST() {
@@ -542,7 +542,7 @@ function calculateGST() {
     const resultDiv = document.getElementById("gstResult");
 
     if (!amount || amount <= 0) {
-        resultDiv.innerHTML = '<p class="error-msg">⚠️ Amount must be greater than 0.</p>';
+        resultDiv.innerHTML = '<p class="error-msg">âš ï¸ Amount must be greater than 0.</p>';
         return;
     }
 
@@ -576,9 +576,9 @@ function calculateGST() {
             </div>
         </div>
 
-        <p class="note">💡 Tip: GST rates in India are 5%, 12%, 18%, and 28%.</p>
+        <p class="note">ðŸ’¡ Tip: GST rates in India are 5%, 12%, 18%, and 28%.</p>
 
-        <a href="/finance/index.html" class="back-link">← Back to Home</a>
+        <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
 }
 </script>
