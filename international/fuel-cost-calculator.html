@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,24 +56,24 @@
 
     <header class="header">
         <div class="container">
-            <div class="logo">ðŸ“¸ PixSathi</div>
-            <p class="tagline">Free Online Tools for Everyone â€¢ 100% Free â€¢ Private</p>
+            <div class="logo">📸 PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
             <nav class="nav">
-                <a href="/">ðŸ  Home</a>
-                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ‡®ðŸ‡³ Indian Exams</a>
-                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ› ï¸ International Tools</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ’° Finance</a>
-                <a href="/blog">ðŸ“ Blog</a>
-                <a href="/contact">ðŸ“¬ Contact</a>
+                <a href="/">🏠 Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
+                <a href="/blog">📝 Blog</a>
+                <a href="/contact">📬 Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <div class="conv-container">
-            <a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">â† Back to International Tools</a>
+            <a href="/international/" style="display: inline-block; margin-bottom: 15px; color: #4f46e5; text-decoration: none; font-weight: 600; font-size: 14px;">← Back to International Tools</a>
             
-            <h1>â›½ Fuel Cost Calculator (Gas & Petrol)</h1>
+            <h1>⛽ Fuel Cost Calculator (Gas & Petrol)</h1>
             <p style="color: #64748b; margin-bottom: 20px;">Calculate the fuel cost for your next road trip instantly.</p>
 
             <div class="conv-row">
@@ -90,7 +90,7 @@
             </div>
             
             <div class="conv-result">
-                <div class="value" id="cost">â‚¹666.67</div>
+                <div class="value" id="cost">₹666.67</div>
                 <div class="label">Total Fuel Cost</div>
             </div>
         </div>
@@ -104,7 +104,7 @@
             <p>Calculating your trip fuel cost is easy. Here is the simple formula our tool uses:</p>
             <ul>
                 <li><strong>Fuel Needed:</strong> Distance / Fuel Efficiency (km/L)</li>
-                <li><strong>Total Cost:</strong> Fuel Needed Ã— Fuel Price (per L)</li>
+                <li><strong>Total Cost:</strong> Fuel Needed × Fuel Price (per L)</li>
             </ul>
             <p>For example, if you are traveling 100 km, your car gives 15 km/L, and fuel costs $1 per L, you will need 6.67 liters of fuel, costing a total of $6.67.</p>
 
@@ -117,7 +117,7 @@
             
             <div class="faq-item">
                 <h3>What is the formula for petrol cost?</h3>
-                <p>The formula is: (Distance / Mileage) Ã— Petrol Price. You can also just enter your numbers into the calculator above for instant results.</p>
+                <p>The formula is: (Distance / Mileage) × Petrol Price. You can also just enter your numbers into the calculator above for instant results.</p>
             </div>
 
             <div class="faq-item">
@@ -127,8 +127,8 @@
 
             <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
             <ul>
-                <li><a href="/international/unit-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">ðŸ“ Unit Converter</a></li>
-                <li><a href="/international/date-calculator" style="color: #4f46e5; text-decoration: none; font-weight: 600;">ðŸ“… Date Calculator</a></li>
+                <li><a href="/international/unit-converter" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📏 Unit Converter</a></li>
+                <li><a href="/international/date-calculator" style="color: #4f46e5; text-decoration: none; font-weight: 600;">📅 Date Calculator</a></li>
                 <li><a href="/international/">All International Tools</a></li>
             </ul>
         </section>
@@ -136,12 +136,12 @@
 
     <footer class="footer">
         <div class="container">
-            <p>Â© 2026 PixSathi | Made for Everyone ðŸŒ</p>
+            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
             <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">Home</a> Â· 
-                <a href="/about">About</a> Â· 
-                <a href="/privacy-policy">Privacy</a> Â· 
-                <a href="/disclaimer">Disclaimer</a> Â· 
+                <a href="/">Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
                 <a href="/contact">Contact</a>
             </p>
         </div>
@@ -153,7 +153,7 @@
         var e=parseFloat(document.getElementById('eff').value)||1;
         var p=parseFloat(document.getElementById('price').value)||0;
         var cost=(d/e)*p;
-        document.getElementById('cost').textContent='â‚¹'+cost.toFixed(2);
+        document.getElementById('cost').textContent='₹'+cost.toFixed(2);
     }
     calcFuel();
     </script>
