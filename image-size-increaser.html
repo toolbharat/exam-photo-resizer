@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <title>Image Size Increaser Online Free - Photo KB Kaise Badhaye | PixSathi</title>
+    <meta name="description" content="Free online image size increaser. Increase image size in KB without losing quality. Perfect for government exam forms requiring minimum 20KB, 50KB or 100KB photos.">
+    <link rel="canonical" href="https://www.pixsathi.in/image-size-increaser">
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        .tool-container { background: white; padding: 20px; border-radius: 12px; max-width: 600px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        .upload-box { border: 2px dashed #4f46e5; padding: 40px 20px; border-radius: 10px; cursor: pointer; background: #fafbff; transition: 0.3s; margin-bottom: 15px; }
+        .upload-box:hover { background: #eef2ff; }
+        .upload-box p { margin: 10px 0; color: #4f46e5; font-weight: 600; }
+        .upload-box input { display: none; }
+        
+        .size-input { width: 100%; padding: 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 16px; margin-bottom: 15px; outline: none; text-align: center; font-weight: bold; }
+        .size-input:focus { border-color: #4f46e5; }
+        
+        .action-btn { width: 100%; padding: 12px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .action-btn:hover { background: #4338ca; }
+        .action-btn:disabled { background: #a5b4fc; cursor: not-allowed; }
+        
+        .download-btn { display: none; width: 100%; padding: 12px; background: #16a34a; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: 0.2s; }
+        .download-btn:hover { background: #15803d; }
+        
+        .status { margin-top: 15px; font-size: 14px; font-weight: 600; color: #64748b; }
+        .status.error { color: #dc2626; }
+        .status.success { color: #16a34a; }
+    </style>
+
+    <!-- FAQ Schema for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "How does this tool increase image size without changing quality?","acceptedAnswer": {"@type": "Answer","text": "The tool adds standard invisible metadata to the end of your image file. This increases the file size in KB but doesn't touch the actual image pixels, so the quality remains exactly the same."}},
+        {"@type": "Question","name": "Can I increase a photo to exactly 50KB?","acceptedAnswer": {"@type": "Answer","text": "Yes, simply enter 50 in the target size box. The tool will automatically adjust the file to exactly 50KB."}},
+        {"@type": "Question","name": "Is my photo safe?","acceptedAnswer": {"@type": "Answer","text": "Yes, absolutely. The tool works locally in your browser using JavaScript. Your images are never uploaded to any server."}}
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone &bull; 100% Free &bull; Private</p>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/exams/">Exams</a>
+                <a href="/finance/">Finance</a>
+                <a href="/image-compressor">Compressor</a>
+                <a href="/photo-merger">Merger</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 30px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">Image Size Increaser (KB Badhaye)</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Increase your image file size in KB without losing quality. Perfect for forms requiring minimum KB.</p>
+        </section>
+
+        <div class="tool-container">
+            <label for="imageInput" class="upload-box" id="uploadBox">
+                <div style="font-size: 40px;">&#128247;</div>
+                <p id="fileNameText">Click to select an Image (JPG, PNG)</p>
+                <input type="file" id="imageInput" accept="image/jpeg, image/png">
+            </label>
+            
+            <p id="currentSizeDisplay" style="font-weight: bold; color: #dc2626; margin-bottom: 10px; display: none;"></p>
+
+            <div style="text-align: left; margin-bottom: 5px; font-weight: 600; color: #1e293b;">Enter Target Size (KB):</div>
+            <input type="number" id="targetSize" class="size-input" value="50" min="1" max="500" placeholder="e.g. 50">
+            
+            <button id="processBtn" class="action-btn" disabled>Increase Image Size</button>
+            
+            <p class="status" id="statusText"></p>
+            
+            <button id="downloadBtn" class="download-btn">&#11015; Download Increased Image</button>
+        </div>
+
+        <!-- SEO Content Section -->
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Increase Image Size in KB Online Free</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Image Size Increaser</strong> ek 100% free tool hai jo aapki photo ya signature ka size (KB mein) badha deta hai bina quality kharab kiye. Bahut baar sarkari exam forms (jaise SSC, UPSC, IBPS) mein minimum file size ki condition hoti hai (jaise "Photo should be between 20KB to 50KB"). Agar aapki photo 10KB ki hai, toh form reject ho jata hai. Ye tool us problem ko seconds mein solve karta hai. Sabse acchi baat? Aapki photos kisi server par upload nahi hoti, sab kuch aapke browser mein securely hota hai.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Increase Image Size (Step-by-Step)</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
+                <li><strong>Step 1:</strong> Apni photo select karein (JPG, PNG).</li>
+                <li><strong>Step 2:</strong> Target KB size daalein (jaise 20, 50 ya 100).</li>
+                <li><strong>Step 3:</strong> "Increase Image Size" button par click karein.</li>
+                <li><strong>Step 4:</strong> Nayi badhi hui photo ko download karein.</li>
+            </ul>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Why Use PixSathi Image Size Increaser?</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
+                <li><strong>Exact KB Target:</strong> Aapko exactly 20KB ya 50KB ki photo chahiye? Ye tool exact size dega.</li>
+                <li><strong>No Quality Loss:</strong> Tool photo ke pixels ko kharab nahi karta, bas file ke andar invisible data add karta hai.</li>
+                <li><strong>Privacy First:</strong> Photos server par upload nahi hoti, isliye 100% safe hai.</li>
+                <li><strong>No Watermark:</strong> Download ki gayi image par koi watermark nahi aayega.</li>
+            </ul>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
+            
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">How does this tool increase image size without changing quality?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">The tool adds standard invisible metadata (dummy bytes) to the end of your image file. This increases the file size in KB but doesn't touch the actual image pixels, so the quality remains exactly the same.</p>
+            </div>
+            
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Can I increase a photo to exactly 50KB?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, simply enter '50' in the target size box. The tool will automatically adjust the file to exactly 50KB.</p>
+            </div>
+
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Is my photo safe?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, absolutely. The tool works locally in your browser using JavaScript. Your images are never uploaded to any server.</p>
+            </div>
+
+            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
+            <p>
+                <a href="/image-compressor" style="color: #3182ce; text-decoration: none;">Image Compressor</a> |
+                <a href="/ssc-cgl-photo-resizer" style="color: #3182ce; text-decoration: none;">SSC CGL Resizer</a> |
+                <a href="/ibps-po-photo-resizer" style="color: #3182ce; text-decoration: none;">IBPS PO Resizer</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PixSathi | Made for India &#127470;&#127475;</p>
+        </div>
+    </footer>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const fileNameText = document.getElementById('fileNameText');
+        const currentSizeDisplay = document.getElementById('currentSizeDisplay');
+        const targetSizeInput = document.getElementById('targetSize');
+        const processBtn = document.getElementById('processBtn');
+        const statusText = document.getElementById('statusText');
+        const downloadBtn = document.getElementById('downloadBtn');
+        
+        let currentFile = null;
+        let processedFileName = "increased-image.jpg";
+
+        imageInput.addEventListener('change', function(e) {
+            currentFile = e.target.files[0];
+            if (currentFile) {
+                const sizeKB = (currentFile.size / 1024).toFixed(2);
+                fileNameText.innerText = currentFile.name;
+                currentSizeDisplay.innerText = "Current Size: " + sizeKB + " KB";
+                currentSizeDisplay.style.display = 'block';
+                
+                statusText.innerText = "";
+                downloadBtn.style.display = 'none';
+                processBtn.disabled = false;
+            }
+        });
+
+        processBtn.addEventListener('click', function() {
+            if (!currentFile) {
+                statusText.innerText = "Please select an image first.";
+                statusText.className = "status error";
+                return;
+            }
+
+            const targetKB = parseFloat(targetSizeInput.value);
+            if (!targetKB || targetKB <= 0 || targetKB > 500) {
+                statusText.innerText = "Please enter a valid target size between 1 and 500 KB.";
+                statusText.className = "status error";
+                return;
+            }
+
+            statusText.innerText = "Processing image...";
+            statusText.className = "status";
+            processBtn.disabled = true;
+            processedFileName = "increased-" + currentFile.name;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const arrayBuffer = e.target.result;
+                const currentSizeBytes = arrayBuffer.byteLength;
+                const targetSizeBytes = targetKB * 1024;
+
+                if (targetSizeBytes <= currentSizeBytes) {
+                    statusText.innerText = "Target size must be greater than the current image size (" + (currentSizeBytes / 1024).toFixed(2) + " KB).";
+                    statusText.className = "status error";
+                    processBtn.disabled = false;
+                    return;
+                }
+
+                const paddingSize = targetSizeBytes - currentSizeBytes;
+                const padding = new Uint8Array(paddingSize);
+                
+                // Fill with random bytes to avoid any compression patterns
+                for (let i = 0; i < paddingSize; i++) {
+                    padding[i] = Math.floor(Math.random() * 256);
+                }
+
+                // Combine original file array and padding array
+                const newBlob = new Blob([new Uint8Array(arrayBuffer), padding], { type: currentFile.type });
+                const url = URL.createObjectURL(newBlob);
+                
+                downloadBtn.onclick = function() {
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = processedFileName;
+                    a.click();
+                    URL.revokeObjectURL(url);
+                };
+
+                statusText.innerText = "Success! Image size increased to approx " + targetKB + " KB.";
+                statusText.className = "status success";
+                downloadBtn.style.display = 'block';
+                processBtn.disabled = false;
+            };
+            reader.readAsArrayBuffer(currentFile);
+        });
+    </script>
+</body>
+</html>
