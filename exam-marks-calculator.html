@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <title>Exam Marks Calculator with Negative Marking - SSC, IBPS | PixSathi</title>
+    <meta name="description" content="Free online exam marks calculator with negative marking. Calculate your SSC CGL, IBPS PO, RRB, and UPSC scores instantly. Accurate score and percentage calculation.">
+    <link rel="canonical" href="https://www.pixsathi.in/exam-marks-calculator">
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        .tool-container { background: white; padding: 25px; border-radius: 12px; max-width: 600px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .input-group { margin-bottom: 15px; text-align: left; }
+        .input-group label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 5px; font-size: 14px; }
+        .input-group input, .input-group select { width: 100%; padding: 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 16px; outline: none; }
+        .input-group input:focus, .input-group select:focus { border-color: #4f46e5; }
+        .action-btn { width: 100%; padding: 14px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.2s; }
+        .action-btn:hover { background: #4338ca; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; background: #f0fdf4; border: 2px solid #16a34a; border-radius: 10px; text-align: center; }
+        .result-box h3 { color: #166534; margin-bottom: 10px; font-size: 20px; }
+        .result-box p { font-size: 16px; font-weight: 600; color: #1e293b; margin-bottom: 5px; }
+        .highlight { color: #16a34a; font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone &bull; 100% Free &bull; Private</p>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/exams/">Exams</a>
+                <a href="/finance/">Finance</a>
+                <a href="/image-compressor">Compressor</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 30px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">Exam Marks Calculator</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Calculate your exact score with negative marking for SSC, IBPS, RRB & more.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="input-group">
+                <label>Total Questions Attempted (Correct + Wrong):</label>
+                <input type="number" id="totalQuestions" value="100" min="1">
+            </div>
+            
+            <div class="input-group">
+                <label>Number of Correct Answers:</label>
+                <input type="number" id="correctAnswers" value="80" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label>Number of Wrong Answers:</label>
+                <input type="number" id="wrongAnswers" value="20" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>Marks Per Correct Answer:</label>
+                <input type="number" id="marksPerCorrect" value="1" min="0.25" step="0.25">
+            </div>
+
+            <div class="input-group">
+                <label>Negative Marking Per Wrong Answer:</label>
+                <select id="negativeMarking">
+                    <option value="0">No Negative Marking (0)</option>
+                    <option value="0.25">0.25 (For SSC, RRB)</option>
+                    <option value="0.33">0.33 (For IBPS PO/Clerk)</option>
+                    <option value="0.50">0.50 (For some exams)</option>
+                    <option value="1">1.00 (Full mark deduction)</option>
+                </select>
+            </div>
+
+            <button class="action-btn" onclick="calculateMarks()">Calculate My Score</button>
+
+            <div class="result-box" id="resultBox">
+                <h3>Your Result</h3>
+                <p>Total Score: <span class="highlight" id="finalScore">0</span></p>
+                <p>Percentage: <span class="highlight" id="finalPercentage" style="color: #4f46e5;">0%</span></p>
+                <p style="font-size: 13px; color: #64748b; font-weight: normal; margin-top: 10px;" id="calculationText"></p>
+            </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Free Online Exam Marks Calculator (With Negative Marking)</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Exam Marks Calculator</strong> ek 100% free tool hai jo sarkari exam (jaise SSC CGL, IBPS PO, SBI Clerk, RRB NTPC, UPSC) ke students ke liye banaya gaya hai. Exam ke baad sabse bada sawaal yahi hota hai: "Mera score kitna banega?" Is tool mein aap apne Sahi (Correct) aur Galat (Wrong) answers daal kar apna exact score aur percentage seconds mein nikaal sakte hain. Isme aap alag-alag exams ki negative marking (0.25, 0.33, 0.50) bhi select kar sakte hain.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Calculate Your Exam Score (Step-by-Step)</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
+                <li><strong>Step 1:</strong> Apne exam ke total questions enter karein.</li>
+                <li><strong>Step 2:</strong> Apne Sahi (Correct) answers ki sankhya daalein.</li>
+                <li><strong>Step 3:</strong> Apne Galat (Wrong) answers ki sankhya daalein.</li>
+                <li><strong>Step 4:</strong> Exam ki negative marking select karein (jaise SSC ke liye 0.25).</li>
+                <li><strong>Step 5:</strong> "Calculate My Score" par click karein aur apna result dekhein.</li>
+            </ul>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Negative Marking Kya Hai?</h2>
+            <p style="margin-bottom: 20px;">Bahut se sarkari exams mein galat jawab dene par marks kate jaate hain, isko negative marking kehte hain. Alag-alag exams ki negative marking alag hoti hai. Jaise SSC exams mein har galat answer par 0.25 marks katte hain, jabki IBPS PO mein 0.33 marks katte hain. Is tool se aap apni exact negative marking nikaal kar apna final score jaan sakte hain bina kisi galti ke.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Is this tool accurate for all exams?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, the formula used here is the standard one. Just select the correct negative marking for your exam (0.25, 0.33, or 0.50) and the score will be 100% accurate.</p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">What is the formula for calculating marks?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Total Score = (Correct Answers &times; Marks per correct) - (Wrong Answers &times; Negative Marking).</p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Does it save my data?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">No, this tool runs completely in your browser. We do not save or collect your answers or scores.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PixSathi | Made for India &#127470;&#127475;</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateMarks() {
+            const total = parseInt(document.getElementById('totalQuestions').value) || 0;
+            const correct = parseInt(document.getElementById('correctAnswers').value) || 0;
+            const wrong = parseInt(document.getElementById('wrongAnswers').value) || 0;
+            const marksPerCorrect = parseFloat(document.getElementById('marksPerCorrect').value) || 0;
+            const negativeMark = parseFloat(document.getElementById('negativeMarking').value) || 0;
+
+            // Validation
+            if (correct + wrong > total) {
+                alert("Correct + Wrong answers cannot be greater than total questions!");
+                return;
+            }
+
+            const totalMarks = total * marksPerCorrect;
+            const positiveMarks = correct * marksPerCorrect;
+            const negativeMarks = wrong * negativeMark;
+            const finalScore = positiveMarks - negativeMarks;
+            const percentage = (finalScore / totalMarks) * 100;
+
+            document.getElementById('finalScore').innerText = finalScore.toFixed(2) + " / " + totalMarks;
+            document.getElementById('finalPercentage').innerText = percentage.toFixed(2) + "%";
+            
+            document.getElementById('calculationText').innerHTML = 
+                `Formula: (${correct} &times; ${marksPerCorrect}) - (${wrong} &times; ${negativeMark}) = ${finalScore.toFixed(2)} marks`;
+
+            document.getElementById('resultBox').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
