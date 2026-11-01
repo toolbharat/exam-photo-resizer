@@ -65,29 +65,26 @@
                     <option value="ssc_chsl">SSC CHSL</option>
                     <option value="ssc_mts">SSC MTS</option>
                     <option value="ssc_gd">SSC GD</option>
-                    <option value="ssc_cpo">SSC CPO</option>
-                    <option value="ssc_je">SSC JE</option>
                     <option value="ibps_po">IBPS PO / Clerk</option>
                     <option value="sbi_po">SBI PO / Clerk</option>
                     <option value="rrb_ntpc">RRB NTPC</option>
-                    <option value="rrb_group_d">RRB Group D</option>
-                    <option value="rrb_alp">RRB ALP</option>
                     <option value="neet">NEET</option>
                     <option value="jee">JEE Main</option>
-                    <option value="cuet">CUET</option>
                     <option value="upsc">UPSC</option>
-                    <option value="state_psc">State PSC</option>
                     <option value="police">State Police</option>
-                    <option value="nda">NDA</option>
-                    <option value="cds">CDS</option>
-                    <option value="ctet">CTET</option>
-                    <option value="ugc_net">UGC NET</option>
-                    <option value="clat">CLAT</option>
                 </select>
             </div>
 
             <div class="input-group">
-                <label>Upload Photo or Signature:</label>
+                <label>What are you checking?</label>
+                <select id="docType">
+                    <option value="photo">Photo (Photograph)</option>
+                    <option value="sign">Signature</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Upload Document:</label>
                 <input type="file" id="docInput" accept="image/*">
             </div>
 
@@ -99,7 +96,7 @@
         <!-- SEO Content -->
         <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Check Exam Photo Size & Format</h2>
-            <p style="margin-bottom: 20px;">Sarkari exam forms mein photo aur signature reject hone ka sabse bada karan galat file size (KB) ya dimensions (pixels) hota hai. PixSathi ka <strong>Exam Photo Checker</strong> aapki photo ko instantly check karta hai. Agar aapki photo sahi hai, toh ye green signal deta hai, aur agar galat hai, toh batata hai ki kya change karna hai.</p>
+            <p style="margin-bottom: 20px;">Sarkari exam forms mein photo aur signature reject hone ka sabse bada karan galat file size (KB) ya dimensions (pixels) hota hai. PixSathi ka <strong>Exam Photo Checker</strong> aapki photo aur signature dono ko instantly check karta hai. Agar aapka document sahi hai, toh ye green signal deta hai, aur agar galat hai, toh batata hai ki kya change karna hai.</p>
             
             <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 6px; margin-top: 15px;">
                 <p style="font-size: 14px; color: #92400e; margin: 0;"><strong>Note:</strong> Exam rules can sometimes change. While we try our best to keep this updated, please always cross-check the exact photo size and dimensions from the official exam notification before submitting your form.</p>
@@ -108,29 +105,52 @@
     </main>
 
     <script>
+        // Har exam ke Photo aur Signature ke alag rules
         const examRules = {
-            ssc_cgl: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC CGL" },
-            ssc_chsl: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC CHSL" },
-            ssc_mts: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC MTS" },
-            ssc_gd: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC GD" },
-            ssc_cpo: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC CPO" },
-            ssc_je: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC JE" },
-            ibps_po: { minKB: 20, maxKB: 50, width: 200, height: 230, name: "IBPS PO/Clerk" },
-            sbi_po: { minKB: 20, maxKB: 50, width: 200, height: 230, name: "SBI PO/Clerk" },
-            rrb_ntpc: { minKB: 15, maxKB: 40, width: 100, height: 120, name: "RRB NTPC" },
-            rrb_group_d: { minKB: 15, maxKB: 40, width: 100, height: 120, name: "RRB Group D" },
-            rrb_alp: { minKB: 15, maxKB: 40, width: 100, height: 120, name: "RRB ALP" },
-            neet: { minKB: 10, maxKB: 200, width: 200, height: 230, name: "NEET" },
-            jee: { minKB: 10, maxKB: 200, width: 200, height: 230, name: "JEE Main" },
-            cuet: { minKB: 10, maxKB: 200, width: 200, height: 230, name: "CUET" },
-            upsc: { minKB: 20, maxKB: 300, width: 350, height: 350, name: "UPSC" },
-            state_psc: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "State PSC" },
-            police: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "State Police" },
-            nda: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "NDA" },
-            cds: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "CDS" },
-            ctet: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "CTET" },
-            ugc_net: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "UGC NET" },
-            clat: { minKB: 20, maxKB: 50, width: 200, height: 230, name: "CLAT" }
+            ssc_cgl: {
+                photo: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC CGL Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "SSC CGL Signature" }
+            },
+            ssc_chsl: {
+                photo: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC CHSL Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "SSC CHSL Signature" }
+            },
+            ssc_mts: {
+                photo: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC MTS Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "SSC MTS Signature" }
+            },
+            ssc_gd: {
+                photo: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "SSC GD Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "SSC GD Signature" }
+            },
+            ibps_po: {
+                photo: { minKB: 20, maxKB: 50, width: 200, height: 230, name: "IBPS PO Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "IBPS PO Signature" }
+            },
+            sbi_po: {
+                photo: { minKB: 20, maxKB: 50, width: 200, height: 230, name: "SBI PO Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "SBI PO Signature" }
+            },
+            rrb_ntpc: {
+                photo: { minKB: 15, maxKB: 40, width: 100, height: 120, name: "RRB NTPC Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "RRB NTPC Signature" }
+            },
+            neet: {
+                photo: { minKB: 10, maxKB: 200, width: 200, height: 230, name: "NEET Photo" },
+                sign: { minKB: 4, maxKB: 30, width: 140, height: 60, name: "NEET Signature" }
+            },
+            jee: {
+                photo: { minKB: 10, maxKB: 200, width: 200, height: 230, name: "JEE Main Photo" },
+                sign: { minKB: 4, maxKB: 30, width: 140, height: 60, name: "JEE Main Signature" }
+            },
+            upsc: {
+                photo: { minKB: 20, maxKB: 300, width: 350, height: 350, name: "UPSC Photo" },
+                sign: { minKB: 20, maxKB: 300, width: 350, height: 350, name: "UPSC Signature" }
+            },
+            police: {
+                photo: { minKB: 20, maxKB: 50, width: 100, height: 120, name: "State Police Photo" },
+                sign: { minKB: 10, maxKB: 20, width: 140, height: 60, name: "State Police Signature" }
+            }
         };
 
         let uploadedFile = null;
@@ -171,23 +191,28 @@
 
         function checkDocument() {
             if (!uploadedFile) {
-                alert("Please upload a photo or signature first.");
+                alert("Please upload a document first.");
                 return;
             }
 
             const exam = document.getElementById('examSelect').value;
-            const rules = examRules[exam];
+            const docType = document.getElementById('docType').value; // 'photo' ya 'sign'
+            
+            // Rules select karo based on exam and document type
+            const rules = examRules[exam][docType];
             
             const sizeKB = (uploadedFile.size / 1024).toFixed(2);
             const resultBox = document.getElementById('resultBox');
             let isValid = true;
             let errors = [];
 
+            // Check Size
             if (sizeKB < rules.minKB || sizeKB > rules.maxKB) {
                 isValid = false;
                 errors.push(`Size is <strong>${sizeKB} KB</strong>. It must be between ${rules.minKB} KB and ${rules.maxKB} KB.`);
             }
 
+            // Check Dimensions
             if (imgWidth !== rules.width || imgHeight !== rules.height) {
                 isValid = false;
                 errors.push(`Dimensions are <strong>${imgWidth}x${imgHeight} px</strong>. It must be exactly ${rules.width}x${rules.height} px.`);
@@ -197,13 +222,13 @@
 
             if (isValid) {
                 resultBox.className = 'result-box result-valid';
-                resultBox.innerHTML = `<h3>&#9989; Your Document is Valid!</h3>
+                resultBox.innerHTML = `<h3>&#9989; Your ${docType === 'photo' ? 'Photo' : 'Signature'} is Valid!</h3>
                 <p>Your file is perfect for <strong>${rules.name}</strong>. Size: ${sizeKB} KB, Dimensions: ${imgWidth}x${imgHeight} px.</p>`;
             } else {
                 resultBox.className = 'result-box result-invalid';
-                resultBox.innerHTML = `<h3>&#10060; Your Document is Not Valid!</h3>
+                resultBox.innerHTML = `<h3>&#10060; Your ${docType === 'photo' ? 'Photo' : 'Signature'} is Not Valid!</h3>
                 <ul>${errors.map(e => `<li>${e}</li>`).join('')}</ul>
-                <p>Click here to <a href="/${exam.replace('_', '-')}-photo-resizer">Fix your Photo</a>.</p>`;
+                <p>Click here to <a href="/${exam.replace('_', '-')}-photo-resizer">Fix your Document</a>.</p>`;
             }
         }
     </script>
