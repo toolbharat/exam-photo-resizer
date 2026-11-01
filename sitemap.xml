@@ -209,5 +209,9 @@
   <url><loc>https://www.pixsathi.in/international/pdf-compressor</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/pdf-merger</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.pixsathi.in/international/pdf-to-jpg</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url>
+    <loc>https://www.pixsathi.in/split-pdf</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+    </url><loc>https://www.pixsathi.in/barcode-generator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
 </urlset>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <title>Free Online Barcode Generator - Code 128, EAN-13 | PixSathi</title>
+    <meta name="description" content="Free online barcode generator. Create high-quality barcodes (Code 128, EAN-13, UPC) for inventory and retail products. Download as PNG or SVG.">
+    <link rel="canonical" href="https://www.pixsathi.in/barcode-generator">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- JsBarcode Library -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+
+    <style>
+        .tool-container { background: white; padding: 25px; border-radius: 12px; max-width: 600px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        .input-group { text-align: left; margin-bottom: 15px; }
+        .input-group label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 5px; font-size: 14px; }
+        .input-group input, .input-group select { width: 100%; padding: 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 16px; outline: none; }
+        .input-group input:focus, .input-group select:focus { border-color: #4f46e5; }
+        
+        .preview-box { margin: 25px 0; padding: 20px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: center; align-items: center; min-height: 150px; }
+        #barcode { max-width: 100%; }
+        
+        .btn-group { display: flex; gap: 10px; }
+        .action-btn { flex: 1; padding: 12px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .action-btn:hover { background: #4338ca; }
+        .btn-svg { background: #16a34a; }
+        .btn-svg:hover { background: #15803d; }
+        
+        .status { margin-top: 15px; font-size: 14px; font-weight: 600; color: #dc2626; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <p class="tagline">Free Online Tools for Everyone &bull; 100% Free &bull; Private</p>
+            <nav class="nav">
+                <a href="/">&#127968; Home</a>
+                <a href="/exams/">&#128221; Exams</a>
+                <a href="/finance/">&#128176; Finance</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 30px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">&#128277; Barcode Generator</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Generate high-quality barcodes for your products and inventory.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="input-group">
+                <label>Enter Barcode Text/Number:</label>
+                <input type="text" id="barcodeText" placeholder="e.g. 123456789012" oninput="generateBarcode()">
+            </div>
+
+            <div class="input-group">
+                <label>Select Barcode Format:</label>
+                <select id="barcodeFormat" onchange="generateBarcode()">
+                    <option value="CODE128">Code 128 (Inventory/Alphanumeric)</option>
+                    <option value="EAN13">EAN-13 (Retail Products in India)</option>
+                    <option value="UPC">UPC-A (US Retail)</option>
+                    <option value="CODE39">Code 39 (General Purpose)</option>
+                </select>
+            </div>
+
+            <div class="preview-box">
+                <svg id="barcode"></svg>
+            </div>
+            
+            <p class="status" id="statusText"></p>
+
+            <div class="btn-group">
+                <button class="action-btn" onclick="downloadPNG()">&#11015; Download PNG</button>
+                <button class="action-btn btn-svg" onclick="downloadSVG()">&#11015; Download SVG (Print)</button>
+            </div>
+        </div>
+
+        <!-- SEO Content -->
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Free Online Barcode Generator for Products</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Barcode Generator</strong> chhote businessmen, dukandaron aur inventory managers ke liye ek 100% free tool hai. Iski madad se aap apne products ke liye professional barcodes bana sakte hain aur unhe PNG ya SVG format mein download kar sakte hain. Sab kuch aapke browser mein hota hai, koi data server par nahi jata.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Create Barcode for Product in India</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
+                <li><strong>Step 1:</strong> Apne product ka number ya text daalein.</li>
+                <li><strong>Step 2:</strong> Format select karein (Retail products ke liye EAN-13 best hai).</li>
+                <li><strong>Step 3:</strong> Barcode generate hote hi download karein.</li>
+                <li><strong>Note:</strong> Print ke liye hamesha <strong>SVG format</strong> download karein, kyunki PNG print par blur ho jata hai.</li>
+            </ul>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Which barcode format should I use?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">For retail products in India, use EAN-13. For internal inventory or alphanumeric codes, use Code 128.</p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Are these barcodes scannable?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, these are standard barcodes and can be scanned by any barcode scanner.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PixSathi | Made for India &#127470;&#127475;</p>
+        </div>
+    </footer>
+
+    <script>
+        function generateBarcode() {
+            const text = document.getElementById('barcodeText').value;
+            const format = document.getElementById('barcodeFormat').value;
+            const status = document.getElementById('statusText');
+            const svg = document.getElementById('barcode');
+
+            if (!text) {
+                svg.innerHTML = '';
+                status.innerText = '';
+                return;
+            }
+
+            try {
+                JsBarcode("#barcode", text, {
+                    format: format,
+                    lineColor: "#000",
+                    width: 2,
+                    height: 80,
+                    displayValue: true
+                });
+                status.innerText = '';
+            } catch (error) {
+                svg.innerHTML = '';
+                if (format === 'EAN13') {
+                    status.innerText = "Error: EAN-13 requires exactly 12 or 13 digits.";
+                } else {
+                    status.innerText = "Error: Invalid input for selected format.";
+                }
+            }
+        }
+
+        function downloadPNG() {
+            const svg = document.getElementById('barcode');
+            if (!svg.innerHTML) { alert("Please generate a barcode first."); return; }
+            
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const img = new Image();
+            
+            img.onload = function() {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.fillStyle = "#ffffff";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0);
+                
+                const a = document.createElement('a');
+                a.download = 'barcode.png';
+                a.href = canvas.toDataURL('image/png');
+                a.click();
+            };
+            img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
+        }
+
+        function downloadSVG() {
+            const svg = document.getElementById('barcode');
+            if (!svg.innerHTML) { alert("Please generate a barcode first."); return; }
+            
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const blob = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.download = 'barcode.svg';
+            a.href = url;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
