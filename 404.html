@@ -7,7 +7,47 @@
 <link rel="stylesheet" href="/style.css">
 <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
 <script src="/heic-fix.js"></script>
+    <!-- HEIC Converter Library -->
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    <!-- Universal HEIC Converter Script for All Pages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('input[type="file"]');
+            inputs.forEach(input => {
+                input.addEventListener('change', async (e) => {
+                    const files = Array.from(input.files);
+                    if (files.length === 0) return;
+                    
+                    let hasHeic = false;
+                    const dataTransfer = new DataTransfer();
+                    
+                    for (let file of files) {
+                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
+                            hasHeic = true;
+                            try {
+                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
+                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
+                                dataTransfer.items.add(newFile);
+                            } catch (error) {
+                                console.error("HEIC Error", error);
+                            }
+                        } else {
+                            dataTransfer.items.add(file);
+                        }
+                    }
+                    
+                    if (hasHeic) {
+                        e.stopImmediatePropagation(); 
+                        input.files = dataTransfer.files;
+                        input.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }, true); 
+            });
+        });
+    </script>
 </head>
+
 <body>
 <header class="header">
 <div class="container">
