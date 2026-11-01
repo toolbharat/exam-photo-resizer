@@ -19,6 +19,9 @@
     <link rel="canonical" href="https://www.pixsathi.in/image-size-increaser">
     <link rel="stylesheet" href="/style.css">
     
+    <!-- HEIC Library -->
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+
     <style>
         .tool-container { background: white; padding: 20px; border-radius: 12px; max-width: 600px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
         .upload-box { border: 2px dashed #4f46e5; padding: 40px 20px; border-radius: 10px; cursor: pointer; background: #fafbff; transition: 0.3s; margin-bottom: 15px; }
@@ -39,75 +42,30 @@
         .status { margin-top: 15px; font-size: 14px; font-weight: 600; color: #64748b; }
         .status.error { color: #dc2626; }
         .status.success { color: #16a34a; }
+
+        /* Loading Loader CSS */
+        #heic-loader { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.95); z-index: 99999; flex-direction: column; justify-content: center; align-items: center; }
+        #heic-loader .spinner { border: 5px solid #f3f3f3; border-top: 5px solid #4f46e5; border-radius: 50%; width: 50px; height: 50px; animation: heic-spin 1s linear infinite; }
+        @keyframes heic-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #heic-loader p { margin-top: 20px; font-weight: bold; color: #4f46e5; font-size: 20px; text-align: center; }
     </style>
-
-    <!-- FAQ Schema for Google Search -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question","name": "How does this tool increase image size without changing quality?","acceptedAnswer": {"@type": "Answer","text": "The tool adds standard invisible metadata to the end of your image file. This increases the file size in KB but doesn't touch the actual image pixels, so the quality remains exactly the same."}},
-        {"@type": "Question","name": "Can I increase a photo to exactly 50KB?","acceptedAnswer": {"@type": "Answer","text": "Yes, simply enter 50 in the target size box. The tool will automatically adjust the file to exactly 50KB."}},
-        {"@type": "Question","name": "Is my photo safe?","acceptedAnswer": {"@type": "Answer","text": "Yes, absolutely. The tool works locally in your browser using JavaScript. Your images are never uploaded to any server."}}
-      ]
-    }
-    </script>
-
-
-
-
-    <!-- HEIC Converter Library -->
-    
-    <!-- Universal HEIC Converter Script for All Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputs = document.querySelectorAll('input[type="file"]');
-            inputs.forEach(input => {
-                input.addEventListener('change', async (e) => {
-                    const files = Array.from(input.files);
-                    if (files.length === 0) return;
-                    
-                    let hasHeic = false;
-                    const dataTransfer = new DataTransfer();
-                    
-                    for (let file of files) {
-                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
-                            hasHeic = true;
-                            try {
-                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
-                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
-                                dataTransfer.items.add(newFile);
-                            } catch (error) {
-                                console.error("HEIC Error", error);
-                            }
-                        } else {
-                            dataTransfer.items.add(file);
-                        }
-                    }
-                    
-                    if (hasHeic) {
-                        e.stopImmediatePropagation(); 
-                        input.files = dataTransfer.files;
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                }, true); 
-            });
-        });
-    </script>
 </head>
-
 <body>
+
+    <!-- Loading Screen -->
+    <div id="heic-loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
 
     <header class="header">
         <div class="container">
             <div class="logo">&#128248; PixSathi</div>
             <p class="tagline">Free Online Tools for Everyone &bull; 100% Free &bull; Private</p>
             <nav class="nav">
-                <a href="/">Home</a>
-                <a href="/exams/">Exams</a>
-                <a href="/finance/">Finance</a>
+                <a href="/">&#127968; Home</a>
+                <a href="/exams/">&#128221; Exams</a>
+                <a href="/finance/">&#128176; Finance</a>
                 <a href="/image-compressor">Compressor</a>
                 <a href="/photo-merger">Merger</a>
             </nav>
@@ -123,8 +81,8 @@
         <div class="tool-container">
             <label for="imageInput" class="upload-box" id="uploadBox">
                 <div style="font-size: 40px;">&#128247;</div>
-                <p id="fileNameText">Click to select an Image (JPG, PNG)</p>
-                <input type="file" id="imageInput" accept="image/jpeg, image/png">
+                <p id="fileNameText">Click to select an Image (JPG, PNG, HEIC)</p>
+                <input type="file" id="imageInput" accept="image/*">
             </label>
             
             <p id="currentSizeDisplay" style="font-weight: bold; color: #dc2626; margin-bottom: 10px; display: none;"></p>
@@ -139,50 +97,31 @@
             <button id="downloadBtn" class="download-btn">&#11015; Download Increased Image</button>
         </div>
 
-        <!-- SEO Content Section -->
         <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Increase Image Size in KB Online Free</h2>
-            <p style="margin-bottom: 20px;">PixSathi ka <strong>Image Size Increaser</strong> ek 100% free tool hai jo aapki photo ya signature ka size (KB mein) badha deta hai bina quality kharab kiye. Bahut baar sarkari exam forms (jaise SSC, UPSC, IBPS) mein minimum file size ki condition hoti hai (jaise "Photo should be between 20KB to 50KB"). Agar aapki photo 10KB ki hai, toh form reject ho jata hai. Ye tool us problem ko seconds mein solve karta hai. Sabse acchi baat? Aapki photos kisi server par upload nahi hoti, sab kuch aapke browser mein securely hota hai.</p>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Image Size Increaser</strong> ek 100% free tool hai jo aapki photo ya signature ka size (KB mein) badha deta hai bina quality kharab kiye. Bahut baar sarkari exam forms (jaise SSC, UPSC, IBPS) mein minimum file size ki condition hoti hai (jaise "Photo should be between 20KB to 50KB"). Agar aapki photo 10KB ki hai, toh form reject ho jata hai. Ye tool us problem ko seconds mein solve karta hai.</p>
 
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Increase Image Size (Step-by-Step)</h2>
             <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
-                <li><strong>Step 1:</strong> Apni photo select karein (JPG, PNG).</li>
+                <li><strong>Step 1:</strong> Apni photo select karein (JPG, PNG, HEIC).</li>
                 <li><strong>Step 2:</strong> Target KB size daalein (jaise 20, 50 ya 100).</li>
                 <li><strong>Step 3:</strong> "Increase Image Size" button par click karein.</li>
                 <li><strong>Step 4:</strong> Nayi badhi hui photo ko download karein.</li>
             </ul>
 
-            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Why Use PixSathi Image Size Increaser?</h2>
-            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
-                <li><strong>Exact KB Target:</strong> Aapko exactly 20KB ya 50KB ki photo chahiye? Ye tool exact size dega.</li>
-                <li><strong>No Quality Loss:</strong> Tool photo ke pixels ko kharab nahi karta, bas file ke andar invisible data add karta hai.</li>
-                <li><strong>Privacy First:</strong> Photos server par upload nahi hoti, isliye 100% safe hai.</li>
-                <li><strong>No Watermark:</strong> Download ki gayi image par koi watermark nahi aayega.</li>
-            </ul>
-
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
-            
             <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
                 <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">How does this tool increase image size without changing quality?</h3>
                 <p style="font-size: 14px; margin: 0; color: #4a5568;">The tool adds standard invisible metadata (dummy bytes) to the end of your image file. This increases the file size in KB but doesn't touch the actual image pixels, so the quality remains exactly the same.</p>
             </div>
-            
             <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
                 <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Can I increase a photo to exactly 50KB?</h3>
                 <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, simply enter '50' in the target size box. The tool will automatically adjust the file to exactly 50KB.</p>
             </div>
-
             <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
                 <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Is my photo safe?</h3>
                 <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, absolutely. The tool works locally in your browser using JavaScript. Your images are never uploaded to any server.</p>
             </div>
-
-            <h2 style="font-size: 22px; margin-top: 30px; margin-bottom: 16px; color: #1a202c;">Related Tools</h2>
-            <p>
-                <a href="/image-compressor" style="color: #3182ce; text-decoration: none;">Image Compressor</a> |
-                <a href="/ssc-cgl-photo-resizer" style="color: #3182ce; text-decoration: none;">SSC CGL Resizer</a> |
-                <a href="/ibps-po-photo-resizer" style="color: #3182ce; text-decoration: none;">IBPS PO Resizer</a>
-            </p>
         </section>
     </main>
 
@@ -192,6 +131,7 @@
         </div>
     </footer>
 
+    <!-- Logic with Loading & HEIC Support -->
     <script>
         const imageInput = document.getElementById('imageInput');
         const fileNameText = document.getElementById('fileNameText');
@@ -200,13 +140,34 @@
         const processBtn = document.getElementById('processBtn');
         const statusText = document.getElementById('statusText');
         const downloadBtn = document.getElementById('downloadBtn');
+        const loader = document.getElementById('heic-loader');
         
         let currentFile = null;
         let processedFileName = "increased-image.jpg";
 
-        imageInput.addEventListener('change', function(e) {
-            currentFile = e.target.files[0];
-            if (currentFile) {
+        imageInput.addEventListener('change', async function(e) {
+            let file = e.target.files[0];
+            if (!file) return;
+
+            // Show Loading Immediately
+            loader.style.display = 'flex';
+
+            // Convert HEIC if needed
+            if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
+                try {
+                    const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
+                    const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+                    file = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
+                } catch (error) {
+                    alert("HEIC conversion failed. Please try JPG.");
+                    loader.style.display = 'none';
+                    return;
+                }
+            }
+
+            // Short delay so the user sees the smooth loading animation
+            setTimeout(() => {
+                currentFile = file;
                 const sizeKB = (currentFile.size / 1024).toFixed(2);
                 fileNameText.innerText = currentFile.name;
                 currentSizeDisplay.innerText = "Current Size: " + sizeKB + " KB";
@@ -215,7 +176,9 @@
                 statusText.innerText = "";
                 downloadBtn.style.display = 'none';
                 processBtn.disabled = false;
-            }
+                
+                loader.style.display = 'none'; // Hide Loading
+            }, 600); 
         });
 
         processBtn.addEventListener('click', function() {
@@ -253,12 +216,10 @@
                 const paddingSize = targetSizeBytes - currentSizeBytes;
                 const padding = new Uint8Array(paddingSize);
                 
-                // Fill with random bytes to avoid any compression patterns
                 for (let i = 0; i < paddingSize; i++) {
                     padding[i] = Math.floor(Math.random() * 256);
                 }
 
-                // Combine original file array and padding array
                 const newBlob = new Blob([new Uint8Array(arrayBuffer), padding], { type: currentFile.type });
                 const url = URL.createObjectURL(newBlob);
                 
@@ -278,67 +239,5 @@
             reader.readAsArrayBuffer(currentFile);
         });
     </script>
-
-<!-- UNIVERSAL LOADER START -->
-<div id="heic-loader-universal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); z-index: 99999; flex-direction: column; justify-content: center; align-items: center;">
-    <div style="border: 5px solid #f3f3f3; border-top: 5px solid #4f46e5; border-radius: 50%; width: 50px; height: 50px; animation: heic-spin 1s linear infinite;"></div>
-    <p style="margin-top: 20px; font-weight: bold; color: #4f46e5; font-size: 20px; text-align: center;">Loading...</p>
-</div>
-<style>@keyframes heic-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
-<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-<script id="heic-fix-universal-script">
-    document.addEventListener('DOMContentLoaded', () => {
-        const loader = document.getElementById('heic-loader-universal');
-        const inputs = document.querySelectorAll('input[type="file"]');
-        
-        inputs.forEach(input => {
-            input.addEventListener('change', async (e) => {
-                if (input.dataset.processing === 'true') {
-                    input.dataset.processing = 'false';
-                    return;
-                }
-                
-                const files = Array.from(input.files);
-                if (files.length === 0) return;
-
-                const hasHeic = files.some(file => file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic');
-
-                // Har baar photo upload par Loading dikhao
-                if(loader) loader.style.display = 'flex';
-
-                if (hasHeic) {
-                    e.stopImmediatePropagation(); 
-                    input.dataset.processing = 'true';
-                    
-                    const dataTransfer = new DataTransfer();
-                    for (let file of files) {
-                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
-                            try {
-                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
-                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
-                                dataTransfer.items.add(newFile);
-                            } catch (error) { 
-                                console.error("HEIC Error", error); 
-                                dataTransfer.items.add(file); 
-                            }
-                        } else {
-                            dataTransfer.items.add(file);
-                        }
-                    }
-                    input.files = dataTransfer.files;
-                    if(loader) loader.style.display = 'none';
-                    input.dispatchEvent(new Event('change', { bubbles: true }));
-                } else {
-                    // Normal JPG/PNG ke liye 800ms loading dikhao
-                    setTimeout(() => {
-                        if(loader) loader.style.display = 'none';
-                    }, 800);
-                }
-            }, true); 
-        });
-    });
-</script>
-<!-- UNIVERSAL LOADER END -->
 </body>
 </html>
