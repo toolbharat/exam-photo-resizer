@@ -135,6 +135,8 @@
         .hero-cta { width: 100%; padding: 8px 14px; font-size: 11px; }
     }
     </style>
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+<script src="/heic-fix.js"></script>
 </head>
 <body>
 

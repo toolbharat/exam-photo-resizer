@@ -14,6 +14,8 @@
         .tool-info h3 { font-size: 13px; font-weight: 700; margin: 0 0 2px 0; }
         .tool-info p { font-size: 11px; color: #6e6e73; margin: 0; }
     </style>
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+<script src="/heic-fix.js"></script>
 </head>
 <body>
 
