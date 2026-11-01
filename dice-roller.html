@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll a Dice Online Free - Virtual Dice Roller | PixSathi</title>
+    <meta name="description" content="Free online dice roller. Roll a 3D virtual dice and get random numbers from 1 to 6 instantly. Perfect for board games.">
+    <link rel="canonical" href="https://www.pixsathi.in/dice-roller">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .tool-container { background: white; padding: 40px 20px; border-radius: 12px; max-width: 500px; margin: 30px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        
+        .dice-container { perspective: 1000px; margin: 40px auto; width: 100px; height: 100px; }
+        .dice { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        
+        .face { position: absolute; width: 100px; height: 100px; background: #ffffff; border: 2px solid #cbd5e1; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 40px; box-shadow: inset 0 0 15px rgba(0,0,0,0.1); }
+        
+        .front  { transform: rotateY(0deg) translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .right  { transform: rotateY(90deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .top    { transform: rotateX(90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+        
+        .action-btn { width: 100%; max-width: 300px; padding: 15px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 20px; }
+        .action-btn:hover { background: #4338ca; }
+        .action-btn:disabled { background: #a5b4fc; cursor: not-allowed; }
+        
+        .result-text { margin-top: 20px; font-size: 24px; font-weight: bold; color: #1e293b; min-height: 35px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <nav class="nav"><a href="/">&#127968; Home</a></nav>
+        </div>
+    </header>
+
+    <div style="max-width: 1100px; margin: 15px auto 0; padding: 0 20px; text-align: left;" class="no-print">
+        <a href="/" style="display: inline-flex; align-items: center; background: #eef2ff; color: #4f46e5; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid #c7d2fe; transition: 0.2s;">
+            &#8592; Back to Home
+        </a>
+    </div>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 30px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">Roll a Dice</h1>
+            <p style="color: #64748b; margin-bottom: 10px;">Click the button to roll the virtual dice.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="dice-container">
+                <div class="dice" id="dice">
+                    <div class="face front">1</div>
+                    <div class="face back">6</div>
+                    <div class="face right">3</div>
+                    <div class="face left">4</div>
+                    <div class="face top">2</div>
+                    <div class="face bottom">5</div>
+                </div>
+            </div>
+            
+            <div class="result-text" id="result">Roll to see!</div>
+            
+            <button class="action-btn" id="rollBtn" onclick="rollDice()">Roll Dice</button>
+        </div>
+    </main>
+
+    <script>
+        let isRolling = false;
+        let currentX = 0;
+        let currentY = 0;
+
+        function rollDice() {
+            if (isRolling) return;
+            isRolling = true;
+            
+            const dice = document.getElementById('dice');
+            const resultText = document.getElementById('result');
+            const btn = document.getElementById('rollBtn');
+            
+            btn.disabled = true;
+            resultText.innerText = "Rolling...";
+
+            const roll = Math.floor(Math.random() * 6) + 1;
+            
+            // Target rotations for each face to face the front
+            const targetRotations = {
+                1: { x: 0, y: 0 },
+                2: { x: -90, y: 0 },
+                3: { x: 0, y: -90 },
+                4: { x: 0, y: 90 },
+                5: { x: 90, y: 0 },
+                6: { x: 0, y: 180 }
+            };
+
+            const target = targetRotations[roll];
+
+            // Calculate the next rotation to ensure it always spins forward
+            const spins = 3; // 3 full spins (1080 degrees)
+            
+            // Math formula to find the nearest forward rotation
+            const targetXMod = (target.x % 360 + 360) % 360;
+            const currentXMod = (currentX % 360 + 360) % 360;
+            const nextX = currentX + (360 * spins) + ((targetXMod - currentXMod + 360) % 360);
+            
+            const targetYMod = (target.y % 360 + 360) % 360;
+            const currentYMod = (currentY % 360 + 360) % 360;
+            const nextY = currentY + (360 * spins) + ((targetYMod - currentYMod + 360) % 360);
+
+            currentX = nextX;
+            currentY = nextY;
+
+            dice.style.transform = `rotateX(${currentX}deg) rotateY(${currentY}deg)`;
+
+            setTimeout(() => {
+                resultText.innerText = `You rolled a ${roll}!`;
+                btn.disabled = false;
+                isRolling = false;
+            }, 800); // Matches the new CSS transition time
+        }
+    </script>
+</body>
+</html>
