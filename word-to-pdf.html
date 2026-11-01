@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,12 +47,11 @@
         .faq-item h3 { font-size: 16px; margin: 0 0 6px 0; color: #1a202c; }
         .faq-item p { font-size: 14px; margin: 0; color: #4a5568; }
     </style>
-<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+
 <script src="/heic-handler.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+
 <script src="/heic-fix.js"></script>
-    <!-- HEIC Converter Library -->
-    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    
     <!-- Universal HEIC Converter Script for All Pages -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -270,6 +269,61 @@
                 convertBtn.disabled = false;
                 convertBtn.textContent = 'Convert to PDF';
             }
+        });
+    </script>
+    <!-- HEIC Loader UI -->
+    <style>
+        #heic-loader { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.95); z-index: 99999; flex-direction: column; justify-content: center; align-items: center; }
+        #heic-loader .spinner { border: 5px solid #f3f3f3; border-top: 5px solid #4f46e5; border-radius: 50%; width: 50px; height: 50px; animation: heic-spin 1s linear infinite; }
+        @keyframes heic-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #heic-loader p { margin-top: 20px; font-weight: bold; color: #4f46e5; font-size: 18px; text-align: center; }
+    </style>
+    <div id="heic-loader">
+        <div class="spinner"></div>
+        <p>Converting iPhone Photo (HEIC)...<br>Please wait.</p>
+    </div>
+
+    <!-- HEIC Converter Library & Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('input[type="file"]');
+            const loader = document.getElementById('heic-loader');
+            
+            inputs.forEach(input => {
+                input.addEventListener('change', async (e) => {
+                    const files = Array.from(input.files);
+                    if (files.length === 0) return;
+                    
+                    let hasHeic = false;
+                    const dataTransfer = new DataTransfer();
+                    
+                    for (let file of files) {
+                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
+                            hasHeic = true;
+                            if(loader) loader.style.display = 'flex'; // Loader ON
+                            
+                            try {
+                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
+                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
+                                dataTransfer.items.add(newFile);
+                            } catch (error) {
+                                console.error("HEIC Error", error);
+                            }
+                        } else {
+                            dataTransfer.items.add(file);
+                        }
+                    }
+                    
+                    if (hasHeic) {
+                        e.stopImmediatePropagation(); 
+                        input.files = dataTransfer.files;
+                        if(loader) loader.style.display = 'none'; // Loader OFF
+                        input.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }, true); 
+            });
         });
     </script>
 </body>
