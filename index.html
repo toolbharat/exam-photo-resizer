@@ -41,24 +41,29 @@
 
         /* Main Layout */
         .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        .section-title { font-size: 16px; color: #1d1d1f; margin: 20px 0 12px; font-weight: 700; }
-        .category-title { font-size: 13px; color: #4f46e5; margin: 20px 0 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
+        .page-title { font-size: 24px; color: #1d1d1f; margin: 10px 0 20px; font-weight: 800; text-align: center; }
+        
+        /* Category Headings */
+        .category-title { font-size: 15px; color: #4f46e5; margin: 30px 0 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; display: flex; align-items: center; gap: 8px;}
 
-        /* Two Column Grid */
-        .two-column-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 25px; margin: 20px 0; align-items: start; }
+        /* Cards Grid */
+        .compact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+        .compact-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 8px; padding: 12px 15px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; transition: all 0.2s; font-size: 13px; }
+        .compact-card:hover { border-color: #4f46e5; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1); transform: translateY(-2px); }
+        .compact-card .flag { width: 28px; height: 18px; flex-shrink: 0; border-radius: 2px; }
+        .compact-card .icon { font-size: 22px; flex-shrink: 0; }
+        .compact-card .name { font-size: 14px; font-weight: 600; color: #1d1d1f; line-height: 1.2; }
+        .compact-card .sub { font-size: 11px; color: #6e6e73; margin-top: 2px; }
 
-        /* Cards */
-        .country-section { margin-bottom: 24px; }
-        .compact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-        .compact-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 8px; padding: 8px 10px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; transition: all 0.2s; font-size: 12px; }
-        .compact-card:hover { border-color: #4f46e5; box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1); transform: translateY(-1px); }
-        .compact-card .flag { width: 24px; height: 16px; flex-shrink: 0; border-radius: 2px; }
-        .compact-card .icon { font-size: 18px; flex-shrink: 0; }
-        .compact-card .name { font-size: 12px; font-weight: 600; color: #1d1d1f; line-height: 1.2; }
-        .compact-card .sub { font-size: 10px; color: #6e6e73; margin-top: 1px; }
+        /* View All Button Style */
+        .view-all { justify-content: center; background: #eef2ff; border-color: #c7d2fe; color: #4f46e5; font-weight: 600; }
+        .view-all:hover { background: #e0e7ff; }
+
+        /* Divider */
+        .divider { height: 2px; background: #e2e8f0; margin: 40px 0 20px; border-radius: 2px; }
 
         /* SEO Content */
-        .content-section { max-width: 900px; margin: 30px auto; padding: 30px; background: #ffffff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); line-height: 1.7; color: #1d1d1f; }
+        .content-section { max-width: 900px; margin: 40px auto; padding: 30px; background: #ffffff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); line-height: 1.7; color: #1d1d1f; }
         .content-section h2 { font-size: 18px; color: #1d1d1f; margin: 20px 0 10px; font-weight: 700; }
         .content-section h3 { font-size: 15px; color: #1d1d1f; margin: 16px 0 8px; font-weight: 600; }
         .content-section p { font-size: 13px; margin-bottom: 12px; color: #3a3a3c; }
@@ -66,15 +71,19 @@
         .content-section li { margin-bottom: 4px; }
 
         /* Footer */
-        .footer { text-align: center; padding: 18px; color: #6e6e73; font-size: 12px; border-top: 1px solid #e5e5ea; margin-top: 30px; }
-        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer { text-align: center; padding: 20px; color: #6e6e73; font-size: 12px; border-top: 1px solid #e5e5ea; margin-top: 40px; }
+        .footer a { color: #4f46e5; text-decoration: none; font-weight: 500;}
 
         /* Mobile */
         @media (max-width: 700px) {
-            .two-column-grid { grid-template-columns: 1fr; }
             .header .container { flex-direction: column; text-align: center; gap: 6px; }
             .nav { justify-content: center; flex-wrap: wrap; }
-            .compact-grid { grid-template-columns: repeat(2, 1fr); }
+            .compact-grid { grid-template-columns: repeat(2, 1fr); gap: 8px;}
+            .compact-card { padding: 10px; gap: 8px;}
+            .compact-card .icon { font-size: 18px; }
+            .compact-card .name { font-size: 12px; }
+            .category-title { font-size: 13px; }
+            .page-title { font-size: 20px; }
         }
     </style>
 </head>
@@ -96,86 +105,70 @@
     </header>
 
     <main class="container">
-        <!-- Two-column grid -->
-        <div class="two-column-grid">
+        <h1 class="page-title">🛠️ All Free Online Tools</h1>
 
-            <!-- Left Column: International Tools -->
-            <section class="country-section">
-                <h2 class="section-title">🌍 International Tools</h2>
-                <div class="compact-grid">
-                    <a href="/international/us-passport-photo" class="compact-card">
-                        <img src="/flags/us.png" alt="US" class="flag">
-                        <div><div class="name">US Passport</div><div class="sub">2x2 inch</div></div>
-                    </a>
-                    <a href="/international/uk-visa-photo" class="compact-card">
-                        <img src="/flags/gb.png" alt="UK" class="flag">
-                        <div><div class="name">UK Visa</div><div class="sub">3.5x4.5 cm</div></div>
-                    </a>
-                    <a href="/international/canada-passport-photo" class="compact-card">
-                        <img src="/flags/ca.png" alt="Canada" class="flag">
-                        <div><div class="name">Canada Passport</div><div class="sub">5x7 cm</div></div>
-                    </a>
-                    <a href="/international/india-passport-photo" class="compact-card">
-                        <img src="/flags/in.png" alt="India" class="flag">
-                        <div><div class="name">India Passport</div><div class="sub">35x45 mm</div></div>
-                    </a>
-                    <a href="/international/" class="compact-card" style="grid-column: 1 / -1; justify-content: center; background: #eef2ff; border-color: #4f46e5;">
-                        <span class="icon">🌍</span>
-                        <div><div class="name">All International Tools →</div></div>
-                    </a>
-                </div>
-            </section>
+        <!-- 1. PDF & Document Tools -->
+        <h2 class="category-title">📄 PDF & Document Tools</h2>
+        <div class="compact-grid">
+            <a href="/pdf-password-remover" class="compact-card"><span class="icon">&#128273;</span><div><div class="name">PDF Password</div><div class="sub">Remove Password</div></div></a>
+            <a href="/jpg-to-pdf" class="compact-card"><span class="icon">&#128196;</span><div><div class="name">JPG to PDF</div><div class="sub">Convert Images</div></div></a>
+            <a href="/pdf-to-image" class="compact-card"><span class="icon">&#128444;</span><div><div class="name">PDF to Image</div><div class="sub">Extract Pages</div></div></a>
+            <a href="/word-to-pdf" class="compact-card"><span class="icon">&#128221;</span><div><div class="name">Word to PDF</div><div class="sub">Convert Document</div></div></a>
+            <a href="/split-pdf" class="compact-card"><span class="icon">&#9986;</span><div><div class="name">Split PDF</div><div class="sub">Extract pages</div></div></a>
+            <a href="/international/pdf-compressor" class="compact-card"><span class="icon">&#128476;</span><div><div class="name">PDF Compressor</div><div class="sub">Reduce size</div></div></a>
+            <a href="/excel-merger" class="compact-card"><span class="icon">&#128202;</span><div><div class="name">Excel Merger</div><div class="sub">Merge files</div></div></a>
+        </div>
 
-            <!-- Right Column: Categorized Tools (Reordered) -->
-            <section class="country-section">
-                <h2 class="section-title">🛠️ Free Online Tools</h2>
-                
-                <!-- Category 1: PDF & Document Tools -->
-                <h3 class="category-title">📄 PDF & Document Tools</h3>
-                <div class="compact-grid">
-                    <a href="/pdf-password-remover" class="compact-card"><span class="icon">&#128273;</span><div><div class="name">PDF Password</div><div class="sub">Remove</div></div></a>
-                    <a href="/jpg-to-pdf" class="compact-card"><span class="icon">&#128196;</span><div><div class="name">JPG to PDF</div><div class="sub">Convert</div></div></a>
-                    <a href="/pdf-to-image" class="compact-card"><span class="icon">&#128444;</span><div><div class="name">PDF to Image</div><div class="sub">Extract</div></div></a>
-                    <a href="/word-to-pdf" class="compact-card"><span class="icon">&#128221;</span><div><div class="name">Word to PDF</div><div class="sub">Convert</div></div></a>
-                    <a href="/split-pdf" class="compact-card"><span class="icon">&#9986;</span><div><div class="name">Split PDF</div><div class="sub">Extract pages</div></div></a>
-                    <a href="/international/pdf-compressor" class="compact-card"><span class="icon">&#128476;</span><div><div class="name">PDF Compressor</div><div class="sub">Reduce size</div></div></a>
-                    <a href="/excel-merger" class="compact-card"><span class="icon">&#128202;</span><div><div class="name">Excel Merger</div><div class="sub">Merge files</div></div></a>
-                </div>
+        <!-- 2. Image & Photo Tools -->
+        <h2 class="category-title">🖼️ Image & Photo Tools</h2>
+        <div class="compact-grid">
+            <a href="/image-compressor" class="compact-card"><span class="icon">&#128293;</span><div><div class="name">Image Compressor</div><div class="sub">Exact KB Target</div></div></a>
+            <a href="/image-size-increaser" class="compact-card"><span class="icon">&#128200;</span><div><div class="name">Size Increaser</div><div class="sub">Increase KB</div></div></a>
+            <a href="/photo-merger" class="compact-card"><span class="icon">&#128279;</span><div><div class="name">Photo Merger</div><div class="sub">Merge photos</div></div></a>
+            <a href="/image-converter" class="compact-card"><span class="icon">&#128260;</span><div><div class="name">Image Converter</div><div class="sub">Any format</div></div></a>
+            <a href="/signature-background-remover" class="compact-card"><span class="icon">&#9997;</span><div><div class="name">Signature Cleaner</div><div class="sub">White BG</div></div></a>
+        </div>
 
-                <!-- Category 2: Image & Photo Tools -->
-                <h3 class="category-title">🖼️ Image & Photo Tools</h3>
-                <div class="compact-grid">
-                    <a href="/image-compressor" class="compact-card"><span class="icon">&#128293;</span><div><div class="name">Image Compressor</div><div class="sub">Exact KB</div></div></a>
-                    <a href="/image-size-increaser" class="compact-card"><span class="icon">&#128200;</span><div><div class="name">Size Increaser</div><div class="sub">Increase KB</div></div></a>
-                    <a href="/photo-merger" class="compact-card"><span class="icon">&#128279;</span><div><div class="name">Photo Merger</div><div class="sub">Merge photos</div></div></a>
-                    <a href="/image-converter" class="compact-card"><span class="icon">&#128260;</span><div><div class="name">Image Converter</div><div class="sub">Any format</div></div></a>
-                    <a href="/signature-background-remover" class="compact-card"><span class="icon">&#9997;</span><div><div class="name">Signature Cleaner</div><div class="sub">White BG</div></div></a>
-                </div>
+        <!-- 3. Finance, Exam & Health Tools -->
+        <h2 class="category-title">🧮 Finance, Exam & Health Tools</h2>
+        <div class="compact-grid">
+            <a href="/gst-invoice-generator" class="compact-card"><span class="icon">&#128176;</span><div><div class="name">GST Invoice</div><div class="sub">Bill Generator</div></div></a>
+            <a href="/gst-calculator" class="compact-card"><span class="icon">&#129518;</span><div><div class="name">GST Calculator</div><div class="sub">Add/Remove Tax</div></div></a>
+            <a href="/exam-photo-checker" class="compact-card"><span class="icon">&#128269;</span><div><div class="name">Photo Checker</div><div class="sub">Exam Valid size</div></div></a>
+            <a href="/period-tracker" class="compact-card"><span class="icon">&#127800;</span><div><div class="name">Period Tracker</div><div class="sub">Health Tool</div></div></a>
+        </div>
 
-                <!-- Category 3: Finance, Exam & Health Tools -->
-                <h3 class="category-title">🧮 Finance, Exam & Health Tools</h3>
-                <div class="compact-grid">
-                    <a href="/gst-invoice-generator" class="compact-card"><span class="icon">&#128176;</span><div><div class="name">GST Invoice</div><div class="sub">Bill Generator</div></div></a>
-                    <a href="/gst-calculator" class="compact-card"><span class="icon">&#129518;</span><div><div class="name">GST Calculator</div><div class="sub">Add/Remove</div></div></a>
-                    <a href="/exam-photo-checker" class="compact-card"><span class="icon">&#128269;</span><div><div class="name">Photo Checker</div><div class="sub">Exam Valid size</div></div></a>
-                    <a href="/cgpa-calculator" class="compact-card"><span class="icon">&#129518;</span><div><div class="name">CGPA Calculator</div><div class="sub">Percentage</div></div></a>
-                    <a href="/period-tracker" class="compact-card"><span class="icon">&#127800;</span><div><div class="name">Period Tracker</div><div class="sub">Health Tool</div></div></a>
-                </div>
+        <!-- 4. Other Tools (Fun & Utility) -->
+        <h2 class="category-title">💱 Other Tools</h2>
+        <div class="compact-grid">
+            <a href="/fancy-text-generator" class="compact-card"><span class="icon">&#10024;</span><div><div class="name">Fancy Text</div><div class="sub">70+ Stylish Fonts</div></div></a>
+            <a href="/password-generator" class="compact-card"><span class="icon">&#128274;</span><div><div class="name">Password Gen</div><div class="sub">Strong Passwords</div></div></a>
+            <a href="/diff-checker" class="compact-card"><span class="icon">&#128260;</span><div><div class="name">Diff Checker</div><div class="sub">Compare Text</div></div></a>
+            <a href="/url-encoder" class="compact-card"><span class="icon">&#128279;</span><div><div class="name">URL Encoder</div><div class="sub">Encode/Decode</div></div></a>
+            <a href="/coin-flip" class="compact-card"><span class="icon">&#129689;</span><div><div class="name">Flip a Coin</div><div class="sub">Heads or Tails</div></div></a>
+            <a href="/dice-roller" class="compact-card"><span class="icon">&#127922;</span><div><div class="name">Roll a Dice</div><div class="sub">1 to 6</div></div></a>
+            <a href="/qr-code-generator" class="compact-card"><span class="icon">&#127919;</span><div><div class="name">QR Code</div><div class="sub">Generator</div></div></a>
+            <a href="/barcode-generator" class="compact-card"><span class="icon">&#128277;</span><div><div class="name">Barcode Gen</div><div class="sub">For Products</div></div></a>
+        </div>
 
-                <!-- Category 4: Fun & Utility Tools (Moved to Bottom) -->
-                <h3 class="category-title">🎯 Fun & Utility Tools</h3>
-                <div class="compact-grid">
-                    <a href="/fancy-text-generator" class="compact-card"><span class="icon">&#10024;</span><div><div class="name">Fancy Text</div><div class="sub">Stylish Fonts</div></div></a>
-                    <a href="/password-generator" class="compact-card"><span class="icon">&#128274;</span><div><div class="name">Password Gen</div><div class="sub">Strong Passwords</div></div></a>
-                    <a href="/diff-checker" class="compact-card"><span class="icon">&#128260;</span><div><div class="name">Diff Checker</div><div class="sub">Compare Text</div></div></a>
-                    <a href="/url-encoder" class="compact-card"><span class="icon">&#128279;</span><div><div class="name">URL Encoder</div><div class="sub">Encode/Decode</div></div></a>
-                    <a href="/coin-flip" class="compact-card"><span class="icon">&#129689;</span><div><div class="name">Flip a Coin</div><div class="sub">Heads or Tails</div></div></a>
-                    <a href="/dice-roller" class="compact-card"><span class="icon">&#127922;</span><div><div class="name">Roll a Dice</div><div class="sub">1 to 6</div></div></a>
-                    <a href="/qr-code-generator" class="compact-card"><span class="icon">&#127919;</span><div><div class="name">QR Code</div><div class="sub">Generator</div></div></a>
-                    <a href="/barcode-generator" class="compact-card"><span class="icon">&#128277;</span><div><div class="name">Barcode Gen</div><div class="sub">For Products</div></div></a>
-                </div>
-            </section>
+        <!-- 5. Student Tools -->
+        <h2 class="category-title">🎓 Student Tools</h2>
+        <div class="compact-grid">
+            <a href="/exam-marks-calculator" class="compact-card"><span class="icon">&#128221;</span><div><div class="name">Marks Calculator</div><div class="sub">Negative Marking</div></div></a>
+            <a href="/cgpa-calculator" class="compact-card"><span class="icon">&#129518;</span><div><div class="name">CGPA Calculator</div><div class="sub">Percentage</div></div></a>
+        </div>
 
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- 6. International & Passport Tools (Sample) -->
+        <h2 class="category-title" style="color: #10b981; border-bottom-color: #10b981;">🌍 International & Passport Tools</h2>
+        <div class="compact-grid">
+            <a href="/international/us-passport-photo" class="compact-card"><img src="/flags/us.png" alt="US" class="flag"><div><div class="name">US Passport</div><div class="sub">2x2 inch</div></div></a>
+            <a href="/international/uk-visa-photo" class="compact-card"><img src="/flags/gb.png" alt="UK" class="flag"><div><div class="name">UK Visa</div><div class="sub">3.5x4.5 cm</div></div></a>
+            <a href="/international/canada-passport-photo" class="compact-card"><img src="/flags/ca.png" alt="Canada" class="flag"><div><div class="name">Canada Passport</div><div class="sub">5x7 cm</div></div></a>
+            <a href="/international/india-passport-photo" class="compact-card"><img src="/flags/in.png" alt="India" class="flag"><div><div class="name">India Passport</div><div class="sub">35x45 mm</div></div></a>
+            <a href="/international/" class="compact-card view-all" style="border-color:#10b981; color:#10b981; background:#ecfdf5;"><span class="icon">🌍</span><div><div class="name">View All International Tools →</div></div></a>
         </div>
 
         <!-- SEO Content -->
