@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <title>International Tools - Passport, Visa, GPA & Global Utilities | PixSathi</title>
+    <meta name="description" content="Free international tools for US, UK, Canada, Australia. Passport photo maker, visa resizer, GPA calculator, currency converter, and global utilities. 100% free.">
+    <link rel="canonical" href="https://www.pixsathi.in/international/">
+    <link rel="stylesheet" href="/style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,318 +14,67 @@
       gtag('js', new Date());
       gtag('config', 'G-L5K09RC5D2');
     </script>
-    <title>International Tools — Passport Photos, Student Tools &amp; More | PixSathi</title>
-    <meta name="description" content="Free international tools for 20+ countries — passport &amp; visa photos, student tools, unit converters, and more. 100% free, no signup, no watermark.">
-    <meta name="keywords" content="international tools, passport photo maker, visa photo, student tools, gpa calculator, unit converter, currency converter">
-    <link rel="canonical" href="https://www.pixsathi.in/international/">
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link rel="stylesheet" href="/style.css">
     <style>
-.intl-header { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: #fff; padding: 15px 10px; text-align: center; }
-.intl-header h1 { font-size: 20px; font-weight: 700; margin-bottom: 2px; }
-.intl-header p { font-size: 12px; opacity: 0.85; max-width: 600px; margin: 0 auto; }
-        .intl-container { max-width: 900px; margin: 0 auto; padding: 20px 15px; }
-        .intl-section { margin-bottom: 25px; }
-        .intl-section h2 { font-size: 18px; color: #1a202c; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #eef2ff; }
-        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
-        .tool-card { display: block; padding: 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; text-decoration: none; color: #1a202c; transition: all 0.2s; }
-        .tool-card:hover { border-color: #4f46e5; box-shadow: 0 4px 12px rgba(79,70,229,0.1); transform: translateY(-2px); }
-        .tool-card .icon { font-size: 22px; margin-bottom: 4px; }
-        .tool-card .name { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
-        .tool-card .desc { font-size: 11px; color: #6b7280; }
-        .country-select { width: 100%; max-width: 350px; padding: 10px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 14px; }
-        .info-block { background: #f9fafb; border-radius: 10px; padding: 20px; margin-top: 25px; font-size: 14px; line-height: 1.6; color: #374151; }
-        .info-block h2 { font-size: 18px; color: #1a202c; margin-bottom: 10px; }
-        .info-block ul { margin: 10px 0 0 20px; }
-        .info-block li { margin-bottom: 4px; }
-        .why-list { list-style: none; margin: 0; padding: 0; }
-        .why-list li { padding: 6px 0; font-size: 14px; }
+        .header { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: #ffffff; padding: 10px 20px; }
+        .header .container { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;}
+        .nav a { color: white; text-decoration: none; padding: 5px 10px; background: rgba(255,255,255,0.2); border-radius: 5px; font-size: 13px; margin-left: 5px;}
+        .category-title { font-size: 15px; color: #10b981; margin: 30px 0 12px; font-weight: 700; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        .compact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+        .compact-card { background: white; border: 1px solid #e5e5ea; border-radius: 8px; padding: 12px 15px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; transition: 0.2s;}
+        .compact-card:hover { border-color: #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1); transform: translateY(-2px); }
+        .compact-card .icon { font-size: 22px; }
+        .compact-card .name { font-size: 14px; font-weight: 600; color: #1d1d1f; }
+        .compact-card .sub { font-size: 11px; color: #6e6e73; }
+        .back-btn { display: inline-flex; margin: 15px 0; padding: 8px 16px; background: #eef2ff; color: #4f46e5; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px;}
     </style>
-<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-<script src="/heic-fix.js"></script>
-    <!-- HEIC Converter Library -->
-    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-    <!-- Universal HEIC Converter Script for All Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputs = document.querySelectorAll('input[type="file"]');
-            inputs.forEach(input => {
-                input.addEventListener('change', async (e) => {
-                    const files = Array.from(input.files);
-                    if (files.length === 0) return;
-                    
-                    let hasHeic = false;
-                    const dataTransfer = new DataTransfer();
-                    
-                    for (let file of files) {
-                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
-                            hasHeic = true;
-                            try {
-                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
-                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
-                                dataTransfer.items.add(newFile);
-                            } catch (error) {
-                                console.error("HEIC Error", error);
-                            }
-                        } else {
-                            dataTransfer.items.add(file);
-                        }
-                    }
-                    
-                    if (hasHeic) {
-                        e.stopImmediatePropagation(); 
-                        input.files = dataTransfer.files;
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                }, true); 
-            });
-        });
-    </script>
 </head>
-
 <body>
-
     <header class="header">
         <div class="container">
-            <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Free Online Tools for Everyone • 100% Free • Private</p>
+            <div class="logo" style="font-weight: 800; font-size: 18px;">📸 PixSathi</div>
             <nav class="nav">
-                <a href="/">🏠 Home</a>
-                <a href="/exams/">📝 Exams</a>
-                <a href="/international/">🌍 International</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/blog">📝 Blog</a>
-                <a href="/contact">📬 Contact</a>
+                <a href="/">🏠 Main Dashboard</a>
+                <a href="/exams/" style="background:#f59e0b;">🇮🇳 Indian Exams</a>
             </nav>
         </div>
     </header>
 
-    <section class="intl-header">
-        <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
-<h1>🌍 International Tools</h1>
-        <p>Free tools for 20+ countries — 100% free, no signup, no watermark.</p>
-    </section>
+    <main class="container" style="max-width: 1100px; margin: 0 auto; padding: 20px;">
+        <a href="/" class="back-btn">← Back to Main Dashboard</a>
+        <h1 style="font-size: 28px; color: #1e293b; margin-top: 10px;">🌍 International Tools</h1>
+        <p style="color: #64748b; margin-bottom: 20px;">Free tools for 20+ countries — 100% free, no signup, no watermark.</p>
 
-    <main class="intl-container">
-
-        <!-- Passport & Visa Photos -->
-        <section class="intl-section">
-            <h2>📸 Passport &amp; Visa Photos</h2>
-            <p style="margin-bottom: 16px; color: #4b5563;">Select your country:</p>
-            <select class="country-select" onchange="if(this.value) window.location.href=this.value;">
-                <option value="">-- Choose Your Country --</option>
-                <option value="/international/india-passport-photo">🇮🇳 India</option>
-                <option value="/international/us-passport-photo">🇺🇸 United States</option>
-                <option value="/international/uk-visa-photo">🇬🇧 United Kingdom</option>
-                <option value="/international/canada-passport-photo">🇨🇦 Canada</option>
-                <option value="/international/australia-passport-photo">🇦🇺 Australia</option>
-                <option value="/international/germany-visa-photo">🇩🇪 Germany</option>
-                <option value="/international/france-passport-photo">🇫🇷 France</option>
-                <option value="/international/japan-visa-photo">🇯🇵 Japan</option>
-                <option value="/international/china-visa-photo">🇨🇳 China</option>
-                <option value="/international/italy-passport-photo">🇮🇹 Italy</option>
-                <option value="/international/spain-visa-photo">🇪🇸 Spain</option>
-                <option value="/international/netherlands-passport-photo">🇳🇱 Netherlands</option>
-                <option value="/international/sweden-passport-photo">🇸🇪 Sweden</option>
-                <option value="/international/norway-passport-photo">🇳🇴 Norway</option>
-                <option value="/international/south-korea-passport-photo">🇰🇷 South Korea</option>
-                <option value="/international/singapore-passport-photo">🇸🇬 Singapore</option>
-                <option value="/international/new-zealand-passport-photo">🇳🇿 New Zealand</option>
-                <option value="/international/ireland-passport-photo">🇮🇪 Ireland</option>
-                <option value="/international/poland-passport-photo">🇵🇱 Poland</option>
-            </select>
-        </section>
-
-        <!-- Document Tools -->
-        <section class="intl-section">
-            <h2>📄 Document Tools</h2>
-            <div class="tool-grid">
-                <a href="/international/signature-resizer" class="tool-card">
-                    <div class="icon">✍️</div>
-                    <div class="name">Signature Resizer</div>
-                    <div class="desc">US/UK visa</div>
-                </a>
-                <a href="/international/document-scanner" class="tool-card">
-                    <div class="icon">📄</div>
-                    <div class="name">Document Scanner</div>
-                    <div class="desc">Scan to PDF</div>
-                </a>
-                <a href="/international/pdf-merger" class="tool-card">
-                    <div class="icon">🔗</div>
-                    <div class="name">PDF Merger</div>
-                    <div class="desc">Merge PDFs</div>
-                </a>
-                <a href="/international/pdf-compressor" class="tool-card">
-                    <div class="icon">🗜️</div>
-                    <div class="name">PDF Compressor</div>
-                    <div class="desc">Reduce PDF size</div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Student Tools -->
-        <section class="intl-section">
-            <h2>🎓 Student Tools</h2>
-            <div class="tool-grid">
-                <a href="/international/gpa-calculator" class="tool-card">
-                    <div class="icon">🎓</div>
-                    <div class="name">GPA Calculator</div>
-                    <div class="desc">4.0 scale</div>
-                </a>
-                <a href="/international/grade-calculator" class="tool-card">
-                    <div class="icon">📊</div>
-                    <div class="name">Grade Calculator</div>
-                    <div class="desc">Final grade</div>
-                </a>
-                <a href="/international/citation-generator" class="tool-card">
-                    <div class="icon">📚</div>
-                    <div class="name">Citation Generator</div>
-                    <div class="desc">APA, MLA</div>
-                </a>
-                <a href="/international/study-timer" class="tool-card">
-                    <div class="icon">⏱️</div>
-                    <div class="name">Study Timer</div>
-                    <div class="desc">Pomodoro</div>
-                </a>
-                <a href="/international/word-counter" class="tool-card">
-                    <div class="icon">📝</div>
-                    <div class="name">Word Counter</div>
-                    <div class="desc">Count words</div>
-                </a>
-                <a href="/international/percentage-calculator" class="tool-card">
-                    <div class="icon">📊</div>
-                    <div class="name">Percentage Calculator</div>
-                    <div class="desc">Calculate %</div>
-                </a>
-                <a href="/international/age-calculator" class="tool-card">
-                    <div class="icon">🎂</div>
-                    <div class="name">Age Calculator</div>
-                    <div class="desc">Exact age</div>
-                </a>
-                <a href="/international/unit-converter" class="tool-card">
-                    <div class="icon">📏</div>
-                    <div class="name">Unit Converter</div>
-                    <div class="desc">cm, kg, °C</div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Other International Tools -->
-        <section class="intl-section">
-            <h2>💱 Other Tools</h2>
-            <div class="tool-grid">
-                <a href="/international/currency-converter" class="tool-card">
-                    <div class="icon">💱</div>
-                    <div class="name">Currency Converter</div>
-                    <div class="desc">Live rates</div>
-                </a>
-                <a href="/international/time-zone-converter" class="tool-card">
-                    <div class="icon">🌍</div>
-                    <div class="name">Time Zone Converter</div>
-                    <div class="desc">World clocks</div>
-                </a>
-                <a href="/international/temperature-converter" class="tool-card">
-                    <div class="icon">🌡️</div>
-                    <div class="name">Temperature Converter</div>
-                    <div class="desc">°C ↔ °F</div>
-                </a>
-                <a href="/international/height-converter" class="tool-card">
-                    <div class="icon">📏</div>
-                    <div class="name">Height Converter</div>
-                    <div class="desc">Feet ↔ cm</div>
-                </a>
-                <a href="/international/weight-converter" class="tool-card">
-                    <div class="icon">⚖️</div>
-                    <div class="name">Weight Converter</div>
-                    <div class="desc">kg ↔ lbs</div>
-                </a>
-                <a href="/international/shoe-size-converter" class="tool-card">
-                    <div class="icon">👟</div>
-                    <div class="name">Shoe Size Converter</div>
-                    <div class="desc">US ↔ UK ↔ EU</div>
-                </a>
-                <a href="/international/bmi-calculator" class="tool-card">
-                    <div class="icon">⚖️</div>
-                    <div class="name">BMI Calculator</div>
-                    <div class="desc">Body Mass Index</div>
-                </a>
-                <a href="/international/calorie-calculator" class="tool-card">
-                    <div class="icon">🍎</div>
-                    <div class="name">Calorie Calculator</div>
-                    <div class="desc">Daily calories</div>
-                </a>
-                <a href="/international/date-calculator" class="tool-card">
-                    <div class="icon">📅</div>
-                    <div class="name">Date Calculator</div>
-                    <div class="desc">Between dates</div>
-                </a>
-                <a href="/international/discount-calculator" class="tool-card">
-                    <div class="icon">💰</div>
-                    <div class="name">Discount Calculator</div>
-                    <div class="desc">Sale price</div>
-                </a>
-                <a href="/international/tip-calculator" class="tool-card">
-                    <div class="icon">🍽️</div>
-                    <div class="name">Tip Calculator</div>
-                    <div class="desc">Restaurant bill</div>
-                </a>
-                <a href="/international/fuel-cost-calculator" class="tool-card">
-                    <div class="icon">⛽</div>
-                    <div class="name">Fuel Cost Calculator</div>
-                    <div class="desc">Trip cost</div>
-                </a>
-            </div>
-        </section>
-
-        <div style="text-align: center; margin: 40px 0;">
-            <a href="/" style="display: inline-block; padding: 14px 32px; background: #4f46e5; color: #fff; border-radius: 10px; text-decoration: none; font-weight: 700;">🏠 View All Tools →</a>
+        <h2 class="category-title">📸 Passport & Visa Photos</h2>
+        <div class="compact-grid">
+            <a href="/international/us-passport-photo" class="compact-card"><span class="icon">🇺🇸</span><div><div class="name">US Passport</div><div class="sub">2x2 inch</div></div></a>
+            <a href="/international/uk-visa-photo" class="compact-card"><span class="icon">🇬🇧</span><div><div class="name">UK Visa</div><div class="sub">3.5x4.5 cm</div></div></a>
+            <a href="/international/canada-passport-photo" class="compact-card"><span class="icon">🇨🇦</span><div><div class="name">Canada Passport</div><div class="sub">5x7 cm</div></div></a>
+            <a href="/international/australia-passport-photo" class="compact-card"><span class="icon">🇦🇺</span><div><div class="name">Australia Passport</div><div class="sub">35x45 mm</div></div></a>
+            <a href="/international/germany-visa-photo" class="compact-card"><span class="icon">🇩🇪</span><div><div class="name">Germany Visa</div><div class="sub">35x45 mm</div></div></a>
+            <a href="/international/france-passport-photo" class="compact-card"><span class="icon">🇫🇷</span><div><div class="name">France Passport</div><div class="sub">35x45 mm</div></div></a>
+            <a href="/international/japan-visa-photo" class="compact-card"><span class="icon">🇯🇵</span><div><div class="name">Japan Visa</div><div class="sub">45x45 mm</div></div></a>
+            <a href="/international/china-visa-photo" class="compact-card"><span class="icon">🇨🇳</span><div><div class="name">China Visa</div><div class="sub">33x48 mm</div></div></a>
         </div>
 
-        <!-- About Section -->
-        <div class="info-block">
-            <h2>About International Tools</h2>
-            <p>PixSathi offers free international tools for users in the United States, United Kingdom, Canada, Australia, Germany, France, Japan, China, India, Italy, Spain, Netherlands, Sweden, Norway, South Korea, Singapore, New Zealand, Ireland, and Poland. All tools work directly in your browser — no signup, no watermark, and your files never leave your device.</p>
+        <h2 class="category-title">🎓 International Student Tools</h2>
+        <div class="compact-grid">
+            <a href="/international/gpa-calculator" class="compact-card"><span class="icon">🎓</span><div><div class="name">GPA Calculator</div><div class="sub">4.0 scale</div></div></a>
+            <a href="/international/grade-calculator" class="compact-card"><span class="icon">📊</span><div><div class="name">Grade Calculator</div><div class="sub">Final grade</div></div></a>
+            <a href="/international/citation-generator" class="compact-card"><span class="icon">📚</span><div><div class="name">Citation Generator</div><div class="sub">APA, MLA</div></div></a>
+            <a href="/international/unit-converter" class="compact-card"><span class="icon">📏</span><div><div class="name">Unit Converter</div><div class="sub">cm, kg, °C</div></div></a>
         </div>
 
-        <!-- Popular Tools -->
-        <div class="info-block">
-            <h2>Popular International Tools</h2>
-            <ul>
-                <li><strong>US Passport Photo Maker:</strong> Create 2x2 inch passport photos for US passport and visa applications</li>
-                <li><strong>UK Visa Photo Maker:</strong> Create 3.5x4.5 cm photos for UK visa applications</li>
-                <li><strong>Canada Passport Photo Maker:</strong> Create 5x7 cm photos for Canada passport applications</li>
-                <li><strong>GPA Calculator:</strong> Calculate GPA on 4.0 scale for US/Canada universities</li>
-                <li><strong>Citation Generator:</strong> Generate APA, MLA, and Chicago citations</li>
-                <li><strong>Currency Converter:</strong> Convert between 150+ currencies with live rates</li>
-                <li><strong>Time Zone Converter:</strong> Compare time across cities worldwide</li>
-            </ul>
+        <h2 class="category-title">💱 Global Utility Tools</h2>
+        <div class="compact-grid">
+            <a href="/international/currency-converter" class="compact-card"><span class="icon">💱</span><div><div class="name">Currency Converter</div><div class="sub">Live rates</div></div></a>
+            <a href="/international/time-zone-converter" class="compact-card"><span class="icon">🌍</span><div><div class="name">Time Zone Converter</div><div class="sub">World clocks</div></div></a>
+            <a href="/international/temperature-converter" class="compact-card"><span class="icon">🌡️</span><div><div class="name">Temperature Converter</div><div class="sub">°C ↔ °F</div></div></a>
+            <a href="/international/height-converter" class="compact-card"><span class="icon">📏</span><div><div class="name">Height Converter</div><div class="sub">Feet ↔ cm</div></div></a>
+            <a href="/international/weight-converter" class="compact-card"><span class="icon">⚖️</span><div><div class="name">Weight Converter</div><div class="sub">kg ↔ lbs</div></div></a>
+            <a href="/international/shoe-size-converter" class="compact-card"><span class="icon">👟</span><div><div class="name">Shoe Size Converter</div><div class="sub">US ↔ UK ↔ EU</div></div></a>
+            <a href="/international/bmi-calculator" class="compact-card"><span class="icon">⚖️</span><div><div class="name">BMI Calculator</div><div class="sub">Body Mass Index</div></div></a>
+            <a href="/international/calorie-calculator" class="compact-card"><span class="icon">🍎</span><div><div class="name">Calorie Calculator</div><div class="sub">Daily calories</div></div></a>
         </div>
-
-        <!-- Why Choose -->
-        <div class="info-block">
-            <h2>Why Choose PixSathi?</h2>
-            <ul class="why-list">
-                <li>✅ <strong>100% Free</strong> — no signup, no login</li>
-                <li>✅ <strong>No Watermark</strong></li>
-                <li>✅ <strong>Files processed in your browser</strong> — never uploaded</li>
-                <li>✅ <strong>Works on mobile, tablet, and desktop</strong></li>
-                <li>✅ <strong>Instant results</strong></li>
-            </ul>
-        </div>
-
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 PixSathi | Made for Everyone 🌍</p>
-            <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">🏠 Home</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a> · <a href="/contact">📬 Contact</a>
-            </p>
-        </div>
-    </footer>
-
-    <script src="/script.js" defer></script>
 </body>
 </html>

@@ -3,199 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-L5K09RC5D2');
-    </script>
     <title>PixSathi Blog — Exam Tips, Photo Guides & Tool Tutorials</title>
-    <meta name="description" content="Free guides for exam photo size, image compression, PDF tools, CGPA conversion. Tips, tutorials, and how-to articles. — PixSathi Blog">
-    <link rel="canonical" href="https://pixsathi.in/blog">
-    <script defer src="/_vercel/insights/script.js"></script>
+    <meta name="description" content="Free guides for exam photo size, image compression, PDF tools, CGPA conversion. Tips, tutorials, and how-to articles.">
+    <link rel="canonical" href="https://www.pixsathi.in/blog/">
     <link rel="stylesheet" href="/style.css">
     <style>
-        .blog-header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        .blog-header h1 {
-            font-size: 26px;
-            margin-bottom: 6px;
-            font-weight: 800;
-        }
-        .blog-header p {
-            font-size: 13px;
-            opacity: 0.9;
-            margin: 0;
-        }
-        .blog-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e5ea;
-            flex-wrap: wrap;
-        }
-        .blog-tab {
-            padding: 8px 16px;
-            background: #f2f2f7;
-            color: #1d1d1f;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        .blog-tab:hover, .blog-tab.active {
-            background: #4f46e5;
-            color: #ffffff;
-        }
-        .blog-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 24px 20px;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
-        }
-        .blog-card {
-            background: #ffffff;
-            border: 1px solid #e5e5ea;
-            border-radius: 12px;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card:hover {
-            border-color: #4f46e5;
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.12);
-            transform: translateY(-3px);
-        }
-        .blog-card-banner {
-            height: 100px;
-            background: linear-gradient(135deg, #eef2ff 0%, #ddd6fe 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-        }
-        .blog-card-content {
-            padding: 16px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card-tag {
-            display: inline-block;
-            font-size: 10px;
-            padding: 3px 8px;
-            background: #eef2ff;
-            color: #4f46e5;
-            border-radius: 10px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            align-self: flex-start;
-        }
-        .blog-card h3 {
-            font-size: 15px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        .blog-card p {
-            font-size: 12px;
-            color: #6e6e73;
-            margin: 0 0 12px 0;
-            line-height: 1.5;
-            flex: 1;
-        }
-        .blog-card-cta {
-            font-size: 12px;
-            color: #4f46e5;
-            font-weight: 700;
-        }
-        .empty-state {
-            text-align: center;
-            padding: 40px 20px;
-            color: #6e6e73;
-            background: #ffffff;
-            border-radius: 12px;
-            border: 2px dashed #e5e5ea;
-        }
-        .empty-state h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #1d1d1f;
-        }
+        .blog-header { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: #ffffff; padding: 20px; text-align: center; }
+        .blog-header h1 { font-size: 26px; margin-bottom: 6px; font-weight: 800; }
+        .blog-header p { font-size: 13px; opacity: 0.9; margin: 0; }
+        
+        .blog-container { max-width: 1000px; margin: 0 auto; padding: 24px 20px; }
+        
+        /* CHHOTE CARDS KA CSS */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+        .blog-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; }
+        .blog-card:hover { border-color: #4f46e5; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1); transform: translateY(-2px); }
+        .blog-card-banner { height: 60px; background: linear-gradient(135deg, #eef2ff 0%, #ddd6fe 100%); display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .blog-card-content { padding: 12px; flex: 1; display: flex; flex-direction: column; }
+        .blog-card-tag { display: inline-block; font-size: 9px; padding: 2px 6px; background: #eef2ff; color: #4f46e5; border-radius: 10px; font-weight: 700; margin-bottom: 6px; align-self: flex-start; }
+        .blog-card h3 { font-size: 13px; font-weight: 700; color: #1d1d1f; margin-bottom: 6px; line-height: 1.3; }
+        .blog-card p { font-size: 11px; color: #6e6e73; margin: 0 0 8px 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-card-cta { font-size: 11px; color: #4f46e5; font-weight: 700; margin-top: auto;}
     </style>
-<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-<script src="/heic-fix.js"></script>
-    <!-- HEIC Converter Library -->
-    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-    <!-- Universal HEIC Converter Script for All Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputs = document.querySelectorAll('input[type="file"]');
-            inputs.forEach(input => {
-                input.addEventListener('change', async (e) => {
-                    const files = Array.from(input.files);
-                    if (files.length === 0) return;
-                    
-                    let hasHeic = false;
-                    const dataTransfer = new DataTransfer();
-                    
-                    for (let file of files) {
-                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
-                            hasHeic = true;
-                            try {
-                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
-                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
-                                dataTransfer.items.add(newFile);
-                            } catch (error) {
-                                console.error("HEIC Error", error);
-                            }
-                        } else {
-                            dataTransfer.items.add(file);
-                        }
-                    }
-                    
-                    if (hasHeic) {
-                        e.stopImmediatePropagation(); 
-                        input.files = dataTransfer.files;
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                }, true); 
-            });
-        });
-    </script>
 </head>
-
 <body>
-
     <header class="header">
         <div class="container">
             <div class="logo">📸 PixSathi</div>
-            <p class="tagline">Exam Photo & Signature Resizer • 100% Free • Private</p>
-            <nav class="nav">
-                <a href="/">🏠 Home</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-    <a href="/india">🇮🇳 India</a>
-                <a href="/blog">📝 Blog</a>
-                <a href="/contact">📬 Contact</a>
-            </nav>
+            <nav class="nav"><a href="/">🏠 Home</a> <a href="/blog/">📝 Blog</a></nav>
         </div>
     </header>
 
@@ -204,93 +39,38 @@
         <p>Exam tips, photo guides, tool tutorials — sab kuch ek jagah</p>
     </section>
 
-    <nav class="blog-tabs">
-        <a href="/blog" class="blog-tab active">All Posts</a>
-        <a href="/blog#exam" class="blog-tab">Exam Tips</a>
-        <a href="/blog#photo" class="blog-tab">Photo Guides</a>
-        <a href="/blog#tools" class="blog-tab">Tool Tutorials</a>
-    </nav>
-
     <main class="blog-container">
         <div class="blog-grid">
+            <!-- Puraane Blogs -->
+            <a href="/blog/ssc-cgl-photo-size-2026.html" class="blog-card"><div class="blog-card-banner">📸</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>SSC CGL Photo Size 2026</h3><p>SSC CGL form ke liye photo aur signature ka exact size janein.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/ibps-po-photo-requirements-2026.html" class="blog-card"><div class="blog-card-banner">🏦</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>IBPS PO Photo & Signature</h3><p>IBPS form ke liye photo aur signature ka size, format, aur tips.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/neet-photo-size-2026.html" class="blog-card"><div class="blog-card-banner">🩺</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>NEET Photo Size 2026</h3><p>NEET form ke liye photo ka exact size, format, aur common mistakes.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/exam-photo-rejection-reasons.html" class="blog-card"><div class="blog-card-banner">⚠️</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>Photo Rejection Reasons</h3><p>Form reject hone ke top 5 karan aur unse bachne ke tarike.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/image-compress-20kb.html" class="blog-card"><div class="blog-card-banner">🗜️</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>Image 20KB Kaise Banaye</h3><p>Photo ka size kam karne ka aasan tarika bina software ke.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/pdf-merge-guide.html" class="blog-card"><div class="blog-card-banner">🔗</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>PDF Merge Kaise Kare</h3><p>Multiple PDFs ko ek file mein jodne ka aasan tarika.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/cgpa-to-percentage.html" class="blog-card"><div class="blog-card-banner">🧮</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>CGPA to Percentage</h3><p>CBSE, Engineering, Medical — sab formulas ek jagah.</p><span class="blog-card-cta">Read More →</span></div></a>
 
-            <a href="/blog/ssc-cgl-photo-size-2026" class="blog-card">
-                <div class="blog-card-banner">📸</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Exam Tips</span>
-                    <h3>SSC CGL Photo Size 2026: Complete Guide</h3>
-                    <p>SSC CGL form ke liye photo aur signature ka exact size janein. 100×120 px, 20-50 KB — sab detail mein.</p>
-                    <span class="blog-card-cta">Read More →</span>
-                </div>
-            </a>
-
-            <a href="/blog/image-compress-20kb" class="blog-card">
-                <div class="blog-card-banner">🗜️</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Tool Tutorial</span>
-                    <h3>Image को 20KB कैसे बनाएं (Free Guide)</h3>
-                    <p>Photo ka size kam karne ka aasan tarika. Koi software nahi, koi signup nahi — browser mein hi.</p>
-                    <span class="blog-card-cta">Read More →</span>
-                </div>
-            </a>
-
-            <a href="/blog/ibps-photo-signature-guide" class="blog-card">
-                <div class="blog-card-banner">🏦</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Exam Tips</span>
-                    <h3>IBPS PO Photo & Signature Requirements</h3>
-                    <p>IBPS form ke liye photo aur signature ka size, format, aur tips. Complete guide 2026.</p>
-                    <span class="blog-card-cta">Read More →</span>
-                </div>
-            </a>
-
-            <a href="/blog/cgpa-to-percentage" class="blog-card">
-                <div class="blog-card-banner">🧮</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Tool Tutorial</span>
-                    <h3>CGPA को Percentage में कैसे बदलें</h3>
-                    <p>CBSE, Engineering, Medical — sab formulas. Apna CGPA daalo aur exact percentage paao.</p>
-                    <span class="blog-card-cta">Read More →</span>
-                </div>
-            </a>
-
-            <a href="/blog/pdf-merge-guide" class="blog-card">
-                <div class="blog-card-banner">🔗</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Tool Tutorial</span>
-                    <h3>PDF को Merge कैसे करें (Free)</h3>
-                    <p>Multiple PDFs ko ek file mein jodne ka aasan tarika. Koi signup nahi, sab browser mein.</p>
-                    <span class="blog-card-cta">Read More →</span>
-                </div>
-            </a>
-
-            <a href="/blog/neet-photo-size-2026" class="blog-card">
-                <div class="blog-card-banner">🩺</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Exam Tips</span>
-                    <h3>NEET Photo Size 2026: Exact Requirements</h3>
-                    <p>NEET form ke liye photo ka exact size, format, aur common mistakes se kaise bachein.</p>
-                    <span class="blog-card-cta">Read More →</span>
-                </div>
-            </a>
-
+            <!-- Naye 15 Blogs -->
+            <a href="/blog/fancy-text-generator.html" class="blog-card"><div class="blog-card-banner">✨</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>Fancy Text for Instagram & Gaming</h3><p>Create cool stylish names using our free generator.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/password-generator.html" class="blog-card"><div class="blog-card-banner">🔒</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>Create Strong Passwords</h3><p>Protect your online accounts with secure passwords.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/period-tracker.html" class="blog-card"><div class="blog-card-banner">🌸</div><div class="blog-card-content"><span class="blog-card-tag">Health</span><h3>Period Tracker Guide</h3><p>Track your cycle and ovulation easily with our tool.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/diff-checker.html" class="blog-card"><div class="blog-card-banner">🔄</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>Compare Two Texts Online</h3><p>Find exact differences between two documents.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/url-encoder.html" class="blog-card"><div class="blog-card-banner">🔗</div><div class="blog-card-content"><span class="blog-card-tag">Developer</span><h3>URL Encoder & Decoder</h3><p>Encode special characters in URLs instantly.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/coin-flip.html" class="blog-card"><div class="blog-card-banner">🪙</div><div class="blog-card-content"><span class="blog-card-tag">Fun</span><h3>Flip a Coin Online</h3><p>Make quick decisions with virtual Heads or Tails.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/dice-roller.html" class="blog-card"><div class="blog-card-banner">🎲</div><div class="blog-card-content"><span class="blog-card-tag">Fun</span><h3>Roll a Dice Online</h3><p>Play board games without physical dice.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/gst-invoice-generator.html" class="blog-card"><div class="blog-card-banner">💰</div><div class="blog-card-content"><span class="blog-card-tag">Finance</span><h3>Create GST Invoice Online</h3><p>Step-by-step guide for professional GST bills.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/gst-calculator.html" class="blog-card"><div class="blog-card-banner">🧮</div><div class="blog-card-content"><span class="blog-card-tag">Finance</span><h3>Calculate GST Easily</h3><p>Learn formulas for inclusive and exclusive GST.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/barcode-generator.html" class="blog-card"><div class="blog-card-banner">🔕</div><div class="blog-card-content"><span class="blog-card-tag">Business</span><h3>Generate Barcodes</h3><p>Create product barcodes in SVG and PNG.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/split-pdf.html" class="blog-card"><div class="blog-card-banner">✂</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>Split PDF Files</h3><p>Extract specific pages from a large PDF.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/increase-image-size.html" class="blog-card"><div class="blog-card-banner">📈</div><div class="blog-card-content"><span class="blog-card-tag">Tool Tutorial</span><h3>Increase Image Size in KB</h3><p>Meet minimum size requirements for exam forms.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/signature-background-remover.html" class="blog-card"><div class="blog-card-banner">✍</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>White Background Signature</h3><p>Remove shadows from signature for govt forms.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/exam-photo-checker.html" class="blog-card"><div class="blog-card-banner">🔍</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>Check Exam Photo Validity</h3><p>Don't let your form get rejected. Check now.</p><span class="blog-card-cta">Read More →</span></div></a>
+            <a href="/blog/exam-marks-calculator.html" class="blog-card"><div class="blog-card-banner">📝</div><div class="blog-card-content"><span class="blog-card-tag">Exam Tips</span><h3>Calculate Exam Marks</h3><p>Score with negative marking for SSC and IBPS.</p><span class="blog-card-cta">Read More →</span></div></a>
         </div>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 PixSathi | Made for India 🇮🇳</p>
-            <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">🏠 Home</a> · 
-                <a href="/about">About</a> · 
-                <a href="/blog">📝 Blog</a> · 
-                <a href="/privacy-policy">Privacy</a> · 
-                <a href="/disclaimer">Disclaimer</a> · 
-                <a href="/contact">📬 Contact</a>
-            </p>
-        </div>
+        <div class="container"><p>© 2026 PixSathi | Made for India 🇮🇳</p></div>
     </footer>
-
-    <script src="/script.js" defer></script>
 </body>
 </html>
