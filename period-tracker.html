@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Period Tracker Online - Menstrual Cycle Calculator | PixSathi</title>
+    <meta name="description" content="Free online period tracker and ovulation calculator in India. Predict your next period, fertile window, and ovulation date. 100% private, no signup required.">
+    <meta name="keywords" content="period tracker free, period tracker india, menstrual cycle tracker, ovulation calculator, how to track period">
+    <link rel="canonical" href="https://www.pixsathi.in/period-tracker">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <!-- SEO Schema for FAQs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "How does a period tracker work?","acceptedAnswer": {"@type": "Answer","text": "A period tracker calculates your next expected period based on your last period date and average cycle length."}},
+        {"@type": "Question","name": "Is this period tracker free?","acceptedAnswer": {"@type": "Answer","text": "Yes, PixSathi's period tracker is 100% free to use. No signup or login is required."}},
+        {"@type": "Question","name": "Is my data safe?","acceptedAnswer": {"@type": "Answer","text": "Yes, your data never leaves your device. All calculations happen locally in your browser, ensuring 100% privacy."}}
+      ]
+    }
+    </script>
+
+    <style>
+        .tool-container { background: white; padding: 30px; border-radius: 16px; max-width: 600px; margin: 30px auto; box-shadow: 0 8px 25px rgba(236,72,153,0.1); border: 1px solid #fce7f3; }
+        
+        .input-group { margin-bottom: 20px; text-align: left; }
+        .input-group label { display: block; font-weight: 600; color: #9d174d; margin-bottom: 8px; font-size: 15px; }
+        .input-group input { width: 100%; padding: 14px; border: 2px solid #fbcfe8; border-radius: 10px; font-size: 16px; outline: none; box-sizing: border-box; transition: 0.2s;}
+        .input-group input:focus { border-color: #ec4899; box-shadow: 0 0 0 3px rgba(236,72,153,0.1); }
+        
+        .action-btn { width: 100%; padding: 15px; background: #ec4899; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 10px; }
+        .action-btn:hover { background: #db2777; }
+        
+        .result-box { display: none; margin-top: 25px; }
+        .result-card { background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 12px; padding: 20px; margin-bottom: 15px; text-align: left; border-left: 5px solid #ec4899; }
+        .result-card h4 { margin: 0 0 5px 0; color: #831843; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;}
+        .result-card p { margin: 0; font-size: 20px; font-weight: bold; color: #be185d; }
+        
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type=number] { -moz-appearance: textfield; }
+        
+        .disclaimer { font-size: 12px; color: #64748b; margin-top: 20px; text-align: center; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <nav class="nav"><a href="/">&#127968; Home</a></nav>
+        </div>
+    </header>
+
+    <div style="max-width: 1100px; margin: 15px auto 0; padding: 0 20px; text-align: left;" class="no-print">
+        <a href="/" style="display: inline-flex; align-items: center; background: #fdf2f8; color: #ec4899; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid #fbcfe8; transition: 0.2s;">
+            &#8592; Back to Home
+        </a>
+    </div>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 20px;">
+            <h1 style="font-size: 28px; color: #831843; margin-bottom: 8px;">&#127800; Free Period Tracker</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Predict your next period, ovulation, and fertile window (100% Private).</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="input-group">
+                <label>First Day of Your Last Period:</label>
+                <input type="date" id="lastPeriod" onchange="calculateCycle()" onclick="this.showPicker()" style="cursor:pointer;">
+            </div>
+
+            <div class="input-group">
+                <label>Average Cycle Length (in days):</label>
+                <input type="number" id="cycleLength" value="28" min="20" max="45" placeholder="e.g. 28" oninput="calculateCycle()">
+                <p style="font-size: 12px; color: #64748b; margin-top: 5px;">Don't know? 28 days is the average.</p>
+            </div>
+
+            <button class="action-btn" onclick="calculateCycle()">Calculate My Cycle</button>
+
+            <div class="result-box" id="resultBox">
+                <div class="result-card">
+                    <h4>Next Period Expected On:</h4>
+                    <p id="outNextPeriod">-</p>
+                </div>
+                
+                <div class="result-card" style="border-left-color: #f59e0b; background: #fffbeb;">
+                    <h4 style="color: #92400e;">Ovulation Date:</h4>
+                    <p id="outOvulation" style="color: #b45309;">-</p>
+                </div>
+
+                <div class="result-card" style="border-left-color: #10b981; background: #f0fdf4;">
+                    <h4 style="color: #065f46;">Fertile Window:</h4>
+                    <p id="outFertile" style="color: #047857;">-</p>
+                </div>
+            </div>
+
+            <p class="disclaimer">Note: This is an estimate based on average cycle lengths. Consult a doctor for medical advice.</p>
+        </div>
+
+        <!-- SEO Content -->
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Free Online Period Tracker & Ovulation Calculator</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Period Tracker</strong> ek 100% free tool hai jo aapko aapke next period, ovulation date aur fertile window ka andaza lagane me madad karta hai. Isme aapko sirf apni last period ki date aur apni average cycle length daalni hai, aur ye tool exact calculation kar dega. Sabse badi baat, aapka saara data aapke hi device par rehta hai, kisi server par nahi jata.</p>
+            
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Track Your Period?</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
+                <li><strong>Step 1:</strong> Apni last period shuru hone ki date select karein.</li>
+                <li><strong>Step 2:</strong> Apna average cycle length daalein (agar nahi pata toh 28 rakh dein).</li>
+                <li><strong>Step 3:</strong> Tool turant aapki next period aur ovulation date calculate kar dega.</li>
+            </ul>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">How does a period tracker work?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">A period tracker calculates your next expected period based on your last period date and average cycle length.</p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Is this period tracker free?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, PixSathi's period tracker is 100% free to use. No signup or login is required.</p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Is my data safe?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, your data never leaves your device. All calculations happen locally in your browser, ensuring 100% privacy.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        document.getElementById('lastPeriod').value = `${yyyy}-${mm}-${dd}`;
+
+        function formatDate(date) {
+            const d = date.getDate();
+            const m = date.toLocaleString('default', { month: 'short' });
+            const y = date.getFullYear();
+            return `${d} ${m} ${y}`;
+        }
+
+        function calculateCycle() {
+            const lastPeriodVal = document.getElementById('lastPeriod').value;
+            const cycleLength = parseInt(document.getElementById('cycleLength').value);
+            const resultBox = document.getElementById('resultBox');
+
+            if (!lastPeriodVal || !cycleLength || cycleLength < 20 || cycleLength > 45) {
+                resultBox.style.display = 'none';
+                return;
+            }
+
+            const lastPeriodDate = new Date(lastPeriodVal);
+
+            const nextPeriodDate = new Date(lastPeriodDate);
+            nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength);
+
+            const ovulationDate = new Date(nextPeriodDate);
+            ovulationDate.setDate(ovulationDate.getDate() - 14);
+
+            const fertileStart = new Date(ovulationDate);
+            fertileStart.setDate(fertileStart.getDate() - 5);
+            
+            const fertileEnd = new Date(ovulationDate);
+            fertileEnd.setDate(fertileEnd.getDate() + 1);
+
+            document.getElementById('outNextPeriod').innerText = formatDate(nextPeriodDate);
+            document.getElementById('outOvulation').innerText = formatDate(ovulationDate);
+            document.getElementById('outFertile').innerText = `${formatDate(fertileStart)} to ${formatDate(fertileEnd)}`;
+
+            resultBox.style.display = 'block';
+        }
+
+        window.onload = calculateCycle;
+    </script>
+</body>
+</html>

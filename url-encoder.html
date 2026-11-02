@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online URL Encoder & Decoder - Percent Encoding | PixSathi</title>
+    <meta name="description" content="Free online URL encoder and decoder tool. Easily encode or decode URL strings, percent encoding, and query parameters instantly. 100% free and private.">
+    <meta name="keywords" content="url encoder, url decoder, url encode string online free, percent encoding online, url decode and encode online">
+    <link rel="canonical" href="https://www.pixsathi.in/url-encoder">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <style>
+        .tool-container { background: white; padding: 25px; border-radius: 12px; max-width: 800px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        
+        .input-group { margin-bottom: 20px; text-align: left; }
+        .input-group label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 8px; font-size: 15px; }
+        
+        textarea { width: 100%; padding: 15px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 15px; font-family: monospace; outline: none; resize: vertical; min-height: 120px; box-sizing: border-box; background: #f8fafc; }
+        textarea:focus { border-color: #4f46e5; background: #fff; }
+        
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .action-btn { flex: 1; min-width: 120px; padding: 12px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .action-btn:hover { background: #4338ca; }
+        
+        .btn-decode { background: #0ea5e9; }
+        .btn-decode:hover { background: #0284c7; }
+        .btn-clear { background: #ef4444; flex: 0.5; }
+        .btn-clear:hover { background: #dc2626; }
+        .btn-copy { background: #16a34a; flex: 0.5; }
+        .btn-copy:hover { background: #15803d; }
+        
+        .error-msg { color: #dc2626; font-size: 14px; font-weight: 600; margin-top: 10px; display: none; }
+        
+        /* Hide number arrows */
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <nav class="nav"><a href="/">&#127968; Home</a></nav>
+        </div>
+    </header>
+
+    <div style="max-width: 1100px; margin: 15px auto 0; padding: 0 20px; text-align: left;" class="no-print">
+        <a href="/" style="display: inline-flex; align-items: center; background: #eef2ff; color: #4f46e5; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid #c7d2fe; transition: 0.2s;">
+            &#8592; Back to Home
+        </a>
+    </div>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 20px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">URL Encoder / Decoder</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Encode or Decode URLs, Query Parameters, and Percent Encoding instantly.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="input-group">
+                <label>Input Text / URL:</label>
+                <textarea id="inputText" placeholder="Type or paste your URL here... (e.g., https://pixsathi.in?query=hello world)"></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button class="action-btn" onclick="encodeURL()">Encode URL</button>
+                <button class="action-btn btn-decode" onclick="decodeURL()">Decode URL</button>
+                <button class="action-btn btn-clear" onclick="clearAll()">Clear</button>
+            </div>
+
+            <p class="error-msg" id="errorMsg"></p>
+
+            <div class="input-group">
+                <label>Result:</label>
+                <textarea id="outputText" placeholder="Result will appear here..." readonly></textarea>
+            </div>
+
+            <button class="action-btn btn-copy" style="width: 100%; margin-top: 10px;" onclick="copyResult()">&#128203; Copy Result</button>
+        </div>
+
+        <!-- SEO Content -->
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Free Online URL Encoder and Decoder</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>URL Encoder / Decoder</strong> ek 100% free tool hai jo developers, SEO experts, aur students ke liye banaya gaya hai. Jab bhi aapko kisi URL me special characters (jaise space, &, ?, =) bhejne ho, toh unhe <strong>Percent Encoding</strong> (URL Encoding) me convert karna padta hai. Ye tool ek click me aapke URL ko encode ya decode kar deta hai.</p>
+            
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">What is URL Encoding?</h2>
+            <p style="margin-bottom: 20px;">URLs me sirf certain characters allowed hote hain. Agar aap koi space ya special character use karte hain, toh browser use galat samajh sakta hai. URL Encoding wo process hai jisme aise characters ko <code>%20</code> (space ke liye) ya <code>%26</code> (& ke liye) me convert kiya jata hai. Decoding iska ulta hai.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">What is the difference between encodeURI and encodeURIComponent?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;"><code>encodeURI</code> poori URL ko encode karta hai (jaise https:// ko chhod deta hai), jabki <code>encodeURIComponent</code> URL ke parameters ko encode karta hai. Ye tool query parameters ke liye best hai.</p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="font-size: 16px; margin: 0 0 6px 0; color: #1a202c;">Is this tool free?</h3>
+                <p style="font-size: 14px; margin: 0; color: #4a5568;">Yes, it is 100% free and works entirely in your browser. Your data is never sent to any server.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function encodeURL() {
+            const input = document.getElementById('inputText').value;
+            const output = document.getElementById('outputText');
+            const error = document.getElementById('errorMsg');
+            
+            error.style.display = 'none';
+            if (!input) {
+                output.value = '';
+                return;
+            }
+            
+            try {
+                // Use encodeURIComponent for standard query string encoding
+                output.value = encodeURIComponent(input);
+            } catch (e) {
+                error.innerText = "Error: Could not encode the text.";
+                error.style.display = 'block';
+            }
+        }
+
+        function decodeURL() {
+            const input = document.getElementById('inputText').value;
+            const output = document.getElementById('outputText');
+            const error = document.getElementById('errorMsg');
+            
+            error.style.display = 'none';
+            if (!input) {
+                output.value = '';
+                return;
+            }
+            
+            try {
+                output.value = decodeURIComponent(input);
+            } catch (e) {
+                error.innerText = "Error: Invalid encoded URL (Malformed URI sequence).";
+                error.style.display = 'block';
+                output.value = '';
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            document.getElementById('errorMsg').style.display = 'none';
+        }
+
+        function copyResult() {
+            const output = document.getElementById('outputText');
+            if (!output.value) return;
+            
+            output.select();
+            output.setSelectionRange(0, 99999); // For mobile devices
+            
+            navigator.clipboard.writeText(output.value).then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = "✅ Copied!";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

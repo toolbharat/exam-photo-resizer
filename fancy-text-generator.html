@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Text Generator - 70+ Stylish Fonts & Symbols | PixSathi</title>
+    <meta name="description" content="Free fancy text generator. Convert normal text into 70+ cool, stylish fonts and symbols for Instagram bio, Free Fire, PUBG, and Facebook. 100% free and easy to copy.">
+    <meta name="keywords" content="fancy text generator, stylish name maker for free fire, pubg stylish name generator, instagram stylish font converter, copy and paste fancy fonts, cool text generator">
+    <link rel="canonical" href="https://www.pixsathi.in/fancy-text-generator">
+    <link rel="stylesheet" href="/style.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <style>
+        .tool-container { background: white; padding: 25px; border-radius: 12px; max-width: 900px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        
+        .input-box { width: 100%; padding: 15px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 18px; outline: none; margin-bottom: 20px; box-sizing: border-box; text-align: center; }
+        .input-box:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
+        
+        /* Scrollable area for 70+ styles */
+        .results-area { max-height: 600px; overflow-y: auto; padding-right: 10px; }
+        .results-area::-webkit-scrollbar { width: 6px; }
+        .results-area::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+        .result-item { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; margin-bottom: 10px; transition: 0.2s; }
+        .result-item:hover { border-color: #c7d2fe; background: #eef2ff; }
+        .result-text { font-size: 20px; color: #1e293b; overflow-x: auto; white-space: nowrap; padding-right: 15px; font-family: sans-serif; }
+        
+        .copy-btn { background: #4f46e5; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 14px; transition: 0.2s; white-space: nowrap; }
+        .copy-btn:hover { background: #4338ca; }
+        .copy-btn.copied { background: #16a34a; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">&#128248; PixSathi</div>
+            <nav class="nav"><a href="/">&#127968; Home</a></nav>
+        </div>
+    </header>
+
+    <div style="max-width: 1100px; margin: 15px auto 0; padding: 0 20px; text-align: left;">
+        <a href="/" style="display: inline-flex; align-items: center; background: #eef2ff; color: #4f46e5; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid #c7d2fe; transition: 0.2s;">
+            &#8592; Back to Home
+        </a>
+    </div>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 20px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">&#10024; Fancy Text Generator</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Create 70+ stylish names & symbols for Instagram, Free Fire, PUBG.</p>
+        </section>
+
+        <div class="tool-container">
+            <input type="text" id="inputText" class="input-box" placeholder="Type your name here (e.g. Rizwan)" oninput="generateText()">
+            
+            <div class="results-area" id="resultsContainer">
+                <!-- Results will be generated here -->
+            </div>
+        </div>
+
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Free Fancy Text Generator (70+ Styles & Symbols)</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Fancy Text Generator</strong> aapko normal text ko stylish fonts aur cool symbols me convert karne ki suvidha deta hai. Isme 70 se zyada unique styles available hain. Chahe aapko <strong>Free Fire ka stylish name</strong> banana ho jisme crown aur swords hon, ya Instagram bio ke liye hearts aur stars wale fonts chahiye hon, ye tool seconds me aapka kaam kar dega.</p>
+        </section>
+    </main>
+
+    <script>
+        const alphaLower = "abcdefghijklmnopqrstuvwxyz".split("");
+        const alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+        function createMap(lowerStr, upperStr = lowerStr) {
+            let map = {};
+            let lowers = Array.from(lowerStr);
+            let uppers = Array.from(upperStr);
+            for(let i=0; i<26; i++) {
+                if(lowers[i]) map[alphaLower[i]] = lowers[i];
+                if(uppers[i]) map[alphaUpper[i]] = uppers[i];
+                else if(lowers[i]) map[alphaUpper[i]] = lowers[i];
+            }
+            return map;
+        }
+
+        // Combiners
+        const strike = char => char + "\u0336";
+        const underline = char => char + "\u0332";
+        const slash = char => char + "\u0338";
+        const doubleUnderline = char => char + "\u0333";
+        const wavyUnderline = char => char + "\u0330";
+        const dotted = char => char + "\u0307";
+        const tildeStrike = char => char + "\u0334";
+        const zalgoLight = char => char + "\u0300\u0301\u0302";
+
+        // Symbol Generators
+        const symHeart = char => char + "♡";
+        const symStar = char => char + "★";
+        const symSparkles = char => char + "✨";
+        const symFlower = char => char + "✿";
+        const symArrow = char => char + "➤";
+        const symCrown = char => "👑" + char;
+        const symSword = char => char + "⚔️";
+        const symFlame = char => char + "🔥";
+        const symMoon = char => char + "☾";
+        const symDiamond = char => char + "♦";
+        
+        // Boxed letters
+        const wrapSquare = char => "【" + char + "】";
+        const wrapCircle = char => "◉" + char + "◉";
+        const wrapArrow = char => "»" + char + "«";
+        const wrapStar = char => "✦" + char + "✦";
+        const wrapHeart = char => "❥" + char + "❥";
+
+        const styles = [
+            // --- 1. Standard Fonts ---
+            { name: "Bold Serif", map: createMap("𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳", "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙") },
+            { name: "Italic Serif", map: createMap("𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧", "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍") },
+            { name: "Bold Italic", map: createMap("𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛", "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁") },
+            { name: "Script (Cursive)", map: createMap("𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏", "𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵") },
+            { name: "Bold Script", map: createMap("𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃", "𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩") },
+            { name: "Fraktur (Gothic)", map: createMap("𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷", "𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ") },
+            { name: "Bold Fraktur", map: createMap("𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟", "𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅") },
+            { name: "Double Struck", map: createMap("𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫", "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ") },
+            { name: "Sans-Serif", map: createMap("𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓", "𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹") },
+            { name: "Sans-Serif Bold", map: createMap("𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇", "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭") },
+            { name: "Sans-Serif Italic", map: createMap("𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻", "𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡") },
+            { name: "Monospace", map: createMap("𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉") },
+            { name: "Upside Down", map: { 'a':'ɐ', 'b':'q', 'c':'ɔ', 'd':'p', 'e':'ǝ', 'f':'ɟ', 'g':'ƃ', 'h':'ɥ', 'i':'ᴉ', 'j':'ɾ', 'k':'ʞ', 'l':'l', 'm':'ɯ', 'n':'u', 'o':'o', 'p':'d', 'q':'b', 'r':'ɹ', 's':'s', 't':'ʇ', 'u':'n', 'v':'ʌ', 'w':'ʍ', 'x':'x', 'y':'ʎ', 'z':'z', 'A':'∀', 'B':'𐐒', 'C':'Ɔ', 'D':'◖', 'E':'Ǝ', 'F':'Ⅎ', 'G':'⅁', 'H':'H', 'I':'I', 'J':'ſ', 'K':'ʞ', 'L':'˥', 'M':'W', 'N':'N', 'O':'O', 'P':'Ԁ', 'Q':'Ό', 'R':'ᴚ', 'S':'S', 'T':'⊥', 'U':'∩', 'V':'Λ', 'W':'M', 'X':'X', 'Y':'⅄', 'Z':'Z' }, reverse: true },
+
+            // --- 2. Aesthetic & Shapes ---
+            { name: "Aesthetic Fullwidth", map: createMap("ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ", "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ") },
+            { name: "Small Caps", map: createMap("ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ") },
+            { name: "Circled", map: createMap("ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ", "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ") },
+            { name: "Negative Circled", map: createMap("🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩") },
+            { name: "Squared", map: createMap("🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉") },
+            { name: "Negative Squared", map: createMap("🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉") },
+            { name: "Parenthesized", map: createMap("⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵") },
+            { name: "Regional Indicator", map: createMap("🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿") },
+            { name: "Superscript", map: createMap("ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖᑫʳˢᵗᵘᵛʷˣʸᶻ") },
+            { name: "Subscript", map: createMap("ₐ♭꜀ᵈₑբ₉ₕᵢⱼₖₗₘₙₒₚᵩᵣₛₜᵤᵥᵥₓᵧ₂") },
+            { name: "Greek Letters", map: { 'a':'α', 'b':'β', 'c':'ς', 'd':'δ', 'e':'ε', 'f':'ƒ', 'g':'g', 'h':'h', 'i':'ι', 'j':'j', 'k':'κ', 'l':'λ', 'm':'μ', 'n':'η', 'o':'σ', 'p':'ρ', 'q':'q', 'r':'я', 's':'s', 't':'τ', 'u':'υ', 'v':'ν', 'w':'ω', 'x':'χ', 'y':'γ', 'z':'z' } },
+            { name: "Cyrillic Letters", map: { 'a':'а', 'b':'б', 'c':'с', 'd':'д', 'e':'е', 'f':'ф', 'g':'г', 'h':'н', 'i':'и', 'j':'й', 'k':'к', 'l':'л', 'm':'м', 'n':'п', 'o':'о', 'p':'р', 'q':'ц', 'r':'я', 's':'с', 't':'т', 'u':'у', 'v':'в', 'w':'ш', 'x':'х', 'y':'у', 'z':'з' } },
+            { name: "Currency Symbols", map: { 'a':'₳', 'b':'฿', 'c':'₵', 'd':'Ð', 'e':'€', 'f':'₣', 'g':'₲', 'h':'₶', 'i':'ł', 'j':'J', 'k':'₭', 'l':'Ⱡ', 'm':'₥', 'n':'₦', 'o':'Ø', 'p':'₱', 'q':'Q', 'r':'₹', 's':'₷', 't':'₮', 'u':'Ʉ', 'v':'V', 'w':'₩', 'x':'Ӿ', 'y':'Ɏ', 'z':'Ⱬ' } },
+            { name: "Arrow Letters", map: { 'a':'⬅', 'b':'⬆', 'c':'⬇', 'd':'➡', 'e':'↗', 'f':'↘', 'g':'↙', 'h':'↖', 'i':'⇑', 'j':'⇓', 'k':'⇐', 'l':'⇒', 'm':'⇔', 'n':'↔', 'o':'↕', 'p':'⇉', 'q':'⇇', 'r':'⤴', 's':'⤵', 't':'↺', 'u':'↻', 'v':'↭', 'w':'⇝', 'x':'↯', 'y':'⇵', 'z':'⇶' } },
+
+            // --- 3. Text Effects ---
+            { name: "S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶", customFn: strike },
+            { name: "U̲n̲d̲e̲r̲l̲i̲n̲e̲", customFn: underline },
+            { name: "S̷l̷a̷s̷h̷", customFn: slash },
+            { name: "D̳o̳u̳b̳l̳e̳ ̳U̳n̳d̳e̳r̳l̳i̳n̳e̳", customFn: doubleUnderline },
+            { name: "W̰a̰v̰y̰ ̰Ṵn̰d̰ḛr̰l̰ḭn̰ḛ", customFn: wavyUnderline },
+            { name: "Ḋȯṫṫėḋ", customFn: dotted },
+            { name: "T̴i̴l̴d̴e̴ ̴S̴t̴r̴i̴k̴e̴", customFn: tildeStrike },
+            { name: "Z̷a̷l̷g̷o̷ ̷L̷i̷g̷h̷t̷", customFn: zalgoLight },
+
+            // --- 4. Symbol Combinations (The Gamers Choice) ---
+            { name: "Heart Mix ♡", customFn: symHeart },
+            { name: "Star Mix ★", customFn: symStar },
+            { name: "Sparkles ✨", customFn: symSparkles },
+            { name: "Flower Mix ✿", customFn: symFlower },
+            { name: "Arrow Mix ➤", customFn: symArrow },
+            { name: "Crown (FF Style) 👑", customFn: symCrown },
+            { name: "Sword (PUBG Style) ⚔️", customFn: symSword },
+            { name: "Fire Mix 🔥", customFn: symFlame },
+            { name: "Moon Mix ☾", customFn: symMoon },
+            { name: "Diamond ♦", customFn: symDiamond },
+            
+            // --- 5. Bracket & Wrap Styles ---
+            { name: "【S】【q】【u】【a】【r】【e】", customFn: wrapSquare },
+            { name: "◉C◉i◉r◉c◉l◉e◉", customFn: wrapCircle },
+            { name: "»A« »r« »r« »o« »w«", customFn: wrapArrow },
+            { name: "✦S✦t✦a✦r✦", customFn: wrapStar },
+            { name: "❥H❥e❥a❥r❥t❥", customFn: wrapHeart },
+            
+            // --- 6. Bold + Symbols Mixed ---
+            { name: "Bold + Heart", map: createMap("𝐚♡𝐛♡𝐜♡𝐝♡𝐞♡𝐟♡𝐠♡𝐡♡𝐢♡𝐣♡𝐤♡𝐥♡𝐦♡𝐧♡𝐨♡𝐩♡𝐪♡𝐫♡𝐬♡𝐭♡𝐮♡𝐯♡𝐰♡𝐱♡𝐲♡𝐳♡", "𝐀♡𝐁♡𝐂♡𝐃♡𝐄♡𝐅♡𝐆♡𝐇♡𝐈♡𝐉♡𝐊♡𝐋♡𝐌♡𝐍♡𝐎♡𝐏♡𝐐♡𝐑♡𝐒♡𝐓♡𝐔♡𝐕♡𝐖♡𝐗♡𝐘♡𝐙♡") },
+            { name: "Script + Star", map: createMap("𝒶★𝒷★𝒸★𝒹★ℯ★𝒻★ℊ★𝒽★𝒾★𝒿★𝓀★𝓁★𝓂★𝓃★ℴ★𝓅★𝓆★𝓇★𝓈★𝓉★𝓊★𝓋★𝓌★𝓍★𝓎★𝓏★", "𝒜★ℬ★𝒞★𝒟★ℰ★ℱ★𝒢★ℋ★ℐ★𝒥★𝒦★ℒ★ℳ★𝒩★𝒪★𝒫★𝒬★ℛ★𝒮★𝒯★𝒰★𝒱★𝒲★𝒳★𝒴★𝒵★") },
+            { name: "Sans + Sparkles", map: createMap("𝗮✨𝗯✨𝗰✨𝗱✨𝗲✨𝗳✨𝗴✨𝗵✨𝗶✨𝗷✨𝗸✨𝗹✨𝗺✨𝗻✨𝗼✨𝗽✨𝗾✨𝗿✨𝘀✨𝘁✨𝘂✨𝘃✨𝘄✨𝘅✨𝘆✨𝘇✨", "𝗔✨𝗕✨𝗖✨𝗗✨𝗘✨𝗙✨𝗚✨𝗛✨𝗜✨𝗝✨𝗞✨𝗟✨𝗠✨𝗡✨𝗢✨𝗣✨𝗤✨𝗥✨𝗦✨𝗧✨𝗨✨𝗩✨𝗪✨𝗫✨𝗬✨𝗭✨") },
+            { name: "Gothic + Swords", map: createMap("𝔞⚔️𝔟⚔️𝔠⚔️𝔡⚔️𝔢⚔️𝔣⚔️𝔤⚔️𝔥⚔️𝔦⚔️𝔧⚔️𝔨⚔️𝔩⚔️𝔪⚔️𝔫⚔️𝔬⚔️𝔭⚔️𝔮⚔️𝔯⚔️𝔰⚔️𝔱⚔️𝔲⚔️𝔳⚔️𝔴⚔️𝔵⚔️𝔶⚔️𝔷⚔️", "𝔄⚔️𝔅⚔️ℭ⚔️𝔇⚔️𝔈⚔️𝔉⚔️𝔊⚔️ℌ⚔️ℑ⚔️𝔍⚔️𝔎⚔️𝔏⚔️𝔐⚔️𝔑⚔️𝔒⚔️𝔓⚔️𝔔⚔️ℜ⚔️𝔖⚔️𝔗⚔️𝔘⚔️𝔙⚔️𝔚⚔️𝔛⚔️𝔜⚔️ℨ⚔️") }
+        ];
+
+        function generateText() {
+            const input = document.getElementById('inputText').value;
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = '';
+
+            if (!input) return;
+
+            styles.forEach(style => {
+                let convertedText = '';
+                let textToProcess = input;
+                
+                if (style.reverse) {
+                    textToProcess = input.split('').reverse().join('');
+                }
+
+                for (let char of textToProcess) {
+                    if (style.customFn) {
+                        convertedText += style.customFn(char);
+                    } else {
+                        convertedText += style.map[char] || char;
+                    }
+                }
+
+                const div = document.createElement('div');
+                div.className = 'result-item';
+                
+                const textSpan = document.createElement('span');
+                textSpan.className = 'result-text';
+                textSpan.innerText = convertedText;
+                
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'copy-btn';
+                copyBtn.innerText = 'Copy';
+                copyBtn.onclick = function() {
+                    navigator.clipboard.writeText(convertedText).then(() => {
+                        copyBtn.innerText = '✅ Copied!';
+                        copyBtn.classList.add('copied');
+                        setTimeout(() => {
+                            copyBtn.innerText = 'Copy';
+                            copyBtn.classList.remove('copied');
+                        }, 2000);
+                    });
+                };
+
+                div.appendChild(textSpan);
+                div.appendChild(copyBtn);
+                container.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
