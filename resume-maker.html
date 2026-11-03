@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tlzrOaoU-WR5NCPKOZP6TkNLgj0IyDJJ8ccoMWkeKhY" />
+    <title>Free Resume & Biodata Maker - 12 Global Templates | PixSathi</title>
+    <meta name="description" content="Create a professional resume or Indian job biodata for free. Choose from 12 global templates (US, Europe, India). No login. Download PDF instantly.">
+    <link rel="canonical" href="https://www.pixsathi.in/resume-maker">
+    <link rel="stylesheet" href="/style.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <style>
+        .resume-wrapper { display: flex; gap: 20px; max-width: 1300px; margin: 20px auto; padding: 0 15px; align-items: flex-start; }
+        
+        /* Form Panel */
+        .form-panel { flex: 1; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-height: 90vh; overflow-y: auto; }
+        .section-title { font-size: 15px; font-weight: 700; color: #4f46e5; margin: 20px 0 10px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center;}
+        .input-group { margin-bottom: 12px; text-align: left; }
+        .input-group label { display: block; font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 4px; }
+        .input-group input, .input-group textarea, .input-group select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; outline: none; box-sizing: border-box; }
+        .input-group input:focus, .input-group select:focus { border-color: #4f46e5; }
+        
+        /* Dynamic Inputs */
+        .dynamic-row { display: flex; gap: 5px; margin-bottom: 8px; }
+        .dynamic-row input { flex: 1; }
+        .btn-remove { background: #fee2e2; color: #dc2626; border: none; padding: 0 12px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s;}
+        .btn-remove:hover { background: #fca5a5; }
+        .btn-add-more { background: #e0e7ff; color: #4f46e5; border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s;}
+        .btn-add-more:hover { background: #c7d2fe; }
+
+        /* Preview Panel */
+        .preview-panel { flex: 1.2; background: white; padding: 30px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: sticky; top: 20px; min-height: 800px; overflow-x: auto;}
+        
+        /* Hide all templates by default */
+        .resume-template { display: none; --theme-color: #4f46e5; width: 100%; max-width: 800px; margin: 0 auto; }
+        .resume-template.active { display: block; }
+        
+        /* Dynamic lists in preview */
+        ul.dynamic-list { margin: 0; padding-left: 20px; font-size: 14px; color: #1e293b; line-height: 1.5;}
+        ul.dynamic-list li { margin-bottom: 5px; }
+        .t2-sidebar ul.dynamic-list, .t10-sidebar ul.dynamic-list { color: white; }
+        .t5 ul.dynamic-list { font-size: 12px; padding-left: 15px; }
+        .t6 ul.dynamic-list { font-size: 13px; }
+        .t8 ul.dynamic-list { font-size: 14px; font-family: 'Times New Roman', Times, serif; }
+        .t9 ul.dynamic-list { font-size: 14px; color: #000; }
+        .t10-sidebar ul.dynamic-list { font-size: 12px; color: #bdc3c7; padding-left: 15px; }
+        .t11 ul.dynamic-list { font-size: 13px; color: #555; margin-left: 0;}
+
+        /* ----- TEMPLATE 1: CLASSIC ----- */
+        .t1-header { border-bottom: 2px solid var(--theme-color); padding-bottom: 15px; margin-bottom: 20px; text-align: center; }
+        .t1-header h1 { margin: 0; font-size: 32px; color: #1e293b; text-transform: uppercase; }
+        .t1-header p { margin: 5px 0 0 0; font-size: 14px; color: #475569; }
+        .t1-sec h2 { font-size: 16px; color: var(--theme-color); margin: 0 0 8px 0; text-transform: uppercase; border-bottom: 1px solid #e2e8f0; padding-bottom: 3px; }
+        
+        /* ----- TEMPLATE 2: MODERN SIDEBAR ----- */
+        .t2-container { display: flex; min-height: 700px; border: 1px solid #e2e8f0; }
+        .t2-sidebar { width: 35%; background: var(--theme-color); color: white; padding: 30px 20px; }
+        .t2-sidebar h1 { font-size: 26px; margin: 0 0 5px 0; text-transform: uppercase; line-height: 1.2;}
+        .t2-sidebar p { font-size: 13px; margin-bottom: 5px; opacity: 0.9; }
+        .t2-sidebar h3 { font-size: 14px; text-transform: uppercase; margin: 25px 0 10px 0; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px;}
+        .t2-main { width: 65%; padding: 30px; }
+        .t2-main h2 { font-size: 18px; color: var(--theme-color); margin: 0 0 10px 0; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px;}
+        .t2-item { margin-bottom: 15px; }
+
+        /* ----- TEMPLATE 3: MINIMALIST ----- */
+        .t3-header { margin-bottom: 30px; }
+        .t3-header h1 { font-size: 36px; font-weight: 300; color: #1e293b; margin: 0; letter-spacing: 2px;}
+        .t3-header p { font-size: 14px; color: #64748b; margin: 5px 0 0 0; border-left: 3px solid var(--theme-color); padding-left: 10px;}
+        .t3-sec { margin-bottom: 25px; display: flex; }
+        .t3-sec-title { width: 25%; font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--theme-color); }
+        .t3-sec-content { width: 75%; }
+
+        /* ----- TEMPLATE 4: EXECUTIVE ----- */
+        .t4-header { background: var(--theme-color); color: white; padding: 30px; text-align: center; margin-bottom: 20px; border-radius: 8px;}
+        .t4-header h1 { margin: 0; font-size: 30px; text-transform: uppercase; letter-spacing: 1px;}
+        .t4-header p { margin: 5px 0 0 0; font-size: 14px; }
+        .t4-sec { margin-bottom: 20px; padding: 0 15px;}
+        .t4-sec h2 { font-size: 16px; color: #1e293b; background: #f1f5f9; padding: 8px 15px; border-radius: 4px; border-left: 4px solid var(--theme-color); margin-bottom: 10px;}
+        .t4-sec p { margin: 0 0 8px 15px; font-size: 14px; color: #475569; }
+
+        /* ----- TEMPLATE 5: US CANADA ATS ----- */
+        .t5 { font-family: Arial, sans-serif; color: #000; }
+        .t5-header { text-align: center; margin-bottom: 15px; }
+        .t5-header h1 { margin: 0; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+        .t5-header p { margin: 2px 0; font-size: 12px; }
+        .t5-sec { margin-bottom: 15px; }
+        .t5-sec h2 { font-size: 14px; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; margin: 0 0 5px 0; padding-bottom: 2px;}
+        .t5-sec p { margin: 0 0 4px 0; font-size: 12px; line-height: 1.4;}
+
+        /* ----- TEMPLATE 6: EUROPASS ----- */
+        .t6 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column;}
+        .t6-header { background: #002f6c; color: white; padding: 20px; margin-bottom: 20px; }
+        .t6-header h1 { margin: 0; font-size: 28px; }
+        .t6-header p { margin: 5px 0 0 0; font-size: 16px; }
+        .t6-body { display: flex; gap: 20px; }
+        .t6-left { width: 35%; border-right: 1px solid #ccc; padding-right: 15px; }
+        .t6-right { width: 65%; }
+        .t6-sec h2 { font-size: 16px; color: #002f6c; border-bottom: 1px solid #002f6c; margin: 0 0 10px 0; padding-bottom: 3px;}
+        .t6-sec p { font-size: 13px; margin: 0 0 8px 0; }
+
+        /* ----- TEMPLATE 7: CREATIVE ----- */
+        .t7 { background: #fff; }
+        .t7-header { border-left: 10px solid var(--theme-color); padding-left: 20px; margin-bottom: 30px; }
+        .t7-header h1 { font-size: 40px; margin: 0; color: var(--theme-color); font-weight: 900;}
+        .t7-header p { font-size: 16px; font-weight: 600; color: #333; text-transform: uppercase; letter-spacing: 2px;}
+        .t7-sec h2 { font-size: 20px; color: #333; border-bottom: 2px dashed var(--theme-color); display: inline-block; margin-bottom: 10px;}
+        .t7-sec p { font-size: 14px; color: #555; }
+
+        /* ----- TEMPLATE 8: ACADEMIC ----- */
+        .t8 { font-family: 'Times New Roman', Times, serif; }
+        .t8-header { text-align: center; margin-bottom: 20px; }
+        .t8-header h1 { margin: 0; font-size: 28px; }
+        .t8-header p { font-size: 14px; margin: 5px 0; }
+        .t8-sec h2 { font-size: 18px; border-bottom: 1px solid #333; margin: 15px 0 8px 0; text-transform: uppercase;}
+
+        /* ----- TEMPLATE 9: INDIAN BIODATA ----- */
+        .t9 { font-family: 'Georgia', serif; border: 2px solid #000; padding: 30px; }
+        .t9-header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px; }
+        .t9-header h1 { margin: 0; font-size: 28px; font-weight: bold; text-transform: uppercase; text-decoration: underline;}
+        .t9-header p { margin: 5px 0 0 0; font-size: 16px; font-weight: bold; }
+        .t9-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .t9-table td { padding: 6px 10px; font-size: 14px; vertical-align: top; }
+        .t9-table td:first-child { font-weight: bold; width: 35%; }
+        .t9-table td:nth-child(2) { width: 5%; }
+        .t9-sec h2 { font-size: 16px; font-weight: bold; text-decoration: underline; margin: 15px 0 5px 0;}
+        .t9-footer { margin-top: 40px; font-size: 14px; font-weight: bold; text-align: right; }
+
+        /* ----- TEMPLATE 10: DARK SIDEBAR ----- */
+        .t10-container { display: flex; min-height: 800px; border: 1px solid #e2e8f0; font-family: Arial, sans-serif;}
+        .t10-sidebar { width: 35%; background: #2c3e50; color: white; padding: 30px 20px; }
+        .t10-sidebar h1 { font-size: 28px; margin: 0 0 5px 0; text-transform: uppercase; line-height: 1.2; letter-spacing: 1px;}
+        .t10-sidebar p { font-size: 14px; margin-bottom: 20px; color: #bdc3c7;}
+        .t10-sidebar h3 { font-size: 14px; text-transform: uppercase; margin: 25px 0 10px 0; border-bottom: 1px solid #7f8c8d; padding-bottom: 5px; color: #ecf0f1;}
+        .t10-sidebar p.info { font-size: 12px; margin-bottom: 5px; color: #bdc3c7;}
+        .t10-main { width: 65%; padding: 30px; background: white;}
+        .t10-main h2 { font-size: 16px; color: #2c3e50; margin: 0 0 10px 0; text-transform: uppercase; font-weight: bold;}
+
+        /* ----- TEMPLATE 11: ICONIC TWO COLUMN ----- */
+        .t11-container { display: flex; min-height: 800px; font-family: 'Segoe UI', sans-serif; padding: 20px; background: white;}
+        .t11-left { width: 35%; padding-right: 20px; border-right: 1px solid #eee; }
+        .t11-right { width: 65%; padding-left: 20px; }
+        .t11-header h1 { font-size: 32px; color: #2c3e50; margin: 0; font-weight: 300; letter-spacing: 1px;}
+        .t11-header p { font-size: 14px; color: #e74c3c; margin: 5px 0 20px 0; font-weight: 600;}
+        .t11-sec { margin-bottom: 20px; }
+        .t11-sec h3 { font-size: 15px; color: #2c3e50; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;}
+        .t11-sec h3::before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #e74c3c; }
+        .t11-sec p { font-size: 13px; color: #555; margin: 0 0 5px 20px; }
+
+        /* ----- TEMPLATE 12: RIGHT SIDEBAR WITH INITIALS ----- */
+        .t12-container { display: flex; min-height: 800px; font-family: Arial, sans-serif;}
+        .t12-main { width: 65%; padding: 40px; background: white;}
+        .t12-sidebar { width: 35%; background: #f8f9fa; padding: 40px 30px; border-left: 1px solid #e9ecef;}
+        .t12-avatar { width: 80px; height: 80px; background: #3498db; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin-bottom: 20px;}
+        .t12-header h1 { font-size: 32px; color: #3498db; margin: 0; font-weight: 300;}
+        .t12-header p { font-size: 14px; color: #7f8c8d; margin: 5px 0 30px 0; text-transform: uppercase; letter-spacing: 1px;}
+        .t12-sec h3 { font-size: 15px; color: #3498db; margin: 0 0 10px 0; text-transform: uppercase;}
+        .t12-main h2 { font-size: 16px; color: #2c3e50; margin: 0 0 10px 0; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+
+        /* Print Settings */
+        @page { size: A4 portrait; margin: 0; }
+        @media print {
+            body * { visibility: hidden; }
+            .preview-panel, .preview-panel * { visibility: visible; }
+            .preview-panel { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; padding: 0; margin: 0; border: none; }
+            .resume-template { display: none !important; }
+            .resume-template.active { display: block !important; }
+            .form-panel, .header, .footer, .content-section { display: none !important; }
+            .t2-container, .t6-body, .t10-container, .t11-container, .t12-container { min-height: 100vh; }
+        }
+        
+        .action-btn { width: 100%; padding: 15px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+        .action-btn:hover { background: #4338ca; }
+
+        @media (max-width: 900px) {
+            .resume-wrapper { flex-direction: column; }
+            .preview-panel { width: 100%; position: static; padding: 10px; }
+            .t6-body, .t10-container, .t11-container, .t12-container { flex-direction: column; }
+            .t6-left, .t6-right, .t10-sidebar, .t10-main, .t11-left, .t11-right, .t12-main, .t12-sidebar { width: 100%; border: none; padding: 20px;}
+            .t9-table td { padding: 4px; font-size: 12px;}
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <nav class="nav"><a href="/">🏠 Home</a> <a href="/blog/">📝 Blog</a></nav>
+        </div>
+    </header>
+
+    <div class="resume-wrapper">
+        <!-- Left Form -->
+        <div class="form-panel">
+            <h2 style="margin-top:0; color:#1e293b;">Global Resume Builder</h2>
+            
+            <div class="section-title">Design Settings</div>
+            <div class="input-group">
+                <label>Select Template Format:</label>
+                <select id="templateSelector" onchange="switchTemplate()">
+                    <option value="t1">1. Classic (General)</option>
+                    <option value="t2">2. Modern Sidebar (Fresher)</option>
+                    <option value="t3">3. Minimalist (Clean)</option>
+                    <option value="t4">4. Executive (Premium)</option>
+                    <option value="t5">5. US/Canada Corporate (ATS)</option>
+                    <option value="t6">6. Europass (Europe Standard)</option>
+                    <option value="t7">7. Creative Portfolio</option>
+                    <option value="t8">8. Academic / Research</option>
+                    <option value="t9">9. Indian Job Biodata</option>
+                    <option value="t10">10. Dark Sidebar (Corporate)</option>
+                    <option value="t11">11. Iconic Two-Column</option>
+                    <option value="t12">12. Right Sidebar (Initials)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Theme Color (For colored templates):</label>
+                <select id="themeSelector" onchange="changeTheme()">
+                    <option value="#4f46e5">🔵 Professional Blue</option>
+                    <option value="#10b981">🟢 Modern Green</option>
+                    <option value="#1e293b">⚫ Corporate Dark</option>
+                    <option value="#be123c">🔴 Traditional Maroon</option>
+                </select>
+            </div>
+
+            <div class="section-title">Personal Details</div>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" class="i-name" oninput="updateResume()">
+            </div>
+            <div class="input-group">
+                <label>Job Title / Objective</label>
+                <input type="text" class="i-job" oninput="updateResume()">
+            </div>
+            <div class="input-group">
+                <label>Email & Phone</label>
+                <input type="text" class="i-contact" oninput="updateResume()">
+            </div>
+            <div class="input-group">
+                <label>Address</label>
+                <input type="text" class="i-address" oninput="updateResume()">
+            </div>
+            
+            <div class="input-group">
+                <label>Father's Name (For Biodata)</label>
+                <input type="text" class="i-father" oninput="updateResume()">
+            </div>
+            <div class="input-group">
+                <label>Date of Birth (DOB)</label>
+                <input type="text" class="i-dob" oninput="updateResume()">
+            </div>
+            <div class="input-group">
+                <label>Languages Known</label>
+                <input type="text" class="i-lang" oninput="updateResume()">
+            </div>
+
+            <!-- DYNAMIC EDUCATION SECTION -->
+            <div class="section-title">
+                Education & Qualification
+                <button class="btn-add-more" type="button" onclick="addEducation()">+ Add More</button>
+            </div>
+            <div id="edu-container">
+                <!-- JS will add inputs here -->
+            </div>
+
+            <!-- DYNAMIC EXPERIENCE SECTION -->
+            <div class="section-title">
+                Experience / Projects
+                <button class="btn-add-more" type="button" onclick="addExperience()">+ Add More</button>
+            </div>
+            <div id="exp-container">
+                <!-- JS will add inputs here -->
+            </div>
+
+            <div class="section-title">Skills</div>
+            <div class="input-group">
+                <label>Skills (Comma separated)</label>
+                <input type="text" class="i-skills" oninput="updateResume()">
+            </div>
+
+            <button class="action-btn" onclick="window.print()">📥 Print / Save as PDF</button>
+        </div>
+
+        <!-- Right Preview -->
+        <div class="preview-panel" id="previewContainer">
+            
+            <!-- Template 1: Classic -->
+            <div id="t1" class="resume-template active">
+                <div class="t1-header">
+                    <h1 class="d-name">YOUR NAME</h1>
+                    <p class="d-job">Job Title</p>
+                    <p class="d-contact">Contact Info</p>
+                    <p class="d-address">Address</p>
+                </div>
+                <div class="t1-sec"><h2>Summary</h2><p>Motivated professional seeking a challenging role.</p></div>
+                <div class="t1-sec"><h2>Education</h2><ul class="dynamic-list d-edu-list"></ul></div>
+                <div class="t1-sec"><h2>Experience</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                <div class="t1-sec"><h2>Skills</h2><p class="d-skills"></p></div>
+            </div>
+
+            <!-- Template 2: Modern Sidebar -->
+            <div id="t2" class="resume-template">
+                <div class="t2-container">
+                    <div class="t2-sidebar">
+                        <h1 class="d-name">YOUR NAME</h1>
+                        <p class="d-job">Job Title</p>
+                        <h3>Contact</h3>
+                        <p class="d-contact"></p>
+                        <p class="d-address"></p>
+                        <h3>Skills</h3>
+                        <p class="d-skills"></p>
+                    </div>
+                    <div class="t2-main">
+                        <div class="t2-item"><h2>Profile</h2><p>Motivated professional seeking a challenging role.</p></div>
+                        <div class="t2-item"><h2>Education</h2><ul class="dynamic-list d-edu-list"></ul></div>
+                        <div class="t2-item"><h2>Experience</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 3: Minimalist -->
+            <div id="t3" class="resume-template">
+                <div class="t3-header"><h1 class="d-name">YOUR NAME</h1><p class="d-job">Job Title</p></div>
+                <div class="t3-sec"><div class="t3-sec-title">Contact</div><div class="t3-sec-content"><p class="d-contact"></p><p class="d-address"></p></div></div>
+                <div class="t3-sec"><div class="t3-sec-title">Education</div><div class="t3-sec-content"><ul class="dynamic-list d-edu-list"></ul></div></div>
+                <div class="t3-sec"><div class="t3-sec-title">Experience</div><div class="t3-sec-content"><ul class="dynamic-list d-exp-list"></ul></div></div>
+                <div class="t3-sec"><div class="t3-sec-title">Skills</div><div class="t3-sec-content"><p class="d-skills"></p></div></div>
+            </div>
+
+            <!-- Template 4: Executive -->
+            <div id="t4" class="resume-template">
+                <div class="t4-header"><h1 class="d-name">YOUR NAME</h1><p class="d-job">Job Title</p><p class="d-contact" style="margin-top:10px; font-size:12px;"></p><p class="d-address" style="font-size:12px;"></p></div>
+                <div class="t4-sec"><h2>Professional Summary</h2><p>Motivated professional seeking a challenging role.</p></div>
+                <div class="t4-sec"><h2>Education</h2><ul class="dynamic-list d-edu-list" style="margin-left:15px;"></ul></div>
+                <div class="t4-sec"><h2>Experience</h2><ul class="dynamic-list d-exp-list" style="margin-left:15px;"></ul></div>
+                <div class="t4-sec"><h2>Skills</h2><p class="d-skills"></p></div>
+            </div>
+
+            <!-- Template 5: US/Canada ATS -->
+            <div id="t5" class="resume-template t5">
+                <div class="t5-header"><h1 class="d-name">YOUR NAME</h1><p class="d-contact"></p><p class="d-address"></p></div>
+                <div class="t5-sec"><h2>Professional Summary</h2><p>Motivated professional seeking a challenging role.</p></div>
+                <div class="t5-sec"><h2>Work Experience</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                <div class="t5-sec"><h2>Education</h2><ul class="dynamic-list d-edu-list"></ul></div>
+                <div class="t5-sec"><h2>Skills</h2><p class="d-skills"></p></div>
+            </div>
+
+            <!-- Template 6: Europass -->
+            <div id="t6" class="resume-template t6">
+                <div class="t6-header"><h1 class="d-name">YOUR NAME</h1><p class="d-job">Job Title</p></div>
+                <div class="t6-body">
+                    <div class="t6-left">
+                        <div class="t6-sec"><h2>Personal Info</h2><p class="d-address"></p><p class="d-contact"></p></div>
+                        <div class="t6-sec"><h2>Skills</h2><p class="d-skills"></p></div>
+                    </div>
+                    <div class="t6-right">
+                        <div class="t6-sec"><h2>Work Experience</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                        <div class="t6-sec"><h2>Education & Training</h2><ul class="dynamic-list d-edu-list"></ul></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 7: Creative -->
+            <div id="t7" class="resume-template t7">
+                <div class="t7-header"><h1 class="d-name">YOUR NAME</h1><p class="d-job">Job Title</p><p class="d-contact" style="font-size:14px; margin-top:10px;"></p><p class="d-address" style="font-size:14px;"></p></div>
+                <div class="t7-sec"><h2>About Me</h2><p>Motivated professional seeking a challenging role.</p></div>
+                <div class="t7-sec"><h2>Experience</h2><ul class="dynamic-list d-exp-list" style="padding-left:0; list-style-type: none;"></ul></div>
+                <div class="t7-sec"><h2>Education</h2><ul class="dynamic-list d-edu-list" style="padding-left:0; list-style-type: none;"></ul></div>
+                <div class="t7-sec"><h2>Skills</h2><p class="d-skills"></p></div>
+            </div>
+
+            <!-- Template 8: Academic -->
+            <div id="t8" class="resume-template t8">
+                <div class="t8-header"><h1 class="d-name">YOUR NAME</h1><p class="d-address"></p><p class="d-contact"></p></div>
+                <div class="t8-sec"><h2>Education</h2><ul class="dynamic-list d-edu-list"></ul></div>
+                <div class="t8-sec"><h2>Research & Experience</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                <div class="t8-sec"><h2>Skills & Certifications</h2><p class="d-skills"></p></div>
+            </div>
+
+            <!-- Template 9: Indian Biodata -->
+            <div id="t9" class="resume-template t9">
+                <div class="t9-header"><h1>BIODATA</h1><p class="d-job">Job Title</p></div>
+                <table class="t9-table">
+                    <tr><td>Name</td><td>:</td><td class="d-name" style="font-weight:bold;"></td></tr>
+                    <tr><td>Father's Name</td><td>:</td><td class="d-father"></td></tr>
+                    <tr><td>Date of Birth</td><td>:</td><td class="d-dob"></td></tr>
+                    <tr><td>Address</td><td>:</td><td class="d-address"></td></tr>
+                    <tr><td>Contact</td><td>:</td><td class="d-contact"></td></tr>
+                    <tr><td>Languages Known</td><td>:</td><td class="d-lang"></td></tr>
+                </table>
+                <div class="t9-sec"><h2>Educational Qualification:</h2><ul class="dynamic-list d-edu-list"></ul></div>
+                <div class="t9-sec"><h2>Experience:</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                <div class="t9-sec"><h2>Skills:</h2><p class="d-skills"></p></div>
+                <div class="t9-footer"><p>I hereby declare that the above information is true to the best of my knowledge.</p><br><p>Signature: _________________</p></div>
+            </div>
+
+            <!-- Template 10: Dark Sidebar -->
+            <div id="t10" class="resume-template">
+                <div class="t10-container">
+                    <div class="t10-sidebar">
+                        <h1 class="d-name">JOHN SMITH</h1><p class="d-job">Senior Sales Associate</p>
+                        <h3>Contact</h3><p class="info d-address"></p><p class="info d-contact"></p>
+                        <h3>Skills</h3><p class="info d-skills"></p>
+                        <h3>Education</h3><ul class="dynamic-list d-edu-list"></ul>
+                    </div>
+                    <div class="t10-main">
+                        <div class="t10-item"><h2>Work History</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 11: Iconic Two Column -->
+            <div id="t11" class="resume-template">
+                <div class="t11-container">
+                    <div class="t11-left">
+                        <div class="t11-header"><h1 class="d-name">John Smith</h1><p class="d-job">Senior Sales Associate</p></div>
+                        <div class="t11-sec"><h3>Contact</h3><p class="d-contact"></p><p class="d-address"></p></div>
+                        <div class="t11-sec"><h3>Skills</h3><p class="d-skills"></p></div>
+                        <div class="t11-sec"><h3>Education</h3><ul class="dynamic-list d-edu-list"></ul></div>
+                    </div>
+                    <div class="t11-right">
+                        <div class="t11-sec"><h3>Work History</h3><ul class="dynamic-list d-exp-list"></ul></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 12: Right Sidebar -->
+            <div id="t12" class="resume-template">
+                <div class="t12-container">
+                    <div class="t12-main">
+                        <div class="t12-header"><h1 class="d-name">John Smith</h1><p class="d-job">Senior Sales Associate</p></div>
+                        <div class="t12-item"><h2>Work History</h2><ul class="dynamic-list d-exp-list"></ul></div>
+                    </div>
+                    <div class="t12-sidebar">
+                        <div class="t12-avatar" id="avatarInitials">JS</div>
+                        <div class="t12-sec"><h3>Contact</h3><p class="d-contact"></p><p class="d-address"></p></div>
+                        <div class="t12-sec"><h3>Skills</h3><p class="d-skills"></p></div>
+                        <div class="t12-sec"><h3>Education</h3><ul class="dynamic-list d-edu-list"></ul></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SEO Content & Tips Section -->
+    <section class="content-section" style="max-width: 900px; margin: 40px auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); line-height: 1.7; color: #1d1d1f;">
+        <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #1e293b;">Things to Consider When Building a Resume</h2>
+        <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: #4f46e5;">1. Resume Layout & Format</h3>
+        <p style="font-size: 14px; color: #3a3a3c; margin-bottom: 12px;">Consider the hiring manager's perspective and the qualities they might find helpful and easy to scan. Focus on the necessary details first. Create sections to list your professional skills, certifications, awards, memberships, education, and accomplishments in an organized and concise format.</p>
+        <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: #4f46e5;">2. What NOT to Include in Your Resume</h3>
+        <ul style="font-size: 14px; color: #3a3a3c; margin-left: 20px; margin-bottom: 12px;">
+            <li><strong>Do not include hobbies or objectives:</strong> Focus only on the necessary information relevant to the job.</li>
+            <li><strong>No photo:</strong> You don’t need to include a photo unless it’s necessary for specific industries.</li>
+            <li><strong>No emojis:</strong> Avoid using exclamation points, smiley faces, or emojis in your resume.</li>
+            <li><strong>Professional Email:</strong> Don’t use nicknames or catchphrases in your email address.</li>
+            <li><strong>Check formatting:</strong> Double-check the bullet points, periods, capitalization, spelling, and overall structure.</li>
+        </ul>
+        <h2 style="font-size: 20px; font-weight: 700; margin: 30px 0 10px; color: #1e293b;">Frequently Asked Questions (FAQs)</h2>
+        <div style="background: #f8fafc; border-radius: 8px; padding: 15px 20px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+            <h3 style="font-size: 15px; margin: 0 0 5px 0; color: #1e293b;">Is this resume maker really free?</h3>
+            <p style="font-size: 13px; margin: 0; color: #475569;">Yes, PixSathi's resume maker is 100% free. You don't need to sign up or pay to download your PDF.</p>
+        </div>
+        <div style="background: #f8fafc; border-radius: 8px; padding: 15px 20px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+            <h3 style="font-size: 15px; margin: 0 0 5px 0; color: #1e293b;">Will there be a watermark on my resume?</h3>
+            <p style="font-size: 13px; margin: 0; color: #475569;">No, we do not add any watermark. When you print or save as PDF, it will be a clean, professional document.</p>
+        </div>
+        <div style="background: #f8fafc; border-radius: 8px; padding: 15px 20px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
+            <h3 style="font-size: 15px; margin: 0 0 5px 0; color: #1e293b;">Which template is best for Indian jobs?</h3>
+            <p style="font-size: 13px; margin: 0; color: #475569;">For traditional Indian jobs, government sectors, and banks, the "Indian Job Biodata" template is the best choice as it includes fields like Father's Name and DOB.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PixSathi | Made for Everyone ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize first input fields on load
+        window.onload = function() {
+            addEducation();
+            addExperience();
+            updateResume();
+        };
+
+        function addEducation() {
+            const container = document.getElementById('edu-container');
+            const div = document.createElement('div');
+            div.className = 'dynamic-row';
+            div.innerHTML = `
+                <input type="text" class="i-edu" oninput="updateResume()">
+                <button class="btn-remove" type="button" onclick="this.parentElement.remove(); updateResume();">X</button>
+            `;
+            container.appendChild(div);
+        }
+
+        function addExperience() {
+            const container = document.getElementById('exp-container');
+            const div = document.createElement('div');
+            div.className = 'dynamic-row';
+            div.innerHTML = `
+                <input type="text" class="i-exp" oninput="updateResume()">
+                <button class="btn-remove" type="button" onclick="this.parentElement.remove(); updateResume();">X</button>
+            `;
+            container.appendChild(div);
+        }
+
+        function switchTemplate() {
+            const selected = document.getElementById('templateSelector').value;
+            document.querySelectorAll('.resume-template').forEach(t => t.classList.remove('active'));
+            document.getElementById(selected).classList.add('active');
+        }
+
+        function changeTheme() {
+            const color = document.getElementById('themeSelector').value;
+            document.querySelectorAll('.resume-template').forEach(t => t.style.setProperty('--theme-color', color));
+        }
+
+        function updateResume() {
+            const name = document.querySelector('.i-name').value || 'YOUR NAME';
+            const job = document.querySelector('.i-job').value || 'Job Title';
+            const contact = document.querySelector('.i-contact').value || 'Email | Phone';
+            const address = document.querySelector('.i-address').value || 'Address';
+            const father = document.querySelector('.i-father').value || '';
+            const dob = document.querySelector('.i-dob').value || '';
+            const lang = document.querySelector('.i-lang').value || '';
+            const skills = document.querySelector('.i-skills').value;
+
+            // Collect Dynamic Education
+            const eduInputs = document.querySelectorAll('.i-edu');
+            let eduHTML = '';
+            eduInputs.forEach(input => {
+                if(input.value.trim() !== '') {
+                    eduHTML += `<li>${input.value}</li>`;
+                }
+            });
+
+            // Collect Dynamic Experience
+            const expInputs = document.querySelectorAll('.i-exp');
+            let expHTML = '';
+            expInputs.forEach(input => {
+                if(input.value.trim() !== '') {
+                    expHTML += `<li>${input.value}</li>`;
+                }
+            });
+
+            // Update simple text fields
+            document.querySelectorAll('.d-name').forEach(el => el.innerText = name);
+            document.querySelectorAll('.d-job').forEach(el => el.innerText = job);
+            document.querySelectorAll('.d-contact').forEach(el => el.innerText = contact);
+            document.querySelectorAll('.d-address').forEach(el => el.innerText = address);
+            document.querySelectorAll('.d-father').forEach(el => el.innerText = father);
+            document.querySelectorAll('.d-dob').forEach(el => el.innerText = dob);
+            document.querySelectorAll('.d-lang').forEach(el => el.innerText = lang);
+            document.querySelectorAll('.d-skills').forEach(el => el.innerText = skills || '');
+
+            // Update lists
+            document.querySelectorAll('.d-edu-list').forEach(el => el.innerHTML = eduHTML);
+            document.querySelectorAll('.d-exp-list').forEach(el => el.innerHTML = expHTML);
+
+            // Avatar Initials
+            if(document.querySelector('.i-name').value) {
+                let nameStr = document.querySelector('.i-name').value;
+                let initials = nameStr.split(' ').map(n => n[0]).join('').substring(0,2).toUpperCase();
+                if(document.getElementById('avatarInitials')) {
+                    document.getElementById('avatarInitials').innerText = initials;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

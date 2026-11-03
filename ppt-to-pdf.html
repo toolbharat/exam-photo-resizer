@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert PPT to PDF Online Free - Presentation to PDF | PixSathi</title>
+    <meta name="description" content="Convert your presentation slides to a single PDF file for free. Upload your PPT images and download as PDF. 100% private, no server upload.">
+    <meta name="keywords" content="ppt to pdf converter, how to convert ppt to pdf, convert ppt to pdf online free, ppt to pdf converter for mobile app">
+    <link rel="canonical" href="https://www.pixsathi.in/ppt-to-pdf">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5K09RC5D2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5K09RC5D2');
+    </script>
+
+    <style>
+        .tool-container { background: white; padding: 30px; border-radius: 12px; max-width: 800px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        .upload-box { border: 2px dashed #4f46e5; padding: 40px 20px; border-radius: 10px; cursor: pointer; background: #fafbff; transition: 0.3s; margin-bottom: 20px; }
+        .upload-box:hover { background: #eef2ff; }
+        .upload-box input { display: none; }
+        
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; margin: 20px 0; text-align: left;}
+        .image-card { position: relative; background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 8px; text-align: center;}
+        .image-card img { width: 100%; height: 80px; object-fit: cover; border-radius: 4px; }
+        .image-card span { font-size: 11px; display: block; margin-top: 5px; color: #475569; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .image-card .btn-del { position: absolute; top: -5px; right: -5px; background: #dc2626; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; cursor: pointer; font-size: 12px; font-weight: bold;}
+        
+        .action-btn { width: 100%; padding: 15px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 20px; display: none;}
+        .action-btn:hover { background: #4338ca; }
+        
+        #loader { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); z-index: 99999; flex-direction: column; justify-content: center; align-items: center; }
+        #loader .spinner { border: 5px solid #f3f3f3; border-top: 5px solid #4f46e5; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <p style="margin-top: 20px; font-weight: bold; color: #4f46e5; font-size: 18px;">Creating PDF... Please wait.</p>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">📸 PixSathi</div>
+            <nav class="nav"><a href="/">🏠 Home</a> <a href="/blog/">📝 Blog</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section" style="text-align: center; margin-top: 20px;">
+            <h1 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">Presentation to PDF Converter</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Upload your PPT slides (as images) to create a single PDF.</p>
+        </section>
+
+        <div class="tool-container">
+            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; border-radius: 8px; text-align: left; margin-bottom: 20px;">
+                <p style="font-size: 13px; color: #92400e; margin: 0;"><strong>How to use:</strong> Since PPTX files cannot be processed directly in the browser, please export your PowerPoint slides as JPG/PNG images first. Then upload them here to merge into a PDF.</p>
+            </div>
+
+            <label for="imageInput" class="upload-box" id="uploadBox">
+                <div style="font-size: 40px;">🖼️</div>
+                <p style="color: #4f46e5; font-weight: 600; margin-top: 10px;">Click to select Slide Images</p>
+                <p style="font-size: 12px; color: #64748b;">Supports JPG, PNG, HEIC</p>
+                <input type="file" id="imageInput" accept="image/*" multiple>
+            </label>
+
+            <div class="image-grid" id="imageGrid">
+                <!-- Images will appear here -->
+            </div>
+
+            <button id="convertBtn" class="action-btn" onclick="generatePDF()">📥 Convert to PDF</button>
+        </div>
+
+        <!-- SEO Content -->
+        <section class="content-section" style="max-width:900px;margin:40px auto;padding:30px;line-height:1.7;color:#2d3748;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">Convert Presentation to PDF Online Free</h2>
+            <p style="margin-bottom: 20px;">PixSathi ka <strong>Presentation to PDF</strong> tool aapko aapke PPT slides ko ek single PDF document me convert karne ki suvidha deta hai. Kyunki direct PPTX parsing browser me possible nahi hai, hum ye tarika use karte hain jisme aap apne slides ko images me save karke upload karte hain. Ye 100% free, fast aur private hai.</p>
+
+            <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Convert PPT to PDF (Step-by-Step)</h2>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
+                <li><strong>Step 1:</strong> Apni PPT file open karein aur "Save as Images" (JPG/PNG) karein.</li>
+                <li><strong>Step 2:</strong> Upar diye gaye box me apni saari slide images select karein.</li>
+                <li><strong>Step 3:</strong> "Convert to PDF" button dabayein.</li>
+                <li><strong>Step 4:</strong> Aapki saari slides ek PDF file me convert ho jayengi.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        let filesArray = [];
+
+        document.getElementById('imageInput').addEventListener('change', function(e) {
+            const newFiles = Array.from(e.target.files);
+            filesArray = filesArray.concat(newFiles);
+            renderImages();
+        });
+
+        function renderImages() {
+            const grid = document.getElementById('imageGrid');
+            const convertBtn = document.getElementById('convertBtn');
+            grid.innerHTML = '';
+            
+            if (filesArray.length === 0) {
+                convertBtn.style.display = 'none';
+                return;
+            }
+
+            filesArray.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const div = document.createElement('div');
+                    div.className = 'image-card';
+                    div.innerHTML = `
+                        <img src="${event.target.result}" alt="Slide">
+                        <span>${file.name}</span>
+                        <button class="btn-del" onclick="removeImage(${index})">×</button>
+                    `;
+                    grid.appendChild(div);
+                };
+                reader.readAsDataURL(file);
+            });
+            
+            convertBtn.style.display = 'block';
+        }
+
+        function removeImage(index) {
+            filesArray.splice(index, 1);
+            renderImages();
+        }
+
+        async function generatePDF() {
+            if (filesArray.length === 0) return;
+            
+            document.getElementById('loader').style.display = 'flex';
+            
+            // Wait a bit for loader to show
+            await new Promise(r => setTimeout(r, 100));
+
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const pageWidth = pdf.internal.pageSize.getWidth();
+            const pageHeight = pdf.internal.pageSize.getHeight();
+
+            for (let i = 0; i < filesArray.length; i++) {
+                const file = filesArray[i];
+                
+                // Convert file to Data URL
+                const dataUrl = await new Promise((resolve) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.readAsDataURL(file);
+                });
+
+                // Create Image object to get dimensions
+                const img = await new Promise((resolve) => {
+                    const image = new Image();
+                    image.onload = () => resolve(image);
+                    image.src = dataUrl;
+                });
+
+                // Calculate scaling to fit A4
+                const imgRatio = img.width / img.height;
+                const pageRatio = pageWidth / pageHeight;
+                let imgWidth, imgHeight, x, y;
+
+                if (imgRatio > pageRatio) {
+                    imgWidth = pageWidth;
+                    imgHeight = pageWidth / imgRatio;
+                    x = 0;
+                    y = (pageHeight - imgHeight) / 2;
+                } else {
+                    imgHeight = pageHeight;
+                    imgWidth = pageHeight * imgRatio;
+                    y = 0;
+                    x = (pageWidth - imgWidth) / 2;
+                }
+
+                if (i > 0) pdf.addPage();
+                
+                // Add image to PDF (jsPDF supports JPG/PNG)
+                const imgType = file.type === 'image/png' ? 'PNG' : 'JPEG';
+                pdf.addImage(dataUrl, imgType, x, y, imgWidth, imgHeight);
+            }
+
+            pdf.save('PixSathi-Presentation.pdf');
+            document.getElementById('loader').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
