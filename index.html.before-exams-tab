@@ -66,7 +66,7 @@
         .tool-card { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; min-height: 80px; }
         .tool-icon { font-size: 26px; flex-shrink: 0; }
         .tool-info h3 { font-size: 13px; font-weight: 700; color: #1d1d1f; margin: 0 0 2px 0; }
-        .tool-info p { font-size: 11px; color: #6e6e73; margin: 0; line-height: 1.4; }
+        .tool-info p { font-size: 11px; color: #475569; margin: 0; line-height: 1.4; }
         .tool-cta { font-size: 11px; color: #4f46e5; font-weight: 600; margin-top: 3px; }
         .content-section h2 { font-size: 16px !important; margin: 14px 0 8px !important; }
         .content-section h3 { font-size: 14px !important; }
