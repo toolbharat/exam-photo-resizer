@@ -4,3 +4,10 @@ _backup_*/
 *.bak
 *.backup
 node_modules/
+# Backups and temp files
+*.before-*
+*.current
+*backup*.html
+urls.txt
+redirect-audit.txt
+hinglish-files.txt
