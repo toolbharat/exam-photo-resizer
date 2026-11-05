@@ -1,0 +1,5 @@
+# PixSathi
+> Free online tools for passport photos, exam resizer, PDF, and finance.
+
+PixSathi is a 100% free online suite of tools designed for Indian students, professionals, and businesses. 
+Features include exam photo resizers (SSC, UPSC, IBPS), PDF converters, image compressors, a GST invoice generator, and a resume builder. All tools run client-side in the browser with 100% privacy.
