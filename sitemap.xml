@@ -259,16 +259,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pixsathi.in/404</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/index-backup</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.pixsathi.in/blog/barcode-generator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -385,11 +375,6 @@
   </url>
   <url>
     <loc>https://www.pixsathi.in/blog/url-encoder</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pixsathi.in/finance/404</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
