@@ -46,6 +46,24 @@
     { "source": "/india", "destination": "/international/india-passport-photo", "permanent": true },
     { "source": "/india.html", "destination": "/international/india-passport-photo", "permanent": true },
     { "source": "/404", "destination": "/", "permanent": true },
-    { "source": "/finance/404", "destination": "/", "permanent": true }
+    { "source": "/finance/404", "destination": "/", "permanent": true },
+    { "source": "/finance/income-tax-calculator-hi", "destination": "/finance/income-tax-calculator", "permanent": true },
+    { "source": "/finance/emi-calculator-hi", "destination": "/finance/emi-calculator", "permanent": true },
+    { "source": "/finance/sip-calculator-hi", "destination": "/finance/sip-calculator", "permanent": true },
+    { "source": "/finance/fd-calculator-hi", "destination": "/finance/fd-calculator", "permanent": true },
+    { "source": "/finance/rd-calculator-hi", "destination": "/finance/rd-calculator", "permanent": true },
+    { "source": "/finance/ppf-calculator-hi", "destination": "/finance/ppf-calculator", "permanent": true },
+    { "source": "/finance/nps-calculator-hi", "destination": "/finance/nps-calculator", "permanent": true },
+    { "source": "/finance/salary-calculator-hi", "destination": "/finance/salary-calculator", "permanent": true },
+    { "source": "/finance/hra-calculator-hi", "destination": "/finance/hra-calculator", "permanent": true },
+    { "source": "/finance/gratuity-calculator-hi", "destination": "/finance/gratuity-calculator", "permanent": true },
+    { "source": "/finance/loan-eligibility-calculator-hi", "destination": "/finance/loan-eligibility-calculator", "permanent": true },
+    { "source": "/finance/lumpsum-calculator-hi", "destination": "/finance/lumpsum-calculator", "permanent": true },
+    { "source": "/finance/swp-calculator-hi", "destination": "/finance/swp-calculator", "permanent": true },
+    { "source": "/finance/cagr-calculator-hi", "destination": "/finance/cagr-calculator", "permanent": true },
+    { "source": "/finance/compound-interest-calculator-hi", "destination": "/finance/compound-interest-calculator", "permanent": true },
+    { "source": "/finance/insurance-calculator-hi", "destination": "/finance/insurance-calculator", "permanent": true },
+    { "source": "/finance/gst-calculator-hi", "destination": "/finance/gst-calculator", "permanent": true },
+    { "source": "/finance/index-hi", "destination": "/finance/", "permanent": true }
   ]
 }

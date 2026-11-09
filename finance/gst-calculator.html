@@ -15,10 +15,9 @@
       gtag('config', 'G-3XDWGNTC1J', { cookie_domain: 'pixsathi.in' });
     </script>
 
-    <title>GST Calculator - India Finance Calculator | PixSathi</title>
-    <meta name="description" content="Free GST Calculator for India. Calculate GST amount, net price, and gross price with 5%, 12%, 18%, 28% slabs instantly.">
+    <title>GST Calculator - Calculate GST Amount Online (India) | PixSathi</title>
+    <meta name="description" content="Free online GST Calculator for India. Calculate GST amount, net price, and gross price instantly with 5%, 12%, 18%, 28% tax slabs.">
     
-    <!-- CANONICAL TAG ADDED HERE -->
     <link rel="canonical" href="https://www.pixsathi.in/finance/gst-calculator">
     
     <link rel="icon" href="/finance/favicon.ico" sizes="any">
@@ -122,71 +121,6 @@ body {
     color: var(--text-muted);
 }
 
-/* ========== CALCULATOR GRID ========== */
-.calculator-section {
-    margin-top: 35px;
-}
-
-.calculator-section h2,
-.info-section h2 {
-    font-size: 24px;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-}
-
-.calculator-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.calculator-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 25px;
-    transition: 0.2s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.calculator-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--primary);
-}
-
-.calculator-card h3 {
-    margin: 0 0 10px;
-    color: var(--primary-dark);
-    font-size: 20px;
-}
-
-.calculator-card p {
-    flex: 1;
-    min-height: 60px;
-    margin: 0 0 20px;
-    color: var(--text-muted);
-    line-height: 1.5;
-}
-
-.calculator-card a {
-    display: inline-block;
-    background: var(--primary-dark);
-    color: #ffffff;
-    padding: 9px 15px;
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    transition: 0.2s;
-}
-
-.calculator-card a:hover {
-    background: #004a73;
-}
-
 /* ========== INFO SECTION ========== */
 .info-section {
     background: var(--white);
@@ -199,6 +133,7 @@ body {
 .info-section p {
     color: var(--text);
     line-height: 1.7;
+    margin-bottom: 16px;
 }
 
 .info-section h2 {
@@ -207,6 +142,37 @@ body {
 
 .info-section h2:first-child {
     margin-top: 0;
+}
+
+.info-section h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.info-section ul {
+    margin: 12px 0 12px 24px;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.info-section ul li {
+    margin-bottom: 8px;
+}
+
+.info-section a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
+.info-section strong {
+    color: var(--text-dark);
 }
 
 /* ========== FORM INPUTS ========== */
@@ -218,8 +184,6 @@ body {
 }
 
 .info-section input[type="number"],
-.info-section input[type="text"],
-.info-section input[type="email"],
 .info-section select {
     width: 100%;
     padding: 12px 14px;
@@ -263,21 +227,11 @@ body {
 }
 
 /* ========== RESULT BOX ========== */
-#emiResult,
-#gstResult,
-#sipResult,
-#fdResult,
-#salaryResult,
-#taxResult {
+#gstResult {
     margin-top: 25px;
 }
 
-#emiResult h2,
-#gstResult h2,
-#sipResult h2,
-#fdResult h2,
-#salaryResult h2,
-#taxResult h2 {
+#gstResult h2 {
     font-size: 22px;
     color: var(--text-dark);
     margin-bottom: 16px;
@@ -313,43 +267,6 @@ body {
     font-size: 22px;
     color: var(--primary-dark);
     font-weight: 700;
-}
-
-/* ========== AMORTIZATION TABLE ========== */
-.table-wrap {
-    overflow-x: auto;
-    margin-top: 10px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-}
-
-.amort-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    min-width: 500px;
-}
-
-.amort-table th {
-    background: var(--primary-dark);
-    color: #ffffff;
-    padding: 12px;
-    text-align: left;
-    font-weight: 600;
-}
-
-.amort-table td {
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-}
-
-.amort-table tr:nth-child(even) {
-    background: #fafbfc;
-}
-
-.amort-table tr:hover {
-    background: var(--primary-light);
 }
 
 /* ========== MESSAGES ========== */
@@ -424,88 +341,56 @@ body {
 
 /* ========== MOBILE ========== */
 @media (max-width: 900px) {
-    .calculator-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .emi-result-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .emi-result-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 600px) {
-    .calculator-grid {
-        grid-template-columns: 1fr;
-    }
-    .emi-result-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero {
-        padding: 30px 20px;
-    }
-    .hero h1 {
-        font-size: 28px;
-    }
-    .logo {
-        font-size: 21px;
-    }
-    .info-section {
-        padding: 20px;
-    }
-    .emi-result-card strong {
-        font-size: 20px;
-    }
-    .main-nav {
-        justify-content: center;
-    }
+    .emi-result-grid { grid-template-columns: 1fr; }
+    .hero { padding: 30px 20px; }
+    .hero h1 { font-size: 28px; }
+    .logo { font-size: 21px; }
+    .info-section { padding: 20px; }
+    .emi-result-card strong { font-size: 20px; }
+    .main-nav { justify-content: center; }
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
 <script src="/heic-fix.js"></script>
-    <!-- HEIC Converter Library -->
-    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-    <!-- Universal HEIC Converter Script for All Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputs = document.querySelectorAll('input[type="file"]');
-            inputs.forEach(input => {
-                input.addEventListener('change', async (e) => {
-                    const files = Array.from(input.files);
-                    if (files.length === 0) return;
-                    
-                    let hasHeic = false;
-                    const dataTransfer = new DataTransfer();
-                    
-                    for (let file of files) {
-                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
-                            hasHeic = true;
-                            try {
-                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
-                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
-                                dataTransfer.items.add(newFile);
-                            } catch (error) {
-                                console.error("HEIC Error", error);
-                            }
-                        } else {
-                            dataTransfer.items.add(file);
-                        }
-                    }
-                    
-                    if (hasHeic) {
-                        e.stopImmediatePropagation(); 
-                        input.files = dataTransfer.files;
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                }, true); 
-            });
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const inputs = document.querySelectorAll('input[type="file"]');
+        inputs.forEach(input => {
+            input.addEventListener('change', async (e) => {
+                const files = Array.from(input.files);
+                if (files.length === 0) return;
+                let hasHeic = false;
+                const dataTransfer = new DataTransfer();
+                for (let file of files) {
+                    if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
+                        hasHeic = true;
+                        try {
+                            const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
+                            const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+                            const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
+                            dataTransfer.items.add(newFile);
+                        } catch (error) { console.error("HEIC Error", error); }
+                    } else { dataTransfer.items.add(file); }
+                }
+                if (hasHeic) {
+                    e.stopImmediatePropagation(); 
+                    input.files = dataTransfer.files;
+                    input.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+            }, true); 
         });
-    </script>
+    });
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "PixSathi - Free Online Tools",
-  "url": "https://www.pixsathi.in/",
+  "name": "GST Calculator",
+  "url": "https://www.pixsathi.in/finance/gst-calculator",
   "publisher": {
     "@type": "Organization",
     "name": "PixSathi",
@@ -568,6 +453,86 @@ body {
             <button type="button" onclick="calculateGST()">Calculate GST</button>
         </form>
         <div id="gstResult"></div>
+    </section>
+
+    <!-- ========== NEW SEO CONTENT SECTION ========== -->
+    <section class="info-section">
+        <h2>What is GST and How to Calculate It?</h2>
+
+        <p>The Goods and Services Tax (GST) is a comprehensive, multi-stage, destination-based tax that is levied on every value addition. Implemented on July 1, 2017, it replaced a multitude of indirect taxes like VAT, Service Tax, and Excise Duty, unifying India under a single tax regime. Whether you are a business owner, a freelancer, or a consumer, understanding GST is essential because it impacts the price of almost everything you buy or sell.</p>
+
+        <p>Calculating GST manually can lead to errors, especially when you need to separate the tax from the final price. Our <strong>GST Calculator</strong> simplifies this process, allowing you to instantly determine the net price, the GST amount, and the gross price. It is an indispensable tool for invoicing, accounting, and financial planning.</p>
+
+        <h3>What Are the GST Tax Slabs in India?</h3>
+        <p>GST is divided into four primary tax slabs to ensure that essential goods are taxed less and luxury items are taxed more:</p>
+        <ul>
+            <li><strong>5%:</strong> Applied to essential items like food grains, medicines, and economy hotels.</li>
+            <li><strong>12%:</strong> Applied to processed foods, business-class air tickets, and certain services.</li>
+            <li><strong>18%:</strong> The standard slab applied to most goods and services, including IT services, electronics, and financial services.</li>
+            <li><strong>28%:</strong> Applied to luxury items like high-end cars, tobacco, and aerated drinks.</li>
+        </ul>
+        <p>Additionally, a cess is applied on certain goods (like automobiles and tobacco) to compensate states for revenue loss.</p>
+
+        <h3>How Does the GST Calculator Work?</h3>
+        <p>Our calculator has two primary functions, making it flexible for both sellers and buyers:</p>
+
+        <p><strong>1. Add GST (Exclusive):</strong> Use this option if you know the base price of a product and want to add GST to find the final selling price.<br>
+        <em>Formula:</em> GST Amount = (Original Price × GST Rate) / 100<br>
+        <em>Final Price</em> = Original Price + GST Amount</p>
+
+        <p><strong>2. Remove GST (Inclusive):</strong> Use this option if you know the final price (which includes GST) and want to find out the original base price and how much tax was paid.<br>
+        <em>Formula:</em> Base Price = Final Price × 100 / (100 + GST Rate)<br>
+        <em>GST Amount</em> = Final Price - Base Price</p>
+
+        <h3>Examples of GST Calculation</h3>
+
+        <p><strong>Example 1 (Adding GST):</strong> You buy a laptop for ₹50,000 (base price). The GST rate is 18%.<br>
+        GST Amount = 50,000 × 18% = ₹9,000.<br>
+        Total Price = ₹50,000 + ₹9,000 = <strong>₹59,000</strong>.</p>
+
+        <p><strong>Example 2 (Removing GST):</strong> You paid a restaurant bill of ₹1,180, which includes 18% GST. What was the base price?<br>
+        Base Price = 1,180 × 100 / (100 + 18) = <strong>₹1,000</strong>.<br>
+        GST Amount = 1,180 - 1,000 = <strong>₹180</strong>.</p>
+
+        <p><strong>Example 3 (5% Slab):</strong> A food package costs ₹200. With 5% GST:<br>
+        GST = ₹10. Final Price = <strong>₹210</strong>.</p>
+
+        <h3>Why is GST Important for Businesses?</h3>
+        <ul>
+            <li><strong>Input Tax Credit (ITC):</strong> Businesses can claim credit for the GST paid on purchases, reducing their overall tax burden.</li>
+            <li><strong>Compliance:</strong> Accurate GST calculation is mandatory for filing monthly and quarterly returns (GSTR-1, GSTR-3B).</li>
+            <li><strong>Pricing Strategy:</strong> Businesses use GST calculators to price their products competitively while maintaining profit margins.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions (FAQs)</h3>
+
+        <p><strong>Q: Is GST the same for all states in India?</strong><br>
+        A: Yes, GST is a unified tax applicable across all states and union territories. However, for inter-state trade, IGST (Integrated GST) is levied, which is also calculated using the same rates.</p>
+
+        <p><strong>Q: What is a Reverse GST Calculator?</strong><br>
+        A: A reverse GST calculator (the "Remove GST" option in our tool) helps you find the base price from the final price that includes GST.</p>
+
+        <p><strong>Q: Who needs to register for GST?</strong><br>
+        A: Businesses with an annual turnover exceeding ₹40 lakh (₹20 lakh for services) must register for GST. However, voluntary registration is also allowed.</p>
+
+        <p><strong>Q: Can I use this calculator for invoicing?</strong><br>
+        A: Yes, this calculator provides the exact breakdown of net price and tax amount, which you can use to create compliant invoices.</p>
+
+        <h3>When Should You Use This Calculator?</h3>
+        <p>Use this GST calculator whenever you are:</p>
+        <ul>
+            <li>Preparing an invoice for a client.</li>
+            <li>Verifying the GST charged on a bill.</li>
+            <li>Calculating your tax liability for the month.</li>
+            <li>Deciding the selling price of a product.</li>
+        </ul>
+
+        <h3>Related Calculators</h3>
+        <ul>
+            <li><a href="/finance/income-tax-calculator">Income Tax Calculator</a> — Calculate your income tax</li>
+            <li><a href="/finance/emi-calculator">EMI Calculator</a> — Calculate loan EMIs</li>
+            <li><a href="/finance/salary-calculator">Salary Calculator</a> — Calculate in-hand salary</li>
+        </ul>
     </section>
 
 </main>
