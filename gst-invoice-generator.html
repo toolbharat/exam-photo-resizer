@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -129,15 +129,15 @@
 
         <header class="header">
         <div class="container">
-            <div class="logo">📸 PixSathi</div>
+            <div class="logo">ðŸ“¸ PixSathi</div>
             <p class="tagline">Free Online Tools for Everyone - 100% Free - Private</p>
             <nav class="nav" aria-label="Main navigation">
-                <a href="/">🏠 Home</a>
-                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
-                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/blog/">📝 Blog</a>
-                <a href="/contact">📬 Contact</a>
+                <a href="/">ðŸ  Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ‡®ðŸ‡³ Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ› ï¸ International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ’° Finance</a>
+                <a href="/blog/">ðŸ“ Blog</a>
+                <a href="/contact">ðŸ“¬ Contact</a>
             </nav>
         </div>
     </header>
@@ -217,7 +217,7 @@
                     <tr>
                         <th width="40%">Item Description</th>
                         <th width="15%">Qty</th>
-                        <th width="20%">Rate (₹)</th>
+                        <th width="20%">Rate (â‚¹)</th>
                         <th width="15%">GST %</th>
                         <th width="10%">Del</th>
                     </tr>
@@ -230,7 +230,7 @@
             <div class="section-title">Adjustments</div>
             <div class="grid-2">
                 <div class="input-group">
-                    <label>Discount (₹)</label>
+                    <label>Discount (â‚¹)</label>
                     <input type="number" id="discount" value="0" min="0" oninput="updateInvoice()">
                 </div>
                 <div class="input-group">
@@ -292,23 +292,23 @@
                 <table class="totals-table">
                     <tr>
                         <td>Subtotal:</td>
-                        <td style="text-align: right;">₹<span id="showSubtotal">0.00</span></td>
+                        <td style="text-align: right;">â‚¹<span id="showSubtotal">0.00</span></td>
                     </tr>
                     <tr>
                         <td>CGST (9%):</td>
-                        <td style="text-align: right;">₹<span id="showCgst">0.00</span></td>
+                        <td style="text-align: right;">â‚¹<span id="showCgst">0.00</span></td>
                     </tr>
                     <tr>
                         <td>SGST (9%):</td>
-                        <td style="text-align: right;">₹<span id="showSgst">0.00</span></td>
+                        <td style="text-align: right;">â‚¹<span id="showSgst">0.00</span></td>
                     </tr>
                     <tr id="discountRow" style="display: none;">
                         <td style="color: #dc2626;">Discount:</td>
-                        <td style="text-align: right; color: #dc2626;">- ₹<span id="showDiscount">0.00</span></td>
+                        <td style="text-align: right; color: #dc2626;">- â‚¹<span id="showDiscount">0.00</span></td>
                     </tr>
                     <tr class="grand-total">
                         <td style="padding-top: 15px;">Grand Total:</td>
-                        <td style="text-align: right; padding-top: 15px;">₹<span id="showGrandTotal">0.00</span></td>
+                        <td style="text-align: right; padding-top: 15px;">â‚¹<span id="showGrandTotal">0.00</span></td>
                     </tr>
                 </table>
             </div>
@@ -454,8 +454,8 @@
                 tr.innerHTML = `
                     <td>${desc}</td>
                     <td style="text-align: center;">${qty}</td>
-                    <td style="text-align: right;">₹${rate.toFixed(2)}</td>
-                    <td style="text-align: right;">₹${amount.toFixed(2)}</td>
+                    <td style="text-align: right;">â‚¹${rate.toFixed(2)}</td>
+                    <td style="text-align: right;">â‚¹${amount.toFixed(2)}</td>
                 `;
                 previewItems.appendChild(tr);
             });

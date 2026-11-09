@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -410,7 +410,7 @@ body {
         <a href="/" style="text-decoration:none;color:inherit;"><div class="logo">PixSathi Finance</div></a>
         <p class="tagline">Free Online Financial Calculators</p>
         <nav class="main-nav">
-            <a href="/" style="background:#10b981;color:white;padding:5px 12px;border-radius:6px;font-weight:600;">🔧 All Tools</a>
+            <a href="/" style="background:#10b981;color:white;padding:5px 12px;border-radius:6px;font-weight:600;">ðŸ”§ All Tools</a>
             <a href="/finance/index">Home</a>
             <a href="/finance/emi-calculator">EMI</a>
             <a href="/finance/gst-calculator">GST</a>
@@ -433,7 +433,7 @@ body {
     <section class="info-section">
         <h2>GST Details</h2>
         <form onsubmit="return false;">
-            <p>Amount (₹)</p>
+            <p>Amount (â‚¹)</p>
             <input type="number" id="gstAmount" placeholder="e.g. 10000" min="1">
 
             <p>GST Rate (%)</p>
@@ -477,25 +477,25 @@ body {
         <p>Our calculator has two primary functions, making it flexible for both sellers and buyers:</p>
 
         <p><strong>1. Add GST (Exclusive):</strong> Use this option if you know the base price of a product and want to add GST to find the final selling price.<br>
-        <em>Formula:</em> GST Amount = (Original Price × GST Rate) / 100<br>
+        <em>Formula:</em> GST Amount = (Original Price Ã— GST Rate) / 100<br>
         <em>Final Price</em> = Original Price + GST Amount</p>
 
         <p><strong>2. Remove GST (Inclusive):</strong> Use this option if you know the final price (which includes GST) and want to find out the original base price and how much tax was paid.<br>
-        <em>Formula:</em> Base Price = Final Price × 100 / (100 + GST Rate)<br>
+        <em>Formula:</em> Base Price = Final Price Ã— 100 / (100 + GST Rate)<br>
         <em>GST Amount</em> = Final Price - Base Price</p>
 
         <h3>Examples of GST Calculation</h3>
 
-        <p><strong>Example 1 (Adding GST):</strong> You buy a laptop for ₹50,000 (base price). The GST rate is 18%.<br>
-        GST Amount = 50,000 × 18% = ₹9,000.<br>
-        Total Price = ₹50,000 + ₹9,000 = <strong>₹59,000</strong>.</p>
+        <p><strong>Example 1 (Adding GST):</strong> You buy a laptop for â‚¹50,000 (base price). The GST rate is 18%.<br>
+        GST Amount = 50,000 Ã— 18% = â‚¹9,000.<br>
+        Total Price = â‚¹50,000 + â‚¹9,000 = <strong>â‚¹59,000</strong>.</p>
 
-        <p><strong>Example 2 (Removing GST):</strong> You paid a restaurant bill of ₹1,180, which includes 18% GST. What was the base price?<br>
-        Base Price = 1,180 × 100 / (100 + 18) = <strong>₹1,000</strong>.<br>
-        GST Amount = 1,180 - 1,000 = <strong>₹180</strong>.</p>
+        <p><strong>Example 2 (Removing GST):</strong> You paid a restaurant bill of â‚¹1,180, which includes 18% GST. What was the base price?<br>
+        Base Price = 1,180 Ã— 100 / (100 + 18) = <strong>â‚¹1,000</strong>.<br>
+        GST Amount = 1,180 - 1,000 = <strong>â‚¹180</strong>.</p>
 
-        <p><strong>Example 3 (5% Slab):</strong> A food package costs ₹200. With 5% GST:<br>
-        GST = ₹10. Final Price = <strong>₹210</strong>.</p>
+        <p><strong>Example 3 (5% Slab):</strong> A food package costs â‚¹200. With 5% GST:<br>
+        GST = â‚¹10. Final Price = <strong>â‚¹210</strong>.</p>
 
         <h3>Why is GST Important for Businesses?</h3>
         <ul>
@@ -513,7 +513,7 @@ body {
         A: A reverse GST calculator (the "Remove GST" option in our tool) helps you find the base price from the final price that includes GST.</p>
 
         <p><strong>Q: Who needs to register for GST?</strong><br>
-        A: Businesses with an annual turnover exceeding ₹40 lakh (₹20 lakh for services) must register for GST. However, voluntary registration is also allowed.</p>
+        A: Businesses with an annual turnover exceeding â‚¹40 lakh (â‚¹20 lakh for services) must register for GST. However, voluntary registration is also allowed.</p>
 
         <p><strong>Q: Can I use this calculator for invoicing?</strong><br>
         A: Yes, this calculator provides the exact breakdown of net price and tax amount, which you can use to create compliant invoices.</p>
@@ -529,9 +529,9 @@ body {
 
         <h3>Related Calculators</h3>
         <ul>
-            <li><a href="/finance/income-tax-calculator">Income Tax Calculator</a> — Calculate your income tax</li>
-            <li><a href="/finance/emi-calculator">EMI Calculator</a> — Calculate loan EMIs</li>
-            <li><a href="/finance/salary-calculator">Salary Calculator</a> — Calculate in-hand salary</li>
+            <li><a href="/finance/income-tax-calculator">Income Tax Calculator</a> â€” Calculate your income tax</li>
+            <li><a href="/finance/emi-calculator">EMI Calculator</a> â€” Calculate loan EMIs</li>
+            <li><a href="/finance/salary-calculator">Salary Calculator</a> â€” Calculate in-hand salary</li>
         </ul>
     </section>
 
@@ -539,7 +539,7 @@ body {
 
 <footer class="site-footer">
     <div class="container">
-        <p>© 2026 India Finance Calculator</p>
+        <p>Â© 2026 India Finance Calculator</p>
         <nav class="footer-nav">
             <a href="/finance/about">About</a> |
             <a href="/finance/contact">Contact</a> |
@@ -555,7 +555,7 @@ body {
    ============================================ */
 
 function formatINR(num) {
-    return '₹ ' + Math.round(num).toLocaleString('en-IN');
+    return 'â‚¹ ' + Math.round(num).toLocaleString('en-IN');
 }
 
 function calculateGST() {
@@ -565,7 +565,7 @@ function calculateGST() {
     const resultDiv = document.getElementById("gstResult");
 
     if (!amount || amount <= 0) {
-        resultDiv.innerHTML = '<p class="error-msg">⚠️ Amount must be greater than 0.</p>';
+        resultDiv.innerHTML = '<p class="error-msg">âš ï¸ Amount must be greater than 0.</p>';
         return;
     }
 
@@ -599,9 +599,9 @@ function calculateGST() {
             </div>
         </div>
 
-        <p class="note">💡 Tip: GST rates in India are 5%, 12%, 18%, and 28%.</p>
+        <p class="note">ðŸ’¡ Tip: GST rates in India are 5%, 12%, 18%, and 28%.</p>
 
-        <a href="/finance/index" class="back-link">← Back to Home</a>
+        <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
 }
 </script>
