@@ -42,6 +42,10 @@
       "has": [{ "type": "host", "value": "pixsathi.in" }],
       "destination": "https://www.pixsathi.in/$1",
       "permanent": true
-    }
+    },
+    { "source": "/india", "destination": "/international/india-passport-photo", "permanent": true },
+    { "source": "/india.html", "destination": "/international/india-passport-photo", "permanent": true },
+    { "source": "/404", "destination": "/", "permanent": true },
+    { "source": "/finance/404", "destination": "/", "permanent": true }
   ]
 }
