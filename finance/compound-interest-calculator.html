@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -611,6 +611,7 @@ body {
   }
 }
 </script>
+<link rel="canonical" href="https://www.pixsathi.in/finance/compound-interest-calculator" />
 </head>
 
 <body>
@@ -620,14 +621,14 @@ body {
         <a href="/" style="text-decoration:none;color:inherit;"><div class="logo">PixSathi Finance</div></a>
         <p class="tagline">Free Online Financial Calculators</p>
         <nav class="main-nav">
-            <a href="/" style="background:#10b981;color:white;padding:5px 12px;border-radius:6px;font-weight:600;">🔧 All Tools</a>
+            <a href="/" style="background:#10b981;color:white;padding:5px 12px;border-radius:6px;font-weight:600;">ðŸ”§ All Tools</a>
             <a href="/finance/index">Home</a>
             <a href="/finance/fd-calculator">FD</a>
             <a href="/finance/rd-calculator">RD</a>
             <a href="/finance/ppf-calculator">PPF</a>
             <a href="/finance/sip-calculator">SIP</a>
             <a href="/finance/blog">Blog</a>
-            <a href="/finance/index-hi" class="lang-switch">🌐 हिंदी</a>
+            <a href="/finance/index-hi" class="lang-switch">ðŸŒ à¤¹à¤¿à¤‚à¤¦à¥€</a>
         </nav>
     </div>
 </header>
@@ -643,7 +644,7 @@ body {
     <section class="info-section">
         <h2>Your Details</h2>
         <form onsubmit="return false;">
-            <p>Principal Amount (₹)</p>
+            <p>Principal Amount (â‚¹)</p>
             <input type="number" id="ciPrincipal" placeholder="e.g. 100000" min="1000" value="100000">
 
             <p>Interest Rate (% per year)</p>
@@ -674,7 +675,7 @@ body {
         <p>Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. It is often called "interest on interest" and can significantly grow your money over time.</p>
 
         <h3>Formula</h3>
-        <p><strong>A = P × (1 + r/n)^(n×t)</strong></p>
+        <p><strong>A = P Ã— (1 + r/n)^(nÃ—t)</strong></p>
         <ul>
             <li><strong>A</strong> = Final amount (maturity value)</li>
             <li><strong>P</strong> = Principal amount</li>
@@ -685,17 +686,17 @@ body {
 
         <h3>Compound Interest vs Simple Interest</h3>
         <ul>
-            <li><strong>Simple Interest:</strong> Interest only on principal (P × r × t)</li>
+            <li><strong>Simple Interest:</strong> Interest only on principal (P Ã— r Ã— t)</li>
             <li><strong>Compound Interest:</strong> Interest on principal + accumulated interest</li>
             <li>Compound interest gives higher returns over long periods</li>
         </ul>
 
         <h3>Example</h3>
-        <p>₹1,00,000 at 8% for 10 years:</p>
+        <p>â‚¹1,00,000 at 8% for 10 years:</p>
         <ul>
-            <li><strong>Simple Interest:</strong> ₹1,80,000 (interest: ₹80,000)</li>
-            <li><strong>Compound Interest (yearly):</strong> ₹2,15,892 (interest: ₹1,15,892)</li>
-            <li><strong>Difference:</strong> ₹35,892 more with compounding</li>
+            <li><strong>Simple Interest:</strong> â‚¹1,80,000 (interest: â‚¹80,000)</li>
+            <li><strong>Compound Interest (yearly):</strong> â‚¹2,15,892 (interest: â‚¹1,15,892)</li>
+            <li><strong>Difference:</strong> â‚¹35,892 more with compounding</li>
         </ul>
 
         <h3>Where is Compound Interest Used?</h3>
@@ -716,7 +717,7 @@ body {
 
 <footer class="site-footer">
     <div class="container">
-        <p>© 2026 India Finance Calculator</p>
+        <p>Â© 2026 India Finance Calculator</p>
         <nav class="footer-nav">
             <a href="/finance/about">About</a> |
             <a href="/finance/contact">Contact</a> |
@@ -734,7 +735,7 @@ body {
 
 // Indian number format helper
 function formatINR(num) {
-    return '₹ ' + Math.round(num).toLocaleString('en-IN');
+    return 'â‚¹ ' + Math.round(num).toLocaleString('en-IN');
 }
 
 /* ============================================
@@ -748,24 +749,24 @@ function calculateCompoundInterest() {
     const resultDiv = document.getElementById("ciResult");
 
     if (!principal || principal <= 0) {
-        resultDiv.innerHTML = '<p class="error-msg">⚠️ Principal must be greater than 0.</p>';
+        resultDiv.innerHTML = '<p class="error-msg">âš ï¸ Principal must be greater than 0.</p>';
         return;
     }
     if (!annualRate || annualRate < 0.1 || annualRate > 30) {
-        resultDiv.innerHTML = '<p class="error-msg">⚠️ Interest rate must be between 0.1% and 30%.</p>';
+        resultDiv.innerHTML = '<p class="error-msg">âš ï¸ Interest rate must be between 0.1% and 30%.</p>';
         return;
     }
     if (!years || years <= 0 || years > 50) {
-        resultDiv.innerHTML = '<p class="error-msg">⚠️ Period must be between 1 and 50 years.</p>';
+        resultDiv.innerHTML = '<p class="error-msg">âš ï¸ Period must be between 1 and 50 years.</p>';
         return;
     }
 
-    // Compound Interest: A = P × (1 + r/n)^(n×t)
+    // Compound Interest: A = P Ã— (1 + r/n)^(nÃ—t)
     const rate = annualRate / 100;
     const maturity = principal * Math.pow(1 + rate / n, n * years);
     const compoundInterest = maturity - principal;
 
-    // Simple Interest for comparison: SI = P × r × t
+    // Simple Interest for comparison: SI = P Ã— r Ã— t
     const simpleInterest = principal * rate * years;
     const simpleTotal = principal + simpleInterest;
 
@@ -808,10 +809,10 @@ function calculateCompoundInterest() {
             </table>
         </div>
 
-        <p class="note">💡 Compounding ${freqNames[n].toLowerCase()} gives you ${formatINR(difference)} more than simple interest.</p>
-        <p class="note">📊 Formula: ${formatINR(principal)} × (1 + ${annualRate}%/${n})^(${n}×${years}) = ${formatINR(maturity)}</p>
+        <p class="note">ðŸ’¡ Compounding ${freqNames[n].toLowerCase()} gives you ${formatINR(difference)} more than simple interest.</p>
+        <p class="note">ðŸ“Š Formula: ${formatINR(principal)} Ã— (1 + ${annualRate}%/${n})^(${n}Ã—${years}) = ${formatINR(maturity)}</p>
 
-        <a href="/finance/index" class="back-link">← Back to Home</a>
+        <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
 }
 </script>
