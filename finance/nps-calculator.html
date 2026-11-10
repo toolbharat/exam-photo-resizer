@@ -720,7 +720,7 @@ body {
 
 <footer class="site-footer">
     <div class="container">
-        <p>Â© 2026 India Finance Calculator</p>
+        <p>© 2026 India Finance Calculator</p>
         <nav class="footer-nav">
             <a href="/finance/about">About</a> |
             <a href="/finance/contact">Contact</a> |
@@ -1345,7 +1345,7 @@ function calculateGratuity() {
         </div>
 
         <p class="note">ðŸ’¡ Gratuity up to â‚¹20 lakh is tax-exempt. Amount above â‚¹20 lakh is taxable.</p>
-        <p class="note">ðŸ“Š Formula: (15 Ã— â‚¹${lastSalary.toLocaleString('en-IN')} Ã— ${roundedYears}) / 26 = ${formatINR(gratuity)}</p>
+        <p class="note">📊 Formula: (15 Ã— â‚¹${lastSalary.toLocaleString('en-IN')} Ã— ${roundedYears}) / 26 = ${formatINR(gratuity)}</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
@@ -1432,7 +1432,7 @@ function calculateInsurance() {
         </div>
 
         <p class="note">ðŸ’¡ This is an indicative estimate. Actual premium depends on your medical history, the insurer, and policy terms.</p>
-        <p class="note">ðŸ“Š Cover = (Income Ã— 15) + Loans + Child Education âˆ’ Savings</p>
+        <p class="note">📊 Cover = (Income Ã— 15) + Loans + Child Education âˆ’ Savings</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
@@ -1521,7 +1521,7 @@ function calculateNPS() {
         </div>
 
         <p class="note">ðŸ’¡ Pension is estimated at 6% annuity rate. Actual rates vary by insurer and annuity option.</p>
-        <p class="note">ðŸ“Š Tax benefit: Additional â‚¹50,000 deduction under Section 80CCD(1B) in Old Regime.</p>
+        <p class="note">📊 Tax benefit: Additional â‚¹50,000 deduction under Section 80CCD(1B) in Old Regime.</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
@@ -1609,7 +1609,7 @@ function calculateSWP() {
 
         ${statusMsg}
 
-        <p class="note">ðŸ“Š Initial Investment: ${formatINR(investment)} | Monthly Withdrawal: ${formatINR(monthlyWithdrawal)} | Expected Return: ${annualReturn}%</p>
+        <p class="note">📊 Initial Investment: ${formatINR(investment)} | Monthly Withdrawal: ${formatINR(monthlyWithdrawal)} | Expected Return: ${annualReturn}%</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
@@ -1664,7 +1664,7 @@ function calculateLumpsum() {
         </div>
 
         <p class="note">ðŸ’¡ Your money grows <strong>${growthMultiple.toFixed(2)}x</strong> in ${years} years at ${annualReturn}% annual return.</p>
-        <p class="note">ðŸ“Š Formula: ${formatINR(amount)} Ã— (1 + ${annualReturn}%)^${years} = ${formatINR(maturity)}</p>
+        <p class="note">📊 Formula: ${formatINR(amount)} Ã— (1 + ${annualReturn}%)^${years} = ${formatINR(maturity)}</p>
         <p class="note">âš ï¸ Returns are market-linked and not guaranteed. This is an estimate.</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
@@ -1717,7 +1717,7 @@ function calculateCAGR() {
         </div>
 
         <p class="note">ðŸ’¡ Your investment grew at an average rate of <strong>${cagr.toFixed(2)}% per year</strong> over ${years} years.</p>
-        <p class="note">ðŸ“Š Formula: [(${formatINR(final)} / ${formatINR(initial)})^(1/${years}) âˆ’ 1] Ã— 100 = ${cagr.toFixed(2)}%</p>
+        <p class="note">📊 Formula: [(${formatINR(final)} / ${formatINR(initial)})^(1/${years}) âˆ’ 1] Ã— 100 = ${cagr.toFixed(2)}%</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
@@ -1780,7 +1780,7 @@ function calculatePPF() {
         </div>
 
         <p class="note">ðŸ’¡ Tax-free returns: Investment + Interest + Maturity all exempt under EEE.</p>
-        <p class="note">ðŸ“Š Investment under Section 80C eligible for deduction up to â‚¹1.5 lakh (Old Regime).</p>
+        <p class="note">📊 Investment under Section 80C eligible for deduction up to â‚¹1.5 lakh (Old Regime).</p>
         <p class="note">âš ï¸ PPF interest rates are revised quarterly. Rate used: ${annualRate}%</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
@@ -1856,7 +1856,7 @@ function calculateHRA() {
         </div>
 
         <p class="note">ðŸ’¡ Available only under the Old Tax Regime.</p>
-        <p class="note">ðŸ“Š If annual rent exceeds â‚¹1,00,000, landlord's PAN is required.</p>
+        <p class="note">📊 If annual rent exceeds â‚¹1,00,000, landlord's PAN is required.</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
@@ -1919,7 +1919,7 @@ function calculateRD() {
         </div>
 
         <p class="note">ðŸ’¡ Monthly deposit of ${formatINR(monthly)} for ${months} months at ${annualRate}% p.a.</p>
-        <p class="note">ðŸ“Š Interest is compounded quarterly. Actual rates may vary by bank.</p>
+        <p class="note">📊 Interest is compounded quarterly. Actual rates may vary by bank.</p>
         <p class="note">âš ï¸ Interest is taxable. TDS applies if annual interest exceeds â‚¹40,000.</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
@@ -1998,7 +1998,7 @@ function calculateCompoundInterest() {
         </div>
 
         <p class="note">ðŸ’¡ Compounding ${freqNames[n].toLowerCase()} gives you ${formatINR(difference)} more than simple interest.</p>
-        <p class="note">ðŸ“Š Formula: ${formatINR(principal)} Ã— (1 + ${annualRate}%/${n})^(${n}Ã—${years}) = ${formatINR(maturity)}</p>
+        <p class="note">📊 Formula: ${formatINR(principal)} Ã— (1 + ${annualRate}%/${n})^(${n}Ã—${years}) = ${formatINR(maturity)}</p>
 
         <a href="/finance/index" class="back-link">â† Back to Home</a>
     `;
