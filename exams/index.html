@@ -3,193 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Exam Photo & Signature Resizer Tools | PixSathi</title>
-    <meta name="description" content="Free photo & signature resizer for SSC, IBPS, NEET, JEE, UPSC and 45+ Indian government exams. Exact size, 100% free.">
+    <title>Indian Exam Photo & Signature Resizer | PixSathi</title>
+    <meta name="description" content="Free photo and signature resizer for SSC, IBPS, NEET, JEE, UPSC and 45+ Indian government exams.">
+    <link rel="canonical" href="https://www.pixsathi.in/exams/">
     <link rel="stylesheet" href="/style.css">
     <style>
-        .header { padding: 8px 20px !important; }
-        .header .container { gap: 10px !important; }
-        .logo { font-size: 16px !important; }
-        .tagline { font-size: 10px !important; margin: 0 !important; }
-        .nav a { padding: 4px 10px !important; font-size: 12px !important; }
-        .section-title { font-size: 15px !important; margin: 16px 0 10px !important; }
-        .dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-        .dash-card { background: #ffffff; border: 1px solid #e5e5ea; border-radius: 10px; padding: 14px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); transition: all 0.2s; display: flex; align-items: center; gap: 12px; min-height: 80px; text-decoration: none; color: inherit; }
-        .dash-card:hover { border-color: #4f46e5; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1); transform: translateY(-2px); }
-        .tool-icon { font-size: 26px; flex-shrink: 0; }
-        .tool-info h3 { font-size: 13px; font-weight: 700; color: #1d1d1f; margin: 0 0 2px 0; }
-        .tool-info p { font-size: 11px; color: #475569; margin: 0; }
-        .footer { padding: 14px !important; margin-top: 20px !important; font-size: 11px !important; }
+        .exam-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+        .exam-card { background: #fff; border: 1px solid #e5e5ea; border-radius: 8px; padding: 15px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px; transition: 0.2s; }
+        .exam-card:hover { border-color: #4f46e5; box-shadow: 0 4px 12px rgba(79,70,229,0.1); transform: translateY(-2px); }
+        .exam-card .icon { font-size: 22px; }
+        .exam-card .name { font-size: 14px; font-weight: 600; }
+        .exam-card .sub { font-size: 11px; color: #475569; }
+        .header-note { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 8px; margin: 20px 0; font-size: 14px; }
     </style>
-<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-<script src="/heic-fix.js"></script>
-    <!-- HEIC Converter Library -->
-    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-    <!-- Universal HEIC Converter Script for All Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputs = document.querySelectorAll('input[type="file"]');
-            inputs.forEach(input => {
-                input.addEventListener('change', async (e) => {
-                    const files = Array.from(input.files);
-                    if (files.length === 0) return;
-                    
-                    let hasHeic = false;
-                    const dataTransfer = new DataTransfer();
-                    
-                    for (let file of files) {
-                        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
-                            hasHeic = true;
-                            try {
-                                const convertedBlob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
-                                const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-                                const newFile = new File([blob], file.name.replace(/\.heic$/i, '.jpg'), { type: "image/jpeg" });
-                                dataTransfer.items.add(newFile);
-                            } catch (error) {
-                                console.error("HEIC Error", error);
-                            }
-                        } else {
-                            dataTransfer.items.add(file);
-                        }
-                    }
-                    
-                    if (hasHeic) {
-                        e.stopImmediatePropagation(); 
-                        input.files = dataTransfer.files;
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                }, true); 
-            });
-        });
-    </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "PixSathi - Free Online Tools",
-  "url": "https://www.pixsathi.in/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "PixSathi",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.pixsathi.in/favicon.ico"
-    }
-  }
-}
-</script>
-<link rel="canonical" href="https://www.pixsathi.in/exams/" />
 </head>
-
 <body>
 
-        <header class="header">
+    <header class="header">
         <div class="container">
-            <div class="logo">ðŸ“¸ PixSathi</div>
+            <div class="logo">📸 PixSathi</div>
             <p class="tagline">Free Online Tools for Everyone - 100% Free - Private</p>
-            <nav class="nav" aria-label="Main navigation">
-                <a href="/">ðŸ  Home</a>
+            <nav class="nav">
+                <a href="/">🏠 Home</a>
                 <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
-                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ› ï¸ International Tools</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🛠️ International Tools</a>
                 <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/blog/">ðŸ“ Blog</a>
+                <a href="/blog/">📝 Blog</a>
                 <a href="/contact">📬 Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-
         <h1>🇮🇳 Indian Exam Photo & Signature Resizer</h1>
-<div style="background: #fff3cd; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 8px; margin: 16px 0; font-size: 13px;">
-    <strong>🇮🇳 For Indian Students Only</strong><br>
-    These tools are for Indian government exams â€” SSC, IBPS, NEET, JEE, UPSC, and 45+ more.<br>
-    Looking for international passport/visa photos? <a href="/international/" style="color: #4f46e5; font-weight: 600;">Click here →</a>
-</div>
         <p>Free photo & signature resizer for SSC, IBPS, NEET, JEE, UPSC and 45+ Indian government exams.</p>
 
-        <h2 class="section-title">Popular Exams</h2>
-        <div class="dash-grid">
-            
-            <!-- NAYA CARD YAHAN ADD KIYA HAI -->
-            <a href="/exam-photo-checker" class="dash-card" style="border: 2px solid #4f46e5; background: #eef2ff;">
-    <div class="tool-icon">&#128269;</div>
-    <div class="tool-info"><h3>Photo Checker</h3><p>Check exam photo size</p></div>
-</a>
-<a href="/exam-marks-calculator" class="dash-card" style="border: 2px solid #4f46e5; background: #eef2ff;">
-                <div class="tool-icon">&#128221;</div>
-                <div class="tool-info"><h3>Marks Calculator</h3><p>Calculate SSC, IBPS score</p></div>
-            </a>
-
-            <a href="/ssc-cgl-photo-resizer" class="dash-card">
-                <div class="tool-icon">ðŸ“‹</div>
-                <div class="tool-info"><h3>SSC CGL</h3><p>Photo & signature resizer</p></div>
-            </a>
-            <a href="/ssc-chsl-photo-resizer" class="dash-card">
-                <div class="tool-icon">ðŸ“‹</div>
-                <div class="tool-info"><h3>SSC CHSL</h3><p>Photo & signature resizer</p></div>
-            </a>
-            <a href="/ibps-po-photo-resizer" class="dash-card">
-                <div class="tool-icon">ðŸ¦</div>
-                <div class="tool-info"><h3>IBPS PO</h3><p>Photo & signature resizer</p></div>
-            </a>
-            <a href="/neet-photo-resizer" class="dash-card">
-                <div class="tool-icon">ðŸ©º</div>
-                <div class="tool-info"><h3>NEET</h3><p>Photo & signature resizer</p></div>
-            </a>
-            <a href="/jee-main-photo-resizer" class="dash-card">
-                <div class="tool-icon">âš™ï¸</div>
-                <div class="tool-info"><h3>JEE Main</h3><p>Photo & signature resizer</p></div>
-            </a>
-            <a href="/upsc-photo-resizer" class="dash-card">
-                <div class="tool-icon">ðŸ›ï¸</div>
-                <div class="tool-info"><h3>UPSC</h3><p>Photo & signature resizer</p></div>
-            </a>
+        <div class="header-note">
+            <strong>🇮🇳 For Indian Students Only</strong><br>
+            These tools are for Indian government exams — SSC, IBPS, NEET, JEE, UPSC, and 45+ more.<br>
+            Looking for international passport/visa photos? <a href="/international/">Click here →</a>
         </div>
 
-        <h2 class="section-title">All Exams</h2>
-        <div class="dash-grid">
-            <a href="/ssc-mts-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ“‹</div><div class="tool-info"><h3>SSC MTS</h3></div></a>
-            <a href="/ssc-gd-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ“‹</div><div class="tool-info"><h3>SSC GD</h3></div></a>
-            <a href="/ssc-cpo-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ“‹</div><div class="tool-info"><h3>SSC CPO</h3></div></a>
-            <a href="/ssc-je-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ“‹</div><div class="tool-info"><h3>SSC JE</h3></div></a>
-            <a href="/ibps-clerk-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ¦</div><div class="tool-info"><h3>IBPS Clerk</h3></div></a>
-            <a href="/ibps-so-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ¦</div><div class="tool-info"><h3>IBPS SO</h3></div></a>
-            <a href="/ibps-rrb-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ¦</div><div class="tool-info"><h3>IBPS RRB</h3></div></a>
-            <a href="/sbi-po-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ¦</div><div class="tool-info"><h3>SBI PO</h3></div></a>
-            <a href="/sbi-clerk-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ¦</div><div class="tool-info"><h3>SBI Clerk</h3></div></a>
-            <a href="/rrb-ntpc-photo-resizer" class="dash-card"><div class="tool-icon">ðŸš‚</div><div class="tool-info"><h3>RRB NTPC</h3></div></a>
-            <a href="/rrb-group-d-photo-resizer" class="dash-card"><div class="tool-icon">ðŸš‚</div><div class="tool-info"><h3>RRB Group D</h3></div></a>
-            <a href="/rrb-alp-photo-resizer" class="dash-card"><div class="tool-icon">ðŸš‚</div><div class="tool-info"><h3>RRB ALP</h3></div></a>
-            <a href="/ctet-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ“š</div><div class="tool-info"><h3>CTET</h3></div></a>
-            <a href="/ugc-net-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ“š</div><div class="tool-info"><h3>UGC NET</h3></div></a>
-            <a href="/clat-photo-resizer" class="dash-card"><div class="tool-icon">âš–ï¸</div><div class="tool-info"><h3>CLAT</h3></div></a>
-            <a href="/gate-photo-resizer" class="dash-card"><div class="tool-icon">âš™ï¸</div><div class="tool-info"><h3>GATE</h3></div></a>
-            <a href="/police-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ‘®</div><div class="tool-info"><h3>Police</h3></div></a>
-            <a href="/up-police-photo-resizer" class="dash-card"><div class="tool-icon">ðŸ‘®</div><div class="tool-info"><h3>UP Police</h3></div></a>
-            <a href="/nda-photo-resizer" class="dash-card"><div class="tool-icon">ðŸŽ–ï¸</div><div class="tool-info"><h3>NDA</h3></div></a>
-            <a href="/cds-photo-resizer" class="dash-card"><div class="tool-icon">ðŸŽ–ï¸</div><div class="tool-info"><h3>CDS</h3></div></a>
+        <h2>Popular Exams</h2>
+        <div class="exam-grid">
+            <a href="/exam-photo-checker" class="exam-card"><span class="icon">🔍</span><div><div class="name">Photo Checker</div><div class="sub">Check exam photo size</div></div></a>
+            <a href="/exam-marks-calculator" class="exam-card"><span class="icon">📝</span><div><div class="name">Marks Calculator</div><div class="sub">Calculate SSC, IBPS score</div></div></a>
+            <a href="/ssc-cgl-photo-resizer" class="exam-card"><span class="icon">📋</span><div><div class="name">SSC CGL</div><div class="sub">Photo & signature resizer</div></div></a>
+            <a href="/ssc-chsl-photo-resizer" class="exam-card"><span class="icon">📋</span><div><div class="name">SSC CHSL</div><div class="sub">Photo & signature resizer</div></div></a>
+            <a href="/ibps-po-photo-resizer" class="exam-card"><span class="icon">🏦</span><div><div class="name">IBPS PO</div><div class="sub">Photo & signature resizer</div></div></a>
+            <a href="/neet-photo-resizer" class="exam-card"><span class="icon">🩺</span><div><div class="name">NEET</div><div class="sub">Photo & signature resizer</div></div></a>
+            <a href="/jee-main-photo-resizer" class="exam-card"><span class="icon">⚙️</span><div><div class="name">JEE Main</div><div class="sub">Photo & signature resizer</div></div></a>
+            <a href="/upsc-photo-resizer" class="exam-card"><span class="icon">🏛️</span><div><div class="name">UPSC</div><div class="sub">Photo & signature resizer</div></div></a>
         </div>
 
-    </main>
+        <h2>All Exams</h2>
+        <div class="exam-grid">
+            <a href="/ssc-mts-photo-resizer" class="exam-card"><span class="icon">📋</span><div><div class="name">SSC MTS</div></div></a>
+            <a href="/ssc-gd-photo-resizer" class="exam-card"><span class="icon">📋</span><div><div class="name">SSC GD</div></div></a>
+            <a href="/ssc-cpo-photo-resizer" class="exam-card"><span class="icon">📋</span><div><div class="name">SSC CPO</div></div></a>
+            <a href="/ssc-je-photo-resizer" class="exam-card"><span class="icon">📋</span><div><div class="name">SSC JE</div></div></a>
+            <a href="/ibps-clerk-photo-resizer" class="exam-card"><span class="icon">🏦</span><div><div class="name">IBPS Clerk</div></div></a>
+            <a href="/ibps-so-photo-resizer" class="exam-card"><span class="icon">🏦</span><div><div class="name">IBPS SO</div></div></a>
+            <a href="/ibps-rrb-photo-resizer" class="exam-card"><span class="icon">🏦</span><div><div class="name">IBPS RRB</div></div></a>
+            <a href="/sbi-po-photo-resizer" class="exam-card"><span class="icon">🏦</span><div><div class="name">SBI PO</div></div></a>
+            <a href="/sbi-clerk-photo-resizer" class="exam-card"><span class="icon">🏦</span><div><div class="name">SBI Clerk</div></div></a>
+            <a href="/rrb-ntpc-photo-resizer" class="exam-card"><span class="icon">🚂</span><div><div class="name">RRB NTPC</div></div></a>
+            <a href="/rrb-group-d-photo-resizer" class="exam-card"><span class="icon">🚂</span><div><div class="name">RRB Group D</div></div></a>
+            <a href="/rrb-alp-photo-resizer" class="exam-card"><span class="icon">🚂</span><div><div class="name">RRB ALP</div></div></a>
+            <a href="/ctet-photo-resizer" class="exam-card"><span class="icon">📚</span><div><div class="name">CTET</div></div></a>
+            <a href="/ugc-net-photo-resizer" class="exam-card"><span class="icon">📚</span><div><div class="name">UGC NET</div></div></a>
+            <a href="/clat-photo-resizer" class="exam-card"><span class="icon">⚖️</span><div><div class="name">CLAT</div></div></a>
+            <a href="/gate-photo-resizer" class="exam-card"><span class="icon">⚙️</span><div><div class="name">GATE</div></div></a>
+            <a href="/police-photo-resizer" class="exam-card"><span class="icon">👮</span><div><div class="name">Police</div></div></a>
+            <a href="/up-police-photo-resizer" class="exam-card"><span class="icon">👮</span><div><div class="name">UP Police</div></div></a>
+            <a href="/nda-photo-resizer" class="exam-card"><span class="icon">🎖️</span><div><div class="name">NDA</div></div></a>
+            <a href="/cds-photo-resizer" class="exam-card"><span class="icon">🎖️</span><div><div class="name">CDS</div></div></a>
+        </div>
 
-    <footer class="footer">
-        <div class="container">
+        <footer class="footer" style="margin-top: 40px;">
             <p>© 2026 PixSathi | Made for EveryOne</p>
-            <p style="margin-top: 6px; font-size: 12px;">
-                <a href="/">ðŸ  Home</a> Â· 
-                <a href="/about">About</a> Â· 
-                <a href="/privacy-policy">Privacy</a> Â· 
-                <a href="/disclaimer">Disclaimer</a> Â· 
+            <p style="margin-top: 6px;">
+                <a href="/">🏠 Home</a> · 
+                <a href="/about">About</a> · 
+                <a href="/privacy-policy">Privacy</a> · 
+                <a href="/disclaimer">Disclaimer</a> · 
                 <a href="/contact">📬 Contact</a>
             </p>
-            <div style="margin-top: 15px;">
-                <a href='https://www.saashub.com/pixsathi-in?utm_source=badge&utm_campaign=badge&utm_content=pixsathi-in&badge_variant=color&badge_kind=approved' target='_blank'>
-                    <img src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1" alt="PixSathi.in badge" style="max-width: 150px;"/>
-                </a>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
 
 </body>
 </html>
