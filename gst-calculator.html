@@ -13,7 +13,7 @@
       gtag('config', 'G-L5K09RC5D2');
     </script>
 
-    <title>GST Calculator Online Free - Reverse, Inclusive & Exclusive | PixSathi</title>
+    <title>GST Calculator Online Free - Reverse, Inclusive &amp; Exclusive | PixSathi</title>
     <meta name="description" content="Free online GST calculator. Calculate GST inclusive, exclusive, reverse GST, CGST, SGST, and IGST instantly. Best GST calculator for India.">
     <link rel="canonical" href="https://www.pixsathi.in/gst-calculator">
     <link rel="stylesheet" href="/style.css">
@@ -63,15 +63,15 @@
 
         <header class="header">
         <div class="container">
-            <div class="logo">ðŸ“¸ PixSathi</div>
+            <div class="logo">&#x1F4F8; PixSathi</div>
             <p class="tagline">Free Online Tools for Everyone - 100% Free - Private</p>
             <nav class="nav" aria-label="Main navigation">
-                <a href="/">ðŸ  Home</a>
-                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">🇮🇳 Indian Exams</a>
-                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">ðŸ› ï¸ International Tools</a>
-                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">💰 Finance</a>
-                <a href="/blog/">ðŸ“ Blog</a>
-                <a href="/contact">📬 Contact</a>
+                <a href="/">&#x1F3E0; Home</a>
+                <a href="/exams/" style="background:#f59e0b;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">&#x1F1EE;&#x1F1F3; Indian Exams</a>
+                <a href="/international/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">&#x1F6E0;&#xFE0F; International Tools</a>
+                <a href="/finance/" style="background:#10b981;color:white;padding:4px 10px;border-radius:6px;font-weight:600;">&#x1F4B0; Finance</a>
+                <a href="/blog/">&#x1F4DD; Blog</a>
+                <a href="/contact">&#x1F4EC; Contact</a>
             </nav>
         </div>
     </header>
@@ -89,7 +89,7 @@
 
         <div class="tool-container">
             <div class="input-group">
-                <label>Amount (â‚¹):</label>
+                <label>Amount (&#x20B9;):</label>
                 <input type="number" id="amount" placeholder="e.g. 10000" oninput="calculateGST()">
             </div>
 
@@ -139,27 +139,27 @@
                 <h3>Calculation Result</h3>
                 <div class="result-row">
                     <span>Base Amount:</span>
-                    <span id="outBase">â‚¹0.00</span>
+                    <span id="outBase">&#x20B9;0.00</span>
                 </div>
                 <div class="result-row" id="rowCgst">
                     <span>CGST:</span>
-                    <span id="outCgst">â‚¹0.00</span>
+                    <span id="outCgst">&#x20B9;0.00</span>
                 </div>
                 <div class="result-row" id="rowSgst">
                     <span>SGST:</span>
-                    <span id="outSgst">â‚¹0.00</span>
+                    <span id="outSgst">&#x20B9;0.00</span>
                 </div>
                 <div class="result-row" id="rowIgst" style="display: none;">
                     <span>IGST:</span>
-                    <span id="outIgst">â‚¹0.00</span>
+                    <span id="outIgst">&#x20B9;0.00</span>
                 </div>
                 <div class="result-row">
                     <span>Total GST:</span>
-                    <span id="outTotalGst">â‚¹0.00</span>
+                    <span id="outTotalGst">&#x20B9;0.00</span>
                 </div>
                 <div class="result-row total">
                     <span>Total Amount:</span>
-                    <span id="outTotal">â‚¹0.00</span>
+                    <span id="outTotal">&#x20B9;0.00</span>
                 </div>
             </div>
         </div>
@@ -171,9 +171,9 @@
 
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 12px;">How to Calculate GST (Formula)</h2>
             <ul style="margin-left: 20px; margin-bottom: 20px; color: #4a5568;">
-                <li><strong>Add GST (Exclusive):</strong> Formula = Amount + (Amount Ã— GST Rate / 100)</li>
-                <li><strong>Remove GST (Reverse/Inclusive):</strong> Formula = Total Amount - [Total Amount Ã— (100 / (100 + GST Rate))]</li>
-                <li><strong>CGST & SGST:</strong> Total GST / 2 (For Intra-state transactions)</li>
+                <li><strong>Add GST (Exclusive):</strong> Formula = Amount + (Amount &#x00D7; GST Rate / 100)</li>
+                <li><strong>Remove GST (Reverse/Inclusive):</strong> Formula = Total Amount - [Total Amount &#x00D7; (100 / (100 + GST Rate))]</li>
+                <li><strong>CGST &amp; SGST:</strong> Total GST / 2 (For Intra-state transactions)</li>
             </ul>
 
             <h2 style="font-size: 22px; color: #1a202c; margin-bottom: 16px;">Frequently Asked Questions (FAQs)</h2>
@@ -227,23 +227,23 @@
             }
 
             // Show Results
-            document.getElementById('outBase').innerText = "â‚¹" + baseAmount.toFixed(2);
-            document.getElementById('outTotalGst').innerText = "â‚¹" + totalGst.toFixed(2);
-            document.getElementById('outTotal').innerText = "â‚¹" + totalAmount.toFixed(2);
+            document.getElementById('outBase').innerText = "\u20B9" + baseAmount.toFixed(2);
+            document.getElementById('outTotalGst').innerText = "\u20B9" + totalGst.toFixed(2);
+            document.getElementById('outTotal').innerText = "\u20B9" + totalAmount.toFixed(2);
 
             if (taxType === 'intra') {
                 document.getElementById('rowCgst').style.display = 'flex';
                 document.getElementById('rowSgst').style.display = 'flex';
                 document.getElementById('rowIgst').style.display = 'none';
                 
-                document.getElementById('outCgst').innerText = "â‚¹" + (totalGst / 2).toFixed(2);
-                document.getElementById('outSgst').innerText = "â‚¹" + (totalGst / 2).toFixed(2);
+                document.getElementById('outCgst').innerText = "\u20B9" + (totalGst / 2).toFixed(2);
+                document.getElementById('outSgst').innerText = "\u20B9" + (totalGst / 2).toFixed(2);
             } else {
                 document.getElementById('rowCgst').style.display = 'none';
                 document.getElementById('rowSgst').style.display = 'none';
                 document.getElementById('rowIgst').style.display = 'flex';
                 
-                document.getElementById('outIgst').innerText = "â‚¹" + totalGst.toFixed(2);
+                document.getElementById('outIgst').innerText = "\u20B9" + totalGst.toFixed(2);
             }
 
             resultBox.style.display = 'block';

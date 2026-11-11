@@ -65,8 +65,8 @@
 
     <header class="header">
         <div class="container">
-            <div class="logo">ðŸ“¸ PixSathi</div>
-            <nav class="nav"><a href="/">ðŸ  Home</a> <a href="/blog/">ðŸ“ Blog</a></nav>
+            <div class="logo">&#x1F4F8; PixSathi</div>
+            <nav class="nav"><a href="/">&#x1F3E0; Home</a> <a href="/blog/">&#x1F4DD; Blog</a></nav>
         </div>
     </header>
 
@@ -82,7 +82,7 @@
             </div>
 
             <label for="imageInput" class="upload-box" id="uploadBox">
-                <div style="font-size: 40px;">🖼️ï¸</div>
+                <div style="font-size: 40px;">&#x1F5BC;&#xFE0F;</div>
                 <p style="color: #4f46e5; font-weight: 600; margin-top: 10px;">Click to select Slide Images</p>
                 <p style="font-size: 12px; color: #64748b;">Supports JPG, PNG, HEIC</p>
                 <input type="file" id="imageInput" accept="image/*" multiple>
@@ -92,7 +92,7 @@
                 <!-- Images will appear here -->
             </div>
 
-            <button id="convertBtn" class="action-btn" onclick="generatePDF()">ðŸ“¥ Convert to PDF</button>
+            <button id="convertBtn" class="action-btn" onclick="generatePDF()">&#x1F4E5; Convert to PDF</button>
         </div>
 
         <!-- SEO Content -->
@@ -137,7 +137,7 @@
                     div.innerHTML = `
                         <img src="${event.target.result}" alt="Slide">
                         <span>${file.name}</span>
-                        <button class="btn-del" onclick="removeImage(${index})">Ã—</button>
+                        <button class="btn-del" onclick="removeImage(${index})">&#x00D7;</button>
                     `;
                     grid.appendChild(div);
                 };
